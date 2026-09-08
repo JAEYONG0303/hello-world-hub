@@ -252,7 +252,7 @@ span.status{cursor:default}
         url: "https://jolly-shrine-63f.notion.site/4-AI-0a0e4917eeaa8311a32081ad314dfb8f" }
     ],
     archive: [
-      { name: "태블로 교육자료", note: "개인정보 블러 처리본 · 165p", href: "/tableau-training-redacted.pdf" },
+      { name: "태블로 교육자료", note: "강슬기 · 165p · 개인정보 처리본" },
       { name: "빅분기 요약본", note: "필기 정리 · 오답 노트" },
       { name: "장기요양 데이터셋", note: "급여 통계 · 대시보드 원본" }
     ]
@@ -486,10 +486,9 @@ span.status{cursor:default}
     DATA.archive.forEach(function (a) {
       var el = document.createElement("div");
       el.className = "arc";
-      el.innerHTML = "<b></b><small></small>" + (a.href ? "<a class=\"projlink\" target=\"_blank\" rel=\"noreferrer\">자료 열기 ↗</a>" : "") + "<span class=\"lock\">비공개 · 로컬 보관</span>";
+      el.innerHTML = "<b></b><small></small><span class=\"lock\">비공개 · 로컬 보관</span>";
       el.querySelector("b").textContent = a.name;
       el.querySelector("small").textContent = a.note;
-      if (a.href) el.querySelector("a").href = a.href;
       host.appendChild(el);
     });
   }

@@ -1,1 +1,8 @@
-{"scripts":{"build":"echo static-site-ready"},"dependencies":{}}
+{
+  "scripts": {
+    "sync": "node sync-notion.mjs",
+    "build": "node sync-notion.mjs && node build.mjs"
+  },
+  "dependencies": {},
+  "type": "module"
+}
