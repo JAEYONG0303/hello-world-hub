@@ -77,6 +77,14 @@ span.status{cursor:default}
 .file:last-child{border-bottom:0}
 .filemore{color:#6d7391;font-size:11px;margin-top:8px}
 
+/* 커리어·역량 지도 */
+.careerhero{display:grid;grid-template-columns:1.1fr .9fr;gap:14px}
+.careerlead{background:linear-gradient(135deg,#1b1838,#101827);border:1px solid #51418b;border-radius:16px;padding:22px}
+.careerlead .label{display:block;margin-bottom:12px}.careerlead h3{font-size:clamp(22px,4vw,34px);line-height:1.15;letter-spacing:-.045em;margin:0}.careerlead p{color:#b6bdd8;margin:14px 0 0;max-width:600px}
+.careerstats{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}.careerstat{border:1px solid var(--line);border-radius:14px;padding:16px;background:#101324}.careerstat b{display:block;color:var(--cyan);font-size:21px;margin-bottom:4px}.careerstat span{color:var(--muted);font-size:11px}
+.careergrid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:14px}.careeritem{border:1px solid var(--line);border-radius:13px;padding:15px;background:#101324}.careeritem b{display:block;font-size:13px;margin-bottom:5px}.careeritem span{color:var(--muted);font-size:11px;line-height:1.55}
+.careercols{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:14px}.careerpanel{border:1px solid var(--line);border-radius:14px;padding:18px;background:#0e1120}.careerpanel h3{font-size:12px;letter-spacing:.1em;color:var(--violet);margin:0 0 12px}.careerpanel ol,.careerpanel ul{margin:0;padding-left:19px;color:#c5cbe4;font-size:12px}.careerpanel li{margin:8px 0}.careerlink{display:inline-block;margin-top:14px;color:var(--cyan);font-size:12px;text-decoration:none}.careerlink:hover{text-decoration:underline}.careerfoot{margin-top:14px;color:#6f7694;font-size:10px;line-height:1.6}
+
 /* AI 학습 경로 */
 .aigrid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
 .ai{display:flex;flex-direction:column;background:linear-gradient(145deg,rgba(22,25,42,.96),rgba(12,14,26,.96));border:1px solid var(--line);border-radius:16px;padding:18px;transition:.2s}
@@ -107,10 +115,13 @@ span.status{cursor:default}
  .grid{grid-template-columns:1fr}
  .wide{grid-column:auto}
  .projgrid,.aigrid,.arcgrid{grid-template-columns:1fr}
+ .careerhero,.careercols{grid-template-columns:1fr}
+ .careergrid{grid-template-columns:1fr 1fr}
  .block{margin-top:34px}
  .more,.status{min-height:44px;padding-left:16px;padding-right:16px}
  .ailink{min-height:44px;line-height:44px}
 }
+@media(max-width:480px){.careergrid,.careerstats{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -169,6 +180,57 @@ span.status{cursor:default}
     <span class="sub">학원수업 아카이브 · 상태를 눌러 변경</span>
   </div>
   <div class="projgrid" id="projects"></div>
+</section>
+
+<!-- 2-c. 커리어·역량 지도 -->
+<section class="block" id="career-skills">
+  <div class="blockhead">
+    <h2>CAREER &amp; SKILLS</h2>
+    <span class="sub">질문 기록 · 시장 분석 · 90일 로드맵</span>
+  </div>
+  <div class="careerhero">
+    <article class="careerlead">
+      <span class="label">CURRENT DIRECTION</span>
+      <h3>행정을 이해하고<br><span style="color:var(--cyan)">데이터로 개선하는 사람</span></h3>
+      <p>보건·공공·대학 행정의 업무 맥락에 데이터 분석과 반복 업무 자동화를 결합하는 운영·기획형 포지션.</p>
+    </article>
+    <div class="careerstats">
+      <div class="careerstat"><b>6개</b><span>반복 질문 카테고리</span></div>
+      <div class="careerstat"><b>2개</b><span>공개 분석 프로젝트</span></div>
+      <div class="careerstat"><b>1순위</b><span>보건·공공·대학 행정</span></div>
+      <div class="careerstat"><b>90일</b><span>역량 연결 계획</span></div>
+    </div>
+  </div>
+  <div class="careergrid" aria-label="질문 카테고리">
+    <div class="careeritem"><b>취업·진로</b><span>병원·대학·공공기관 지원, 공고 탐색, 자기소개서와 면접</span></div>
+    <div class="careeritem"><b>보건의료</b><span>병원 경영성과 논문, 의료기관 회계, 장기요양보험</span></div>
+    <div class="careeritem"><b>데이터 프로젝트</b><span>장기요양·팜랜드·헬스뷰티·이커머스 행동 로그</span></div>
+    <div class="careeritem"><b>통계·자격</b><span>다중회귀, 기초통계, 빅데이터분석기사, 사회조사분석사</span></div>
+    <div class="careeritem"><b>SQL·개발</b><span>MySQL, BigQuery, Python, GitHub, HTML 대시보드</span></div>
+    <div class="careeritem"><b>AI·자동화</b><span>행정 파일 취합·검증, 내부 데이터 보안, 에이전트 활용</span></div>
+  </div>
+  <div class="careercols">
+    <article class="careerpanel">
+      <h3>MARKET FIT</h3>
+      <ul>
+        <li>행정 채용의 기본은 Excel·문서 작성·규정 이해와 조정 능력.</li>
+        <li>의료행정 직무기술서에는 데이터 분석과 전산 활용이 함께 요구됨.</li>
+        <li>현재 강점은 순수 개발보다 보건의료 맥락을 아는 분석·운영에 있음.</li>
+        <li>지원 직무: 기획, 성과관리, 사업운영, 통계, 연구행정.</li>
+      </ul>
+      <a class="careerlink" href="https://www.moel.go.kr/news/enews/report/enewsView.do?news_seq=18662" target="_blank" rel="noopener noreferrer">채용시장 근거 보기 ↗</a>
+    </article>
+    <article class="careerpanel">
+      <h3>NEXT 90 DAYS</h3>
+      <ol>
+        <li>지원 공고 20건을 모아 반복 업무와 우대역량 코딩</li>
+        <li>프로그래머스 MySQL 중급 30문제와 Excel Power Query</li>
+        <li>대학·병원 행정 파일 취합 자동화 사례 1개 완성</li>
+        <li>논문·프로젝트·자동화를 STAR 면접 사례 4개로 변환</li>
+      </ol>
+    </article>
+  </div>
+  <p class="careerfoot">현재 앱에서 조회 가능한 대화·프로젝트 기록과 고용노동부·한국고용정보원 자료, 대표 의료행정 직무기술서를 바탕으로 정리. 전국 모든 채용공고를 계량 분석한 결과는 아님.</p>
 </section>
 
 <!-- 2-b. 노션 프로젝트 보관소 (연동됐을 때만 노출) -->
