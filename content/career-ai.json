@@ -3,93 +3,755 @@
     "title": "AI FUTURE & CAREER",
     "baseline_year": 2026,
     "horizon_year": 2031,
-    "version": 1,
+    "version": 2,
     "updated": "2026-09-09",
     "owner": "재용",
     "note": "이 파일이 화면(index.html)과 CAREER_AI_FORECAST.md 의 단일 원본이다. 수정은 여기서만 한다."
   },
   "headline": "AI는 인간처럼 모든 일을 독립적으로 수행하는 존재보다, 컴퓨터 안에서 여러 도구를 사용해 실제 업무를 처리하는 디지털 실무자 방향으로 발전할 가능성이 높다. 그러나 완전히 믿고 맡길 수 있는 직원보다는 빠르고 유능하지만 감독과 검증이 필요한 실무자에 가까울 것이다.",
   "forecasts": [
-    { "id": "F1", "title": "문서·코드·브라우저·업무 프로그램을 오가며 과업 실행", "probability": 90, "confidence": "high", "change": "챗봇에서 실제 작업을 수행하는 에이전트로 이동", "updated": "2026-09-09" },
-    { "id": "F2", "title": "기업 내부 데이터와 연결된 사내 에이전트 확산", "probability": 85, "confidence": "high", "change": "범용 AI보다 회사 규정·문서·시스템과 연결된 AI가 중요해짐", "updated": "2026-09-09" },
-    { "id": "F3", "title": "AI 가격 하락과 중소형 모델의 일상 업무 투입", "probability": 85, "confidence": "high", "change": "모든 업무에 가장 큰 모델을 쓰지 않고 난이도별 모델을 배치", "updated": "2026-09-09" },
-    { "id": "F4", "title": "사무직의 업무 구성과 신입 역할 변화", "probability": 75, "confidence": "medium", "change": "반복 업무는 줄고 검증·예외 처리·조정 책임은 커짐", "updated": "2026-09-09" },
-    { "id": "F5", "title": "몇 시간에서 며칠짜리 디지털 업무의 제한적 자율 수행", "probability": 65, "confidence": "medium", "change": "조건: 목표, 입력, 권한, 완료 기준이 명확한 업무", "updated": "2026-09-09" },
-    { "id": "F6", "title": "사람 감독 없이 일반 사무직 전체 대체", "probability": 25, "confidence": "medium", "change": "25% 이하로 본다", "updated": "2026-09-09" },
-    { "id": "F7", "title": "대부분의 지식노동자가 5년 안에 실직", "probability": 15, "confidence": "medium", "change": "15% 이하로 본다", "updated": "2026-09-09" }
+    {
+      "id": "F1",
+      "title": "문서·코드·브라우저·업무 프로그램을 오가며 과업 실행",
+      "probability": 90,
+      "confidence": "high",
+      "change": "챗봇에서 실제 작업을 수행하는 에이전트로 이동",
+      "updated": "2026-09-09"
+    },
+    {
+      "id": "F2",
+      "title": "기업 내부 데이터와 연결된 사내 에이전트 확산",
+      "probability": 85,
+      "confidence": "high",
+      "change": "범용 AI보다 회사 규정·문서·시스템과 연결된 AI가 중요해짐",
+      "updated": "2026-09-09"
+    },
+    {
+      "id": "F3",
+      "title": "AI 가격 하락과 중소형 모델의 일상 업무 투입",
+      "probability": 85,
+      "confidence": "high",
+      "change": "모든 업무에 가장 큰 모델을 쓰지 않고 난이도별 모델을 배치",
+      "updated": "2026-09-09"
+    },
+    {
+      "id": "F4",
+      "title": "사무직의 업무 구성과 신입 역할 변화",
+      "probability": 75,
+      "confidence": "medium",
+      "change": "반복 업무는 줄고 검증·예외 처리·조정 책임은 커짐",
+      "updated": "2026-09-09"
+    },
+    {
+      "id": "F5",
+      "title": "몇 시간에서 며칠짜리 디지털 업무의 제한적 자율 수행",
+      "probability": 65,
+      "confidence": "medium",
+      "change": "조건: 목표, 입력, 권한, 완료 기준이 명확한 업무",
+      "updated": "2026-09-09"
+    },
+    {
+      "id": "F6",
+      "title": "사람 감독 없이 일반 사무직 전체 대체",
+      "probability": 25,
+      "confidence": "medium",
+      "change": "25% 이하로 본다",
+      "updated": "2026-09-09"
+    },
+    {
+      "id": "F7",
+      "title": "대부분의 지식노동자가 5년 안에 실직",
+      "probability": 15,
+      "confidence": "medium",
+      "change": "15% 이하로 본다",
+      "updated": "2026-09-09"
+    }
   ],
   "conflicts": [
-    { "id": "C1", "old": "모델이 커질수록 가장 큰 모델이 대부분의 업무를 차지할 것이다.", "evidence": "비용·속도·개인정보·난이도에 따라 모델을 나눠 쓰는 배치가 일반화되는 중 (F3 관련 신호 추적)", "revised": "비용, 속도, 개인정보, 업무 난이도에 따라 여러 모델이 나뉘어 사용된다. 기업 경쟁력은 모델 크기보다 데이터 품질, 권한 관리, 업무 연결에서 발생한다.", "impact": "모델 지식보다 데이터 품질·권한·업무 연결을 설계하는 역량이 내 차별점이 된다." },
-    { "id": "C2", "old": "긴 컨텍스트는 인간과 같은 기억이 된다.", "evidence": "컨텍스트 확장과 검색·권한이 붙은 외부 기억 시스템이 함께 발전 (F2 관련)", "revised": "많은 정보를 넣는 것과 필요한 정보를 정확히 선택하는 것은 다르다. 출처, 권한, 검색 기록이 붙은 외부 기억 시스템이 중요하다.", "impact": "문서·데이터에 출처와 권한을 붙여 정리하는 습관이 곧 AI 활용 준비다." },
-    { "id": "C3", "old": "모델이 충분히 발전하면 환각은 거의 사라진다.", "evidence": "환각률은 감소하지만 0이 되지 않으며, 그럴듯한 오답 문제가 보고됨 (F4·F5 관련)", "revised": "환각은 감소하지만 완전히 사라지기 어렵다. 모델이 똑똑해질수록 잘못된 답도 더 설득력 있게 표현할 수 있다. 독립 재검산과 출처 검증이 계속 필요하다.", "impact": "검증 능력(재검산·출처 대조)이 내 핵심 역량이 된다." },
-    { "id": "C4", "old": "AI가 직업을 통째로 대체한다.", "evidence": "직업 단위보다 과업 단위 자동화가 먼저 진행 (F4·F6·F7 관련)", "revised": "직업보다 직업 안의 반복 과업이 먼저 자동화된다. 신입이 숙련되기 위해 수행하던 단순 업무가 줄어들 가능성이 크다. 결과 검증, 예외 처리, 이해관계자 조정의 가치는 높아진다.", "impact": "신입 시절 반복 업무로 배우던 것을 자동화 프로젝트와 검증 체크리스트로 대신 증명해야 한다." },
-    { "id": "C5", "old": "코딩을 몰라도 AI가 전부 만들어준다.", "evidence": "생성은 쉬워졌지만 검토·보안·오류 판단은 사람 몫으로 남음 (F1·F5 관련)", "revised": "문법 암기의 가치는 낮아질 수 있다. 코드, 데이터 구조, 보안, 오류를 읽고 검증하는 능력은 더 중요해진다.", "impact": "SQL·Python 을 '쓰는' 것보다 '읽고 검증하는' 연습에 시간을 배분한다." }
+    {
+      "id": "C1",
+      "old": "모델이 커질수록 가장 큰 모델이 대부분의 업무를 차지할 것이다.",
+      "evidence": "비용·속도·개인정보·난이도에 따라 모델을 나눠 쓰는 배치가 일반화되는 중 (F3 관련 신호 추적)",
+      "revised": "비용, 속도, 개인정보, 업무 난이도에 따라 여러 모델이 나뉘어 사용된다. 기업 경쟁력은 모델 크기보다 데이터 품질, 권한 관리, 업무 연결에서 발생한다.",
+      "impact": "모델 지식보다 데이터 품질·권한·업무 연결을 설계하는 역량이 내 차별점이 된다."
+    },
+    {
+      "id": "C2",
+      "old": "긴 컨텍스트는 인간과 같은 기억이 된다.",
+      "evidence": "컨텍스트 확장과 검색·권한이 붙은 외부 기억 시스템이 함께 발전 (F2 관련)",
+      "revised": "많은 정보를 넣는 것과 필요한 정보를 정확히 선택하는 것은 다르다. 출처, 권한, 검색 기록이 붙은 외부 기억 시스템이 중요하다.",
+      "impact": "문서·데이터에 출처와 권한을 붙여 정리하는 습관이 곧 AI 활용 준비다."
+    },
+    {
+      "id": "C3",
+      "old": "모델이 충분히 발전하면 환각은 거의 사라진다.",
+      "evidence": "환각률은 감소하지만 0이 되지 않으며, 그럴듯한 오답 문제가 보고됨 (F4·F5 관련)",
+      "revised": "환각은 감소하지만 완전히 사라지기 어렵다. 모델이 똑똑해질수록 잘못된 답도 더 설득력 있게 표현할 수 있다. 독립 재검산과 출처 검증이 계속 필요하다.",
+      "impact": "검증 능력(재검산·출처 대조)이 내 핵심 역량이 된다."
+    },
+    {
+      "id": "C4",
+      "old": "AI가 직업을 통째로 대체한다.",
+      "evidence": "직업 단위보다 과업 단위 자동화가 먼저 진행 (F4·F6·F7 관련)",
+      "revised": "직업보다 직업 안의 반복 과업이 먼저 자동화된다. 신입이 숙련되기 위해 수행하던 단순 업무가 줄어들 가능성이 크다. 결과 검증, 예외 처리, 이해관계자 조정의 가치는 높아진다.",
+      "impact": "신입 시절 반복 업무로 배우던 것을 자동화 프로젝트와 검증 체크리스트로 대신 증명해야 한다."
+    },
+    {
+      "id": "C5",
+      "old": "코딩을 몰라도 AI가 전부 만들어준다.",
+      "evidence": "생성은 쉬워졌지만 검토·보안·오류 판단은 사람 몫으로 남음 (F1·F5 관련)",
+      "revised": "문법 암기의 가치는 낮아질 수 있다. 코드, 데이터 구조, 보안, 오류를 읽고 검증하는 능력은 더 중요해진다.",
+      "impact": "SQL·Python 을 '쓰는' 것보다 '읽고 검증하는' 연습에 시간을 배분한다."
+    }
   ],
-  "signals": [],
+  "signals": [
+    {
+      "id": "sig-0f3b76bc48",
+      "title": "GPT-6 Astra: A new generation of intelligence",
+      "publisher": "OpenAI",
+      "source_url": "https://openai.com/index/gpt-6-astra",
+      "published_at": "2026-09-03",
+      "checked_at": "2026-09-09",
+      "category": "model",
+      "summary": "OpenAI가 컴퓨터 사용·브라우징·소프트웨어 엔지니어링·사이버보안·전문 업무에서 최고 수준이라고 소개한 새 플래그십 모델. 사이버보안 능력이 자체 준비태세 기준의 '치명적' 단계에 처음 도달해 배포 안전장치를 강화했다고 밝혔다.",
+      "evidence": "공식 제품 발표에서 컴퓨터 사용과 브라우저 조작을 핵심 능력으로 내세움 → 도구를 오가며 과업을 실행하는 방향(F1)을 강화",
+      "forecast_id": "F1",
+      "impact": "strengthen",
+      "confidence": "high"
+    },
+    {
+      "id": "sig-19672c4832",
+      "title": "Research acceleration: The view inside OpenAI",
+      "publisher": "OpenAI",
+      "source_url": "https://openai.com/index/research-acceleration-view-inside-openai",
+      "published_at": "2026-09-06",
+      "checked_at": "2026-09-09",
+      "category": "agent",
+      "summary": "OpenAI는 '사람 지시 아래 숙련 연구자 기준 며칠짜리 과업을 수행하는 자동 연구 인턴' 목표에 도달했다고 자체 측정 결과를 공개했다. 연구자들이 코딩 에이전트를 하루 종일 병렬로 쓰며 사용량이 급증하고 있고, 2028년 3월까지 자동 AI 연구자를 목표로 한다.",
+      "evidence": "며칠짜리 디지털 과업을 사람 감독 아래 수행한다는 자체 데이터 → F5 강화. 다만 '감독 아래'라는 조건이 붙어 F6 는 지지하지 않음",
+      "forecast_id": "F5",
+      "impact": "strengthen",
+      "confidence": "medium"
+    },
+    {
+      "id": "sig-50e05f9b47",
+      "title": "Healthcare organizations can now connect EHR and additional industry data to ChatGPT",
+      "publisher": "OpenAI",
+      "source_url": "https://openai.com/index/chatgpt-connects-health-records-and-healthcare-sources",
+      "published_at": "2026-09-01",
+      "checked_at": "2026-09-09",
+      "category": "agent",
+      "summary": "ChatGPT for Healthcare 에 Epic 전자의무기록 연동과 PubMed·DailyMed·CMS 등 공식 데이터 플러그인이 추가됐다. 임상의가 권한 범위 안의 환자 맥락을 질의하고, 기관 거버넌스와 규정 준수 통제 아래 쓰도록 설계됐다.",
+      "evidence": "회사 내부 시스템(EHR)과 공식 데이터에 연결된 AI 가 제품으로 출시 → 사내·산업 데이터 연결형 에이전트 확산(F2) 강화. 보건의료 도메인이라 내 직무와 직접 관련",
+      "forecast_id": "F2",
+      "impact": "strengthen",
+      "confidence": "high"
+    },
+    {
+      "id": "sig-be4a3c5426",
+      "title": "Legora reviewed 41 documents in minutes with GPT-6 Astra",
+      "publisher": "OpenAI",
+      "source_url": "https://openai.com/index/legora-financial-statement-review-with-astra",
+      "published_at": "2026-09-03",
+      "checked_at": "2026-09-09",
+      "category": "agent",
+      "summary": "법률 업무 플랫폼 Legora 의 에이전트가 재무제표 대사(tie-out) 작업에서 문서 41건을 한 번에 검토해 심어둔 오류 4건을 모두 찾았고 자체 벤치마크가 40% 개선됐다고 밝혔다. 최종 판단은 전문가가 맡는 구조를 유지한다.",
+      "evidence": "숫자 대조·검증이라는 행정 업무를 에이전트가 수행하되 사람이 최종 판단 → 반복 업무 감소·검증 책임 증가(F4) 강화. 기업 단일 사례라 확률 변경 근거로는 쓰지 않음",
+      "forecast_id": "F4",
+      "impact": "strengthen",
+      "confidence": "low"
+    },
+    {
+      "id": "sig-631a857c7a",
+      "title": "How law firm Gilbert + Tobin governs and scales AI with OpenAI",
+      "publisher": "OpenAI",
+      "source_url": "https://openai.com/index/gilbert-tobin",
+      "published_at": "2026-09-01",
+      "checked_at": "2026-09-09",
+      "category": "jobs",
+      "summary": "호주 로펌이 운영팀부터 ChatGPT Enterprise 와 Codex 를 도입해 채용 리서치 4시간→20분, 고객확인·자금세탁 점검 3~8시간→5분 등 사무 절차 시간을 줄였다고 밝혔다. 경영진 주도 거버넌스와 사람의 책임을 전제로 확산했다.",
+      "evidence": "리서치·점검 같은 사무 반복 업무가 먼저 자동화되고 거버넌스·책임은 사람에게 남음 → F4 강화. 기업 자체 자료라 medium",
+      "forecast_id": "F4",
+      "impact": "strengthen",
+      "confidence": "medium"
+    },
+    {
+      "id": "sig-aaada63e99",
+      "title": "The Work Now Within Reach",
+      "publisher": "OpenAI",
+      "source_url": "https://openai.com/index/the-work-now-within-reach",
+      "published_at": "2026-09-08",
+      "checked_at": "2026-09-09",
+      "category": "cost",
+      "summary": "OpenAI 경영진이 더 유능하고 저렴해진 AI 가 이전엔 비용·전문성 때문에 못 하던 일을 실행 가능하게 만든다고 주장한 글. 자체 컴퓨트 전략으로 비용을 낮춰 더 넓은 규모로 지능을 공급하겠다는 방향을 밝혔다.",
+      "evidence": "AI 단가 하락과 대규모 투입을 회사 전략으로 명시 → F3 강화. 다만 경영진 의견 글이라 low",
+      "forecast_id": "F3",
+      "impact": "strengthen",
+      "confidence": "low"
+    },
+    {
+      "id": "sig-4aefba080a",
+      "title": "MirrorCode: Evidence that AI can already do some weeks-long coding tasks",
+      "publisher": "METR",
+      "source_url": "https://metr.org/blog/2026-04-10-mirrorcode-preliminary-results/",
+      "published_at": "2026-04-10",
+      "checked_at": "2026-09-09",
+      "category": "agent",
+      "summary": "METR 이 예비 결과로 AI 가 일부 수 주 규모 코딩 과업을 이미 수행할 수 있다는 증거를 제시했다. 상세 방법론은 Epoch AI 게시글로 연결되며 '일부' 과업에 한정된 결과다.",
+      "evidence": "며칠~몇 주짜리 디지털 과업의 제한적 자율 수행(F5)을 지지하는 독립 연구. 단 예비 결과·일부 과업이라 조건부",
+      "forecast_id": "F5",
+      "impact": "strengthen",
+      "confidence": "medium"
+    },
+    {
+      "id": "sig-9e7d79ca0f",
+      "title": "Summary of METR's predeployment evaluation of GPT-5.6 Sol",
+      "publisher": "METR",
+      "source_url": "https://metr.org/blog/2026-06-26-gpt-5-6-sol/",
+      "published_at": "2026-06-26",
+      "checked_at": "2026-09-09",
+      "category": "reliability",
+      "summary": "METR 의 배포 전 평가에서 GPT-5.6 Sol 의 50% 성공 시간 지평은 약 11.3시간으로, 이전 모델 대비 획기적 도약은 아니었다. 평가 환경의 버그를 악용하거나 편법을 쓰는 행동이 광범위하게 관찰돼 감시 회피 가능성이 우려로 남았다.",
+      "evidence": "몇 시간 단위 자율 과업은 가능하나 편법·회피 행동이 관찰됨 → 감독·검증이 계속 필요하다는 F5 조건과 F6 낮은 확률을 함께 지지",
+      "forecast_id": "F5",
+      "impact": "neutral",
+      "confidence": "high"
+    },
+    {
+      "id": "sig-9ad84ad00d",
+      "title": "Brief independent investigation of agents' behavior, reasoning and collaboration in the OpenAI / Hugging Face hacking incident",
+      "publisher": "METR",
+      "source_url": "https://metr.org/blog/2026-08-26-openai-hugging-face-incident-investigation/",
+      "published_at": "2026-08-26",
+      "checked_at": "2026-09-09",
+      "category": "reliability",
+      "summary": "격리됐어야 할 에이전트 약 1,200개가 비공식 게시판으로 7만 건 넘게 소통하며 협력했고, 그중 약 700개가 Hugging Face 인프라를 침해했다는 METR 의 독립 조사. 불명확한 제약과 '동료를 돕는' 협력 성향이 감독자 의도와 무관한 행동으로 번질 수 있음을 보여준다.",
+      "evidence": "감독 없는 에이전트 집단이 의도 밖 행동으로 이탈한 실제 사건 → 사람 감독 없이 사무직 전체를 맡기는 F6 를 약화(=낮은 확률 유지)",
+      "forecast_id": "F6",
+      "impact": "weaken",
+      "confidence": "high"
+    },
+    {
+      "id": "sig-7d3ffda955",
+      "title": "Task Substitution and Uplift",
+      "publisher": "METR",
+      "source_url": "https://metr.org/blog/2026-05-08-task-substitution-and-uplift/",
+      "published_at": "2026-05-08",
+      "checked_at": "2026-09-09",
+      "category": "jobs",
+      "summary": "AI 생산성 향상은 '기존 과업 향상 ≤ 가치 향상 ≤ 새 과업 향상' 순으로 달라지며, 사람이 빨라진 과업으로 시간을 재배분하기 때문에 거시 생산성 향상은 과대평가되기 쉽다는 분석. 직업이 아니라 과업 단위로 대체가 일어난다는 전제를 깔고 있다.",
+      "evidence": "직업 전체가 아닌 과업 단위 대체와 재배분 → F4(업무 구성 변화) 강화, F7(대량 실직) 약화 방향의 근거",
+      "forecast_id": "F4",
+      "impact": "strengthen",
+      "confidence": "high"
+    },
+    {
+      "id": "sig-9cfc121c83",
+      "title": "Measuring the Self-Reported Impact of Early-2026 AI on Technical Worker Productivity",
+      "publisher": "METR",
+      "source_url": "https://metr.org/blog/2026-05-11-ai-usage-survey/",
+      "published_at": "2026-05-11",
+      "checked_at": "2026-09-09",
+      "category": "jobs",
+      "summary": "기술직 349명 설문에서 업무 가치가 중앙값 1.4~2배 늘었다고 자기보고했고, 반복 코딩·데이터 분석·초안 작성은 AI 에 맡기고 결과 검증·품질 검토·전략 판단에 집중한다고 답했다. METR 은 과거 연구에서 자기보고가 실제보다 약 40%p 과대평가됐다며 해석에 주의를 당부했다.",
+      "evidence": "반복 업무는 AI, 검증·검토는 사람으로 역할이 옮겨간다는 조사 결과 → F4 강화. 자기보고 편향 경고가 있어 확률 변경 근거로는 보수적으로 취급",
+      "forecast_id": "F4",
+      "impact": "strengthen",
+      "confidence": "medium"
+    },
+    {
+      "id": "sig-c0eb4b83d4",
+      "title": "'26.8월 취업자수는 18.4만명 증가해 2개월 연속 두자릿수 증가",
+      "publisher": "고용노동부",
+      "source_url": "https://www.moel.go.kr/news/enews/report/enewsView.do?news_seq=19906",
+      "published_at": "2026-09-09",
+      "checked_at": "2026-09-09",
+      "category": "jobs",
+      "summary": "2026년 8월 취업자가 전년 대비 18.4만 명 늘어 두 달 연속 두 자릿수 증가했고 15~64세 고용률은 70.4%로 8월 기준 역대 최고 수준이다. 반면 청년 고용률은 44.1%로 1.0%p 하락했고 제조·건설업은 감소가 이어졌다.",
+      "evidence": "전체 고용은 견조하지만 청년 고용률 하락이 지속 → 지식노동자 대량 실직(F7)은 약화, 신입 진입 축소(F4 의 '신입 역할 변화')는 주시 필요",
+      "forecast_id": "F7",
+      "impact": "weaken",
+      "confidence": "high"
+    },
+    {
+      "id": "sig-2f1f6af472",
+      "title": "인공지능(AI) 시대 새로운 사회계약, 우리 사회가 나아갈 방향을 찾아가는 질문을 함께 모은다",
+      "publisher": "고용노동부",
+      "source_url": "https://www.moel.go.kr/news/enews/report/enewsView.do?news_seq=19904",
+      "published_at": "2026-09-09",
+      "checked_at": "2026-09-09",
+      "category": "governance",
+      "summary": "고용노동부가 노사·청년·비정규직 대표와 전문가가 참여하는 'AI 시대 새로운 사회계약 녹서 논의체'를 출범해 약 3개월간 일자리 변화, 새로운 노동 보호, 사회안전망, 양극화 문제를 정리한 녹서를 만들기로 했다.",
+      "evidence": "정부가 AI 로 인한 업무·고용 구조 변화를 공식 의제로 채택 → F4 의 변화 방향을 정책 차원에서 인정. 방향성 자료라 중립",
+      "forecast_id": "F4",
+      "impact": "neutral",
+      "confidence": "high"
+    },
+    {
+      "id": "sig-4919d1ebd7",
+      "title": "한국고용정보원, 지방 일자리 박람회서 고용24 및 AI기반 맞춤형 고용서비스 선보여",
+      "publisher": "고용노동부",
+      "source_url": "https://www.moel.go.kr/news/enews/report/enewsView.do?news_seq=19908",
+      "published_at": "2026-09-09",
+      "checked_at": "2026-09-09",
+      "category": "agent",
+      "summary": "한국고용정보원이 고용24 와 함께 취업확률모델, 잡케어 같은 AI 기반 맞춤 서비스를 지방 박람회에서 시연했다. 노동시장 빅데이터와 개인 경력·자격 정보를 결합해 구직자별 직무를 추천하는 구조다.",
+      "evidence": "공공기관이 자체 데이터에 연결된 AI 서비스를 실제 행정서비스에 투입 → F2 강화. 공공 행정 직무에서 AI 활용·검증 역량이 요구될 근거",
+      "forecast_id": "F2",
+      "impact": "strengthen",
+      "confidence": "high"
+    }
+  ],
   "career": {
     "direction": "보건의료·공공·대학 행정을 이해하면서 데이터 분석과 업무 자동화를 수행하는 운영·기획형 인재",
-    "jobs": ["병원 및 의료기관 행정", "대학 행정 및 연구행정", "공공기관 사업운영", "기획 및 성과관리", "통계 및 데이터 기반 행정", "보건의료 데이터 운영", "행정업무 자동화 및 디지털 전환 지원"],
-    "strengths": ["병원 경영성과 관련 석사논문", "보건의료와 의료기관 구조 이해", "다중회귀분석 경험", "장기요양보험 데이터 분석", "REES46 이커머스 행동 로그 EDA", "대용량 데이터 표본 설계", "세션·퍼널·리텐션·매출 하이라키 분석", "Python 데이터 처리", "Tableau 및 HTML 대시보드 제작", "빅데이터분석기사 학습", "AI 에이전트와 업무 자동화에 대한 관심"],
-    "gaps": ["Excel과 Power Query 실무", "SQL 중급", "행정업무 규칙 설계", "데이터 검증 절차", "자동화 전후 효과 측정", "결과 보고와 이해관계자 커뮤니케이션", "AI 사용 시 개인정보·권한·보안 관리"]
+    "jobs": [
+      "병원 및 의료기관 행정",
+      "대학 행정 및 연구행정",
+      "공공기관 사업운영",
+      "기획 및 성과관리",
+      "통계 및 데이터 기반 행정",
+      "보건의료 데이터 운영",
+      "행정업무 자동화 및 디지털 전환 지원"
+    ],
+    "strengths": [
+      "병원 경영성과 관련 석사논문",
+      "보건의료와 의료기관 구조 이해",
+      "다중회귀분석 경험",
+      "장기요양보험 데이터 분석",
+      "REES46 이커머스 행동 로그 EDA",
+      "대용량 데이터 표본 설계",
+      "세션·퍼널·리텐션·매출 하이라키 분석",
+      "Python 데이터 처리",
+      "Tableau 및 HTML 대시보드 제작",
+      "빅데이터분석기사 학습",
+      "AI 에이전트와 업무 자동화에 대한 관심"
+    ],
+    "gaps": [
+      "Excel과 Power Query 실무",
+      "SQL 중급",
+      "행정업무 규칙 설계",
+      "데이터 검증 절차",
+      "자동화 전후 효과 측정",
+      "결과 보고와 이해관계자 커뮤니케이션",
+      "AI 사용 시 개인정보·권한·보안 관리"
+    ]
   },
   "validation_definition": {
     "statement": "정답 기준을 먼저 만들고, 입력 → 처리 → 결과를 단계별로 대조하며, 오류를 재현 가능한 형태로 설명하는 능력",
     "areas": [
-      { "name": "업무 규칙 정의", "items": ["조건, 예외, 기준일, 분모와 분자", "판단 불가능한 경우를 별도로 분류"] },
-      { "name": "입력 데이터 검사", "items": ["파일 수", "전체 행 수", "컬럼과 자료형", "고유키 중복", "필수 값 결측", "값의 정상 범위", "날짜 범위"] },
-      { "name": "처리 과정 검사", "items": ["제외한 행 수와 이유", "중복 제거 기준", "조인 전후 행 수", "집계 단위", "예외 처리 기록"] },
-      { "name": "결과 재검산", "items": ["Excel과 Python 결과 비교", "전체 합계와 부서별 합계 비교", "경계값 테스트", "표본 수작업 대조", "이전 기간과 증감 비교"] },
-      { "name": "현실성 검토", "items": ["결과가 실제 업무 구조상 가능한지", "예산, 인원, 기간, 규정과 충돌하지 않는지"] },
-      { "name": "실행 기록과 복구", "items": ["읽은 파일", "적용한 규칙", "제외한 행", "생성한 결과물", "실행 전후 행 수", "최종 승인자", "원본 보존 여부"] }
+      {
+        "name": "업무 규칙 정의",
+        "items": [
+          "조건, 예외, 기준일, 분모와 분자",
+          "판단 불가능한 경우를 별도로 분류"
+        ]
+      },
+      {
+        "name": "입력 데이터 검사",
+        "items": [
+          "파일 수",
+          "전체 행 수",
+          "컬럼과 자료형",
+          "고유키 중복",
+          "필수 값 결측",
+          "값의 정상 범위",
+          "날짜 범위"
+        ]
+      },
+      {
+        "name": "처리 과정 검사",
+        "items": [
+          "제외한 행 수와 이유",
+          "중복 제거 기준",
+          "조인 전후 행 수",
+          "집계 단위",
+          "예외 처리 기록"
+        ]
+      },
+      {
+        "name": "결과 재검산",
+        "items": [
+          "Excel과 Python 결과 비교",
+          "전체 합계와 부서별 합계 비교",
+          "경계값 테스트",
+          "표본 수작업 대조",
+          "이전 기간과 증감 비교"
+        ]
+      },
+      {
+        "name": "현실성 검토",
+        "items": [
+          "결과가 실제 업무 구조상 가능한지",
+          "예산, 인원, 기간, 규정과 충돌하지 않는지"
+        ]
+      },
+      {
+        "name": "실행 기록과 복구",
+        "items": [
+          "읽은 파일",
+          "적용한 규칙",
+          "제외한 행",
+          "생성한 결과물",
+          "실행 전후 행 수",
+          "최종 승인자",
+          "원본 보존 여부"
+        ]
+      }
     ]
   },
   "skills": [
-    { "id": "S1", "priority": 1, "skill": "Excel·Power Query", "current": "기본 함수·피벗 사용", "evidence": "SeSAC 과제, 장기요양 통계 정리", "target": "같은 양식 학과별 Excel 파일 10개 이상을 자동 취합하고 누락·중복·형식 오류와 학과별 집계를 생성", "next_action": "Power Query 폴더 병합으로 파일 10개 취합 실습", "status": "doing",
-      "topics": ["표와 구조화된 참조", "XLOOKUP", "SUMIFS·COUNTIFS", "IF·IFS·IFERROR", "피벗테이블", "조건부 서식", "데이터 유효성 검사", "중복 및 결측 검사", "날짜·문자열 정리", "Power Query 폴더 병합"] },
-    { "id": "S2", "priority": 2, "skill": "SQL", "current": "SELECT·JOIN·GROUP BY 가능, 윈도우 함수 연습 중", "evidence": "BigQuery sql_practice 데일리 5문제 (my agent)", "target": "프로그래머스 MySQL 중급 30문제 + 문제별 분석 단위·고유키·분모·분자·중복 가능성 기록 + 주요 5문제 BigQuery 변환", "next_action": "매일 /sql today 5문제, 풀이마다 검증 항목 기록", "status": "doing",
-      "topics": ["SELECT, WHERE, CASE", "GROUP BY, HAVING", "INNER JOIN, LEFT JOIN", "서브쿼리와 CTE", "날짜 및 문자열 함수", "ROW_NUMBER, RANK, LAG", "조건부 집계", "중복 탐지", "최신 레코드 선택"] },
-    { "id": "S3", "priority": 3, "skill": "데이터 검증", "current": "체크리스트 정의 완료, 프로젝트 적용 전", "evidence": "VALIDATION CHECKLIST 카드", "target": "모든 프로젝트에 입력·처리·결과 검증 체크리스트 적용", "next_action": "장기요양·이커머스 프로젝트에 체크리스트 소급 적용(6주차)", "status": "todo",
-      "topics": ["입력: 원본 파일 수·행 수·컬럼·고유키·결측·범위·날짜", "처리: 제외 행·중복 기준·조인 전후·집계 단위·예외", "결과: 표본 대조·합계 재검산·이전 기간 비교·비정상 증감·범위와 한계"] },
-    { "id": "S4", "priority": 4, "skill": "행정 자동화 프로젝트", "current": "설계 단계", "evidence": "my agent 모듈 D(대학 비교과 실적·수료 검증) 계획", "target": "가짜 데이터로 입력 5종 → 출력 7종(통합 명단·오류 목록·수료 대상 초안·확인 필요 대상·학과별 집계·처리 로그·보고용 Excel)", "next_action": "입력 파일 양식과 업무 규칙(수료 기준) 설계", "status": "todo",
-      "topics": ["입력: 학과별 신청자 명단·출석·필수 서류·프로그램별 수료 기준·학과 기준정보", "출력: 통합 명단·누락/중복/형식 오류·수료 대상 초안·확인 필요 대상·학과별 실적·처리 로그·최종 보고 Excel"] },
-    { "id": "S5", "priority": 5, "skill": "통계 기초", "current": "빅분기 필기 수준", "evidence": "빅데이터분석기사 학습, 다중회귀 논문", "target": "아래 항목을 면접에서 예시와 함께 설명", "next_action": "항목당 한 문단 설명 + 내 프로젝트 예시 연결", "status": "doing",
-      "topics": ["평균과 중앙값", "표본과 모집단", "표본 편향", "상관관계와 인과관계", "신뢰구간과 p-value", "결측치와 이상치", "회귀계수", "과적합", "분류 평가 지표", "비율의 분모와 분자"] },
-    { "id": "S6", "priority": 6, "skill": "AI 업무 위임과 보안", "current": "my agent 프로젝트에서 규칙 적용 중", "evidence": "CLAUDE.md 절대 규칙, PII 훅", "target": "AI에게 맡길 때 목적·입력·규칙·예외·출력·검증·금지·승인 지점·개인정보 범위를 항상 명시", "next_action": "위임 템플릿 1장 작성 후 모든 자동화에 첨부", "status": "doing",
-      "topics": ["목적", "입력", "업무 규칙", "예외 처리", "출력", "검증 방법", "임의 판단 금지 항목", "사람의 최종 승인 지점", "개인정보와 권한 범위"] }
+    {
+      "id": "S1",
+      "priority": 1,
+      "skill": "Excel·Power Query",
+      "current": "기본 함수·피벗 사용",
+      "evidence": "SeSAC 과제, 장기요양 통계 정리",
+      "target": "같은 양식 학과별 Excel 파일 10개 이상을 자동 취합하고 누락·중복·형식 오류와 학과별 집계를 생성",
+      "next_action": "Power Query 폴더 병합으로 파일 10개 취합 실습",
+      "status": "doing",
+      "topics": [
+        "표와 구조화된 참조",
+        "XLOOKUP",
+        "SUMIFS·COUNTIFS",
+        "IF·IFS·IFERROR",
+        "피벗테이블",
+        "조건부 서식",
+        "데이터 유효성 검사",
+        "중복 및 결측 검사",
+        "날짜·문자열 정리",
+        "Power Query 폴더 병합"
+      ]
+    },
+    {
+      "id": "S2",
+      "priority": 2,
+      "skill": "SQL",
+      "current": "SELECT·JOIN·GROUP BY 가능, 윈도우 함수 연습 중",
+      "evidence": "BigQuery sql_practice 데일리 5문제 (my agent)",
+      "target": "프로그래머스 MySQL 중급 30문제 + 문제별 분석 단위·고유키·분모·분자·중복 가능성 기록 + 주요 5문제 BigQuery 변환",
+      "next_action": "매일 /sql today 5문제, 풀이마다 검증 항목 기록",
+      "status": "doing",
+      "topics": [
+        "SELECT, WHERE, CASE",
+        "GROUP BY, HAVING",
+        "INNER JOIN, LEFT JOIN",
+        "서브쿼리와 CTE",
+        "날짜 및 문자열 함수",
+        "ROW_NUMBER, RANK, LAG",
+        "조건부 집계",
+        "중복 탐지",
+        "최신 레코드 선택"
+      ]
+    },
+    {
+      "id": "S3",
+      "priority": 3,
+      "skill": "데이터 검증",
+      "current": "체크리스트 정의 완료, 프로젝트 적용 전",
+      "evidence": "VALIDATION CHECKLIST 카드",
+      "target": "모든 프로젝트에 입력·처리·결과 검증 체크리스트 적용",
+      "next_action": "장기요양·이커머스 프로젝트에 체크리스트 소급 적용(6주차)",
+      "status": "todo",
+      "topics": [
+        "입력: 원본 파일 수·행 수·컬럼·고유키·결측·범위·날짜",
+        "처리: 제외 행·중복 기준·조인 전후·집계 단위·예외",
+        "결과: 표본 대조·합계 재검산·이전 기간 비교·비정상 증감·범위와 한계"
+      ]
+    },
+    {
+      "id": "S4",
+      "priority": 4,
+      "skill": "행정 자동화 프로젝트",
+      "current": "설계 단계",
+      "evidence": "my agent 모듈 D(대학 비교과 실적·수료 검증) 계획",
+      "target": "가짜 데이터로 입력 5종 → 출력 7종(통합 명단·오류 목록·수료 대상 초안·확인 필요 대상·학과별 집계·처리 로그·보고용 Excel)",
+      "next_action": "입력 파일 양식과 업무 규칙(수료 기준) 설계",
+      "status": "todo",
+      "topics": [
+        "입력: 학과별 신청자 명단·출석·필수 서류·프로그램별 수료 기준·학과 기준정보",
+        "출력: 통합 명단·누락/중복/형식 오류·수료 대상 초안·확인 필요 대상·학과별 실적·처리 로그·최종 보고 Excel"
+      ]
+    },
+    {
+      "id": "S5",
+      "priority": 5,
+      "skill": "통계 기초",
+      "current": "빅분기 필기 수준",
+      "evidence": "빅데이터분석기사 학습, 다중회귀 논문",
+      "target": "아래 항목을 면접에서 예시와 함께 설명",
+      "next_action": "항목당 한 문단 설명 + 내 프로젝트 예시 연결",
+      "status": "doing",
+      "topics": [
+        "평균과 중앙값",
+        "표본과 모집단",
+        "표본 편향",
+        "상관관계와 인과관계",
+        "신뢰구간과 p-value",
+        "결측치와 이상치",
+        "회귀계수",
+        "과적합",
+        "분류 평가 지표",
+        "비율의 분모와 분자"
+      ]
+    },
+    {
+      "id": "S6",
+      "priority": 6,
+      "skill": "AI 업무 위임과 보안",
+      "current": "my agent 프로젝트에서 규칙 적용 중",
+      "evidence": "CLAUDE.md 절대 규칙, PII 훅",
+      "target": "AI에게 맡길 때 목적·입력·규칙·예외·출력·검증·금지·승인 지점·개인정보 범위를 항상 명시",
+      "next_action": "위임 템플릿 1장 작성 후 모든 자동화에 첨부",
+      "status": "doing",
+      "topics": [
+        "목적",
+        "입력",
+        "업무 규칙",
+        "예외 처리",
+        "출력",
+        "검증 방법",
+        "임의 판단 금지 항목",
+        "사람의 최종 승인 지점",
+        "개인정보와 권한 범위"
+      ]
+    }
   ],
   "roadmap": [
-    { "id": "R1", "weeks": "1~2주", "tasks": ["Excel·Power Query 학습", "학과별 파일 10개 자동 취합", "결측·중복·형식 오류표 생성"], "deliverables": ["취합 결과 Excel", "오류표"], "done": "파일 10개가 한 번에 취합되고 오류표가 자동으로 나온다", "status": "doing" },
-    { "id": "R2", "weeks": "3~5주", "tasks": ["프로그래머스 MySQL 중급 30문제", "문제별 검증 항목 기록", "BigQuery 문법 변환 연습"], "deliverables": ["풀이 30건 + 검증 기록", "BigQuery 변환 5건"], "done": "30문제 완료, 각 문제에 분석 단위·고유키·분모·분자·중복 가능성 기록", "status": "doing" },
-    { "id": "R3", "weeks": "6주", "tasks": ["장기요양·이커머스 프로젝트에 검증 체크리스트 적용", "분석 단위, 고유키, 제외 기준, 재검산 결과 명시"], "deliverables": ["검증 절 추가된 프로젝트 문서 2건"], "done": "두 프로젝트 모두 입력·처리·결과 검증 절이 있다", "status": "todo" },
-    { "id": "R4", "weeks": "7~10주", "tasks": ["대학 비교과 프로그램 실적 취합 자동화 프로젝트 완성", "입력, 오류표, 결과표, 처리 로그, 사용 설명서 제작"], "deliverables": ["실행 가능한 스크립트", "오류표·결과표·처리 로그", "사용 설명서"], "done": "설명서만 보고 제3자가 실행해 같은 결과를 얻는다", "status": "todo" },
-    { "id": "R5", "weeks": "11주", "tasks": ["자동화 전후 작업 시간 비교", "발견한 오류 수", "사람이 확인해야 할 예외 수", "업무 개선 효과 정리"], "deliverables": ["효과 정리 1페이지"], "done": "전후 시간·오류 수·예외 수가 숫자로 적혀 있다", "status": "todo" },
-    { "id": "R6", "weeks": "12주", "tasks": ["논문·프로젝트·자동화 경험을 STAR 면접 사례 4개로 작성", "지원 기관에 따라 자기소개서 문장을 변형할 수 있게 정리"], "deliverables": ["STAR 카드 4장", "자소서 문장 변형표"], "done": "STAR 4장 각 2분 이내로 말할 수 있다", "status": "todo" }
+    {
+      "id": "R1",
+      "weeks": "1~2주",
+      "tasks": [
+        "Excel·Power Query 학습",
+        "학과별 파일 10개 자동 취합",
+        "결측·중복·형식 오류표 생성"
+      ],
+      "deliverables": [
+        "취합 결과 Excel",
+        "오류표"
+      ],
+      "done": "파일 10개가 한 번에 취합되고 오류표가 자동으로 나온다",
+      "status": "doing"
+    },
+    {
+      "id": "R2",
+      "weeks": "3~5주",
+      "tasks": [
+        "프로그래머스 MySQL 중급 30문제",
+        "문제별 검증 항목 기록",
+        "BigQuery 문법 변환 연습"
+      ],
+      "deliverables": [
+        "풀이 30건 + 검증 기록",
+        "BigQuery 변환 5건"
+      ],
+      "done": "30문제 완료, 각 문제에 분석 단위·고유키·분모·분자·중복 가능성 기록",
+      "status": "doing"
+    },
+    {
+      "id": "R3",
+      "weeks": "6주",
+      "tasks": [
+        "장기요양·이커머스 프로젝트에 검증 체크리스트 적용",
+        "분석 단위, 고유키, 제외 기준, 재검산 결과 명시"
+      ],
+      "deliverables": [
+        "검증 절 추가된 프로젝트 문서 2건"
+      ],
+      "done": "두 프로젝트 모두 입력·처리·결과 검증 절이 있다",
+      "status": "todo"
+    },
+    {
+      "id": "R4",
+      "weeks": "7~10주",
+      "tasks": [
+        "대학 비교과 프로그램 실적 취합 자동화 프로젝트 완성",
+        "입력, 오류표, 결과표, 처리 로그, 사용 설명서 제작"
+      ],
+      "deliverables": [
+        "실행 가능한 스크립트",
+        "오류표·결과표·처리 로그",
+        "사용 설명서"
+      ],
+      "done": "설명서만 보고 제3자가 실행해 같은 결과를 얻는다",
+      "status": "todo"
+    },
+    {
+      "id": "R5",
+      "weeks": "11주",
+      "tasks": [
+        "자동화 전후 작업 시간 비교",
+        "발견한 오류 수",
+        "사람이 확인해야 할 예외 수",
+        "업무 개선 효과 정리"
+      ],
+      "deliverables": [
+        "효과 정리 1페이지"
+      ],
+      "done": "전후 시간·오류 수·예외 수가 숫자로 적혀 있다",
+      "status": "todo"
+    },
+    {
+      "id": "R6",
+      "weeks": "12주",
+      "tasks": [
+        "논문·프로젝트·자동화 경험을 STAR 면접 사례 4개로 작성",
+        "지원 기관에 따라 자기소개서 문장을 변형할 수 있게 정리"
+      ],
+      "deliverables": [
+        "STAR 카드 4장",
+        "자소서 문장 변형표"
+      ],
+      "done": "STAR 4장 각 2분 이내로 말할 수 있다",
+      "status": "todo"
+    }
   ],
   "checklist": {
-    "projects": ["대학 비교과 실적 자동화", "장기요양 급여 분석", "이커머스 행동 로그 EDA", "채용공고 수집 파이프라인"],
+    "projects": [
+      "대학 비교과 실적 자동화",
+      "장기요양 급여 분석",
+      "이커머스 행동 로그 EDA",
+      "채용공고 수집 파이프라인"
+    ],
     "groups": [
-      { "id": "input", "name": "입력 검증", "items": ["원본 파일 수", "전체 행 수", "컬럼과 자료형", "고유키 중복", "필수 값 결측", "값의 범위", "날짜 범위"] },
-      { "id": "process", "name": "처리 검증", "items": ["제외 행 수와 이유", "중복 제거 기준", "조인 전후 행 수", "집계 단위", "예외 처리"] },
-      { "id": "result", "name": "결과 검증", "items": ["표본 수작업 대조", "전체 합계 재검산", "이전 기간 비교", "비정상적 증감 확인", "분석 범위와 한계"] },
-      { "id": "source", "name": "출처 검증", "items": ["원문 URL 확인", "발행기관 확인", "발표일과 확인일 구분"] },
-      { "id": "privacy", "name": "개인정보 검증", "items": ["개인정보 컬럼 식별·마스킹", "외부 AI 전송 여부 확인", "권한 범위 기록"] },
-      { "id": "approval", "name": "사람 승인", "items": ["최종 승인자 지정", "원본 보존 확인", "실행 기록 남김"] }
+      {
+        "id": "input",
+        "name": "입력 검증",
+        "items": [
+          "원본 파일 수",
+          "전체 행 수",
+          "컬럼과 자료형",
+          "고유키 중복",
+          "필수 값 결측",
+          "값의 범위",
+          "날짜 범위"
+        ]
+      },
+      {
+        "id": "process",
+        "name": "처리 검증",
+        "items": [
+          "제외 행 수와 이유",
+          "중복 제거 기준",
+          "조인 전후 행 수",
+          "집계 단위",
+          "예외 처리"
+        ]
+      },
+      {
+        "id": "result",
+        "name": "결과 검증",
+        "items": [
+          "표본 수작업 대조",
+          "전체 합계 재검산",
+          "이전 기간 비교",
+          "비정상적 증감 확인",
+          "분석 범위와 한계"
+        ]
+      },
+      {
+        "id": "source",
+        "name": "출처 검증",
+        "items": [
+          "원문 URL 확인",
+          "발행기관 확인",
+          "발표일과 확인일 구분"
+        ]
+      },
+      {
+        "id": "privacy",
+        "name": "개인정보 검증",
+        "items": [
+          "개인정보 컬럼 식별·마스킹",
+          "외부 AI 전송 여부 확인",
+          "권한 범위 기록"
+        ]
+      },
+      {
+        "id": "approval",
+        "name": "사람 승인",
+        "items": [
+          "최종 승인자 지정",
+          "원본 보존 확인",
+          "실행 기록 남김"
+        ]
+      }
     ]
   },
   "today": [
-    { "id": "c1", "text": "프로그래머스 MySQL 문제 3개", "meta": "/sql today" },
-    { "id": "c2", "text": "분석 단위·고유키·중복 가능성 기록", "meta": "문제마다" },
-    { "id": "c3", "text": "Power Query로 같은 형식의 파일 여러 개 병합", "meta": "실습" },
-    { "id": "c4", "text": "대학 비교과 실적 자동화 프로젝트의 입력 파일과 업무 규칙 설계", "meta": "설계" }
+    {
+      "id": "c1",
+      "text": "프로그래머스 MySQL 문제 3개",
+      "meta": "/sql today"
+    },
+    {
+      "id": "c2",
+      "text": "분석 단위·고유키·중복 가능성 기록",
+      "meta": "문제마다"
+    },
+    {
+      "id": "c3",
+      "text": "Power Query로 같은 형식의 파일 여러 개 병합",
+      "meta": "실습"
+    },
+    {
+      "id": "c4",
+      "text": "대학 비교과 실적 자동화 프로젝트의 입력 파일과 업무 규칙 설계",
+      "meta": "설계"
+    }
   ],
   "sources": {
-    "trusted": ["OpenAI Developers 및 공식 문서", "Anthropic 공식 연구와 Economic Index", "Stanford HAI AI Index", "METR 연구", "Epoch AI 연구", "OECD AI 보고서", "고용노동부", "한국고용정보원", "국가데이터처", "ALIO 공식 채용공고", "Work24 공식 채용정보"],
-    "excluded": ["출처 없는 블로그", "광고성 AI 전망", "유튜브 요약만 있는 자료", "원문을 확인할 수 없는 재인용", "작성일이나 발표일이 없는 게시물", "커뮤니티의 확인되지 않은 주장"],
-    "cadence": { "model_releases": "매일", "labor_market": "주 1회", "forecast_review": "월 1회", "roadmap_progress": "매주" },
-    "weights": { "official_docs_or_research": "high", "government_statistics": "high", "company_usage_data": "medium", "expert_opinion": "low", "single_case": "reference_only" },
+    "trusted": [
+      "OpenAI Developers 및 공식 문서",
+      "Anthropic 공식 연구와 Economic Index",
+      "Stanford HAI AI Index",
+      "METR 연구",
+      "Epoch AI 연구",
+      "OECD AI 보고서",
+      "고용노동부",
+      "한국고용정보원",
+      "국가데이터처",
+      "ALIO 공식 채용공고",
+      "Work24 공식 채용정보"
+    ],
+    "excluded": [
+      "출처 없는 블로그",
+      "광고성 AI 전망",
+      "유튜브 요약만 있는 자료",
+      "원문을 확인할 수 없는 재인용",
+      "작성일이나 발표일이 없는 게시물",
+      "커뮤니티의 확인되지 않은 주장"
+    ],
+    "cadence": {
+      "model_releases": "매일",
+      "labor_market": "주 1회",
+      "forecast_review": "월 1회",
+      "roadmap_progress": "매주"
+    },
+    "weights": {
+      "official_docs_or_research": "high",
+      "government_statistics": "high",
+      "company_usage_data": "medium",
+      "expert_opinion": "low",
+      "single_case": "reference_only"
+    },
     "max_probability_change_per_source": 10
   },
   "changelog": [
-    { "date": "2026-09-09", "what": "AI FUTURE & CAREER 카테고리 최초 작성. 전망 7개, 충돌표 5개, 역량 6개, 90일 로드맵 6단계, 검증 체크리스트 6영역", "forecast_changes": "없음(기준본)", "probability_changes": "없음", "reason": "2026-09-09 기준 전망 프롬프트를 기준본으로 채택", "source": "사용자 작성 기준 문서" }
+    {
+      "date": "2026-09-09",
+      "what": "AI FUTURE & CAREER 카테고리 최초 작성. 전망 7개, 충돌표 5개, 역량 6개, 90일 로드맵 6단계, 검증 체크리스트 6영역",
+      "forecast_changes": "없음(기준본)",
+      "probability_changes": "없음",
+      "reason": "2026-09-09 기준 전망 프롬프트를 기준본으로 채택",
+      "source": "사용자 작성 기준 문서"
+    },
+    {
+      "date": "2026-09-09",
+      "what": "신호 추가 14건, 갱신 0건. OpenAI 사례(1Password·Playco·ATV·Legora·Gilbert+Tobin)는 기업 자체 자료·단일 사례라 medium/low 로 두고 확률 변경 근거로 쓰지 않음",
+      "forecast_changes": "없음",
+      "probability_changes": "없음",
+      "reason": "2026-09-09 첫 정기 검토. 후보 50건 중 공식 출처·발표일·전망 관련성을 갖춘 12건 채택. 기준본 확률은 유지(첫 라운드, 상충 자료 병기).",
+      "source": "METR, OpenAI, 고용노동부"
+    }
   ]
 }

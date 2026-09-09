@@ -1,6 +1,6 @@
 # CAREER_AI_FORECAST — AI 미래 전망과 내 준비 기준 문서
 
-> 생성물. 원본은 `content/career-ai.json` (v1, 마지막 업데이트 2026-09-09). 수정은 JSON 에서만 하고 `node gen-forecast-doc.mjs` 로 다시 만든다.
+> 생성물. 원본은 `content/career-ai.json` (v2, 마지막 업데이트 2026-09-09). 수정은 JSON 에서만 하고 `node gen-forecast-doc.mjs` 로 다시 만든다.
 > 기준 시점 2026년, 전망 범위 2031년까지. 홈페이지 "AI FUTURE & CAREER" 카테고리와 같은 데이터다.
 
 ## 1. 나의 직무 방향
@@ -64,7 +64,22 @@
 
 ## 4. 시장 신호 (수집 자료)
 
-_아직 등록된 신호 없음. `python scripts/ai_signals.py --collect` → `/career-signals review` 로 추가._
+| 날짜 | 기관 | 제목 | 분류 | 전망 | 영향 | 신뢰 | 확인일 |
+|---|---|---|---|---|---|---|---|
+| 2026-09-09 | 고용노동부 | ['26.8월 취업자수는 18.4만명 증가해 2개월 연속 두자릿수 증가](https://www.moel.go.kr/news/enews/report/enewsView.do?news_seq=19906) | jobs | F7 | weaken | high | 2026-09-09 |
+| 2026-09-09 | 고용노동부 | [인공지능(AI) 시대 새로운 사회계약, 우리 사회가 나아갈 방향을 찾아가는 질문을 함께 모은다](https://www.moel.go.kr/news/enews/report/enewsView.do?news_seq=19904) | governance | F4 | neutral | high | 2026-09-09 |
+| 2026-09-09 | 고용노동부 | [한국고용정보원, 지방 일자리 박람회서 고용24 및 AI기반 맞춤형 고용서비스 선보여](https://www.moel.go.kr/news/enews/report/enewsView.do?news_seq=19908) | agent | F2 | strengthen | high | 2026-09-09 |
+| 2026-09-08 | OpenAI | [The Work Now Within Reach](https://openai.com/index/the-work-now-within-reach) | cost | F3 | strengthen | low | 2026-09-09 |
+| 2026-09-06 | OpenAI | [Research acceleration: The view inside OpenAI](https://openai.com/index/research-acceleration-view-inside-openai) | agent | F5 | strengthen | medium | 2026-09-09 |
+| 2026-09-03 | OpenAI | [GPT-6 Astra: A new generation of intelligence](https://openai.com/index/gpt-6-astra) | model | F1 | strengthen | high | 2026-09-09 |
+| 2026-09-03 | OpenAI | [Legora reviewed 41 documents in minutes with GPT-6 Astra](https://openai.com/index/legora-financial-statement-review-with-astra) | agent | F4 | strengthen | low | 2026-09-09 |
+| 2026-09-01 | OpenAI | [Healthcare organizations can now connect EHR and additional industry data to ChatGPT](https://openai.com/index/chatgpt-connects-health-records-and-healthcare-sources) | agent | F2 | strengthen | high | 2026-09-09 |
+| 2026-09-01 | OpenAI | [How law firm Gilbert + Tobin governs and scales AI with OpenAI](https://openai.com/index/gilbert-tobin) | jobs | F4 | strengthen | medium | 2026-09-09 |
+| 2026-08-26 | METR | [Brief independent investigation of agents' behavior, reasoning and collaboration in the OpenAI / Hugging Face hacking incident](https://metr.org/blog/2026-08-26-openai-hugging-face-incident-investigation/) | reliability | F6 | weaken | high | 2026-09-09 |
+| 2026-06-26 | METR | [Summary of METR's predeployment evaluation of GPT-5.6 Sol](https://metr.org/blog/2026-06-26-gpt-5-6-sol/) | reliability | F5 | neutral | high | 2026-09-09 |
+| 2026-05-11 | METR | [Measuring the Self-Reported Impact of Early-2026 AI on Technical Worker Productivity](https://metr.org/blog/2026-05-11-ai-usage-survey/) | jobs | F4 | strengthen | medium | 2026-09-09 |
+| 2026-05-08 | METR | [Task Substitution and Uplift](https://metr.org/blog/2026-05-08-task-substitution-and-uplift/) | jobs | F4 | strengthen | high | 2026-09-09 |
+| 2026-04-10 | METR | [MirrorCode: Evidence that AI can already do some weeks-long coding tasks](https://metr.org/blog/2026-04-10-mirrorcode-preliminary-results/) | agent | F5 | strengthen | medium | 2026-09-09 |
 
 ## 5. 검증 능력의 정의
 
@@ -263,6 +278,7 @@ _아직 등록된 신호 없음. `python scripts/ai_signals.py --collect` → `/
 
 | 날짜 | 무엇이 추가됐나 | 전망 변경 | 확률 변경 | 이유 | 출처 |
 |---|---|---|---|---|---|
+| 2026-09-09 | 신호 추가 14건, 갱신 0건. OpenAI 사례(1Password·Playco·ATV·Legora·Gilbert+Tobin)는 기업 자체 자료·단일 사례라 medium/low 로 두고 확률 변경 근거로 쓰지 않음 | 없음 | 없음 | 2026-09-09 첫 정기 검토. 후보 50건 중 공식 출처·발표일·전망 관련성을 갖춘 12건 채택. 기준본 확률은 유지(첫 라운드, 상충 자료 병기). | METR, OpenAI, 고용노동부 |
 | 2026-09-09 | AI FUTURE & CAREER 카테고리 최초 작성. 전망 7개, 충돌표 5개, 역량 6개, 90일 로드맵 6단계, 검증 체크리스트 6영역 | 없음(기준본) | 없음 | 2026-09-09 기준 전망 프롬프트를 기준본으로 채택 | 사용자 작성 기준 문서 |
 
 _마지막 업데이트: 2026-09-09 · 생성: 2026-09-09_
