@@ -104,8 +104,49 @@ span.status{cursor:default}
 .arc small{color:var(--muted);display:block;margin-top:6px}
 .lock{display:inline-block;margin-top:12px;font-size:11px;color:var(--orange);border:1px solid #6b4f2b;border-radius:99px;padding:5px 10px}
 
+/* AI FUTURE & CAREER */
+.afc{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.afc .wide{grid-column:1/-1}
+.afc .card h2{display:flex;align-items:center;gap:8px}
+.afchead{background:linear-gradient(135deg,#1b1838,#101827);border-color:#51418b}
+.afchead p{font-size:16px;line-height:1.5;letter-spacing:-.02em;margin:0;color:#e6e8ff}
+.afcmeta{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px;font-size:11px;color:var(--muted)}.afcmeta span{border:1px solid #29304a;border-radius:99px;padding:5px 9px;background:#101326aa}
+.fc{display:grid;gap:8px;margin-top:16px}
+.fcrow{display:grid;grid-template-columns:1fr auto;gap:10px;align-items:center;padding:10px 12px;background:#101324;border:1px solid var(--line);border-radius:11px}
+.fcrow b{font-size:13px;font-weight:600}.fcrow small{display:block;color:var(--muted);font-size:11px;margin-top:3px}
+.prob{display:flex;align-items:center;gap:8px;min-width:150px}
+.bar{flex:1;height:6px;background:#1c2033;border-radius:99px;overflow:hidden}.bar i{display:block;height:100%;background:linear-gradient(90deg,var(--violet),var(--cyan))}
+.prob strong{font-size:14px;color:var(--cyan);min-width:38px;text-align:right}
+.conf{font-size:10px;color:var(--muted);border:1px solid #29304a;border-radius:99px;padding:2px 7px}
+.conf[data-c="high"]{color:var(--green);border-color:#335841}.conf[data-c="low"]{color:var(--orange);border-color:#6b4f2b}
+.tbl{width:100%;border-collapse:collapse;font-size:12px}.tbl th{color:var(--violet);font-size:10px;letter-spacing:.1em;text-align:left;padding:6px 8px;border-bottom:1px solid #252a40;font-weight:800}
+.tbl td{padding:9px 8px;border-bottom:1px solid #171b2b;vertical-align:top;color:#c5cbe4;line-height:1.5}.tbl tr:last-child td{border-bottom:0}
+.tbl td:first-child{color:#8b91ad}.tbl .impact{color:var(--cyan)}
+.tblwrap{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.sig{padding:12px 0;border-top:1px solid #20243a}.sig:first-child{border-top:0;padding-top:0}
+.sig b{font-size:13px}.sig a{color:var(--cyan);text-decoration:none}.sig a:hover{text-decoration:underline}
+.sig .meta{display:block;margin-top:4px}.sig p{margin:6px 0 0;color:#c5cbe4;font-size:12px}
+.imp{font-size:10px;border-radius:99px;padding:2px 8px;border:1px solid;margin-left:6px}
+.imp[data-i="strengthen"]{color:var(--green);border-color:#335841}.imp[data-i="weaken"]{color:var(--orange);border-color:#6b4f2b}.imp[data-i="neutral"]{color:var(--muted);border-color:#29304a}
+.empty{color:#6d7391;font-size:12px;padding:8px 0}
+.skill{padding:12px 0;border-top:1px solid #20243a;display:grid;grid-template-columns:auto 1fr auto;gap:12px;align-items:start}.skill:first-child{border-top:0;padding-top:0}
+.skill .num{color:var(--violet);font-weight:800;font-size:12px;padding-top:2px}
+.skill b{font-size:13px}.skill .row{color:#aeb4d0;font-size:11px;margin-top:4px;line-height:1.55}.skill .row em{color:#6d7391;font-style:normal}
+.skill .status{margin-top:0}
+.rm{padding:12px 0;border-top:1px solid #20243a;display:grid;grid-template-columns:64px 1fr auto;gap:12px;align-items:start}.rm:first-child{border-top:0;padding-top:0}
+.rm .wk{color:var(--cyan);font-weight:800;font-size:12px;padding-top:2px}
+.rm .row{color:#aeb4d0;font-size:11px;margin-top:4px;line-height:1.55}.rm .row em{color:#6d7391;font-style:normal}
+.ckbar{display:flex;gap:8px;align-items:center;margin-bottom:12px;flex-wrap:wrap}
+.ckbar select{background:#101324;color:var(--text);border:1px solid #2b3149;border-radius:9px;padding:8px 10px;font:inherit;font-size:12px;min-height:36px}
+.ckgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.ckgroup h4{margin:0 0 6px;font-size:11px;letter-spacing:.1em;color:var(--violet)}
+.ck{display:flex;gap:8px;align-items:center;padding:6px 0;font-size:12px;color:#c5cbe4;cursor:pointer;min-height:30px}
+.ck .check{width:15px;height:15px}.ck.done .check{background:var(--violet);border-color:var(--violet);box-shadow:inset 0 0 0 3px #17172a}.ck.done span{color:#777d99;text-decoration:line-through}
+.log{padding:10px 0;border-top:1px solid #20243a;font-size:12px;color:#c5cbe4}.log:first-child{border-top:0;padding-top:0}.log b{color:var(--cyan);margin-right:8px}.log .meta{display:block;margin-top:3px}
+.ctoday .task{padding:10px 0;min-height:40px}
 @media(max-width:980px){
  .aigrid{grid-template-columns:repeat(2,1fr)}
+ .ckgrid{grid-template-columns:repeat(2,1fr)}
 }
 @media(max-width:760px){
  .wrap{padding:22px 16px 56px}
@@ -117,6 +158,16 @@ span.status{cursor:default}
  .projgrid,.aigrid,.arcgrid{grid-template-columns:1fr}
  .careerhero,.careercols{grid-template-columns:1fr}
  .careergrid{grid-template-columns:1fr 1fr}
+ .afc,.ckgrid{grid-template-columns:1fr}
+ .afc .wide{grid-column:auto}
+ .fcrow{grid-template-columns:1fr}.prob{min-width:0}
+ .skill{grid-template-columns:auto 1fr}.skill .status{grid-column:2;justify-self:start}
+ .rm{grid-template-columns:1fr}.rm .status{justify-self:start}
+ /* 충돌표: 좁은 화면에서는 행을 세로로 쌓고 열 이름을 라벨로 붙인다 */
+ .tbl thead{display:none}
+ .tbl tr{display:block;padding:12px 0;border-bottom:1px solid #20243a}.tbl tr:last-child{border-bottom:0}
+ .tbl td{display:block;padding:4px 0;border:0;font-size:12px}
+ .tbl td:before{content:attr(data-h);display:block;color:var(--violet);font-size:10px;letter-spacing:.1em;font-weight:800;margin-bottom:2px}
  .block{margin-top:34px}
  .more,.status{min-height:44px;padding-left:16px;padding-right:16px}
  .ailink{min-height:44px;line-height:44px}
@@ -233,6 +284,51 @@ span.status{cursor:default}
   <p class="careerfoot">현재 앱에서 조회 가능한 대화·프로젝트 기록과 고용노동부·한국고용정보원 자료, 대표 의료행정 직무기술서를 바탕으로 정리. 전국 모든 채용공고를 계량 분석한 결과는 아님.</p>
 </section>
 
+<!-- 2-d. AI 미래 전망 × 커리어 준비 (원본: content/career-ai.json) -->
+<section class="block" id="ai-future-career">
+  <div class="blockhead">
+    <h2>AI FUTURE &amp; CAREER</h2>
+    <span class="sub" id="afc-sub">2026 → 2031 전망 · 역량 격차 · 90일 로드맵</span>
+  </div>
+  <div class="afc" id="afc">
+    <article class="card afchead wide">
+      <div class="cardhead"><h2>2031 AI 전망</h2><span class="pill" id="afc-updated">—</span></div>
+      <p id="afc-headline"></p>
+      <div class="afcmeta" id="afc-meta"></div>
+      <div class="fc" id="afc-forecasts"></div>
+    </article>
+    <article class="card wide">
+      <div class="cardhead"><h2>전망 충돌표</h2><span class="meta">기존 전망 vs 수정된 판단</span></div>
+      <div class="tblwrap"><table class="tbl" id="afc-conflicts"></table></div>
+    </article>
+    <article class="card">
+      <div class="cardhead"><h2>시장 신호</h2><span class="tag" id="afc-signal-count">—</span></div>
+      <div id="afc-signals"></div>
+    </article>
+    <article class="card ctoday">
+      <div class="cardhead"><h2>CAREER TODAY</h2><span class="pill" id="afc-today-count">—</span></div>
+      <div id="afc-today"></div>
+    </article>
+    <article class="card wide">
+      <div class="cardhead"><h2>MY SKILL GAP</h2><span class="meta">우선순위 · 상태를 눌러 변경</span></div>
+      <div id="afc-skills"></div>
+    </article>
+    <article class="card wide">
+      <div class="cardhead"><h2>90 DAY ROADMAP</h2><span class="tag" id="afc-roadmap-count">—</span></div>
+      <div id="afc-roadmap"></div>
+    </article>
+    <article class="card wide">
+      <div class="cardhead"><h2>VALIDATION CHECKLIST</h2><span class="meta" id="afc-ck-def"></span></div>
+      <div class="ckbar"><label class="meta" for="afc-ck-project">프로젝트</label><select id="afc-ck-project"></select><span class="meta" id="afc-ck-count"></span></div>
+      <div class="ckgrid" id="afc-checklist"></div>
+    </article>
+    <article class="card wide">
+      <div class="cardhead"><h2>CHANGE LOG</h2><span class="meta" id="afc-log-count"></span></div>
+      <div id="afc-changelog"></div>
+    </article>
+  </div>
+</section>
+
 <!-- 2-b. 노션 프로젝트 보관소 (연동됐을 때만 노출) -->
 <section class="block" id="notion-block" hidden>
   <div class="blockhead">
@@ -264,6 +360,8 @@ span.status{cursor:default}
 
 <!-- 빌드 시 sync-notion.mjs 결과가 주입된다. 연동 전에는 null. -->
 <script id="synced" type="application/json">null</script>
+<!-- 빌드 시 content/career-ai.json 이 주입된다. 로컬 미리보기(null)에서는 fetch 로 같은 파일을 읽는다. -->
+<script id="career-ai" type="application/json">null</script>
 
 <script>
 (function () {
@@ -584,6 +682,196 @@ span.status{cursor:default}
       { year: "numeric", month: "long", day: "numeric", weekday: "long" }).format(new Date());
   }
 
+  // ── AI FUTURE & CAREER ─────────────────────────
+  // 원본은 content/career-ai.json 하나. 빌드 때 주입되면 그것을, 아니면(로컬 미리보기) fetch 로 읽는다.
+  // 상태(역량·로드맵·체크리스트·오늘 할 일)는 같은 localStorage 키의 state.career 에 저장한다.
+  if (!state.career) state.career = {};
+  var C = state.career;
+  if (!C.skills) C.skills = {};
+  if (!C.roadmap) C.roadmap = {};
+  if (!C.checklist) C.checklist = {};
+  if (!C.today) C.today = {};
+
+  function careerStatusButton(store, id, fallback, onChange) {
+    var btn = document.createElement("button");
+    btn.className = "status";
+    function cur() { return store[id] || fallback; }
+    function paint() {
+      btn.dataset.s = cur();
+      btn.textContent = LABEL[cur()];
+      btn.setAttribute("aria-label", "상태: " + LABEL[cur()] + ", 눌러서 변경");
+    }
+    btn.addEventListener("click", function (e) {
+      e.stopPropagation();
+      store[id] = CYCLE[cur()];
+      save();
+      paint();
+      if (onChange) onChange();
+    });
+    paint();
+    return btn;
+  }
+
+  function el(tag, cls, text) {
+    var n = document.createElement(tag);
+    if (cls) n.className = cls;
+    if (text !== undefined) n.textContent = text;
+    return n;
+  }
+
+  function renderCareer(d) {
+    if (!d || !d.forecasts) { $("afc-sub").textContent = "데이터를 불러오지 못했습니다 (content/career-ai.json)"; return; }
+    var m = d.meta || {};
+    $("afc-updated").textContent = "업데이트 " + (m.updated || "—");
+    $("afc-headline").textContent = d.headline || "";
+    var meta = $("afc-meta"); meta.innerHTML = "";
+    [ "기준 " + m.baseline_year + " → " + m.horizon_year, "전망 " + d.forecasts.length + "개", "신호 " + (d.signals || []).length + "건", "v" + m.version ]
+      .forEach(function (t) { meta.appendChild(el("span", "", t)); });
+
+    // 1. 전망
+    var fc = $("afc-forecasts"); fc.innerHTML = "";
+    d.forecasts.forEach(function (f) {
+      var row = el("div", "fcrow");
+      var left = el("div"); left.appendChild(el("b", "", f.id + " · " + f.title));
+      left.appendChild(el("small", "", f.change + " · 업데이트 " + f.updated));
+      var prob = el("div", "prob");
+      var bar = el("div", "bar"); var fill = el("i"); fill.style.width = f.probability + "%"; bar.appendChild(fill);
+      prob.appendChild(bar); prob.appendChild(el("strong", "", f.probability + "%"));
+      var conf = el("span", "conf", "신뢰 " + f.confidence); conf.dataset.c = f.confidence; prob.appendChild(conf);
+      row.appendChild(left); row.appendChild(prob); fc.appendChild(row);
+    });
+
+    // 2. 충돌표
+    var tb = $("afc-conflicts"); tb.innerHTML = "";
+    var thead = el("thead"); var hr = el("tr");
+    ["기존 전망", "현재 증거", "수정된 판단", "내게 미치는 영향"].forEach(function (h) { hr.appendChild(el("th", "", h)); });
+    thead.appendChild(hr); tb.appendChild(thead);
+    var tbody = el("tbody");
+    var heads = ["기존 전망", "현재 증거", "수정된 판단", "내게 미치는 영향"];
+    (d.conflicts || []).forEach(function (c) {
+      var tr = el("tr");
+      [c.old, c.evidence, c.revised, c.impact].forEach(function (v, i) {
+        var td = el("td", i === 3 ? "impact" : "", v);
+        td.setAttribute("data-h", heads[i]);  // 모바일 세로 배치용 라벨
+        tr.appendChild(td);
+      });
+      tbody.appendChild(tr);
+    });
+    tb.appendChild(tbody);
+
+    // 3. 시장 신호
+    var sg = $("afc-signals"); sg.innerHTML = "";
+    var signals = (d.signals || []).slice().sort(function (a, b) { return (b.published_at || "").localeCompare(a.published_at || ""); });
+    $("afc-signal-count").textContent = signals.length + " signals";
+    if (!signals.length) sg.appendChild(el("div", "empty", "아직 등록된 공식 자료가 없습니다. 수집 → 검토 → 반영 순서로 추가됩니다."));
+    signals.slice(0, 8).forEach(function (s) {
+      var box = el("div", "sig");
+      var a = el("a"); a.href = s.source_url; a.target = "_blank"; a.rel = "noopener noreferrer"; a.appendChild(el("b", "", s.title));
+      box.appendChild(a);
+      var imp = el("span", "imp", { strengthen: "강화", weaken: "약화", neutral: "중립" }[s.impact] || s.impact); imp.dataset.i = s.impact; box.appendChild(imp);
+      box.appendChild(el("span", "meta", s.publisher + " · 발표 " + s.published_at + " · 확인 " + s.checked_at + " · " + s.forecast_id + " · 신뢰 " + s.confidence));
+      box.appendChild(el("p", "", s.summary));
+      sg.appendChild(box);
+    });
+
+    // 3-b. 오늘 할 일 (커리어)
+    var td = $("afc-today"); td.innerHTML = ""; var doneN = 0;
+    (d.today || []).forEach(function (t) {
+      var isDone = !!C.today[t.id]; if (isDone) doneN++;
+      var row = el("div", "task" + (isDone ? " done" : ""));
+      row.setAttribute("role", "button"); row.setAttribute("tabindex", "0");
+      row.appendChild(el("i", "check")); row.appendChild(el("span", "tasktext", t.text)); row.appendChild(el("span", "meta", t.meta || ""));
+      function toggle() { C.today[t.id] = !isDone; save(); renderCareer(d); }
+      row.addEventListener("click", toggle);
+      row.addEventListener("keydown", function (e) { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); toggle(); } });
+      td.appendChild(row);
+    });
+    $("afc-today-count").textContent = doneN + " / " + (d.today || []).length;
+
+    // 4. 역량 격차
+    var sk = $("afc-skills"); sk.innerHTML = "";
+    (d.skills || []).slice().sort(function (a, b) { return a.priority - b.priority; }).forEach(function (s) {
+      var row = el("div", "skill");
+      row.appendChild(el("div", "num", s.priority + "순위"));
+      var body = el("div"); body.appendChild(el("b", "", s.skill));
+      var r1 = el("div", "row"); r1.innerHTML = "<em>현재</em> " + esc(s.current) + " · <em>증거</em> " + esc(s.evidence);
+      var r2 = el("div", "row"); r2.innerHTML = "<em>목표</em> " + esc(s.target);
+      var r3 = el("div", "row"); r3.innerHTML = "<em>다음 행동</em> " + esc(s.next_action);
+      body.appendChild(r1); body.appendChild(r2); body.appendChild(r3);
+      row.appendChild(body);
+      row.appendChild(careerStatusButton(C.skills, s.id, s.status));
+      sk.appendChild(row);
+    });
+
+    // 5. 90일 로드맵
+    var rm = $("afc-roadmap"); rm.innerHTML = ""; var rmDone = 0;
+    (d.roadmap || []).forEach(function (r) {
+      if ((C.roadmap[r.id] || r.status) === "done") rmDone++;
+      var row = el("div", "rm");
+      row.appendChild(el("div", "wk", r.weeks));
+      var body = el("div"); body.appendChild(el("b", "", r.tasks.join(" · ")));
+      var r1 = el("div", "row"); r1.innerHTML = "<em>결과물</em> " + esc(r.deliverables.join(", "));
+      var r2 = el("div", "row"); r2.innerHTML = "<em>완료 조건</em> " + esc(r.done);
+      body.appendChild(r1); body.appendChild(r2);
+      row.appendChild(body);
+      row.appendChild(careerStatusButton(C.roadmap, r.id, r.status, function () { renderCareer(d); }));
+      rm.appendChild(row);
+    });
+    $("afc-roadmap-count").textContent = rmDone + " / " + (d.roadmap || []).length + " done";
+
+    // 6. 검증 체크리스트 (프로젝트별 저장)
+    var ck = d.checklist || { projects: [], groups: [] };
+    $("afc-ck-def").textContent = (d.validation_definition && d.validation_definition.statement) ? "\"" + d.validation_definition.statement + "\"" : "";
+    var sel = $("afc-ck-project");
+    if (!sel.options.length) {
+      ck.projects.forEach(function (p) { var o = el("option", "", p); o.value = p; sel.appendChild(o); });
+      sel.addEventListener("change", function () { C.ckProject = sel.value; save(); renderCareer(d); });
+    }
+    var project = C.ckProject && ck.projects.indexOf(C.ckProject) >= 0 ? C.ckProject : ck.projects[0];
+    sel.value = project;
+    if (!C.checklist[project]) C.checklist[project] = {};
+    var grid = $("afc-checklist"); grid.innerHTML = ""; var ckTotal = 0, ckDone = 0;
+    ck.groups.forEach(function (g) {
+      var box = el("div", "ckgroup"); box.appendChild(el("h4", "", g.name));
+      g.items.forEach(function (item, i) {
+        var key = g.id + ":" + i; var on = !!C.checklist[project][key]; ckTotal++; if (on) ckDone++;
+        var row = el("div", "ck" + (on ? " done" : "")); row.setAttribute("role", "checkbox"); row.setAttribute("aria-checked", String(on)); row.setAttribute("tabindex", "0");
+        row.appendChild(el("i", "check")); row.appendChild(el("span", "", item));
+        function toggle() { C.checklist[project][key] = !on; save(); renderCareer(d); }
+        row.addEventListener("click", toggle);
+        row.addEventListener("keydown", function (e) { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); toggle(); } });
+        box.appendChild(row);
+      });
+      grid.appendChild(box);
+    });
+    $("afc-ck-count").textContent = ckDone + " / " + ckTotal;
+
+    // 7. 변경 이력
+    var lg = $("afc-changelog"); lg.innerHTML = "";
+    var logs = (d.changelog || []).slice().reverse();
+    $("afc-log-count").textContent = logs.length + " changes";
+    logs.slice(0, 10).forEach(function (c) {
+      var row = el("div", "log");
+      row.appendChild(el("b", "", c.date)); row.appendChild(document.createTextNode(c.what));
+      row.appendChild(el("span", "meta", "전망 변경: " + (c.forecast_changes || "-") + " · 확률: " + (c.probability_changes || "-") + " · 이유: " + c.reason + " · 출처: " + c.source));
+      lg.appendChild(row);
+    });
+  }
+
+  function esc(s) { return String(s == null ? "" : s).replace(/[&<>"]/g, function (ch) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", "\"": "&quot;" }[ch]; }); }
+
+  function loadCareer() {
+    var injected = null;
+    try { var node = document.getElementById("career-ai"); injected = node ? JSON.parse(node.textContent) : null; } catch (e) { injected = null; }
+    if (injected) { renderCareer(injected); return; }
+    // 로컬 미리보기: 같은 원본 파일을 fetch 한다 (file:// 에서는 실패할 수 있음 → http.server 로 열 것)
+    if (typeof fetch !== "function") { renderCareer(null); return; }
+    fetch("content/career-ai.json", { cache: "no-store" })
+      .then(function (r) { return r.ok ? r.json() : null; })
+      .then(renderCareer)
+      .catch(function () { renderCareer(null); });
+  }
+
   paintDate();
   renderToday();
   renderWeek();
@@ -592,6 +880,7 @@ span.status{cursor:default}
   renderAI();
   renderArchive();
   paintSync();
+  loadCareer();
 })();
 </script>
 </body>

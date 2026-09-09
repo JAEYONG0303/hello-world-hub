@@ -106,8 +106,49 @@ span.status{cursor:default}
 .arc small{color:var(--muted);display:block;margin-top:6px}
 .lock{display:inline-block;margin-top:12px;font-size:11px;color:var(--orange);border:1px solid #6b4f2b;border-radius:99px;padding:5px 10px}
 
+/* AI FUTURE & CAREER */
+.afc{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.afc .wide{grid-column:1/-1}
+.afc .card h2{display:flex;align-items:center;gap:8px}
+.afchead{background:linear-gradient(135deg,#1b1838,#101827);border-color:#51418b}
+.afchead p{font-size:16px;line-height:1.5;letter-spacing:-.02em;margin:0;color:#e6e8ff}
+.afcmeta{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px;font-size:11px;color:var(--muted)}.afcmeta span{border:1px solid #29304a;border-radius:99px;padding:5px 9px;background:#101326aa}
+.fc{display:grid;gap:8px;margin-top:16px}
+.fcrow{display:grid;grid-template-columns:1fr auto;gap:10px;align-items:center;padding:10px 12px;background:#101324;border:1px solid var(--line);border-radius:11px}
+.fcrow b{font-size:13px;font-weight:600}.fcrow small{display:block;color:var(--muted);font-size:11px;margin-top:3px}
+.prob{display:flex;align-items:center;gap:8px;min-width:150px}
+.bar{flex:1;height:6px;background:#1c2033;border-radius:99px;overflow:hidden}.bar i{display:block;height:100%;background:linear-gradient(90deg,var(--violet),var(--cyan))}
+.prob strong{font-size:14px;color:var(--cyan);min-width:38px;text-align:right}
+.conf{font-size:10px;color:var(--muted);border:1px solid #29304a;border-radius:99px;padding:2px 7px}
+.conf[data-c="high"]{color:var(--green);border-color:#335841}.conf[data-c="low"]{color:var(--orange);border-color:#6b4f2b}
+.tbl{width:100%;border-collapse:collapse;font-size:12px}.tbl th{color:var(--violet);font-size:10px;letter-spacing:.1em;text-align:left;padding:6px 8px;border-bottom:1px solid #252a40;font-weight:800}
+.tbl td{padding:9px 8px;border-bottom:1px solid #171b2b;vertical-align:top;color:#c5cbe4;line-height:1.5}.tbl tr:last-child td{border-bottom:0}
+.tbl td:first-child{color:#8b91ad}.tbl .impact{color:var(--cyan)}
+.tblwrap{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.sig{padding:12px 0;border-top:1px solid #20243a}.sig:first-child{border-top:0;padding-top:0}
+.sig b{font-size:13px}.sig a{color:var(--cyan);text-decoration:none}.sig a:hover{text-decoration:underline}
+.sig .meta{display:block;margin-top:4px}.sig p{margin:6px 0 0;color:#c5cbe4;font-size:12px}
+.imp{font-size:10px;border-radius:99px;padding:2px 8px;border:1px solid;margin-left:6px}
+.imp[data-i="strengthen"]{color:var(--green);border-color:#335841}.imp[data-i="weaken"]{color:var(--orange);border-color:#6b4f2b}.imp[data-i="neutral"]{color:var(--muted);border-color:#29304a}
+.empty{color:#6d7391;font-size:12px;padding:8px 0}
+.skill{padding:12px 0;border-top:1px solid #20243a;display:grid;grid-template-columns:auto 1fr auto;gap:12px;align-items:start}.skill:first-child{border-top:0;padding-top:0}
+.skill .num{color:var(--violet);font-weight:800;font-size:12px;padding-top:2px}
+.skill b{font-size:13px}.skill .row{color:#aeb4d0;font-size:11px;margin-top:4px;line-height:1.55}.skill .row em{color:#6d7391;font-style:normal}
+.skill .status{margin-top:0}
+.rm{padding:12px 0;border-top:1px solid #20243a;display:grid;grid-template-columns:64px 1fr auto;gap:12px;align-items:start}.rm:first-child{border-top:0;padding-top:0}
+.rm .wk{color:var(--cyan);font-weight:800;font-size:12px;padding-top:2px}
+.rm .row{color:#aeb4d0;font-size:11px;margin-top:4px;line-height:1.55}.rm .row em{color:#6d7391;font-style:normal}
+.ckbar{display:flex;gap:8px;align-items:center;margin-bottom:12px;flex-wrap:wrap}
+.ckbar select{background:#101324;color:var(--text);border:1px solid #2b3149;border-radius:9px;padding:8px 10px;font:inherit;font-size:12px;min-height:36px}
+.ckgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.ckgroup h4{margin:0 0 6px;font-size:11px;letter-spacing:.1em;color:var(--violet)}
+.ck{display:flex;gap:8px;align-items:center;padding:6px 0;font-size:12px;color:#c5cbe4;cursor:pointer;min-height:30px}
+.ck .check{width:15px;height:15px}.ck.done .check{background:var(--violet);border-color:var(--violet);box-shadow:inset 0 0 0 3px #17172a}.ck.done span{color:#777d99;text-decoration:line-through}
+.log{padding:10px 0;border-top:1px solid #20243a;font-size:12px;color:#c5cbe4}.log:first-child{border-top:0;padding-top:0}.log b{color:var(--cyan);margin-right:8px}.log .meta{display:block;margin-top:3px}
+.ctoday .task{padding:10px 0;min-height:40px}
 @media(max-width:980px){
  .aigrid{grid-template-columns:repeat(2,1fr)}
+ .ckgrid{grid-template-columns:repeat(2,1fr)}
 }
 @media(max-width:760px){
  .wrap{padding:22px 16px 56px}
@@ -119,6 +160,16 @@ span.status{cursor:default}
  .projgrid,.aigrid,.arcgrid{grid-template-columns:1fr}
  .careerhero,.careercols{grid-template-columns:1fr}
  .careergrid{grid-template-columns:1fr 1fr}
+ .afc,.ckgrid{grid-template-columns:1fr}
+ .afc .wide{grid-column:auto}
+ .fcrow{grid-template-columns:1fr}.prob{min-width:0}
+ .skill{grid-template-columns:auto 1fr}.skill .status{grid-column:2;justify-self:start}
+ .rm{grid-template-columns:1fr}.rm .status{justify-self:start}
+ /* 충돌표: 좁은 화면에서는 행을 세로로 쌓고 열 이름을 라벨로 붙인다 */
+ .tbl thead{display:none}
+ .tbl tr{display:block;padding:12px 0;border-bottom:1px solid #20243a}.tbl tr:last-child{border-bottom:0}
+ .tbl td{display:block;padding:4px 0;border:0;font-size:12px}
+ .tbl td:before{content:attr(data-h);display:block;color:var(--violet);font-size:10px;letter-spacing:.1em;font-weight:800;margin-bottom:2px}
  .block{margin-top:34px}
  .more,.status{min-height:44px;padding-left:16px;padding-right:16px}
  .ailink{min-height:44px;line-height:44px}
@@ -235,6 +286,51 @@ span.status{cursor:default}
   <p class="careerfoot">현재 앱에서 조회 가능한 대화·프로젝트 기록과 고용노동부·한국고용정보원 자료, 대표 의료행정 직무기술서를 바탕으로 정리. 전국 모든 채용공고를 계량 분석한 결과는 아님.</p>
 </section>
 
+<!-- 2-d. AI 미래 전망 × 커리어 준비 (원본: content/career-ai.json) -->
+<section class="block" id="ai-future-career">
+  <div class="blockhead">
+    <h2>AI FUTURE &amp; CAREER</h2>
+    <span class="sub" id="afc-sub">2026 → 2031 전망 · 역량 격차 · 90일 로드맵</span>
+  </div>
+  <div class="afc" id="afc">
+    <article class="card afchead wide">
+      <div class="cardhead"><h2>2031 AI 전망</h2><span class="pill" id="afc-updated">—</span></div>
+      <p id="afc-headline"></p>
+      <div class="afcmeta" id="afc-meta"></div>
+      <div class="fc" id="afc-forecasts"></div>
+    </article>
+    <article class="card wide">
+      <div class="cardhead"><h2>전망 충돌표</h2><span class="meta">기존 전망 vs 수정된 판단</span></div>
+      <div class="tblwrap"><table class="tbl" id="afc-conflicts"></table></div>
+    </article>
+    <article class="card">
+      <div class="cardhead"><h2>시장 신호</h2><span class="tag" id="afc-signal-count">—</span></div>
+      <div id="afc-signals"></div>
+    </article>
+    <article class="card ctoday">
+      <div class="cardhead"><h2>CAREER TODAY</h2><span class="pill" id="afc-today-count">—</span></div>
+      <div id="afc-today"></div>
+    </article>
+    <article class="card wide">
+      <div class="cardhead"><h2>MY SKILL GAP</h2><span class="meta">우선순위 · 상태를 눌러 변경</span></div>
+      <div id="afc-skills"></div>
+    </article>
+    <article class="card wide">
+      <div class="cardhead"><h2>90 DAY ROADMAP</h2><span class="tag" id="afc-roadmap-count">—</span></div>
+      <div id="afc-roadmap"></div>
+    </article>
+    <article class="card wide">
+      <div class="cardhead"><h2>VALIDATION CHECKLIST</h2><span class="meta" id="afc-ck-def"></span></div>
+      <div class="ckbar"><label class="meta" for="afc-ck-project">프로젝트</label><select id="afc-ck-project"></select><span class="meta" id="afc-ck-count"></span></div>
+      <div class="ckgrid" id="afc-checklist"></div>
+    </article>
+    <article class="card wide">
+      <div class="cardhead"><h2>CHANGE LOG</h2><span class="meta" id="afc-log-count"></span></div>
+      <div id="afc-changelog"></div>
+    </article>
+  </div>
+</section>
+
 <!-- 2-b. 노션 프로젝트 보관소 (연동됐을 때만 노출) -->
 <section class="block" id="notion-block" hidden>
   <div class="blockhead">
@@ -266,6 +362,8 @@ span.status{cursor:default}
 
 <!-- 빌드 시 sync-notion.mjs 결과가 주입된다. 연동 전에는 null. -->
 <script id="synced" type="application/json">null</script>
+<!-- 빌드 시 content/career-ai.json 이 주입된다. 로컬 미리보기(null)에서는 fetch 로 같은 파일을 읽는다. -->
+<script id="career-ai" type="application/json">{"meta":{"title":"AI FUTURE & CAREER","baseline_year":2026,"horizon_year":2031,"version":1,"updated":"2026-09-09","owner":"재용","note":"이 파일이 화면(index.html)과 CAREER_AI_FORECAST.md 의 단일 원본이다. 수정은 여기서만 한다."},"headline":"AI는 인간처럼 모든 일을 독립적으로 수행하는 존재보다, 컴퓨터 안에서 여러 도구를 사용해 실제 업무를 처리하는 디지털 실무자 방향으로 발전할 가능성이 높다. 그러나 완전히 믿고 맡길 수 있는 직원보다는 빠르고 유능하지만 감독과 검증이 필요한 실무자에 가까울 것이다.","forecasts":[{"id":"F1","title":"문서·코드·브라우저·업무 프로그램을 오가며 과업 실행","probability":90,"confidence":"high","change":"챗봇에서 실제 작업을 수행하는 에이전트로 이동","updated":"2026-09-09"},{"id":"F2","title":"기업 내부 데이터와 연결된 사내 에이전트 확산","probability":85,"confidence":"high","change":"범용 AI보다 회사 규정·문서·시스템과 연결된 AI가 중요해짐","updated":"2026-09-09"},{"id":"F3","title":"AI 가격 하락과 중소형 모델의 일상 업무 투입","probability":85,"confidence":"high","change":"모든 업무에 가장 큰 모델을 쓰지 않고 난이도별 모델을 배치","updated":"2026-09-09"},{"id":"F4","title":"사무직의 업무 구성과 신입 역할 변화","probability":75,"confidence":"medium","change":"반복 업무는 줄고 검증·예외 처리·조정 책임은 커짐","updated":"2026-09-09"},{"id":"F5","title":"몇 시간에서 며칠짜리 디지털 업무의 제한적 자율 수행","probability":65,"confidence":"medium","change":"조건: 목표, 입력, 권한, 완료 기준이 명확한 업무","updated":"2026-09-09"},{"id":"F6","title":"사람 감독 없이 일반 사무직 전체 대체","probability":25,"confidence":"medium","change":"25% 이하로 본다","updated":"2026-09-09"},{"id":"F7","title":"대부분의 지식노동자가 5년 안에 실직","probability":15,"confidence":"medium","change":"15% 이하로 본다","updated":"2026-09-09"}],"conflicts":[{"id":"C1","old":"모델이 커질수록 가장 큰 모델이 대부분의 업무를 차지할 것이다.","evidence":"비용·속도·개인정보·난이도에 따라 모델을 나눠 쓰는 배치가 일반화되는 중 (F3 관련 신호 추적)","revised":"비용, 속도, 개인정보, 업무 난이도에 따라 여러 모델이 나뉘어 사용된다. 기업 경쟁력은 모델 크기보다 데이터 품질, 권한 관리, 업무 연결에서 발생한다.","impact":"모델 지식보다 데이터 품질·권한·업무 연결을 설계하는 역량이 내 차별점이 된다."},{"id":"C2","old":"긴 컨텍스트는 인간과 같은 기억이 된다.","evidence":"컨텍스트 확장과 검색·권한이 붙은 외부 기억 시스템이 함께 발전 (F2 관련)","revised":"많은 정보를 넣는 것과 필요한 정보를 정확히 선택하는 것은 다르다. 출처, 권한, 검색 기록이 붙은 외부 기억 시스템이 중요하다.","impact":"문서·데이터에 출처와 권한을 붙여 정리하는 습관이 곧 AI 활용 준비다."},{"id":"C3","old":"모델이 충분히 발전하면 환각은 거의 사라진다.","evidence":"환각률은 감소하지만 0이 되지 않으며, 그럴듯한 오답 문제가 보고됨 (F4·F5 관련)","revised":"환각은 감소하지만 완전히 사라지기 어렵다. 모델이 똑똑해질수록 잘못된 답도 더 설득력 있게 표현할 수 있다. 독립 재검산과 출처 검증이 계속 필요하다.","impact":"검증 능력(재검산·출처 대조)이 내 핵심 역량이 된다."},{"id":"C4","old":"AI가 직업을 통째로 대체한다.","evidence":"직업 단위보다 과업 단위 자동화가 먼저 진행 (F4·F6·F7 관련)","revised":"직업보다 직업 안의 반복 과업이 먼저 자동화된다. 신입이 숙련되기 위해 수행하던 단순 업무가 줄어들 가능성이 크다. 결과 검증, 예외 처리, 이해관계자 조정의 가치는 높아진다.","impact":"신입 시절 반복 업무로 배우던 것을 자동화 프로젝트와 검증 체크리스트로 대신 증명해야 한다."},{"id":"C5","old":"코딩을 몰라도 AI가 전부 만들어준다.","evidence":"생성은 쉬워졌지만 검토·보안·오류 판단은 사람 몫으로 남음 (F1·F5 관련)","revised":"문법 암기의 가치는 낮아질 수 있다. 코드, 데이터 구조, 보안, 오류를 읽고 검증하는 능력은 더 중요해진다.","impact":"SQL·Python 을 '쓰는' 것보다 '읽고 검증하는' 연습에 시간을 배분한다."}],"signals":[],"career":{"direction":"보건의료·공공·대학 행정을 이해하면서 데이터 분석과 업무 자동화를 수행하는 운영·기획형 인재","jobs":["병원 및 의료기관 행정","대학 행정 및 연구행정","공공기관 사업운영","기획 및 성과관리","통계 및 데이터 기반 행정","보건의료 데이터 운영","행정업무 자동화 및 디지털 전환 지원"],"strengths":["병원 경영성과 관련 석사논문","보건의료와 의료기관 구조 이해","다중회귀분석 경험","장기요양보험 데이터 분석","REES46 이커머스 행동 로그 EDA","대용량 데이터 표본 설계","세션·퍼널·리텐션·매출 하이라키 분석","Python 데이터 처리","Tableau 및 HTML 대시보드 제작","빅데이터분석기사 학습","AI 에이전트와 업무 자동화에 대한 관심"],"gaps":["Excel과 Power Query 실무","SQL 중급","행정업무 규칙 설계","데이터 검증 절차","자동화 전후 효과 측정","결과 보고와 이해관계자 커뮤니케이션","AI 사용 시 개인정보·권한·보안 관리"]},"validation_definition":{"statement":"정답 기준을 먼저 만들고, 입력 → 처리 → 결과를 단계별로 대조하며, 오류를 재현 가능한 형태로 설명하는 능력","areas":[{"name":"업무 규칙 정의","items":["조건, 예외, 기준일, 분모와 분자","판단 불가능한 경우를 별도로 분류"]},{"name":"입력 데이터 검사","items":["파일 수","전체 행 수","컬럼과 자료형","고유키 중복","필수 값 결측","값의 정상 범위","날짜 범위"]},{"name":"처리 과정 검사","items":["제외한 행 수와 이유","중복 제거 기준","조인 전후 행 수","집계 단위","예외 처리 기록"]},{"name":"결과 재검산","items":["Excel과 Python 결과 비교","전체 합계와 부서별 합계 비교","경계값 테스트","표본 수작업 대조","이전 기간과 증감 비교"]},{"name":"현실성 검토","items":["결과가 실제 업무 구조상 가능한지","예산, 인원, 기간, 규정과 충돌하지 않는지"]},{"name":"실행 기록과 복구","items":["읽은 파일","적용한 규칙","제외한 행","생성한 결과물","실행 전후 행 수","최종 승인자","원본 보존 여부"]}]},"skills":[{"id":"S1","priority":1,"skill":"Excel·Power Query","current":"기본 함수·피벗 사용","evidence":"SeSAC 과제, 장기요양 통계 정리","target":"같은 양식 학과별 Excel 파일 10개 이상을 자동 취합하고 누락·중복·형식 오류와 학과별 집계를 생성","next_action":"Power Query 폴더 병합으로 파일 10개 취합 실습","status":"doing","topics":["표와 구조화된 참조","XLOOKUP","SUMIFS·COUNTIFS","IF·IFS·IFERROR","피벗테이블","조건부 서식","데이터 유효성 검사","중복 및 결측 검사","날짜·문자열 정리","Power Query 폴더 병합"]},{"id":"S2","priority":2,"skill":"SQL","current":"SELECT·JOIN·GROUP BY 가능, 윈도우 함수 연습 중","evidence":"BigQuery sql_practice 데일리 5문제 (my agent)","target":"프로그래머스 MySQL 중급 30문제 + 문제별 분석 단위·고유키·분모·분자·중복 가능성 기록 + 주요 5문제 BigQuery 변환","next_action":"매일 /sql today 5문제, 풀이마다 검증 항목 기록","status":"doing","topics":["SELECT, WHERE, CASE","GROUP BY, HAVING","INNER JOIN, LEFT JOIN","서브쿼리와 CTE","날짜 및 문자열 함수","ROW_NUMBER, RANK, LAG","조건부 집계","중복 탐지","최신 레코드 선택"]},{"id":"S3","priority":3,"skill":"데이터 검증","current":"체크리스트 정의 완료, 프로젝트 적용 전","evidence":"VALIDATION CHECKLIST 카드","target":"모든 프로젝트에 입력·처리·결과 검증 체크리스트 적용","next_action":"장기요양·이커머스 프로젝트에 체크리스트 소급 적용(6주차)","status":"todo","topics":["입력: 원본 파일 수·행 수·컬럼·고유키·결측·범위·날짜","처리: 제외 행·중복 기준·조인 전후·집계 단위·예외","결과: 표본 대조·합계 재검산·이전 기간 비교·비정상 증감·범위와 한계"]},{"id":"S4","priority":4,"skill":"행정 자동화 프로젝트","current":"설계 단계","evidence":"my agent 모듈 D(대학 비교과 실적·수료 검증) 계획","target":"가짜 데이터로 입력 5종 → 출력 7종(통합 명단·오류 목록·수료 대상 초안·확인 필요 대상·학과별 집계·처리 로그·보고용 Excel)","next_action":"입력 파일 양식과 업무 규칙(수료 기준) 설계","status":"todo","topics":["입력: 학과별 신청자 명단·출석·필수 서류·프로그램별 수료 기준·학과 기준정보","출력: 통합 명단·누락/중복/형식 오류·수료 대상 초안·확인 필요 대상·학과별 실적·처리 로그·최종 보고 Excel"]},{"id":"S5","priority":5,"skill":"통계 기초","current":"빅분기 필기 수준","evidence":"빅데이터분석기사 학습, 다중회귀 논문","target":"아래 항목을 면접에서 예시와 함께 설명","next_action":"항목당 한 문단 설명 + 내 프로젝트 예시 연결","status":"doing","topics":["평균과 중앙값","표본과 모집단","표본 편향","상관관계와 인과관계","신뢰구간과 p-value","결측치와 이상치","회귀계수","과적합","분류 평가 지표","비율의 분모와 분자"]},{"id":"S6","priority":6,"skill":"AI 업무 위임과 보안","current":"my agent 프로젝트에서 규칙 적용 중","evidence":"CLAUDE.md 절대 규칙, PII 훅","target":"AI에게 맡길 때 목적·입력·규칙·예외·출력·검증·금지·승인 지점·개인정보 범위를 항상 명시","next_action":"위임 템플릿 1장 작성 후 모든 자동화에 첨부","status":"doing","topics":["목적","입력","업무 규칙","예외 처리","출력","검증 방법","임의 판단 금지 항목","사람의 최종 승인 지점","개인정보와 권한 범위"]}],"roadmap":[{"id":"R1","weeks":"1~2주","tasks":["Excel·Power Query 학습","학과별 파일 10개 자동 취합","결측·중복·형식 오류표 생성"],"deliverables":["취합 결과 Excel","오류표"],"done":"파일 10개가 한 번에 취합되고 오류표가 자동으로 나온다","status":"doing"},{"id":"R2","weeks":"3~5주","tasks":["프로그래머스 MySQL 중급 30문제","문제별 검증 항목 기록","BigQuery 문법 변환 연습"],"deliverables":["풀이 30건 + 검증 기록","BigQuery 변환 5건"],"done":"30문제 완료, 각 문제에 분석 단위·고유키·분모·분자·중복 가능성 기록","status":"doing"},{"id":"R3","weeks":"6주","tasks":["장기요양·이커머스 프로젝트에 검증 체크리스트 적용","분석 단위, 고유키, 제외 기준, 재검산 결과 명시"],"deliverables":["검증 절 추가된 프로젝트 문서 2건"],"done":"두 프로젝트 모두 입력·처리·결과 검증 절이 있다","status":"todo"},{"id":"R4","weeks":"7~10주","tasks":["대학 비교과 프로그램 실적 취합 자동화 프로젝트 완성","입력, 오류표, 결과표, 처리 로그, 사용 설명서 제작"],"deliverables":["실행 가능한 스크립트","오류표·결과표·처리 로그","사용 설명서"],"done":"설명서만 보고 제3자가 실행해 같은 결과를 얻는다","status":"todo"},{"id":"R5","weeks":"11주","tasks":["자동화 전후 작업 시간 비교","발견한 오류 수","사람이 확인해야 할 예외 수","업무 개선 효과 정리"],"deliverables":["효과 정리 1페이지"],"done":"전후 시간·오류 수·예외 수가 숫자로 적혀 있다","status":"todo"},{"id":"R6","weeks":"12주","tasks":["논문·프로젝트·자동화 경험을 STAR 면접 사례 4개로 작성","지원 기관에 따라 자기소개서 문장을 변형할 수 있게 정리"],"deliverables":["STAR 카드 4장","자소서 문장 변형표"],"done":"STAR 4장 각 2분 이내로 말할 수 있다","status":"todo"}],"checklist":{"projects":["대학 비교과 실적 자동화","장기요양 급여 분석","이커머스 행동 로그 EDA","채용공고 수집 파이프라인"],"groups":[{"id":"input","name":"입력 검증","items":["원본 파일 수","전체 행 수","컬럼과 자료형","고유키 중복","필수 값 결측","값의 범위","날짜 범위"]},{"id":"process","name":"처리 검증","items":["제외 행 수와 이유","중복 제거 기준","조인 전후 행 수","집계 단위","예외 처리"]},{"id":"result","name":"결과 검증","items":["표본 수작업 대조","전체 합계 재검산","이전 기간 비교","비정상적 증감 확인","분석 범위와 한계"]},{"id":"source","name":"출처 검증","items":["원문 URL 확인","발행기관 확인","발표일과 확인일 구분"]},{"id":"privacy","name":"개인정보 검증","items":["개인정보 컬럼 식별·마스킹","외부 AI 전송 여부 확인","권한 범위 기록"]},{"id":"approval","name":"사람 승인","items":["최종 승인자 지정","원본 보존 확인","실행 기록 남김"]}]},"today":[{"id":"c1","text":"프로그래머스 MySQL 문제 3개","meta":"/sql today"},{"id":"c2","text":"분석 단위·고유키·중복 가능성 기록","meta":"문제마다"},{"id":"c3","text":"Power Query로 같은 형식의 파일 여러 개 병합","meta":"실습"},{"id":"c4","text":"대학 비교과 실적 자동화 프로젝트의 입력 파일과 업무 규칙 설계","meta":"설계"}],"sources":{"trusted":["OpenAI Developers 및 공식 문서","Anthropic 공식 연구와 Economic Index","Stanford HAI AI Index","METR 연구","Epoch AI 연구","OECD AI 보고서","고용노동부","한국고용정보원","국가데이터처","ALIO 공식 채용공고","Work24 공식 채용정보"],"excluded":["출처 없는 블로그","광고성 AI 전망","유튜브 요약만 있는 자료","원문을 확인할 수 없는 재인용","작성일이나 발표일이 없는 게시물","커뮤니티의 확인되지 않은 주장"],"cadence":{"model_releases":"매일","labor_market":"주 1회","forecast_review":"월 1회","roadmap_progress":"매주"},"weights":{"official_docs_or_research":"high","government_statistics":"high","company_usage_data":"medium","expert_opinion":"low","single_case":"reference_only"},"max_probability_change_per_source":10},"changelog":[{"date":"2026-09-09","what":"AI FUTURE & CAREER 카테고리 최초 작성. 전망 7개, 충돌표 5개, 역량 6개, 90일 로드맵 6단계, 검증 체크리스트 6영역","forecast_changes":"없음(기준본)","probability_changes":"없음","reason":"2026-09-09 기준 전망 프롬프트를 기준본으로 채택","source":"사용자 작성 기준 문서"}]}</script>
 
 <script>
 (function () {
@@ -586,6 +684,196 @@ span.status{cursor:default}
       { year: "numeric", month: "long", day: "numeric", weekday: "long" }).format(new Date());
   }
 
+  // ── AI FUTURE & CAREER ─────────────────────────
+  // 원본은 content/career-ai.json 하나. 빌드 때 주입되면 그것을, 아니면(로컬 미리보기) fetch 로 읽는다.
+  // 상태(역량·로드맵·체크리스트·오늘 할 일)는 같은 localStorage 키의 state.career 에 저장한다.
+  if (!state.career) state.career = {};
+  var C = state.career;
+  if (!C.skills) C.skills = {};
+  if (!C.roadmap) C.roadmap = {};
+  if (!C.checklist) C.checklist = {};
+  if (!C.today) C.today = {};
+
+  function careerStatusButton(store, id, fallback, onChange) {
+    var btn = document.createElement("button");
+    btn.className = "status";
+    function cur() { return store[id] || fallback; }
+    function paint() {
+      btn.dataset.s = cur();
+      btn.textContent = LABEL[cur()];
+      btn.setAttribute("aria-label", "상태: " + LABEL[cur()] + ", 눌러서 변경");
+    }
+    btn.addEventListener("click", function (e) {
+      e.stopPropagation();
+      store[id] = CYCLE[cur()];
+      save();
+      paint();
+      if (onChange) onChange();
+    });
+    paint();
+    return btn;
+  }
+
+  function el(tag, cls, text) {
+    var n = document.createElement(tag);
+    if (cls) n.className = cls;
+    if (text !== undefined) n.textContent = text;
+    return n;
+  }
+
+  function renderCareer(d) {
+    if (!d || !d.forecasts) { $("afc-sub").textContent = "데이터를 불러오지 못했습니다 (content/career-ai.json)"; return; }
+    var m = d.meta || {};
+    $("afc-updated").textContent = "업데이트 " + (m.updated || "—");
+    $("afc-headline").textContent = d.headline || "";
+    var meta = $("afc-meta"); meta.innerHTML = "";
+    [ "기준 " + m.baseline_year + " → " + m.horizon_year, "전망 " + d.forecasts.length + "개", "신호 " + (d.signals || []).length + "건", "v" + m.version ]
+      .forEach(function (t) { meta.appendChild(el("span", "", t)); });
+
+    // 1. 전망
+    var fc = $("afc-forecasts"); fc.innerHTML = "";
+    d.forecasts.forEach(function (f) {
+      var row = el("div", "fcrow");
+      var left = el("div"); left.appendChild(el("b", "", f.id + " · " + f.title));
+      left.appendChild(el("small", "", f.change + " · 업데이트 " + f.updated));
+      var prob = el("div", "prob");
+      var bar = el("div", "bar"); var fill = el("i"); fill.style.width = f.probability + "%"; bar.appendChild(fill);
+      prob.appendChild(bar); prob.appendChild(el("strong", "", f.probability + "%"));
+      var conf = el("span", "conf", "신뢰 " + f.confidence); conf.dataset.c = f.confidence; prob.appendChild(conf);
+      row.appendChild(left); row.appendChild(prob); fc.appendChild(row);
+    });
+
+    // 2. 충돌표
+    var tb = $("afc-conflicts"); tb.innerHTML = "";
+    var thead = el("thead"); var hr = el("tr");
+    ["기존 전망", "현재 증거", "수정된 판단", "내게 미치는 영향"].forEach(function (h) { hr.appendChild(el("th", "", h)); });
+    thead.appendChild(hr); tb.appendChild(thead);
+    var tbody = el("tbody");
+    var heads = ["기존 전망", "현재 증거", "수정된 판단", "내게 미치는 영향"];
+    (d.conflicts || []).forEach(function (c) {
+      var tr = el("tr");
+      [c.old, c.evidence, c.revised, c.impact].forEach(function (v, i) {
+        var td = el("td", i === 3 ? "impact" : "", v);
+        td.setAttribute("data-h", heads[i]);  // 모바일 세로 배치용 라벨
+        tr.appendChild(td);
+      });
+      tbody.appendChild(tr);
+    });
+    tb.appendChild(tbody);
+
+    // 3. 시장 신호
+    var sg = $("afc-signals"); sg.innerHTML = "";
+    var signals = (d.signals || []).slice().sort(function (a, b) { return (b.published_at || "").localeCompare(a.published_at || ""); });
+    $("afc-signal-count").textContent = signals.length + " signals";
+    if (!signals.length) sg.appendChild(el("div", "empty", "아직 등록된 공식 자료가 없습니다. 수집 → 검토 → 반영 순서로 추가됩니다."));
+    signals.slice(0, 8).forEach(function (s) {
+      var box = el("div", "sig");
+      var a = el("a"); a.href = s.source_url; a.target = "_blank"; a.rel = "noopener noreferrer"; a.appendChild(el("b", "", s.title));
+      box.appendChild(a);
+      var imp = el("span", "imp", { strengthen: "강화", weaken: "약화", neutral: "중립" }[s.impact] || s.impact); imp.dataset.i = s.impact; box.appendChild(imp);
+      box.appendChild(el("span", "meta", s.publisher + " · 발표 " + s.published_at + " · 확인 " + s.checked_at + " · " + s.forecast_id + " · 신뢰 " + s.confidence));
+      box.appendChild(el("p", "", s.summary));
+      sg.appendChild(box);
+    });
+
+    // 3-b. 오늘 할 일 (커리어)
+    var td = $("afc-today"); td.innerHTML = ""; var doneN = 0;
+    (d.today || []).forEach(function (t) {
+      var isDone = !!C.today[t.id]; if (isDone) doneN++;
+      var row = el("div", "task" + (isDone ? " done" : ""));
+      row.setAttribute("role", "button"); row.setAttribute("tabindex", "0");
+      row.appendChild(el("i", "check")); row.appendChild(el("span", "tasktext", t.text)); row.appendChild(el("span", "meta", t.meta || ""));
+      function toggle() { C.today[t.id] = !isDone; save(); renderCareer(d); }
+      row.addEventListener("click", toggle);
+      row.addEventListener("keydown", function (e) { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); toggle(); } });
+      td.appendChild(row);
+    });
+    $("afc-today-count").textContent = doneN + " / " + (d.today || []).length;
+
+    // 4. 역량 격차
+    var sk = $("afc-skills"); sk.innerHTML = "";
+    (d.skills || []).slice().sort(function (a, b) { return a.priority - b.priority; }).forEach(function (s) {
+      var row = el("div", "skill");
+      row.appendChild(el("div", "num", s.priority + "순위"));
+      var body = el("div"); body.appendChild(el("b", "", s.skill));
+      var r1 = el("div", "row"); r1.innerHTML = "<em>현재</em> " + esc(s.current) + " · <em>증거</em> " + esc(s.evidence);
+      var r2 = el("div", "row"); r2.innerHTML = "<em>목표</em> " + esc(s.target);
+      var r3 = el("div", "row"); r3.innerHTML = "<em>다음 행동</em> " + esc(s.next_action);
+      body.appendChild(r1); body.appendChild(r2); body.appendChild(r3);
+      row.appendChild(body);
+      row.appendChild(careerStatusButton(C.skills, s.id, s.status));
+      sk.appendChild(row);
+    });
+
+    // 5. 90일 로드맵
+    var rm = $("afc-roadmap"); rm.innerHTML = ""; var rmDone = 0;
+    (d.roadmap || []).forEach(function (r) {
+      if ((C.roadmap[r.id] || r.status) === "done") rmDone++;
+      var row = el("div", "rm");
+      row.appendChild(el("div", "wk", r.weeks));
+      var body = el("div"); body.appendChild(el("b", "", r.tasks.join(" · ")));
+      var r1 = el("div", "row"); r1.innerHTML = "<em>결과물</em> " + esc(r.deliverables.join(", "));
+      var r2 = el("div", "row"); r2.innerHTML = "<em>완료 조건</em> " + esc(r.done);
+      body.appendChild(r1); body.appendChild(r2);
+      row.appendChild(body);
+      row.appendChild(careerStatusButton(C.roadmap, r.id, r.status, function () { renderCareer(d); }));
+      rm.appendChild(row);
+    });
+    $("afc-roadmap-count").textContent = rmDone + " / " + (d.roadmap || []).length + " done";
+
+    // 6. 검증 체크리스트 (프로젝트별 저장)
+    var ck = d.checklist || { projects: [], groups: [] };
+    $("afc-ck-def").textContent = (d.validation_definition && d.validation_definition.statement) ? "\\"" + d.validation_definition.statement + "\\"" : "";
+    var sel = $("afc-ck-project");
+    if (!sel.options.length) {
+      ck.projects.forEach(function (p) { var o = el("option", "", p); o.value = p; sel.appendChild(o); });
+      sel.addEventListener("change", function () { C.ckProject = sel.value; save(); renderCareer(d); });
+    }
+    var project = C.ckProject && ck.projects.indexOf(C.ckProject) >= 0 ? C.ckProject : ck.projects[0];
+    sel.value = project;
+    if (!C.checklist[project]) C.checklist[project] = {};
+    var grid = $("afc-checklist"); grid.innerHTML = ""; var ckTotal = 0, ckDone = 0;
+    ck.groups.forEach(function (g) {
+      var box = el("div", "ckgroup"); box.appendChild(el("h4", "", g.name));
+      g.items.forEach(function (item, i) {
+        var key = g.id + ":" + i; var on = !!C.checklist[project][key]; ckTotal++; if (on) ckDone++;
+        var row = el("div", "ck" + (on ? " done" : "")); row.setAttribute("role", "checkbox"); row.setAttribute("aria-checked", String(on)); row.setAttribute("tabindex", "0");
+        row.appendChild(el("i", "check")); row.appendChild(el("span", "", item));
+        function toggle() { C.checklist[project][key] = !on; save(); renderCareer(d); }
+        row.addEventListener("click", toggle);
+        row.addEventListener("keydown", function (e) { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); toggle(); } });
+        box.appendChild(row);
+      });
+      grid.appendChild(box);
+    });
+    $("afc-ck-count").textContent = ckDone + " / " + ckTotal;
+
+    // 7. 변경 이력
+    var lg = $("afc-changelog"); lg.innerHTML = "";
+    var logs = (d.changelog || []).slice().reverse();
+    $("afc-log-count").textContent = logs.length + " changes";
+    logs.slice(0, 10).forEach(function (c) {
+      var row = el("div", "log");
+      row.appendChild(el("b", "", c.date)); row.appendChild(document.createTextNode(c.what));
+      row.appendChild(el("span", "meta", "전망 변경: " + (c.forecast_changes || "-") + " · 확률: " + (c.probability_changes || "-") + " · 이유: " + c.reason + " · 출처: " + c.source));
+      lg.appendChild(row);
+    });
+  }
+
+  function esc(s) { return String(s == null ? "" : s).replace(/[&<>"]/g, function (ch) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", "\\"": "&quot;" }[ch]; }); }
+
+  function loadCareer() {
+    var injected = null;
+    try { var node = document.getElementById("career-ai"); injected = node ? JSON.parse(node.textContent) : null; } catch (e) { injected = null; }
+    if (injected) { renderCareer(injected); return; }
+    // 로컬 미리보기: 같은 원본 파일을 fetch 한다 (file:// 에서는 실패할 수 있음 → http.server 로 열 것)
+    if (typeof fetch !== "function") { renderCareer(null); return; }
+    fetch("content/career-ai.json", { cache: "no-store" })
+      .then(function (r) { return r.ok ? r.json() : null; })
+      .then(renderCareer)
+      .catch(function () { renderCareer(null); });
+  }
+
   paintDate();
   renderToday();
   renderWeek();
@@ -594,6 +882,7 @@ span.status{cursor:default}
   renderAI();
   renderArchive();
   paintSync();
+  loadCareer();
 })();
 </script>
 </body>

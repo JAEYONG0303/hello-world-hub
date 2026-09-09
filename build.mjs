@@ -40,6 +40,28 @@ if (existsSync(dataFile)) {
   console.log("[build] data/notion.json 없음 → 목업 데이터로 빌드");
 }
 
+// ── AI FUTURE & CAREER 데이터 주입 ─────────────────
+// content/career-ai.json 이 단일 원본. 없거나 깨지면 빌드를 중단해 기존 dist 를 지킨다.
+const careerFile = new URL("./content/career-ai.json", import.meta.url);
+const CAREER_PLACEHOLDER = '<script id="career-ai" type="application/json">null</script>';
+if (!existsSync(careerFile)) {
+  console.error("[build] content/career-ai.json 없음 → 빌드 중단 (기존 dist 유지)");
+  process.exit(1);
+}
+try {
+  const career = JSON.parse(readFileSync(careerFile, "utf8"));
+  if (!html.includes(CAREER_PLACEHOLDER)) {
+    console.error("[build] index.html 에 career-ai 주입 자리가 없음 → 빌드 중단");
+    process.exit(1);
+  }
+  html = html.replace(CAREER_PLACEHOLDER,
+    '<script id="career-ai" type="application/json">' + JSON.stringify(career).replace(/<\//g, "<\\/") + "</script>");
+  console.log("[build] career-ai 데이터 주입 완료 (v" + career.meta.version + ", " + career.meta.updated + ", 신호 " + career.signals.length + "건)");
+} catch (e) {
+  console.error("[build] content/career-ai.json 파싱 실패 → 빌드 중단:", e.message);
+  process.exit(1);
+}
+
 // ── Worker 로 감싸기 ─────────────────────────────
 const escaped = html
   .replace(/\\/g, "\\\\")
