@@ -615,34 +615,26 @@ h1,h2,h3{letter-spacing:-.01em}
 .mystrip .pipes{display:flex;gap:6px;flex-wrap:wrap;align-items:center;margin-left:auto}
 .mystrip .pipes span{font-size:12px;color:var(--sec);background:var(--surf);border-radius:999px;padding:5px 10px}
 /* B: GeekNews 목록 */
-.newswrap{display:grid;grid-template-columns:minmax(0,1fr) 260px;gap:28px;align-items:start}
-.trend{border:1px solid var(--grid);border-left:4px solid var(--blue);border-radius:10px;padding:16px 20px;margin:0 0 18px;background:var(--card)}
-.trend .lab{font-size:12px;letter-spacing:.08em;color:var(--blue-ink);font-weight:700;text-transform:uppercase}
-.trend h2{font-size:20px;line-height:1.4;margin:6px 0 4px;font-weight:800}
-.trend details{margin-top:6px}.trend summary{cursor:pointer;font-size:13.5px;color:var(--sec);font-weight:600}
-.trend ol{margin:8px 0 0;padding-left:18px;font-size:14.5px;color:var(--sec);line-height:1.65}.trend ol li{margin:4px 0}
-.trend .nx{margin-top:8px;font-size:13.5px;color:var(--sec)}.trend .nx b{color:var(--orange);margin-right:5px}
-.nsec{margin-top:22px}
-.nsec h2{font-size:15px;font-weight:700;padding:0 0 8px;border-bottom:2px solid var(--ink);display:flex;align-items:baseline;gap:8px}
-.nsec h2 .n{font-family:var(--mono);font-size:12px;color:var(--mut);font-weight:400}
-.nrow{display:grid;grid-template-columns:36px minmax(0,1fr);gap:8px;padding:11px 0;border-bottom:1px solid var(--grid)}
-.nrow .num{font-family:var(--mono);font-size:13px;color:var(--mut);padding-top:3px;text-align:right}
-.nrow h3{font-size:16px;font-weight:700;line-height:1.4;margin:0}
-.nrow h3 a{color:var(--ink);text-decoration:none}.nrow h3 a:hover{color:var(--blue-ink);text-decoration:underline}
-.nrow h3 .src{font-size:13px;color:var(--mut);font-weight:400;margin-left:6px}
-.nrow .ch{font-size:11.5px;font-weight:700;color:var(--green);margin-right:6px;letter-spacing:.02em}
-.nrow .one{font-size:14px;color:var(--sec);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;margin-top:2px}
-.nrow .meta{font-size:12.5px;color:var(--mut);margin-top:4px;display:flex;gap:8px;flex-wrap:wrap;align-items:center;font-family:var(--mono)}
-.nrow .meta .b{font-family:var(--sans);font-size:11.5px;background:var(--surf);border-radius:4px;padding:2px 6px;color:var(--sec)}
-.nrow .meta .hi{background:var(--orange-soft);color:var(--orange);font-weight:600}
-.nrow .meta .imp-strengthen{background:var(--green-soft);color:var(--green)}.nrow .meta .imp-weaken{background:var(--orange-soft);color:var(--orange)}
-.nside{position:sticky;top:78px}
-.nside .box{border:1px solid var(--grid);border-radius:10px;padding:14px 16px;margin-bottom:12px;background:var(--card)}
-.nside h4{font-size:12px;letter-spacing:.08em;color:var(--sec);margin:0 0 10px;text-transform:uppercase}
-.nside .pr{display:grid;grid-template-columns:auto 1fr auto;gap:8px;font-size:13px;padding:6px 0;border-top:1px solid var(--grid);align-items:start}
-.nside .pr:first-of-type{border-top:0;padding-top:0}
-.nside .pr b{font-weight:600;display:block}.nside .pr small{color:var(--mut);display:block;font-size:12px}
-.nside .pr .n{font-family:var(--mono);color:var(--sec);font-size:12px;white-space:nowrap}
+.zig{display:grid;grid-template-columns:300px minmax(0,1fr);gap:28px;padding:4px 0 8px;align-items:start}
+.panel{position:sticky;top:78px;background:#111;color:#f1efe8;border-radius:16px;padding:22px 22px 18px}
+.panel .k{font:12px var(--mono);color:#a3ff5e;letter-spacing:.04em}
+.panel h2{font-size:21px;line-height:1.35;margin:10px 0 14px;letter-spacing:-.01em;font-weight:800}
+.panel ol{margin:0;padding-left:18px;font-size:13.5px;line-height:1.6;color:#c2bfb4}.panel li+li{margin-top:8px}
+.panel .next{margin-top:16px;padding-top:12px;border-top:1px solid #2f2f2b;font-size:12.5px;color:#8b8880}.panel .next b{color:#f1efe8;font-weight:600;margin-right:5px}
+.panel .btn{display:inline-block;margin-top:14px;border:1px solid #f1efe8;border-radius:999px;padding:7px 14px;font-size:13px;font-weight:600;color:#f1efe8;text-decoration:none}
+.ngrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.ncard{display:flex;flex-direction:column;background:var(--card);border:1px solid var(--grid);border-radius:12px;overflow:hidden;box-shadow:var(--shadow);color:inherit;text-decoration:none;transition:transform .15s}.ncard:hover{transform:translateY(-2px)}
+.ncard.lead{grid-column:span 2}.ncard.lead h3{font-size:19px}.ncard.lead p{-webkit-line-clamp:3}
+.ncard .band{display:flex;justify-content:space-between;padding:10px 14px;font-size:12px;font-weight:700;background:var(--surf);color:var(--sec)}.ncard .band .dt{font:12px var(--mono);font-weight:400;opacity:.8}
+.ncard[data-cat="정책·고시"] .band,.ncard[data-cat="모델"] .band{background:var(--blue-soft);color:var(--blue-ink)}
+.ncard[data-cat="수가·평가"] .band,.ncard[data-cat="노동시장"] .band{background:var(--green-soft);color:var(--green)}
+.ncard[data-cat="병원계"] .band,.ncard[data-cat="에이전트"] .band{background:var(--orange-soft);color:var(--orange)}
+.ncard .cb{padding:12px 14px 14px;display:flex;flex-direction:column;gap:6px;flex:1}
+.ncard h3{font-size:15px;line-height:1.4;margin:0;letter-spacing:-.01em;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;font-weight:700}
+.ncard p{margin:0;font-size:13px;line-height:1.5;color:var(--sec);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.ncard .src{margin-top:auto;padding-top:6px;font-size:12px;color:var(--mut)}.ncard .src .hi{color:var(--orange);font-weight:700;margin-right:5px}
+.strip{background:#2965ff;color:#fff;border-radius:16px;padding:22px 26px;display:grid;grid-template-columns:1.2fr repeat(5,1fr);gap:18px;align-items:center;margin:28px 0 36px}
+.strip h4{margin:0 0 4px;font-size:17px}.strip .d{font-size:13px;opacity:.85}.strip .p b{display:block;font-size:22px;font-family:var(--mono);font-weight:500}.strip .p small{font-size:12px;opacity:.85}.strip .p i{display:inline-block;width:7px;height:7px;border-radius:50%;background:#a3ff5e;margin-right:6px}.strip .p i.fail{background:#ffb4a2}.strip .p i.skip{background:#ffe08a}
 /* 문제 풀이 */
 .prac{display:grid;grid-template-columns:minmax(0,1fr) 320px;gap:28px;align-items:start}
 .prac .box{border:1px solid var(--grid);border-radius:10px;padding:16px 18px;background:var(--card);margin-bottom:12px}
@@ -655,7 +647,7 @@ h1,h2,h3{letter-spacing:-.01em}
 .prow .tg{display:flex;gap:4px;flex-wrap:wrap;margin-top:6px}.prow .tg span{font-size:11.5px;background:var(--surf);border-radius:4px;padding:2px 7px;color:var(--sec);font-family:var(--mono)}
 .prow .st{font-size:12px;color:var(--mut);white-space:nowrap;font-family:var(--mono)}
 .soon{font-size:13.5px;color:var(--sec);background:var(--surf);border-radius:10px;padding:14px 16px}
-@media(max-width:900px){.newswrap,.prac{grid-template-columns:1fr}.nside{position:static}.tabs.sub{display:none}}
+@media(max-width:900px){.zig,.prac{grid-template-columns:1fr}.panel{position:static}.ngrid{grid-template-columns:1fr}.ncard.lead{grid-column:auto}.strip{grid-template-columns:1fr 1fr}.tabs.sub{display:none}}
 </style>
 </head>
 <body>
@@ -717,17 +709,24 @@ h1,h2,h3{letter-spacing:-.01em}
 <!-- ===== 2. 뉴스 (시안 B: GeekNews 목록 + 동향 헤드라인) ===== -->
 <section data-view="news" id="view-news">
   <div class="wrap pg">
-    <div class="newswrap">
+    <div class="zig">
+      <aside class="panel" id="trend">
+        <div class="k">AI 자동 동향분석 <span id="ins-date"></span></div>
+        <h2 id="ins-headline">오늘 수집분을 아직 분석하지 않았습니다.</h2>
+        <ol id="ins-points"></ol>
+        <div class="next" id="ins-next" hidden></div>
+        <div class="next" id="ins-method" style="border-top:0;padding-top:4px"></div>
+        <a class="btn" id="ins-high" href="#list" data-ch="health" hidden></a>
+      </aside>
       <div>
-        <div class="trend" id="trend">
-          <div class="lab">AI 자동 동향분석 <span id="ins-date" style="font-weight:400;text-transform:none;letter-spacing:0"></span></div>
-          <h2 id="ins-headline">오늘 수집분을 아직 분석하지 않았습니다.</h2>
-          <details><summary>흐름 3개와 다음 볼 것</summary><ol id="ins-points"></ol><div class="nx" id="ins-next" hidden></div><div class="nx" id="ins-method" style="color:var(--mut)"></div></details>
-        </div>
-        <div id="newslist"></div>
+        <div class="jkhead"><h2>보건·의료 변화 <span class="n" id="news-n"></span></h2><div class="more"><a href="#list" data-ch="health">전체 목록·필터 ›</a></div></div>
+        <div class="chips" id="newsfam"></div>
+        <div class="ngrid" id="newslist"></div>
       </div>
-      <aside class="nside" id="nside"></aside>
     </div>
+    <section class="strip" id="pipestrip"></section>
+    <div class="jkhead"><h2>AI·노동시장 신호 <span class="n" id="ai-n"></span></h2><div class="more"><a href="#list" data-ch="ai">전체 ›</a></div></div>
+    <div class="ngrid c3" id="ailist"></div>
   </div>
 </section>
 
@@ -1871,18 +1870,25 @@ function renderRows(F){
     $('jobfam').innerHTML=JOBFAM.map(([k,n,f])=>'<button data-k="'+k+'" class="'+(k==='all'?'on':'')+'">'+n+' '+jobs.filter(f).length+'</button>').join('');
     $('jobfam').addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;$('jobfam').querySelectorAll('button').forEach(x=>x.classList.toggle('on',x===b));jf=b.dataset.k;jlim=16;drawJobs();});
     drawJobs();}
-  // --- 뉴스: 동향 헤드라인 + B 목록
-  if($('ins-headline')&&I.headline){$('ins-headline').textContent=I.headline;$('ins-points').innerHTML=(I.points||[]).map(p=>'<li>'+esc(p)+'</li>').join('');if(I.watch_next){$('ins-next').hidden=false;$('ins-next').innerHTML='<b>다음 볼 것</b>'+esc(I.watch_next);}$('ins-date').textContent=I.text_date?'· 분석 '+I.text_date:'';if(I.method)$('ins-method').textContent=I.method;}
-  const CHL={health:'보건·의료',research:'논문',ai:'AI 신호',sql:'SQL'};
-  let n=0;
-  const nrow=i=>{n++;const b=[];if(i.category)b.push('<span class="b">'+esc(i.category)+'</span>');if(i.relevance==='high'&&i.channel!=='ai')b.push('<span class="b hi">중요</span>');if(i.official===false)b.push('<span class="b hi">비공식</span>');if(i.impact)b.push('<span class="b imp-'+esc(i.impact)+'">'+({strengthen:'전망 강화',weaken:'전망 약화',neutral:'중립'}[i.impact]||i.impact)+'</span>');(i.tags||[]).slice(0,1).forEach(t=>t&&b.push('<span class="b">'+esc(t)+'</span>'));
-    const one=i.note?'나에게 · '+i.note:(i.summary||'');
-    return '<div class="nrow"><div class="num">'+n+'</div><div><h3><span class="ch">'+esc(CHL[i.channel]||i.channel)+'</span>'+(i.url?'<a href="'+esc(i.url)+'" target="_blank" rel="noopener noreferrer">'+esc(i.title)+'</a>':esc(i.title))+'<span class="src">('+esc(i.publisher)+')</span></h3>'+(one?'<div class="one">'+esc(one)+'</div>':'')+'<div class="meta"><span>'+esc(i.published_at||'')+'</span>'+b.join('')+'</div></div></div>';};
+  // --- 뉴스: ZIGULAB 배치 (좌 고정 동향 패널 + 우 3열 카드 + 수집 띠 + AI 카드)
+  if($('ins-headline')&&I.headline){$('ins-headline').textContent=I.headline;$('ins-points').innerHTML=(I.points||[]).map(p=>'<li>'+esc(p)+'</li>').join('');
+    if(I.watch_next){$('ins-next').hidden=false;$('ins-next').innerHTML='<b>다음 볼 것</b>'+esc(I.watch_next);}
+    $('ins-date').textContent='· '+(I.text_date||I.date||'');if(I.method)$('ins-method').textContent=I.method;
+    const hi=Array.isArray(I.high)?I.high.length:(I.high||0);if(hi){$('ins-high').hidden=false;$('ins-high').textContent='중요 '+hi+'건 보기 ›';}}
+  const ncard=(i,lead)=>{const kw=(i.tags||[]).filter(t=>t&&!/^Lv/.test(t)).slice(0,2);const hi=(i.relevance==='high'&&i.channel!=='ai')?'<span class="hi">중요</span>':'';
+    const inner='<div class="band"><span>'+esc(i.category||'')+'</span><span class="dt">'+esc(i.published_at||'')+'</span></div><div class="cb"><h3>'+esc(i.title)+'</h3>'+(i.summary?'<p>'+esc(i.summary)+'</p>':'')+'<div class="src">'+hi+esc(i.publisher)+(kw.length?' · '+kw.map(esc).join(' · '):'')+'</div></div>';
+    return (i.url?'<a class="ncard'+(lead?' lead':'')+'" data-cat="'+esc(i.category||'')+'" href="'+esc(i.url)+'" target="_blank" rel="noopener noreferrer">':'<div class="ncard'+(lead?' lead':'')+'" data-cat="'+esc(i.category||'')+'">')+inner+(i.url?'</a>':'</div>');};
   const health=F.items.filter(i=>i.channel==='health'||i.channel==='research');const ai=F.items.filter(i=>i.channel==='ai');
-  if($('newslist')){$('newslist').innerHTML='<div class="nsec"><h2>보건·의료에서 바뀌는 것 <span class="n">'+health.length+'건 · 공식 출처 · 검토됨</span></h2>'+health.map(nrow).join('')+'</div>'
-    +'<div class="nsec"><h2>AI 신호 <span class="n">'+ai.length+'건 · 전망에 반영</span></h2>'+ai.map(nrow).join('')+'</div>';}
-  if($('nside')){$('nside').innerHTML='<div class="box"><h4>수집 상태</h4>'+pl.map(p=>'<div class="pr"><i class="dot '+esc(p.status)+'" style="margin-top:6px"></i><div><b>'+esc(p.name)+'</b><small>'+esc(p.note||'')+'</small></div><span class="n">'+esc(p.count)+'건<br>'+esc(p.last_run||'—')+'</span></div>').join('')+'</div>'
-    +'<div class="box"><h4>오늘</h4><div style="font-size:14px;color:var(--sec);line-height:1.8">오늘 신규 <b>'+esc(F.meta&&F.meta.today_new||0)+'</b>건 · 보건·의료 <b>'+esc((nb.health||0)+(nb.research||0))+'</b>건 · 중요 <b>'+esc(I.high||0)+'</b>건<br>키워드 '+(I.keywords||[]).map(k=>esc(k.k)+'('+k.n+')').join(', ')+'</div></div>';}
+  if($('newslist')){let nf='all';
+    const drawNews=()=>{const rows=health.filter(i=>nf==='all'||i.category===nf).slice(0,12);$('newslist').innerHTML=rows.length?rows.map((i,k)=>ncard(i,k===0&&nf==='all')).join(''):'<p class="empty">항목 없음</p>';};
+    const cats={};health.forEach(i=>{if(i.category)cats[i.category]=(cats[i.category]||0)+1;});
+    $('news-n').textContent='오늘 신규 '+((nb.health||0)+(nb.research||0))+'건 · 전체 '+health.length+'건';
+    $('newsfam').innerHTML='<button data-k="all" class="on">전체 '+health.length+'</button>'+Object.entries(cats).map(([k,n])=>'<button data-k="'+esc(k)+'">'+esc(k)+' '+n+'</button>').join('');
+    $('newsfam').addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;$('newsfam').querySelectorAll('button').forEach(x=>x.classList.toggle('on',x===b));nf=b.dataset.k;drawNews();});
+    drawNews();}
+  if($('pipestrip')){$('pipestrip').innerHTML='<div><h4>자료 수집 자동화</h4><div class="d">매일 아침 스크립트가 수집하고 문장만 Claude가 씁니다. 원문 복제 없음 · 오늘 신규 '+esc(F.meta&&F.meta.today_new||0)+'건</div></div>'
+    +pl.map(p=>'<div class="p"><b>'+esc(p.count)+'<small>건</small></b><small><i class="'+esc(p.status)+'"></i>'+esc(p.name)+' · '+esc(p.last_run||'—')+'</small></div>').join('');}
+  if($('ailist')){$('ai-n').textContent=ai.length+'건 · 전망에 반영';$('ailist').innerHTML=ai.slice(0,6).map(i=>ncard(i,false)).join('')||'<p class="empty">항목 없음</p>';}
   // --- 문제 풀이: 날짜별 아카이브 (F.practice.days) ---
   const PR=F.practice||{days:[],stats:{}};
   if($('pr-days')&&PR.days.length){
