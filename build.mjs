@@ -95,6 +95,22 @@ if (existsSync(watchFile) && html.includes(WATCH_PLACEHOLDER)) {
   console.log("[build] content/watch.json 없음 → 감시 섹션은 런타임 fetch 폴백");
 }
 
+// ── 피드 데이터 주입 (선택) ───────────────────
+const feedFile = new URL("./content/feed.json", import.meta.url);
+const FEED_PLACEHOLDER = '<script id="hub-feed" type="application/json">null</script>';
+if (existsSync(feedFile) && html.includes(FEED_PLACEHOLDER)) {
+  try {
+    const feed = JSON.parse(readFileSync(feedFile, "utf8"));
+    html = html.replace(FEED_PLACEHOLDER,
+      '<script id="hub-feed" type="application/json">' + JSON.stringify(feed).replace(/<\//g, "<\\/") + "</script>");
+    console.log("[build] feed 주입 완료 (" + (feed.meta && feed.meta.updated || "날짜 없음") + ", " + (feed.items || []).length + "건)");
+  } catch (e) {
+    console.warn("[build] content/feed.json 파싱 실패 → 주입 생략:", e.message);
+  }
+} else {
+  console.log("[build] content/feed.json 없음 → 피드는 런타임 fetch 폴백");
+}
+
 // ── Worker 로 감싸기 ─────────────────────────────
 const escaped = html
   .replace(/\\/g, "\\\\")
