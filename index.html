@@ -1017,6 +1017,12 @@ body{font-size:13.5px;line-height:1.55}
 .afc-nav button:hover:not(:disabled){color:var(--lime);border-color:var(--lime-ring)}.afc-nav button:disabled{opacity:.3;cursor:default}
 .afc-pos{font-family:var(--mono);font-size:11px;color:var(--mut)}
 #afc-headline.past{color:var(--sec)}
+
+.conf-tags{display:flex;gap:4px;flex-wrap:wrap;margin-bottom:6px}.ctag{font-family:var(--mono);font-size:9.5px;color:var(--mut);border:1px solid var(--grid);padding:1px 6px}.ctag.new{color:var(--lime);border-color:var(--lime-ring)}
+tr.conf-old td{color:var(--mut)}tr.conf-old td.impact{color:var(--mut)}
+tr.conf-debate td{padding-top:0;border-top:0}tr.conf-debate details{font-size:13px}tr.conf-debate summary{cursor:pointer;font-family:var(--mono);font-size:10.5px;color:var(--lime);padding:2px 0 8px}
+.dline{margin:0 0 6px;color:var(--sec);line-height:1.55}.dline b{color:var(--ink);font-weight:600;margin-right:6px}.dline.meta{font-family:var(--mono);font-size:10.5px;color:var(--mut)}
+.conf-toggle{margin-top:10px;font:inherit;font-family:var(--mono);font-size:10.5px;color:var(--sec);background:transparent;border:1px solid var(--grid);padding:5px 10px;cursor:pointer}.conf-toggle:hover{color:var(--lime)}
 </style>
 </head>
 <body>
@@ -1949,16 +1955,42 @@ body{font-size:13.5px;line-height:1.55}
     thead.appendChild(hr); tb.appendChild(thead);
     var tbody = el("tbody");
     var heads = ["기존 전망", "현재 증거", "수정된 판단", "내게 미치는 영향"];
-    (d.conflicts || []).forEach(function (c) {
-      var tr = el("tr");
+    var allC = d.conflicts || [];
+    var showOld = !!renderCareer.showOld;
+    var rows = allC.filter(function (c) { return showOld || (c.status || "current") === "current"; });
+    rows.forEach(function (c) {
+      var tr = el("tr"); var isNew = c.date && c.date === m.updated; var isOld = (c.status || "current") !== "current";
+      if (isOld) tr.className = "conf-old";
       [c.old, c.evidence, c.revised, c.impact].forEach(function (v, i) {
         var td = el("td", i === 3 ? "impact" : "", v);
         td.setAttribute("data-h", heads[i]);  // 모바일 세로 배치용 라벨
+        if (i === 0) {
+          var tagRow = el("div", "conf-tags");
+          if (c.forecast_id) tagRow.appendChild(el("span", "ctag", c.forecast_id));
+          if (c.date) tagRow.appendChild(el("span", "ctag", (isOld ? "지난 판단 " : "판단 ") + c.date));
+          if (isNew && !isOld) tagRow.appendChild(el("span", "ctag new", "NEW"));
+          if (isOld && c.superseded_at) tagRow.appendChild(el("span", "ctag", "교체 " + c.superseded_at));
+          td.insertBefore(tagRow, td.firstChild);
+        }
         tr.appendChild(td);
       });
       tbody.appendChild(tr);
+      if (c.debate && (c.debate.challenger || c.debate.defender || c.debate.verdict)) {
+        var dr = el("tr", "conf-debate" + (isOld ? " conf-old" : "")); var dtd = el("td"); dtd.colSpan = 4;
+        var det = el("details"); det.appendChild(el("summary", "", "에이전트 토론 보기"));
+        [["도전", c.debate.challenger], ["옹호", c.debate.defender], ["판정", c.debate.verdict]].forEach(function (pair) {
+          if (!pair[1]) return; var line = el("p", "dline"); line.appendChild(el("b", "", pair[0])); line.appendChild(document.createTextNode(" " + pair[1])); det.appendChild(line);
+        });
+        if (c.debate.signals && c.debate.signals.length) det.appendChild(el("p", "dline meta", "근거 신호 " + c.debate.signals.join(", ")));
+        dtd.appendChild(det); dr.appendChild(dtd); tbody.appendChild(dr);
+      }
     });
     tb.appendChild(tbody);
+    var oldN = allC.filter(function (c) { return (c.status || "current") !== "current"; }).length;
+    var wrap = tb.parentNode; var tog = wrap.querySelector(".conf-toggle");
+    if (!tog) { tog = el("button", "conf-toggle"); tog.type = "button"; wrap.appendChild(tog); }
+    if (oldN) { tog.hidden = false; tog.textContent = showOld ? "지난 판단 숨기기" : "지난 판단 " + oldN + "건 보기 ›"; tog.onclick = function () { renderCareer.showOld = !showOld; renderCareer(d); }; }
+    else tog.hidden = true;
 
     // 3. 시장 신호
     var sg = $("afc-signals"); sg.innerHTML = "";
