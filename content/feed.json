@@ -1,12 +1,12 @@
 {
  "meta": {
   "updated": "2026-09-10",
-  "generated_at": "2026-09-10T12:57:52",
+  "generated_at": "2026-09-10T15:43:39",
   "days": [
    "2026-09-10",
    "2026-09-09"
   ],
-  "today_new": 20,
+  "today_new": 24,
   "note": "수집기 4개의 결과를 스크립트가 합친 값. 원문 복제 없음, 추정치 없음."
  },
  "channels": [
@@ -29,6 +29,11 @@
    "id": "sql",
    "name": "SQL 오늘의 문제",
    "count": 5
+  },
+  {
+   "id": "python",
+   "name": "Python 오늘의 문제",
+   "count": 4
   },
   {
    "id": "research",
@@ -68,6 +73,14 @@
    "status": "ok",
    "note": "주제 서브쿼리/CTE · 원문 3 + 생성 2",
    "count": 5
+  },
+  {
+   "id": "python",
+   "name": "Python 데일리 출제",
+   "last_run": "2026-09-10",
+   "status": "ok",
+   "note": "주제 함수·정규식·날짜 · 원문 + 생성 · 테스트 채점",
+   "count": 4
   }
  ],
  "items": [
@@ -195,6 +208,72 @@
     "G302"
    ],
    "summary": "CTE 를 사용해 `monthly_performance` 에서 각 month 별로 revenue 가 가장 큰 dept_id 를 구하고 month, dept_id, revenue 를 month 오름차순으로 조회하세요. (동률은 없다고 가정)"
+  },
+  {
+   "id": "python-2026-09-10-1",
+   "channel": "python",
+   "title": "[Built-Ins] Input()",
+   "url": "https://www.hackerrank.com/challenges/input/problem",
+   "publisher": "hackerrank_python",
+   "source": "hackerrank_python",
+   "published_at": "2026-09-10",
+   "seen": "2026-09-10",
+   "category": "함수·정규식·날짜",
+   "tags": [
+    "Lv1"
+   ],
+   "kind": "link",
+   "summary": "원문 링크 문제. 사이트에서 풀고 done 으로 기록."
+  },
+  {
+   "id": "python-2026-09-10-2",
+   "channel": "python",
+   "title": "[Built-Ins] Any or All",
+   "url": "https://www.hackerrank.com/challenges/any-or-all/problem",
+   "publisher": "hackerrank_python",
+   "source": "hackerrank_python",
+   "published_at": "2026-09-10",
+   "seen": "2026-09-10",
+   "category": "함수·정규식·날짜",
+   "tags": [
+    "Lv1"
+   ],
+   "kind": "link",
+   "summary": "원문 링크 문제. 사이트에서 풀고 done 으로 기록."
+  },
+  {
+   "id": "python-2026-09-10-3",
+   "channel": "python",
+   "title": "날짜 표기 통일",
+   "url": "",
+   "publisher": "생성 문제 · Python",
+   "source": "Python",
+   "published_at": "2026-09-10",
+   "seen": "2026-09-10",
+   "category": "함수·정규식·날짜",
+   "tags": [
+    "Lv3",
+    "P303"
+   ],
+   "kind": "generated",
+   "summary": "\"2026.09.10\", \"2026-9-1\", \"2026/09/10\", \"2026년 9월 10일\" 처럼 섞인 날짜 문자열 s 를 \"YYYY-MM-DD\" 로 통일해 반환하는 to_iso 를 작성하세요. 날짜가 아니면 None."
+  },
+  {
+   "id": "python-2026-09-10-4",
+   "channel": "python",
+   "title": "등급 라벨",
+   "url": "",
+   "publisher": "생성 문제 · Python",
+   "source": "Python",
+   "published_at": "2026-09-10",
+   "seen": "2026-09-10",
+   "category": "함수·정규식·날짜",
+   "tags": [
+    "Lv1",
+    "P001"
+   ],
+   "kind": "generated",
+   "summary": "장기요양 등급 정수 grade(1~6)를 받아 1~3이면 \"중증\", 4~5면 \"경증\", 6이면 \"인지지원\", 그 외는 \"미해당\"을 반환하는 함수 grade_label 을 작성하세요."
   },
   {
    "id": "w-b1abd45502",
@@ -1877,6 +1956,7 @@
    "health": 15,
    "ai": 0,
    "sql": 0,
+   "python": 0,
    "research": 0
   },
   "deadline_7d": 29,
@@ -1890,5 +1970,194 @@
   "watch_next": "건정심 2027년 보험료율 동결의 공식 보도자료, 치료재료 협의체 1차 회의 결과, 장기요양 통계연보 2025년판 공개 시점.",
   "method": "당일 반영된 항목 15건을 Claude 가 읽고 3가지 흐름으로 묶어 썼다. 키워드·건수는 스크립트가 센 값이고 문장은 판단이다. 원문 복제 없음.",
   "text_date": "2026-09-10"
+ },
+ "practice": {
+  "days": [
+   {
+    "date": "2026-09-10",
+    "sql": [
+     {
+      "title": "[Advanced Select and Joins] The Number of Employees Which Report to Each Employee",
+      "url": "https://leetcode.com/problems/the-number-of-employees-which-report-to-each-employee/",
+      "publisher": "leetcode",
+      "tags": [
+       "Lv1"
+      ],
+      "kind": "link",
+      "summary": "원문 링크 문제. 사이트에서 풀고 done 으로 기록.",
+      "category": "서브쿼리/CTE"
+     },
+     {
+      "title": "[Advanced Select and Joins] Primary Department for Each Employee",
+      "url": "https://leetcode.com/problems/primary-department-for-each-employee/",
+      "publisher": "leetcode",
+      "tags": [
+       "Lv1"
+      ],
+      "kind": "link",
+      "summary": "원문 링크 문제. 사이트에서 풀고 done 으로 기록.",
+      "category": "서브쿼리/CTE"
+     },
+     {
+      "title": "[Advanced Select] Type of Triangle",
+      "url": "https://www.hackerrank.com/challenges/what-type-of-triangle/problem",
+      "publisher": "hackerrank",
+      "tags": [
+       "Lv1"
+      ],
+      "kind": "link",
+      "summary": "원문 링크 문제. 사이트에서 풀고 done 으로 기록.",
+      "category": "서브쿼리/CTE"
+     },
+     {
+      "title": "평균 이상 대기시간 예약",
+      "url": "",
+      "publisher": "생성 문제 · BigQuery",
+      "tags": [
+       "Lv2",
+       "G301"
+      ],
+      "kind": "generated",
+      "summary": "`appointments` 에서 status 가 '완료'인 예약 중 wait_min 이 완료 예약 전체 평균보다 큰 예약의 appt_id, wait_min 을 wait_min 내림차순, appt_id 오름차순으로 조회하세요.",
+      "category": "서브쿼리/CTE"
+     },
+     {
+      "title": "월별 최고 매출 부서",
+      "url": "",
+      "publisher": "생성 문제 · BigQuery",
+      "tags": [
+       "Lv2",
+       "G302"
+      ],
+      "kind": "generated",
+      "summary": "CTE 를 사용해 `monthly_performance` 에서 각 month 별로 revenue 가 가장 큰 dept_id 를 구하고 month, dept_id, revenue 를 month 오름차순으로 조회하세요. (동률은 없다고 가정)",
+      "category": "서브쿼리/CTE"
+     }
+    ],
+    "python": [
+     {
+      "title": "[Built-Ins] Input()",
+      "url": "https://www.hackerrank.com/challenges/input/problem",
+      "publisher": "hackerrank_python",
+      "tags": [
+       "Lv1"
+      ],
+      "kind": "link",
+      "summary": "원문 링크 문제. 사이트에서 풀고 done 으로 기록.",
+      "category": "함수·정규식·날짜"
+     },
+     {
+      "title": "[Built-Ins] Any or All",
+      "url": "https://www.hackerrank.com/challenges/any-or-all/problem",
+      "publisher": "hackerrank_python",
+      "tags": [
+       "Lv1"
+      ],
+      "kind": "link",
+      "summary": "원문 링크 문제. 사이트에서 풀고 done 으로 기록.",
+      "category": "함수·정규식·날짜"
+     },
+     {
+      "title": "날짜 표기 통일",
+      "url": "",
+      "publisher": "생성 문제 · Python",
+      "tags": [
+       "Lv3",
+       "P303"
+      ],
+      "kind": "generated",
+      "summary": "\"2026.09.10\", \"2026-9-1\", \"2026/09/10\", \"2026년 9월 10일\" 처럼 섞인 날짜 문자열 s 를 \"YYYY-MM-DD\" 로 통일해 반환하는 to_iso 를 작성하세요. 날짜가 아니면 None.",
+      "category": "함수·정규식·날짜"
+     },
+     {
+      "title": "등급 라벨",
+      "url": "",
+      "publisher": "생성 문제 · Python",
+      "tags": [
+       "Lv1",
+       "P001"
+      ],
+      "kind": "generated",
+      "summary": "장기요양 등급 정수 grade(1~6)를 받아 1~3이면 \"중증\", 4~5면 \"경증\", 6이면 \"인지지원\", 그 외는 \"미해당\"을 반환하는 함수 grade_label 을 작성하세요.",
+      "category": "함수·정규식·날짜"
+     }
+    ]
+   },
+   {
+    "date": "2026-09-09",
+    "sql": [
+     {
+      "title": "[SUM, MAX, MIN] 가장 비싼 상품 구하기",
+      "url": "https://school.programmers.co.kr/learn/courses/30/lessons/131697",
+      "publisher": "programmers",
+      "tags": [
+       "Lv1"
+      ],
+      "kind": "link",
+      "summary": "원문 링크 문제. 사이트에서 풀고 done 으로 기록.",
+      "category": "GROUP BY/HAVING/집계"
+     },
+     {
+      "title": "[SUM, MAX, MIN] 최댓값 구하기",
+      "url": "https://school.programmers.co.kr/learn/courses/30/lessons/59415",
+      "publisher": "programmers",
+      "tags": [
+       "Lv1"
+      ],
+      "kind": "link",
+      "summary": "원문 링크 문제. 사이트에서 풀고 done 으로 기록.",
+      "category": "GROUP BY/HAVING/집계"
+     },
+     {
+      "title": "[Basic Aggregate Functions] Not Boring Movies",
+      "url": "https://leetcode.com/problems/not-boring-movies/",
+      "publisher": "leetcode",
+      "tags": [
+       "Lv1"
+      ],
+      "kind": "link",
+      "summary": "원문 링크 문제. 사이트에서 풀고 done 으로 기록.",
+      "category": "GROUP BY/HAVING/집계"
+     },
+     {
+      "title": "지역별 수급자 수",
+      "url": "",
+      "publisher": "생성 문제 · BigQuery",
+      "tags": [
+       "Lv1",
+       "G201"
+      ],
+      "kind": "generated",
+      "summary": "`beneficiaries` 를 region 별로 묶어 수급자 수(cnt)를 구하고 cnt 내림차순, region 오름차순으로 조회하세요.",
+      "category": "GROUP BY/HAVING/집계"
+     },
+     {
+      "title": "승인 청구액 1천만원 이상 기관",
+      "url": "",
+      "publisher": "생성 문제 · BigQuery",
+      "tags": [
+       "Lv2",
+       "G202"
+      ],
+      "kind": "generated",
+      "summary": "`claims` 에서 approved 가 TRUE 인 청구만 대상으로 provider_id 별 amount 합계(total)를 구하고, total 이 10,000,000 이상인 기관만 total 내림차순으로 조회하세요.",
+      "category": "GROUP BY/HAVING/집계"
+     }
+    ],
+    "python": []
+   }
+  ],
+  "stats": {
+   "sql": {
+    "solved": 0,
+    "correct": 0,
+    "days": 0
+   },
+   "python": {
+    "solved": 0,
+    "correct": 0,
+    "days": 0
+   }
+  }
  }
 }

@@ -732,14 +732,18 @@ h1,h2,h3{letter-spacing:-.01em}
 <!-- ===== 3. 문제 풀이 (SQL · Python) ===== -->
 <section data-view="practice" id="view-practice">
   <div class="wrap pg">
+    <div class="jkhead"><h2>문제 풀이 <span class="n" id="pr-sub"></span></h2>
+      <div class="datenav"><button id="pr-prev" aria-label="이전 날">‹</button><span class="cur" id="pr-cur">—</span><button id="pr-next" aria-label="다음 날">›</button><select id="pr-days" aria-label="날짜 선택" style="font:inherit;font-size:13px;border:1px solid var(--grid);border-radius:8px;padding:6px 8px;background:var(--card)"></select></div>
+    </div>
     <div class="prac">
       <div>
-        <div class="box"><h2 id="sql-title">오늘의 SQL 5문제</h2><p class="sub" id="sql-sub">요일별 주제 · 원문 링크 3 + 생성 2 · BigQuery·MariaDB 채점</p><div id="sqllist"></div></div>
-        <div class="box"><h2>Python 문제</h2><p class="sub">아직 문제 은행이 없습니다. SQL 데일리와 같은 방식(요일별 주제 · 원문 링크 + 생성 문제 · 자동 채점)으로 만들 예정입니다.</p></div>
+        <div class="box"><h2 id="sql-title">SQL 5문제</h2><p class="sub" id="sql-sub"></p><div id="sqllist"></div></div>
+        <div class="box"><h2 id="py-title">Python 5문제</h2><p class="sub" id="py-sub"></p><div id="pylist"></div></div>
       </div>
       <aside>
-        <div class="box"><h2 style="font-size:15px">푸는 법</h2><ol style="margin:0;padding-left:18px;font-size:14px;color:var(--sec);line-height:1.7"><li>원문 링크 문제는 해당 사이트에서 풀고 <code>/sql done N</code>으로 기록</li><li>생성 문제는 <code>/sql check N &lt;쿼리&gt;</code>로 채점. 정답 행 수와 차이 행이 표시됨</li><li>일요일은 이번 주 오답 복습</li></ol></div>
-        <div class="soon" id="sqlstats">풀이 기록이 쌓이면 정답률·연속 일수가 여기에 표시됩니다.</div>
+        <div class="box"><h2 style="font-size:15px">푸는 법</h2><ol style="margin:0;padding-left:18px;font-size:14px;color:var(--sec);line-height:1.7"><li>원문 링크 문제는 해당 사이트에서 풀고 <code>/sql done N</code> · <code>/python done N</code></li><li>생성 문제는 <code>/sql check N &lt;쿼리&gt;</code> · <code>/python check P### &lt;파일&gt;</code>로 채점</li><li>일요일은 이번 주 오답 복습</li></ol></div>
+        <div class="box" id="pr-stats"><h2 style="font-size:15px">풀이 기록</h2><div id="pr-stats-body" style="font-size:14px;color:var(--sec);line-height:1.8"></div></div>
+        <div class="soon">지난 세트는 지우지 않고 날짜별로 쌓입니다. 위 날짜 선택으로 언제든 다시 볼 수 있습니다.</div>
       </aside>
     </div>
   </div>
@@ -933,7 +937,7 @@ h1,h2,h3{letter-spacing:-.01em}
         <li><time>2020.03 – 2022.02</time><b>가톨릭대학교 경영학과 · 학사</b><p>편입 후 졸업. 이전에 정보보안학을 공부하다 경영으로 방향을 바꿨습니다.</p></li>
       </ol>
       <div>
-        <div class="skill3" style="margin-bottom:20px"><h3><i></i>자격·시험</h3><ul><li>데이터분석 준전문가 ADsP (2025.06)</li><li>ERP정보관리사 물류 2급 (2024.12)</li><li>빅데이터분석기사 · 사회조사분석사 준비 중</li></ul><p class="lv">불합격 이력도 적습니다. ADsP·SQLD 각 1회 불합격 후 학습법을 바꿨습니다.</p></div>
+        <div class="skill3" style="margin-bottom:20px"><h3><i></i>자격·시험</h3><ul><li>데이터분석 준전문가 ADsP (2025.06)</li><li>ERP정보관리사 물류 2급 (2024.12)</li><li>SQL·Python 데일리 문제 풀이 진행 중 · 사회조사분석사 준비 중</li></ul><p class="lv">불합격 이력도 적습니다. ADsP·SQLD 각 1회 불합격 후 학습법을 바꿨습니다.</p></div>
         <div class="skill3"><h3><i></i>도구 숙련도</h3><ul><li>Excel · Google Sheets — 실무 (필터·함수·피벗, Power Query 학습 중)</li><li>SQL · BigQuery — 초중급 (JOIN·GROUP BY·윈도우·CTE)</li><li>Python pandas — 초중급 (전처리·자동화)</li><li>SPSS — 중급 (기술통계·검정·회귀)</li><li>OCS · RCMS — 실무 사용</li></ul></div>
       </div>
     </div>
@@ -1168,11 +1172,11 @@ h1,h2,h3{letter-spacing:-.01em}
   var DATA = {
     today: [
       { id: "t1", text: "가장 중요한 일 하나 끝내기", meta: "09:00" },
-      { id: "t2", text: "빅데이터분석기사 학습", meta: "60 min" },
+      { id: "t2", text: "SQL 5문제 · Python 5문제 풀기", meta: "60 min" },
       { id: "t3", text: "채용 일정 확인하기", meta: "15 min" }
     ],
     week: [
-      { text: "빅분기 1과목 복습", tag: "study" },
+      { text: "SQL·Python 오답 복습", tag: "study" },
       { text: "지원 현황 정리", tag: "career" },
       { text: "프로젝트 등록", tag: "build" }
     ],
@@ -1210,7 +1214,7 @@ h1,h2,h3{letter-spacing:-.01em}
     ],
     archive: [
       { name: "태블로 교육자료", note: "개인정보 블러 처리본 · 165p", href: "/tableau-training-redacted.pdf" },
-      { name: "빅분기 요약본", note: "필기 정리 · 오답 노트" },
+      { name: "SQL·Python 오답 노트", note: "outputs/sql · outputs/python 누적" },
       { name: "장기요양 데이터셋", note: "급여 통계 · 대시보드 원본" }
     ]
   };
@@ -1877,10 +1881,25 @@ function renderRows(F){
     +'<div class="nsec"><h2>AI 신호 <span class="n">'+ai.length+'건 · 전망에 반영</span></h2>'+ai.map(nrow).join('')+'</div>';}
   if($('nside')){$('nside').innerHTML='<div class="box"><h4>수집 상태</h4>'+pl.map(p=>'<div class="pr"><i class="dot '+esc(p.status)+'" style="margin-top:6px"></i><div><b>'+esc(p.name)+'</b><small>'+esc(p.note||'')+'</small></div><span class="n">'+esc(p.count)+'건<br>'+esc(p.last_run||'—')+'</span></div>').join('')+'</div>'
     +'<div class="box"><h4>오늘</h4><div style="font-size:14px;color:var(--sec);line-height:1.8">오늘 신규 <b>'+esc(F.meta&&F.meta.today_new||0)+'</b>건 · 보건·의료 <b>'+esc((nb.health||0)+(nb.research||0))+'</b>건 · 중요 <b>'+esc(I.high||0)+'</b>건<br>키워드 '+(I.keywords||[]).map(k=>esc(k.k)+'('+k.n+')').join(', ')+'</div></div>';}
-  // --- 문제 풀이
-  const sql=F.items.filter(i=>i.channel==='sql');
-  if($('sqllist')){const sp=pl.find(p=>p.id==='sql');if(sp)$('sql-sub').textContent=(sp.note||'')+' · '+(sp.last_run||'');
-    $('sqllist').innerHTML=sql.length?sql.map((i,k)=>'<div class="prow"><div class="num">'+(k+1)+'</div><div><h3>'+(i.url?'<a href="'+esc(i.url)+'" target="_blank" rel="noopener noreferrer">'+esc(i.title)+'</a>':esc(i.title))+'</h3>'+(i.summary?'<div class="d">'+esc(i.summary)+'</div>':'')+'<div class="tg">'+(i.tags||[]).map(t=>'<span>'+esc(t)+'</span>').join('')+'<span>'+esc(i.publisher)+'</span></div></div><div class="st">'+(i.url?'원문':'생성')+'</div></div>').join(''):'<p class="empty">오늘 문제가 없습니다.</p>';}
+  // --- 문제 풀이: 날짜별 아카이브 (F.practice.days) ---
+  const PR=F.practice||{days:[],stats:{}};
+  if($('pr-days')&&PR.days.length){
+    const days=PR.days.map(d=>d.date);let cur=0;
+    $('pr-days').innerHTML=days.map(d=>'<option value="'+d+'">'+d+'</option>').join('');
+    const prow=(i,k)=>'<div class="prow"><div class="num">'+(k+1)+'</div><div><h3>'+(i.url?'<a href="'+esc(i.url)+'" target="_blank" rel="noopener noreferrer">'+esc(i.title)+'</a>':esc(i.title))+'</h3>'+(i.summary?'<div class="d">'+esc(i.summary)+'</div>':'')+'<div class="tg">'+(i.tags||[]).map(t=>'<span>'+esc(t)+'</span>').join('')+'<span>'+esc(i.publisher)+'</span></div></div><div class="st">'+(i.kind==='link'?'원문':'생성')+'</div></div>';
+    const drawPr=()=>{const d=PR.days[cur];$('pr-cur').textContent=d.date;$('pr-days').value=d.date;$('pr-prev').disabled=cur>=PR.days.length-1;$('pr-next').disabled=cur<=0;
+      $('pr-sub').textContent=(d.date===(F.meta&&F.meta.updated)?'오늘':'지난 세트')+' · 전체 '+PR.days.length+'일 누적';
+      $('sql-title').textContent='SQL '+d.sql.length+'문제';$('sql-sub').textContent=d.sql.length?('주제 '+(d.sql[0].category||'')):'이 날 SQL 세트 없음';
+      $('sqllist').innerHTML=d.sql.length?d.sql.map(prow).join(''):'<p class="empty">없음</p>';
+      $('py-title').textContent='Python '+d.python.length+'문제';$('py-sub').textContent=d.python.length?('주제 '+(d.python[0].category||'')):'이 날 Python 세트 없음';
+      $('pylist').innerHTML=d.python.length?d.python.map(prow).join(''):'<p class="empty">없음</p>';};
+    $('pr-prev').addEventListener('click',()=>{if(cur<PR.days.length-1){cur++;drawPr();}});
+    $('pr-next').addEventListener('click',()=>{if(cur>0){cur--;drawPr();}});
+    $('pr-days').addEventListener('change',e=>{cur=days.indexOf(e.target.value);drawPr();});
+    drawPr();
+    const st=PR.stats||{};const line=(k,n)=>{const x=st[k]||{};return n+': 풀이 '+(x.solved||0)+' · 정답 '+(x.correct||0)+' · '+(x.days||0)+'일';};
+    $('pr-stats-body').innerHTML=line('sql','SQL')+'<br>'+line('python','Python');
+  }
   // --- 공통: 상태바, 목록 링크
   const lc=$('list-count');if(lc)lc.textContent=F.items.length+'건';
   document.addEventListener('click',e=>{const a=e.target.closest('a[data-ch]');if(!a)return;e.preventDefault();const d=$('listtoggle');if(!d)return;d.open=true;const li=document.querySelector('#f-channel li[data-v="'+a.dataset.ch+'"]');if(li)li.click();d.scrollIntoView({behavior:'smooth',block:'start'});});
