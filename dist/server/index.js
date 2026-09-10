@@ -751,15 +751,277 @@ body{font-size:13.5px;line-height:1.55}
 .pager button{font:inherit;font-family:var(--mono);font-size:12px;color:var(--sec);background:transparent;border:0;width:34px;height:34px;border-radius:50%;cursor:pointer;display:grid;place-items:center}
 .pager button:hover{color:var(--ink);background:var(--hover)}.pager .pn.on{color:var(--ink);background:var(--grid);font-weight:600}
 .pager .pa{color:var(--mut);font-size:16px}.pager .pa:disabled{opacity:.3;cursor:default;background:transparent}
+
+/* ---- 홈 (variant-E2 이식) ---- */
+.hm{--t1:#f0f0f2;--t2:#a1a1ab;--t3:#7a7a86;--ln:#2a2a30;--lime:#c4f135;--coral:#ff9a7a;--bg:#0c0c0d;color:var(--t1);font-family:Pretendard,'IBM Plex Sans KR',system-ui,sans-serif;font-size:15px;line-height:1.55}
+.hm a{color:inherit;text-decoration:none}.hm h1,.hm h3,.hm p{margin:0}.hm .hm-mono{font-family:var(--mono)}
+
+
+/* CONTAINER */
+.hm-wrap { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
+
+/* HEADER */
+.hdr {
+  height: 56px;
+  border-bottom: 1px solid var(--ln);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: var(--bg);
+}
+
+/* HERO */
+.hm-hero {
+  display: block;
+  min-height: auto;
+  border-bottom: 1px solid var(--ln);
+  opacity: 0;
+  transform: translateY(18px);
+  animation: fu 0.5s cubic-bezier(0.22, 1, 0.36, 1) 0.08s forwards;
+}
+.hm-hero .hm-wrap { width: 100%; }
+.hm-hero-in {
+  max-width:840px;
+  padding: 96px 0 80px;
+}
+.hm-hero h1 {
+  font-size:48px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  color: var(--t1);
+  margin-bottom: 24px;
+}
+.hm-hero p {
+  font-size: 18px;
+  color: var(--t2);
+  line-height: 1.7;
+  max-width:720px;
+  margin-bottom: 32px;
+}
+.hm-hero-btns { display: flex; gap: 12px; margin-bottom: 22px; flex-wrap: wrap; }
+.hm-btn-p {
+  display: inline-flex; align-items: center;
+  height: 44px; padding: 0 22px;
+  background: var(--lime); color: #0c0c0d;
+  font-size: 15px; font-weight: 600;
+  border-radius: var(--r);
+  transition: opacity 0.12s;
+}
+.hm-btn-p:hover { opacity: 0.86; }
+.hm-btn-g {
+  display: inline-flex; align-items: center;
+  height: 44px; padding: 0 22px;
+  border: 1px solid #3a3a42; color: var(--t1);
+  font-size: 15px; font-weight: 500;
+  border-radius: var(--r);
+  transition: border-color 0.12s;
+}
+.hm-btn-g:hover { border-color: var(--t2); }
+.hm-hero-meta {
+  font-size: 12px;
+  color: var(--t3);
+  letter-spacing: 0;
+}
+.hm-hero-meta .hm-mono {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+}
+
+/* CARDS */
+.hm-cards { border-bottom: 1px solid var(--ln); }
+.hm-cards-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+  border-top: 1px solid var(--ln);
+}
+.hm-card {
+  padding: 40px 28px;
+  min-height: 260px;
+  display: flex; flex-direction: column;
+  transition: background 0.15s;
+  color: inherit;
+  border-right: 1px solid var(--ln);
+}
+.hm-card:last-child { border-right: none; }
+.hm-card:hover { background: #111113; }
+.hm-card-num {
+  font-size: 12px;
+  color: var(--t3);
+  letter-spacing: 0;
+  margin-bottom: 16px;
+  display: block;
+}
+.hm-card-num .hm-mono {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+}
+.hm-card h3 {
+  font-size: 22px; font-weight: 600;
+  margin-bottom: 10px;
+  color: var(--t1);
+}
+.hm-card-desc {
+  font-size: 15px; color: var(--t2);
+  line-height: 1.6; flex: 1;
+  margin-bottom: 0;
+}
+.hm-card-live-wrap {
+  border-top: 1px solid var(--ln);
+  margin-top: 20px;
+  padding-top: 14px;
+}
+.hm-card-live {
+  font-size: 13px; color: var(--t2);
+  line-height: 1.45;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.hm-card-live-pub {
+  font-size: 12px;
+  color: var(--t3);
+  letter-spacing: 0;
+  margin-top: 4px;
+}
+.hm-card-dday {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  color: var(--coral);
+  display: inline;
+  margin-right: 4px;
+}
+
+/* NUMBERS */
+.hm-nums { border-bottom: 1px solid var(--ln); }
+.hm-nums-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.hm-num-col {
+  padding: 48px 28px;
+  border-right: 1px solid var(--ln);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.hm-num-col:last-child { border-right: none; }
+.hm-num-val-wrap {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+}
+.hm-num-val {
+  display: block;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 48px; font-weight: 500;
+  color: var(--lime);
+  letter-spacing: -0.02em;
+  font-variant-numeric: tabular-nums;
+  line-height: 1;
+}
+.hm-num-unit {
+  font-size: 18px;
+  color: var(--t2);
+  font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 400;
+}
+.hm-num-lbl {
+  font-size: 13px;
+  color: var(--t3);
+  letter-spacing: 0;
+}
+
+/* ABOUT */
+.hm-about { border-bottom: 1px solid var(--ln); padding: 80px 0; }
+.hm-about-grid {
+  display: grid;
+  grid-template-columns: 4fr 8fr;
+  gap: 32px;
+  align-items: start;
+}
+.hm-about-left {}
+.hm-about-lbl {
+  font-size: 12px;
+  color: var(--t3);
+  letter-spacing: 0;
+  display: block;
+  margin-bottom: 12px;
+}
+.hm-about-heading {
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--t1);
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+}
+.hm-about-body p {
+  font-size: 16px; color: var(--t2);
+  line-height: 1.75; max-width: 640px;
+  margin-bottom: 20px;
+}
+.hm-about-body p .hm-bold-first {
+  color: var(--t1);
+  font-weight: 500;
+}
+.hm-about-body p:last-of-type { margin-bottom: 20px; }
+.hm-about-link {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--t1);
+  letter-spacing: 0;
+  transition: opacity 0.12s;
+}
+.hm-about-link:hover { opacity: 0.7; }
+
+/* FOOTER */
+.hm-ftr {
+  height: 72px;
+  border-top: 1px solid var(--ln);
+}
+.hm-ftr-in {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.hm-ftr-brand { font-size: 14px; font-weight: 600; }
+.hm-ftr-note {
+  font-size: 12px;
+  color: var(--t3);
+  letter-spacing: 0;
+}
+
+@keyframes fu {
+  to { opacity: 1; transform: translateY(0); }}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .hm-hero h1 { font-size: 32px; }
+  .hm-hero-in { padding: 56px 0 48px; }
+  .hm-hero-meta { display: flex; flex-direction: column; gap: 4px; }
+  .hm-cards-row { grid-template-columns: 1fr; }
+  .hm-card { border-right: none; border-bottom: 1px solid var(--ln); }
+  .hm-card:last-child { border-bottom: none; }
+  .hm-nums-row { grid-template-columns: 1fr; }
+  .hm-num-col {
+    border-right: none;
+    border-bottom: 1px solid var(--ln);
+  }
+  .hm-num-col:last-child { border-bottom: none; }
+  .hm-about-grid { grid-template-columns: 1fr; gap: 20px; }}
+
 </style>
 </head>
 <body>
 <a class="skip" href="#main">본문으로 건너뛰기</a>
 <header class="site">
   <div class="wrap topbar">
-    <a class="logo" href="#feed">재용<span>.</span> <small style="font-family:var(--mono);font-size:12px;color:var(--mut);font-weight:400;margin-left:6px">radar</small></a>
+    <a class="logo" href="#home">재용<span>.</span> <small style="font-family:var(--mono);font-size:12px;color:var(--mut);font-weight:400;margin-left:6px">radar</small></a>
     <nav class="tabs" aria-label="화면">
-      <a href="#jobs" data-go="jobs" class="on">채용 공고</a><a href="#news" data-go="news">뉴스</a><a href="#practice" data-go="practice">문제 풀이</a>
+      <a href="#home" data-go="home" class="on">홈</a><a href="#jobs" data-go="jobs">채용 공고</a><a href="#news" data-go="news">뉴스</a><a href="#practice" data-go="practice">문제 풀이</a>
     </nav>
     <nav class="tabs sub" aria-label="보조"><a href="#about" data-go="about">소개</a><a href="#ops" data-go="ops">운영판</a></nav>
     <div class="date"><span id="today-date">—</span><span class="sync" id="sync">동기화 확인 중…</span></div>
@@ -770,7 +1032,39 @@ body{font-size:13.5px;line-height:1.55}
 
 <!-- ===== 피드 (기본 화면) ===== -->
 <!-- ===== 1. 채용 공고 (시안 A: 카드 그리드) ===== -->
-<section data-view="jobs" class="on" id="view-jobs">
+<section data-view="home" class="on" id="view-home">
+  <div class="hm">
+    <section class="hm-hero">
+      <div class="hm-wrap"><div class="hm-hero-in">
+        <h1>매일 아침, 공고와 뉴스를 모으고<br>문제를 풉니다.</h1>
+        <p>보건·공공·대학 쪽 채용 공고, 보건·의료 정책 뉴스, 코딩테스트 문제.<br>스크립트를 모으는 사이트, 바로 여기입니다! 재용입니다.</p>
+        <div class="hm-hero-btns"><a href="#jobs" data-go="jobs" class="hm-btn-p">오늘 공고 보기 ›</a><a href="#about" data-go="about" class="hm-btn-g">만든 과정 보기 ›</a></div>
+        <p class="hm-hero-meta" id="hm-meta"></p>
+      </div></div>
+    </section>
+    <section class="hm-cards"><div class="hm-wrap"><div class="hm-cards-row">
+      <a href="#jobs" data-go="jobs" class="hm-card"><span class="hm-card-num"><span class="hm-mono">01</span> · 매일 아침 수집</span><h3>채용 공고</h3><p class="hm-card-desc">보건·공공·대학 행정 직무의 신입·경력무관 공고를 매일 수집합니다.</p><div class="hm-card-live-wrap"><p class="hm-card-live" id="hm-soon"></p><p class="hm-card-live-pub" id="hm-soon-pub"></p></div></a>
+      <a href="#news" data-go="news" class="hm-card"><span class="hm-card-num"><span class="hm-mono">02</span> · <span class="hm-mono">15</span>개 출처 감시</span><h3>보건·의료 뉴스</h3><p class="hm-card-desc">복지부·심평원·병원협회 등 15개 출처의 정책과 고시를 모니터링합니다.</p><div class="hm-card-live-wrap"><p class="hm-card-live" id="hm-news"></p></div></a>
+      <a href="#practice" data-go="practice" class="hm-card"><span class="hm-card-num"><span class="hm-mono">03</span> · 매일 <span class="hm-mono">5</span>문제</span><h3>문제 풀이</h3><p class="hm-card-desc">매일 SQL 5문제, Python 5문제를 자동 출제하고 BigQuery로 채점합니다.</p><div class="hm-card-live-wrap"><p class="hm-card-live" id="hm-prac"></p></div></a>
+    </div></div></section>
+    <section class="hm-nums"><div class="hm-wrap"><div class="hm-nums-row">
+      <div class="hm-num-col"><div class="hm-num-val-wrap"><span class="hm-num-val" id="hm-upcoming">—</span><span class="hm-num-unit">건</span></div><span class="hm-num-lbl">7일 내 마감</span></div>
+      <div class="hm-num-col"><div class="hm-num-val-wrap"><span class="hm-num-val" id="hm-srccount">—</span><span class="hm-num-unit">곳</span></div><span class="hm-num-lbl">채용 소스</span></div>
+      <div class="hm-num-col"><div class="hm-num-val-wrap"><span class="hm-num-val" id="hm-watchcount">15</span><span class="hm-num-unit">곳</span></div><span class="hm-num-lbl">감시 출처</span></div>
+    </div></div></section>
+    <section class="hm-about"><div class="hm-wrap"><div class="hm-about-grid">
+      <div class="hm-about-left"><span class="hm-about-lbl">ABOUT</span><span class="hm-about-heading">행정 × 데이터</span></div>
+      <div class="hm-about-body">
+        <p><span class="hm-bold-first">살펴보는 자리 —</span> 보건·공공·대학 쪽 기획·성과관리·사업운영·통계·연구행정 공고 (신입·경력무관)</p>
+        <p><span class="hm-bold-first">현장 —</span> 병원 6개월 근무, 의료기관 회계·장기요양보험, 병원 경영성과 논문</p>
+        <p><span class="hm-bold-first">데이터 —</span> 장기요양 통계 15개년 패널·대시보드, 행동 로그 EDA, 다중회귀·기초통계</p>
+        <a href="#about" data-go="about" class="hm-about-link">소개 전문 ›</a>
+      </div>
+    </div></div></section>
+    <div class="hm-ftr"><div class="hm-wrap hm-ftr-in"><span class="hm-ftr-brand">재용.</span><span class="hm-ftr-note" id="hm-ftr-note"></span></div></div>
+  </div>
+</section>
+<section data-view="jobs" id="view-jobs">
   <div class="pw">
     <aside class="rail" id="jobs-rail"></aside>
     <div class="main-col">
@@ -1832,15 +2126,15 @@ function renderWatch(w){
 
 // ---------- 화면 전환 (피드 / 소개 / 운영판) ----------
 (function(){
-  const views=['jobs','news','practice','about','ops'];
+  const views=['home','jobs','news','practice','about','ops'];
   function go(v,scroll){
-    if(!views.includes(v)) v='jobs';
+    if(!views.includes(v)) v='home';
     document.querySelectorAll('.views>section[data-view]').forEach(el=>el.classList.toggle('on',el.dataset.view===v));
     document.querySelectorAll('.tabs a').forEach(a=>a.classList.toggle('on',a.dataset.go===v));
     if(scroll)window.scrollTo({top:0,behavior:'instant'});
   }
   window.addEventListener('hashchange',()=>{const h=location.hash.replace('#','');if(views.includes(h))go(h,true);});
-  const qv=new URLSearchParams(location.search).get('view');const h=location.hash.replace('#','');go(views.includes(h)?h:(views.includes(qv)?qv:'jobs'),false);
+  const qv=new URLSearchParams(location.search).get('view');const h=location.hash.replace('#','');go(views.includes(h)?h:(views.includes(qv)?qv:'home'),false);
   // 소개/운영판 안의 앵커(#work 등)는 해당 화면을 먼저 켠다
   document.addEventListener('click',e=>{const a=e.target.closest('a[href^="#"]');if(!a)return;const id=a.getAttribute('href').slice(1);
     const owner=document.getElementById(id)&&document.getElementById(id).closest('section[data-view]');
@@ -1999,6 +2293,17 @@ function renderRows(F){
 
     $('f-reset').addEventListener('click',()=>{FK.forEach(k=>st[k]='');st.q='';st.soon=false;st.watch=false;$('f-q').value='';$('f-soon').classList.remove('on');jpage=1;drawJobs();});
     drawJobs();}
+  // --- 홈: 히어로 메타 · 카드 라이브 줄 · 숫자 · 푸터 (feed.json + stats)
+  if($('hm-meta')){const g=(F.meta&&F.meta.generated_at||'');const jobsAll=F.items.filter(i=>i.channel==='jobs');
+    $('hm-meta').innerHTML='마지막 수집 <span class="hm-mono">'+esc(g.slice(5,10)+' '+g.slice(11,16))+'</span> · 오늘 신규 <span class="hm-mono">'+esc(F.meta&&F.meta.today_new||0)+'</span>건 · 7일 내 마감 <span class="hm-mono">'+esc(I.deadline_7d||0)+'</span>건';
+    const soon=jobsAll.filter(i=>i.dday!=null&&i.dday>=0).sort((a,b)=>a.dday-b.dday)[0];
+    if(soon){$('hm-soon').innerHTML='<span class="hm-card-dday">'+(soon.dday===0?'D-day':'D-'+soon.dday)+'</span>'+esc(soon.title);$('hm-soon-pub').textContent=soon.publisher;}else{$('hm-soon').textContent='마감 예정 공고 없음';}
+    const h0=F.items.find(i=>i.channel==='health');if(h0)$('hm-news').textContent=(h0.published_at||'').slice(5)+' · '+h0.title+' ('+h0.publisher+')';
+    const sqlP=pl.find(p=>/SQL/.test(p.name))||{},pyP=pl.find(p=>/Python/.test(p.name))||{};const tp=n=>{const m=(n||'').match(/주제\\s+([^·]+)/);return m?m[1].trim():'';};
+    $('hm-prac').textContent='오늘 주제'+(tp(sqlP.note)?' · SQL '+tp(sqlP.note):'')+(tp(pyP.note)?' · Python '+tp(pyP.note):'');
+    $('hm-upcoming').textContent=I.deadline_7d||0;$('hm-srccount').textContent=((F.jobs_facets||{}).source||[]).length||'—';
+    const wp=pl.find(p=>/보건/.test(p.name));if(wp&&wp.note){const m=wp.note.match(/(\\d+)\\s*곳/);if(m)$('hm-watchcount').textContent=m[1];}
+    $('hm-ftr-note').textContent='매일 아침 자동 수집 · 원문은 링크로만 제공 · 기준 '+(F.meta&&F.meta.updated||'').slice(5);}
   // --- 뉴스: B 관제 콘솔 (마퀴 + 레일 + 표 행 + 분석 노트)
   const railPipes=()=>'<div class="rail-label">수집 파이프라인</div>'+pl.map(p=>'<div class="pl-row"><i class="pdot '+esc(p.status)+'"></i><div class="pl-info"><div class="pl-name">'+esc(p.name)+'</div><div class="pl-meta">'+esc(p.last_run||'—')+(p.note?' · '+esc(p.note):'')+'</div></div><span class="pl-count">'+esc(p.count)+'</span></div>').join('');
   if($('news-rail'))$('news-rail').innerHTML=railPipes();
