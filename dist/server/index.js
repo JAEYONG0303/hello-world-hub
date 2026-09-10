@@ -11,23 +11,19 @@ const html = `<!doctype html>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans+KR:wght@400;500;600;700&family=Noto+Serif+KR:wght@700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans+KR:wght@400;500;600;700&family=Noto+Serif+KR:wght@700&display=swap" rel="stylesheet">
 <style>
 /* 재용 홈페이지 — 읽히는 것이 먼저. 본문 17px, 한 줄 64자 이내, 섹션 사이 여백 넉넉히. 팔레트는 본인 분석 그림(ltc_analysis.py)과 같다. */
 :root{
-  --bg:#ffffff;--surf:#f5f6f8;--card:#ffffff;--ink:#111111;--sec:#4b4d52;--mut:#8b8f96;--grid:#e6e8eb;--base:#c9ccd1;
-  --blue:#2a78d6;--blue-ink:#1d5fae;--blue-soft:#e6eefb;--orange:#eb6834;--orange-soft:#fdeee6;--green:#2f8f5b;--green-soft:#e3f3e9;
-  --radius:12px;--radius-lg:18px;--shadow:0 1px 2px rgba(20,20,18,.05),0 8px 24px rgba(20,20,18,.04);
+  --bg:#0c0c0d;--surf:#0e0e10;--card:#121214;--ink:#f0f0f2;--sec:#a1a1ab;--mut:#62626d;--grid:#222226;--base:#3a3a40;
+  --blue:#c4f135;--blue-ink:#c4f135;--blue-soft:rgba(196,241,53,.07);--orange:#ff9a7a;--orange-soft:rgba(255,154,122,.12);--green:#c4f135;--green-soft:rgba(196,241,53,.07);
+  --lime:#c4f135;--lime-ring:rgba(196,241,53,.22);--lime-faint:rgba(196,241,53,.07);--grid-s:#18181b;--hover:rgba(255,255,255,.018);
+  --radius:0;--radius-lg:0;--shadow:none;
   --text:var(--ink);--muted:var(--sec);--line:var(--grid);--panel:var(--card);--violet:var(--blue);--cyan:var(--orange);
   --serif:"Pretendard","IBM Plex Sans KR",system-ui,sans-serif;
   --sans:"Pretendard","IBM Plex Sans KR",system-ui,-apple-system,"Segoe UI","Malgun Gothic",sans-serif;
-  --mono:"IBM Plex Mono",ui-monospace,Consolas,monospace;
+  --mono:"JetBrains Mono","IBM Plex Mono",ui-monospace,Consolas,monospace;
 }
-@media(prefers-color-scheme:dark){:root{
-  --bg:#141412;--surf:#1a1a18;--card:#1f1f1c;--ink:#f1efe8;--sec:#c2bfb4;--mut:#8b8880;--grid:#2f2f2b;--base:#4a4a44;
-  --blue:#6aa5e8;--blue-ink:#8fbcef;--blue-soft:#1c2a3c;--orange:#f39068;--orange-soft:#3a2418;--green:#6cc094;--green-soft:#1c3126;
-  --shadow:none;
-}}
 *{box-sizing:border-box}
 .afc>*,.grid>*,.works>*,.two>*,.dir>*,.skills>*,.kpis>*{min-width:0}
 html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;scroll-padding-top:72px}
@@ -656,6 +652,80 @@ h1,h2,h3{letter-spacing:-.01em}
 .soon{font-size:13.5px;color:var(--sec);background:var(--surf);border-radius:10px;padding:14px 16px}
 @media(max-width:900px){.zig,.prac{grid-template-columns:1fr}.panel{position:static}.ngrid{grid-template-columns:1fr}.ncard.lead{grid-column:auto}.strip{grid-template-columns:1fr 1fr}.tabs.sub{display:none}}
 </style>
+<style id="theme-b">
+body{font-size:13.5px;line-height:1.55}
+.site{background:var(--bg);backdrop-filter:none;border-bottom:1px solid var(--grid)}
+.topbar{height:48px;gap:0;max-width:1280px}
+.logo{font-size:16px;letter-spacing:-.5px}.logo span{color:var(--lime)}.logo small{font-family:var(--mono)!important;font-size:9.5px!important;letter-spacing:.12em;text-transform:uppercase;color:var(--mut)!important;margin-left:7px!important}
+.tabs{gap:0;margin-left:20px}.tabs a{font-size:12.5px;font-weight:500;color:var(--mut);padding:0 15px;height:48px;display:flex;align-items:center;border-radius:0;border-bottom:2px solid transparent}
+.tabs a.on{background:none;color:var(--lime);border-bottom-color:var(--lime)}.tabs a:hover:not(.on){background:none;color:var(--ink)}
+.tabs.sub{margin-left:auto}.tabs.sub a{font-size:12px;color:var(--mut);padding:0 8px}
+.topbar .date{font-family:var(--mono);font-size:10.5px;color:var(--mut)}.topbar .sync{font-size:10.5px}
+.pw{max-width:1280px;margin:0 auto;display:grid;grid-template-columns:240px minmax(0,1fr);border-left:1px solid var(--grid);border-right:1px solid var(--grid)}
+.mq{height:30px;overflow:hidden;border-bottom:1px solid var(--grid);position:relative}
+.mq:before,.mq:after{content:'';position:absolute;top:0;width:48px;height:100%;z-index:2}.mq:before{left:0;background:linear-gradient(to right,var(--bg),transparent)}.mq:after{right:0;background:linear-gradient(to left,var(--bg),transparent)}
+.mq-track{display:flex;align-items:center;height:100%;white-space:nowrap;width:max-content;animation:mq 40s linear infinite}.mq-track:hover{animation-play-state:paused}
+@keyframes mq{to{transform:translateX(-50%)}}
+.mq-item{display:inline-flex;align-items:center;gap:6px;padding:0 22px;font-family:var(--mono);font-size:10.5px;color:var(--mut)}.mq-kw{color:var(--lime);font-weight:600}.mq-sep{display:inline-block;width:1px;height:11px;background:var(--grid)}
+.rail{position:sticky;top:48px;max-height:calc(100vh - 48px);border-right:1px solid var(--grid);background:var(--surf);overflow-y:auto;padding:20px 0 32px}
+.rail-label{font-family:var(--mono);font-size:9.5px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--mut);padding:0 18px 12px}
+.pl-row{display:flex;align-items:center;gap:10px;padding:11px 18px;border-top:1px solid var(--grid-s);color:inherit;text-decoration:none}
+.pl-row.soon{align-items:flex-start}.pl-row.soon:hover .pl-name{color:var(--lime)}
+.pdot{width:6px;height:6px;border-radius:50%;background:var(--lime);flex-shrink:0;animation:breathe 3s ease-in-out infinite}.pdot.fail{background:#f87171;animation:none}.pdot.skip{background:var(--mut);animation:none}
+.pl-row:nth-child(3) .pdot{animation-delay:.6s}.pl-row:nth-child(4) .pdot{animation-delay:1.2s}.pl-row:nth-child(5) .pdot{animation-delay:1.8s}.pl-row:nth-child(6) .pdot{animation-delay:2.4s}
+@keyframes breathe{0%,100%{opacity:.35;box-shadow:0 0 0 0 rgba(196,241,53,0)}50%{opacity:1;box-shadow:0 0 7px 2px rgba(196,241,53,.28)}}
+.pl-info{flex:1;min-width:0}.pl-name{font-size:11.5px;font-weight:600;color:var(--ink);line-height:1.35;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}.pl-meta{font-family:var(--mono);font-size:9.5px;color:var(--mut);margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.pl-count{font-family:var(--mono);font-size:15px;font-weight:600;color:var(--lime);flex-shrink:0;line-height:1}
+.pl-dd{font-family:var(--mono);font-size:10px;font-weight:600;color:var(--lime);white-space:nowrap;padding-top:2px;min-width:38px}.pl-dd.hot{color:var(--orange)}
+.rail-kpi{display:grid;grid-template-columns:1fr 1fr;padding:0 18px 6px;gap:8px}.rail-kpi div{border:1px solid var(--grid);padding:10px 10px 8px}.rail-kpi b{display:block;font-family:var(--mono);font-size:22px;font-weight:600;color:var(--lime);line-height:1}.rail-kpi span{font-size:10.5px;color:var(--mut)}
+.rail-nav{display:flex;gap:6px;align-items:center;padding:0 18px}.rail-nav button{background:transparent;color:var(--ink);border:1px solid var(--grid);width:30px;height:30px;font:inherit;cursor:pointer}.rail-nav button:disabled{opacity:.3}.rail-nav .cur{font-family:var(--mono);font-size:12.5px;color:var(--lime);flex:1;text-align:center}
+.rail-sel{padding:8px 18px 0}.rail-sel select{width:100%;font:inherit;font-family:var(--mono);font-size:11px;background:var(--bg);color:var(--ink);border:1px solid var(--grid);padding:6px 8px}
+.rail-stats{padding:0 18px;font-family:var(--mono);font-size:10.5px;color:var(--sec);line-height:1.9}
+.rail-how{margin:0;padding:0 18px 0 32px;font-size:11.5px;color:var(--sec);line-height:1.6}.rail-how li+li{margin-top:6px}.rail-how code{font-family:var(--mono);font-size:10px;color:var(--lime)}
+.rail-note{padding:14px 18px 0;font-family:var(--mono);font-size:10px;color:var(--mut);line-height:1.6}
+.main-col{min-width:0}.main-col .pad{padding:0 28px}
+.hl-sec{padding:34px 28px 26px;border-bottom:1px solid var(--grid);animation:fadeup .5s ease .08s both}
+@keyframes fadeup{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+.hl-kicker{font-family:var(--mono);font-size:9.5px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--lime);margin-bottom:12px}
+.hl-text{font-size:23px;font-weight:700;line-height:1.35;letter-spacing:-.5px;color:var(--ink);max-width:720px;padding-bottom:16px;position:relative;margin:0}
+.hl-text:after{content:'';position:absolute;bottom:0;left:0;width:44px;height:2.5px;background:var(--lime)}
+.hl-meta{font-family:var(--mono);font-size:10.5px;color:var(--mut);margin-top:14px}
+.cg{display:grid;grid-template-columns:minmax(0,1fr) 268px}
+.notes-col{border-left:1px solid var(--grid);padding:22px 18px 32px;position:sticky;top:48px;align-self:start;max-height:calc(100vh - 48px);overflow-y:auto;animation:fadeup .5s ease .3s both}
+.notes-lbl{font-family:var(--mono);font-size:9.5px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--mut);margin-bottom:12px}
+.note-item{display:flex;gap:13px;padding:14px 0;border-top:1px solid var(--grid-s)}.note-idx{font-family:var(--mono);font-size:10.5px;font-weight:600;color:var(--lime);flex-shrink:0;padding-top:2px;border-left:1.5px solid var(--lime);padding-left:8px;margin-left:-2px}.note-body{font-size:12px;color:var(--sec);line-height:1.65}
+.watch-box{margin-top:22px;padding:14px 14px 14px 12px;border:1px solid var(--grid);border-left:2px solid var(--lime);background:var(--lime-faint)}.watch-lbl{font-family:var(--mono);font-size:9.5px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--lime);margin-bottom:8px}.watch-body{font-size:11.5px;color:var(--sec);line-height:1.65}
+.watch-more{display:block;margin-top:14px;font-family:var(--mono);font-size:10.5px;color:var(--lime);text-decoration:none}
+.sec-hdr{display:flex;align-items:center;gap:12px;padding:18px 28px 12px;border-bottom:1px solid var(--grid);animation:fadeup .45s ease .18s both}.sec-hdr.ai{margin-top:26px}
+.sec-lbl{font-family:var(--mono);font-size:9.5px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--mut);white-space:nowrap}.sec-cnt{font-family:var(--mono);font-size:11px;font-weight:600;color:var(--lime);white-space:nowrap}.sec-divider{flex:1;height:1px;background:var(--grid-s)}
+.sec-more{font-family:var(--mono);font-size:10.5px;color:var(--mut);text-decoration:none;white-space:nowrap}.sec-more:hover{color:var(--lime)}
+.chips{margin:0;gap:4px}.chips button{font-family:var(--mono);font-size:9.5px;font-weight:500;color:var(--mut);background:transparent;border:1px solid var(--grid);border-radius:0;padding:3px 8px;letter-spacing:.04em}.chips button.on{color:var(--lime);border-color:var(--lime-ring);background:var(--lime-faint)}
+.feed-thead{display:grid;grid-template-columns:64px 96px minmax(0,1fr) 150px;gap:0 14px;padding:7px 28px;border-bottom:1px solid var(--grid-s);font-family:var(--mono);font-size:9.5px;color:var(--mut);letter-spacing:.06em;text-transform:uppercase}
+.feed-thead.jobs{grid-template-columns:64px 150px minmax(0,1fr) 190px}.feed-thead.pr{grid-template-columns:34px 60px minmax(0,1fr) 60px}.feed-thead .r{text-align:right}
+.feed-row{border-bottom:1px solid var(--grid-s);animation:fadeup .4s ease both}
+.feed-row-main{display:grid;grid-template-columns:64px 96px minmax(0,1fr) 150px;gap:0 14px;padding:11px 28px;align-items:center;transition:background .12s}.feed-row-main.jobs{grid-template-columns:64px 150px minmax(0,1fr) 190px}.feed-row-main.pr{grid-template-columns:34px 60px minmax(0,1fr) 60px;align-items:flex-start}
+.feed-row:hover .feed-row-main{background:var(--hover)}
+.fd-date,.fd-num{font-family:var(--mono);font-size:10.5px;color:var(--mut);white-space:nowrap}.fd-num{color:var(--lime);font-weight:600}
+.fd-dd{font-family:var(--mono);font-size:10.5px;font-weight:600;color:var(--lime);white-space:nowrap}.fd-dd.hot{color:var(--orange)}
+.fd-cat{display:inline-block;font-family:var(--mono);font-style:normal;font-size:9.5px;color:var(--lime);border:1px solid var(--lime-ring);padding:2px 7px;letter-spacing:.04em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100%}.fd-cats{display:flex;gap:4px;justify-content:flex-end;flex-wrap:wrap}.fd-cats .fd-cat{color:var(--sec);border-color:var(--grid)}
+.fd-title{font-size:13px;font-weight:600;color:var(--ink);line-height:1.4;min-width:0}.fd-title a{color:inherit;text-decoration:none;transition:color .15s}.fd-title a:hover{color:var(--lime)}.fd-title .fd-sub{display:block;font-family:var(--mono);font-size:9.5px;font-weight:400;color:var(--mut);margin-top:3px}
+.fd-hi{font-style:normal;font-family:var(--mono);font-size:9px;color:var(--orange);border:1px solid rgba(255,154,122,.35);padding:1px 5px;margin-right:6px;vertical-align:1px}
+.fd-pub{font-size:11px;color:var(--mut);text-align:right;line-height:1.4}.fd-pubL{font-size:11.5px;color:var(--sec);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.feed-summ{max-height:0;overflow:hidden;transition:max-height .28s ease,padding .28s ease;padding:0 28px 0 calc(28px + 64px + 14px + 96px + 14px)}.feed-row:hover .feed-summ,.feed-summ.open{max-height:120px;padding-bottom:10px}
+.feed-row-main.jobs+.feed-summ{padding-left:calc(28px + 64px + 14px + 150px + 14px)}.feed-row-main.pr+.feed-summ{padding-left:calc(28px + 34px + 14px + 60px + 14px)}
+.feed-summ-text{font-size:11.5px;color:var(--sec);line-height:1.65;border-top:1px solid var(--grid-s);padding-top:9px}
+.feedfoot{font-family:var(--mono);font-size:10.5px;color:var(--mut);padding:18px 28px}.feedfoot .more{font:inherit;color:var(--lime);background:transparent;border:1px solid var(--lime-ring);padding:6px 12px;cursor:pointer}
+.empty{padding:18px 28px;color:var(--mut);font-family:var(--mono);font-size:11px}
+.listtoggle{border-top:1px solid var(--grid);margin-top:8px}.listtoggle summary{font-size:13px;font-family:var(--mono)}.listtoggle summary:before{border-color:var(--lime);color:var(--lime)}
+.pg{padding:0}
+@media(max-width:900px){.pw{grid-template-columns:1fr;border:0}.rail{position:static;max-height:none;border-right:0;border-bottom:1px solid var(--grid);padding:10px 0}
+ .feed-thead{display:none}.feed-row-main,.feed-row-main.jobs,.feed-row-main.pr{grid-template-columns:64px minmax(0,1fr);grid-template-rows:auto auto;gap:6px 10px;padding:12px 16px}
+ .feed-row-main>:nth-child(1){grid-row:1;grid-column:1}.feed-row-main>:nth-child(2){grid-row:2;grid-column:1}.feed-row-main>:nth-child(3){grid-row:1/3;grid-column:2}.feed-row-main>:nth-child(4){display:none}
+ .feed-summ,.feed-row-main.jobs+.feed-summ,.feed-row-main.pr+.feed-summ{padding-left:16px;padding-right:16px}
+ .cg{grid-template-columns:1fr}.notes-col{position:static;border-left:0;border-top:1px solid var(--grid);max-height:none}
+ .hl-sec{padding:24px 16px 20px}.hl-text{font-size:18px}.sec-hdr{padding:16px 16px 12px;flex-wrap:wrap}.main-col .pad{padding:0 16px}.feedfoot{padding:14px 16px}
+ .tabs{margin-left:8px}.tabs a{padding:0 10px;font-size:12px}}
+</style>
 </head>
 <body>
 <a class="skip" href="#main">본문으로 건너뛰기</a>
@@ -675,27 +745,15 @@ h1,h2,h3{letter-spacing:-.01em}
 <!-- ===== 피드 (기본 화면) ===== -->
 <!-- ===== 1. 채용 공고 (시안 A: 카드 그리드) ===== -->
 <section data-view="jobs" class="on" id="view-jobs">
-  <div class="wrap pg">
-    <div class="zig">
-      <aside class="panel" id="jobpanel">
-        <div class="k">채용 레이더 <span id="jp-date"></span></div>
-        <h2 id="jp-head">오늘 신규 —건</h2>
-        <div class="mystat" id="jp-stat"></div>
-        <div class="k" style="margin-top:14px">마감 임박</div>
-        <ol class="soonlist" id="jp-soon"></ol>
-        <div class="next" id="jp-pipes"></div>
-        <a class="btn" href="#list" data-ch="jobs">전체 목록·필터 ›</a>
-      </aside>
-      <div>
-        <div class="jkhead"><h2>채용 공고 <span class="n" id="jobs-n"></span></h2><div class="more"><a href="#list" data-ch="jobs">전체 목록·필터 ›</a></div></div>
-        <div class="chips" id="jobfam"></div>
-        <div class="jk-grid c3" id="jobgrid"></div>
-        <p class="feedfoot" id="jobs-foot"></p>
-      </div>
-    </div>
-    <div class="statusbar" id="statusbar" hidden></div>
-    <div class="mystrip" id="mystrip" hidden></div>
-    <details class="listtoggle" id="listtoggle">
+  <div class="pw">
+    <aside class="rail" id="jobs-rail"></aside>
+    <div class="main-col">
+      <div class="hl-sec"><div class="hl-kicker">채용 레이더 <span id="jp-date"></span></div><h2 class="hl-text" id="jp-head">공고를 불러오는 중</h2><div class="hl-meta" id="jp-pipes"></div></div>
+      <div class="sec-hdr"><span class="sec-lbl">채용 공고</span><span class="sec-cnt" id="jobs-n"></span><span class="sec-divider"></span><div class="chips" id="jobfam"></div><a class="sec-more" href="#list" data-ch="jobs">전체 목록·필터 ›</a></div>
+      <div class="feed-thead jobs"><span>마감</span><span>기관</span><span>제목</span><span class="r">직무 · 형태</span></div>
+      <div id="jobgrid"></div>
+      <p class="feedfoot" id="jobs-foot"></p>
+      <div class="pad"><details class="listtoggle" id="listtoggle">
       <summary>전체 목록과 필터 <span id="list-count" style="font-family:var(--mono);font-size:13px;color:var(--mut);font-weight:400"></span></summary>
       <div class="feedwrap">
         <aside class="side" aria-label="필터">
@@ -722,51 +780,59 @@ h1,h2,h3{letter-spacing:-.01em}
           <div class="box"><h4>오늘의 SQL 5문제</h4><ul class="mini" id="sqltoday"></ul></div>
         </aside>
       </div>
-    </details>
+    </details></div>
+    </div>
   </div>
+  <div id="statusbar" hidden></div><div id="mystrip" hidden></div>
 </section>
 
 <!-- ===== 2. 뉴스 (시안 B: GeekNews 목록 + 동향 헤드라인) ===== -->
 <section data-view="news" id="view-news">
-  <div class="wrap pg">
-    <div class="zig">
-      <aside class="panel" id="trend">
-        <div class="k">AI 자동 동향분석 <span id="ins-date"></span></div>
-        <h2 id="ins-headline">오늘 수집분을 아직 분석하지 않았습니다.</h2>
-        <ol id="ins-points"></ol>
-        <div class="next" id="ins-next" hidden></div>
-        <div class="next" id="ins-method" style="border-top:0;padding-top:4px"></div>
-        <a class="btn" id="ins-high" href="#list" data-ch="health" hidden></a>
-      </aside>
-      <div>
-        <div class="jkhead"><h2>보건·의료 변화 <span class="n" id="news-n"></span></h2><div class="more"><a href="#list" data-ch="health">전체 목록·필터 ›</a></div></div>
-        <div class="chips" id="newsfam"></div>
-        <div class="ngrid" id="newslist"></div>
+  <div class="mq"><div class="mq-track" id="mq-track"></div></div>
+  <div class="pw">
+    <aside class="rail" id="news-rail"></aside>
+    <div class="main-col">
+      <div class="hl-sec"><div class="hl-kicker">AI 자동 동향분석 <span id="ins-date"></span></div><h2 class="hl-text" id="ins-headline">오늘 수집분을 아직 분석하지 않았습니다.</h2><div class="hl-meta" id="ins-method"></div></div>
+      <div class="cg">
+        <div>
+          <div class="sec-hdr"><span class="sec-lbl">보건·의료 변화</span><span class="sec-cnt" id="news-n"></span><span class="sec-divider"></span><div class="chips" id="newsfam"></div></div>
+          <div class="feed-thead"><span>날짜</span><span>분류</span><span>제목</span><span class="r">출처</span></div>
+          <div id="newslist"></div>
+          <div class="sec-hdr ai"><span class="sec-lbl">AI·노동시장 신호</span><span class="sec-cnt" id="ai-n"></span><span class="sec-divider"></span><a class="sec-more" href="#list" data-ch="ai">전체 ›</a></div>
+          <div id="ailist"></div>
+        </div>
+        <aside class="notes-col">
+          <div class="notes-lbl">분석 노트</div>
+          <div id="ins-points"></div>
+          <div class="watch-box" id="ins-next" hidden><div class="watch-lbl">다음 볼 것</div><div class="watch-body" id="ins-next-body"></div></div>
+          <a class="watch-more" id="ins-high" href="#list" data-ch="health" hidden></a>
+        </aside>
       </div>
     </div>
-    <section class="strip" id="pipestrip"></section>
-    <div class="jkhead"><h2>AI·노동시장 신호 <span class="n" id="ai-n"></span></h2><div class="more"><a href="#list" data-ch="ai">전체 ›</a></div></div>
-    <div class="ngrid c3" id="ailist"></div>
   </div>
 </section>
 
 <!-- ===== 3. 문제 풀이 (SQL · Python) ===== -->
 <section data-view="practice" id="view-practice">
-  <div class="wrap pg">
-    <div class="zig">
-      <aside class="panel" id="prpanel">
-        <div class="k">문제 풀이 <span id="pr-sub"></span></div>
-        <h2 id="pr-head">SQL 5문제 · Python 5문제</h2>
-        <div class="datenav dark"><button id="pr-prev" aria-label="이전 날">‹</button><span class="cur" id="pr-cur">—</span><button id="pr-next" aria-label="다음 날">›</button><select id="pr-days" aria-label="날짜 선택"></select></div>
-        <div class="k" style="margin-top:16px">푸는 법</div>
-        <ol><li>원문 링크 문제는 해당 사이트에서 풀고 <code>/sql done N</code> · <code>/python done N</code></li><li>생성 문제는 <code>/sql check N &lt;쿼리&gt;</code> · <code>/python check P### &lt;파일&gt;</code>로 채점</li><li>일요일은 이번 주 오답 복습</li></ol>
-        <div class="next" id="pr-stats"><b>풀이 기록</b><div id="pr-stats-body"></div></div>
-        <div class="next" style="border-top:0;padding-top:4px">지난 세트는 지우지 않고 날짜별로 쌓입니다. 위 날짜 선택으로 언제든 다시 볼 수 있습니다.</div>
-      </aside>
-      <div class="prac">
-        <div class="box"><h2 id="sql-title">SQL 5문제</h2><p class="sub" id="sql-sub"></p><div id="sqllist"></div></div>
-        <div class="box"><h2 id="py-title">Python 5문제</h2><p class="sub" id="py-sub"></p><div id="pylist"></div></div>
-      </div>
+  <div class="pw">
+    <aside class="rail" id="pr-rail">
+      <div class="rail-label">날짜</div>
+      <div class="datenav rail-nav"><button id="pr-prev" aria-label="이전 날">‹</button><span class="cur" id="pr-cur">—</span><button id="pr-next" aria-label="다음 날">›</button></div>
+      <div class="rail-sel"><select id="pr-days" aria-label="날짜 선택"></select></div>
+      <div class="rail-label" style="margin-top:18px">풀이 기록</div>
+      <div class="rail-stats" id="pr-stats-body"></div>
+      <div class="rail-label" style="margin-top:18px">푸는 법</div>
+      <ol class="rail-how"><li>원문 링크 문제는 사이트에서 풀고 <code>/sql done N</code> · <code>/python done N</code></li><li>생성 문제는 <code>/sql check N</code> · <code>/python check P###</code> 로 채점</li><li>일요일은 이번 주 오답 복습</li></ol>
+      <div class="rail-note">지난 세트는 지우지 않고 날짜별로 쌓입니다.</div>
+    </aside>
+    <div class="main-col">
+      <div class="hl-sec"><div class="hl-kicker">문제 풀이 <span id="pr-sub"></span></div><h2 class="hl-text" id="pr-head">SQL 5문제 · Python 5문제</h2><div class="hl-meta">원문 링크 3 + 생성 2 · 생성 문제는 테스트를 통과한 정답만 출제</div></div>
+      <div class="sec-hdr"><span class="sec-lbl" id="sql-title">SQL</span><span class="sec-cnt" id="sql-sub"></span><span class="sec-divider"></span></div>
+      <div class="feed-thead pr"><span>#</span><span>레벨</span><span>문제</span><span class="r">종류</span></div>
+      <div id="sqllist"></div>
+      <div class="sec-hdr"><span class="sec-lbl" id="py-title">Python</span><span class="sec-cnt" id="py-sub"></span><span class="sec-divider"></span></div>
+      <div class="feed-thead pr"><span>#</span><span>레벨</span><span>문제</span><span class="r">종류</span></div>
+      <div id="pylist"></div>
     </div>
   </div>
 </section>
@@ -1878,16 +1944,16 @@ function renderRows(F){
     +'<div class="pipes">'+pl.map(p=>'<span><i class="dot '+esc(p.status)+'"></i>'+esc(p.name.replace(' 수집','').replace(' 출제','').replace(' 감시',''))+' '+esc(p.last_run?p.last_run.slice(5):'—')+'</span>').join('')+'</div>';}
   // --- 채용: A 카드 그리드
   const dd=i=>i.dday==null?'':'<span class="dd">'+(i.dday<0?'마감':i.dday===0?'D-day':'D-'+i.dday)+'</span>';
-  const jcard=i=>{const tg=(i.category||'').split(' · ').filter(Boolean).map(c=>'<span>'+esc(c)+'</span>');(i.tags||[]).slice(0,2).forEach(t=>tg.push('<span>'+esc(t)+'</span>'));
-    return '<article class="jc"><span class="star">☆</span><h3><a href="'+esc(i.url)+'" target="_blank" rel="noopener noreferrer">'+esc(i.title)+'</a></h3><div class="co">'+esc(i.publisher)+dd(i)+'<span class="dt">'+esc(i.published_at||'')+'</span></div>'+(i.summary?'<div class="sm">'+esc(i.summary)+'</div>':'')+'<div class="tg">'+tg.join('')+'</div></article>';};
+  const jcard=i=>{const cat=(i.category||'').split(' · ').filter(Boolean);const dl=i.dday==null?'<span class="fd-date">'+esc(i.deadline||'')+'</span>':'<span class="fd-dd'+(i.dday<=3?' hot':'')+'">'+(i.dday<0?'마감':i.dday===0?'D-day':'D-'+i.dday)+'</span>';
+    return '<div class="feed-row"><div class="feed-row-main jobs">'+dl+'<span class="fd-pubL">'+esc(i.publisher)+'</span><span class="fd-title"><a href="'+esc(i.url)+'" target="_blank" rel="noopener noreferrer">'+esc(i.title)+'</a></span><span class="fd-cats">'+cat.map(c=>'<i class="fd-cat">'+esc(c)+'</i>').join('')+'</span></div>'+(i.summary?'<div class="feed-summ"><div class="feed-summ-text">'+esc(i.summary)+(i.deadline?' · 마감 '+esc(i.deadline):'')+'</div></div>':'')+'</div>';};
   const JOBFAM=[['all','전체',()=>true],['plan','기획',i=>/기획|전략/.test(i.category+i.summary+i.title)],['research','연구행정',i=>/연구|과제|산학|R&D/.test(i.summary+i.title)],['data','데이터',i=>/데이터|분석|통계|AI/.test(i.summary+i.title+(i.tags||[]).join(''))],['ops','사업운영',i=>/사업|운영|관리/.test(i.summary+i.title)],['admin','행정',i=>/행정|사무|총무/.test(i.summary+i.title)]];
   const jobs=F.items.filter(i=>i.channel==='jobs'&&(i.dday==null||i.dday>=0)).sort((a,b)=>(a.dday??999)-(b.dday??999));
   let jf='all',jlim=12;
-  if($('jobpanel')){const tn=F.meta&&F.meta.today_new||0;$('jp-date').textContent='· '+(F.meta&&F.meta.updated||'');$('jp-head').textContent='오늘 신규 '+tn+'건, 7일 내 마감 '+(I.deadline_7d||0)+'건';
-    $('jp-stat').innerHTML='<div><b>'+esc(tn)+'<small>건</small></b><span>오늘 신규</span></div><div><b>'+esc(I.deadline_7d||0)+'<small>건</small></b><span>7일 내 마감</span></div>';
-    const soonJ=F.items.filter(i=>i.channel==='jobs'&&i.dday!=null&&i.dday>=0).sort((a,b)=>a.dday-b.dday).slice(0,5);
-    $('jp-soon').innerHTML=soonJ.length?soonJ.map(i=>'<li><span class="dd'+(i.dday<=3?' hot':'')+'">'+(i.dday===0?'D-day':'D-'+i.dday)+'</span><div><a href="'+esc(i.url)+'" target="_blank" rel="noopener noreferrer">'+esc(i.title)+'</a><small>'+esc(i.publisher)+'</small></div></li>').join(''):'<li>마감 예정 공고 없음</li>';
-    $('jp-pipes').innerHTML='<b>마지막 수집</b>'+esc((F.meta&&F.meta.generated_at||'').replace('T',' ').slice(0,16))+' · '+pl.filter(p=>p.status!=='ok').length+'개 소스 실패';}
+  if($('jobs-rail')){const tn=F.meta&&F.meta.today_new||0;$('jp-date').textContent='· '+(F.meta&&F.meta.updated||'');$('jp-head').textContent='오늘 신규 '+tn+'건, 7일 내 마감 '+(I.deadline_7d||0)+'건';
+    $('jp-pipes').textContent='마지막 수집 '+(F.meta&&F.meta.generated_at||'').replace('T',' ').slice(0,16)+' · 신입·경력무관만 · 마감 가까운 순 · 실패 소스 '+pl.filter(p=>p.status!=='ok').length+'개';
+    const soonJ=F.items.filter(i=>i.channel==='jobs'&&i.dday!=null&&i.dday>=0).sort((a,b)=>a.dday-b.dday).slice(0,6);
+    $('jobs-rail').innerHTML='<div class="rail-label">오늘</div><div class="rail-kpi"><div><b>'+esc(tn)+'</b><span>오늘 신규</span></div><div><b>'+esc(I.deadline_7d||0)+'</b><span>7일 내 마감</span></div></div>'
+      +'<div class="rail-label" style="margin-top:14px">마감 임박</div>'+(soonJ.length?soonJ.map(i=>'<a class="pl-row soon" href="'+esc(i.url)+'" target="_blank" rel="noopener noreferrer"><span class="pl-dd'+(i.dday<=3?' hot':'')+'">'+(i.dday===0?'D-day':'D-'+i.dday)+'</span><div class="pl-info"><div class="pl-name">'+esc(i.title)+'</div><div class="pl-meta">'+esc(i.publisher)+'</div></div></a>').join(''):'<div class="pl-row"><div class="pl-meta">마감 예정 공고 없음</div></div>');}
   const drawJobs=()=>{const f=JOBFAM.find(x=>x[0]===jf)[2];const list=jobs.filter(f);const shown=list.slice(0,jlim);
     $('jobgrid').innerHTML=shown.map(jcard).join('')||'<article class="jc empty">해당 공고 없음</article>';
     $('jobs-foot').innerHTML=(list.length>shown.length?'<button class="more" id="jobs-more">'+(list.length-shown.length)+'건 더 보기</button><br><br>':'')+shown.length+'건 표시 · 조건 '+list.length+'건 · 신입·경력무관 · 마감 가까운 순';
@@ -1896,36 +1962,39 @@ function renderRows(F){
     $('jobfam').innerHTML=JOBFAM.map(([k,n,f])=>'<button data-k="'+k+'" class="'+(k==='all'?'on':'')+'">'+n+' '+jobs.filter(f).length+'</button>').join('');
     $('jobfam').addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;$('jobfam').querySelectorAll('button').forEach(x=>x.classList.toggle('on',x===b));jf=b.dataset.k;jlim=12;drawJobs();});
     drawJobs();}
-  // --- 뉴스: ZIGULAB 배치 (좌 고정 동향 패널 + 우 3열 카드 + 수집 띠 + AI 카드)
-  if($('ins-headline')&&I.headline){$('ins-headline').textContent=I.headline;$('ins-points').innerHTML=(I.points||[]).map(p=>'<li>'+esc(p)+'</li>').join('');
-    if(I.watch_next){$('ins-next').hidden=false;$('ins-next').innerHTML='<b>다음 볼 것</b>'+esc(I.watch_next);}
-    $('ins-date').textContent='· '+(I.text_date||I.date||'');if(I.method)$('ins-method').textContent=I.method;
-    const hi=Array.isArray(I.high)?I.high.length:(I.high||0);if(hi){$('ins-high').hidden=false;$('ins-high').textContent='중요 '+hi+'건 보기 ›';}}
-  const ncard=(i,lead)=>{const kw=(i.tags||[]).filter(t=>t&&!/^Lv/.test(t)).slice(0,2);const hi=(i.relevance==='high'&&i.channel!=='ai')?'<span class="hi">중요</span>':'';
-    const inner='<div class="band"><span>'+esc(i.category||'')+'</span><span class="dt">'+esc(i.published_at||'')+'</span></div><div class="cb"><h3>'+esc(i.title)+'</h3>'+(i.summary?'<p>'+esc(i.summary)+'</p>':'')+'<div class="src">'+hi+esc(i.publisher)+(kw.length?' · '+kw.map(esc).join(' · '):'')+'</div></div>';
-    return (i.url?'<a class="ncard'+(lead?' lead':'')+'" data-cat="'+esc(i.category||'')+'" href="'+esc(i.url)+'" target="_blank" rel="noopener noreferrer">':'<div class="ncard'+(lead?' lead':'')+'" data-cat="'+esc(i.category||'')+'">')+inner+(i.url?'</a>':'</div>');};
+  // --- 뉴스: B 관제 콘솔 (마퀴 + 레일 + 표 행 + 분석 노트)
+  const railPipes=()=>'<div class="rail-label">수집 파이프라인</div>'+pl.map(p=>'<div class="pl-row"><i class="pdot '+esc(p.status)+'"></i><div class="pl-info"><div class="pl-name">'+esc(p.name)+'</div><div class="pl-meta">'+esc(p.last_run||'—')+(p.note?' · '+esc(p.note):'')+'</div></div><span class="pl-count">'+esc(p.count)+'</span></div>').join('');
+  if($('news-rail'))$('news-rail').innerHTML=railPipes();
+  if($('mq-track')){const kws=(I.keywords||[]).map(k=>'<span class="mq-item"><span class="mq-kw">'+esc(k.k)+'</span>'+k.n+'건</span><span class="mq-sep"></span>').join('');
+    const base='<span class="mq-item">오늘 신규 <span class="mq-kw">'+esc(F.meta&&F.meta.today_new||0)+'건</span></span><span class="mq-sep"></span>'+kws+pl.map(p=>'<span class="mq-item">'+esc(p.name)+' <span class="mq-kw">'+esc(p.count)+'건</span></span><span class="mq-sep"></span>').join('');
+    $('mq-track').innerHTML=base+base;}
+  if($('ins-headline')&&I.headline){$('ins-headline').textContent=I.headline;$('ins-date').textContent='· '+(I.text_date||I.date||'');if(I.method)$('ins-method').textContent=I.method;
+    $('ins-points').innerHTML=(I.points||[]).map((p,k)=>'<div class="note-item"><span class="note-idx">'+String(k+1).padStart(2,'0')+'</span><div class="note-body">'+esc(p)+'</div></div>').join('');
+    if(I.watch_next){$('ins-next').hidden=false;$('ins-next-body').textContent=I.watch_next;}
+    const hi=Array.isArray(I.high)?I.high.length:(I.high||0);if(hi){$('ins-high').hidden=false;$('ins-high').textContent='중요 '+hi+'건 목록에서 보기 ›';}}
+  const nrow=i=>{const hi=(i.relevance==='high'&&i.channel!=='ai')?'<i class="fd-hi">중요</i>':'';
+    return '<div class="feed-row"><div class="feed-row-main"><span class="fd-date">'+esc((i.published_at||'').slice(5))+'</span><span class="fd-catw"><i class="fd-cat">'+esc(i.category||'')+'</i></span><span class="fd-title">'+hi+(i.url?'<a href="'+esc(i.url)+'" target="_blank" rel="noopener noreferrer">'+esc(i.title)+'</a>':esc(i.title))+'</span><span class="fd-pub">'+esc(i.publisher)+'</span></div>'+(i.summary?'<div class="feed-summ"><div class="feed-summ-text">'+esc(i.summary)+'</div></div>':'')+'</div>';};
   const health=F.items.filter(i=>i.channel==='health'||i.channel==='research');const ai=F.items.filter(i=>i.channel==='ai');
   if($('newslist')){let nf='all';
-    const drawNews=()=>{const rows=health.filter(i=>nf==='all'||i.category===nf).slice(0,12);$('newslist').innerHTML=rows.length?rows.map((i,k)=>ncard(i,k===0&&nf==='all')).join(''):'<p class="empty">항목 없음</p>';};
+    const drawNews=()=>{const rows=health.filter(i=>nf==='all'||i.category===nf);$('newslist').innerHTML=rows.length?rows.map(nrow).join(''):'<p class="empty">항목 없음</p>';};
     const cats={};health.forEach(i=>{if(i.category)cats[i.category]=(cats[i.category]||0)+1;});
-    $('news-n').textContent='오늘 신규 '+((nb.health||0)+(nb.research||0))+'건 · 전체 '+health.length+'건';
+    $('news-n').textContent=health.length+'건 · 오늘 신규 '+((nb.health||0)+(nb.research||0));
     $('newsfam').innerHTML='<button data-k="all" class="on">전체 '+health.length+'</button>'+Object.entries(cats).map(([k,n])=>'<button data-k="'+esc(k)+'">'+esc(k)+' '+n+'</button>').join('');
     $('newsfam').addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;$('newsfam').querySelectorAll('button').forEach(x=>x.classList.toggle('on',x===b));nf=b.dataset.k;drawNews();});
     drawNews();}
-  if($('pipestrip')){$('pipestrip').innerHTML='<div><h4>자료 수집 자동화</h4><div class="d">매일 아침 스크립트가 수집하고 문장만 Claude가 씁니다. 원문 복제 없음 · 오늘 신규 '+esc(F.meta&&F.meta.today_new||0)+'건</div></div>'
-    +pl.map(p=>'<div class="p"><b>'+esc(p.count)+'<small>건</small></b><small><i class="'+esc(p.status)+'"></i>'+esc(p.name)+' · '+esc(p.last_run||'—')+'</small></div>').join('');}
-  if($('ailist')){$('ai-n').textContent=ai.length+'건 · 전망에 반영';$('ailist').innerHTML=ai.slice(0,6).map(i=>ncard(i,false)).join('')||'<p class="empty">항목 없음</p>';}
+  if($('ailist')){$('ai-n').textContent=ai.length+'건 · 전망에 반영';$('ailist').innerHTML=ai.map(nrow).join('')||'<p class="empty">항목 없음</p>';}
   // --- 문제 풀이: 날짜별 아카이브 (F.practice.days) ---
   const PR=F.practice||{days:[],stats:{}};
   if($('pr-days')&&PR.days.length){
     const days=PR.days.map(d=>d.date);let cur=0;
     $('pr-days').innerHTML=days.map(d=>'<option value="'+d+'">'+d+'</option>').join('');
-    const prow=(i,k)=>'<div class="prow"><div class="num">'+(k+1)+'</div><div><h3>'+(i.url?'<a href="'+esc(i.url)+'" target="_blank" rel="noopener noreferrer">'+esc(i.title)+'</a>':esc(i.title))+'</h3>'+(i.summary?'<div class="d">'+esc(i.summary)+'</div>':'')+'<div class="tg">'+(i.tags||[]).map(t=>'<span>'+esc(t)+'</span>').join('')+'<span>'+esc(i.publisher)+'</span></div></div><div class="st">'+(i.kind==='link'?'원문':'생성')+'</div></div>';
+    const prow=(i,k)=>{const lv=(i.tags||[]).find(t=>/^Lv/.test(t))||'';const ids=(i.tags||[]).filter(t=>!/^Lv/.test(t));
+      return '<div class="feed-row"><div class="feed-row-main pr"><span class="fd-num">'+String(k+1).padStart(2,'0')+'</span><span class="fd-catw"><i class="fd-cat">'+esc(lv)+'</i></span><span class="fd-title">'+(i.url?'<a href="'+esc(i.url)+'" target="_blank" rel="noopener noreferrer">'+esc(i.title)+'</a>':esc(i.title))+'<small class="fd-sub">'+esc(i.publisher)+(ids.length?' · '+ids.map(esc).join(' · '):'')+'</small></span><span class="fd-pub">'+(i.kind==='link'?'원문':'생성')+'</span></div>'+(i.summary&&i.kind!=='link'?'<div class="feed-summ open"><div class="feed-summ-text">'+esc(i.summary)+'</div></div>':'')+'</div>';};
     const drawPr=()=>{const d=PR.days[cur];$('pr-cur').textContent=d.date;$('pr-days').value=d.date;$('pr-prev').disabled=cur>=PR.days.length-1;$('pr-next').disabled=cur<=0;
       $('pr-sub').textContent=(d.date===(F.meta&&F.meta.updated)?'오늘':'지난 세트')+' · 전체 '+PR.days.length+'일 누적';
-      $('pr-head').textContent='SQL '+d.sql.length+'문제 · Python '+d.python.length+'문제';$('sql-title').textContent='SQL '+d.sql.length+'문제';$('sql-sub').textContent=d.sql.length?('주제 '+(d.sql[0].category||'')):'이 날 SQL 세트 없음';
+      $('pr-head').textContent='SQL '+d.sql.length+'문제 · Python '+d.python.length+'문제';$('sql-title').textContent='SQL';$('sql-sub').textContent=d.sql.length?(d.sql.length+'문제 · '+(d.sql[0].category||'')):'세트 없음';
       $('sqllist').innerHTML=d.sql.length?d.sql.map(prow).join(''):'<p class="empty">없음</p>';
-      $('py-title').textContent='Python '+d.python.length+'문제';$('py-sub').textContent=d.python.length?('주제 '+(d.python[0].category||'')):'이 날 Python 세트 없음';
+      $('py-title').textContent='Python';$('py-sub').textContent=d.python.length?(d.python.length+'문제 · '+(d.python[0].category||'')):'세트 없음';
       $('pylist').innerHTML=d.python.length?d.python.map(prow).join(''):'<p class="empty">없음</p>';};
     $('pr-prev').addEventListener('click',()=>{if(cur<PR.days.length-1){cur++;drawPr();}});
     $('pr-next').addEventListener('click',()=>{if(cur>0){cur--;drawPr();}});
