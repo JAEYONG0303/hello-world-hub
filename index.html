@@ -459,6 +459,65 @@ body{font-size:16px}
  .feedhead h1{font-size:24px}
  .statusbar{gap:10px;font-size:12.5px}
 }
+
+/* ================= 피드 v4: 짧은 첫 화면 (캐러셀 + 동향분석) ================= */
+.feedpage{padding:18px 0 60px}
+.insight{background:var(--card);border:1px solid var(--grid);border-radius:var(--radius-lg);padding:22px 26px;box-shadow:var(--shadow);margin:18px 0 26px;display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,.9fr);gap:26px}
+.insight .ttl{display:flex;align-items:center;gap:8px;color:var(--blue-ink);font-weight:700;font-size:15px}
+.insight .ttl i{width:18px;height:18px;border-radius:50%;background:var(--blue-soft);display:inline-grid;place-items:center;font-size:11px;font-style:normal}
+.insight h2{font-family:var(--serif);font-size:22px;line-height:1.35;margin:8px 0 12px}
+.insight ol{margin:0;padding-left:20px;color:var(--sec);font-size:15px;line-height:1.7}
+.insight ol li{margin:6px 0}
+.insight .next{margin-top:12px;font-size:14px;color:var(--sec);background:var(--surf);border:1px solid var(--grid);border-radius:var(--radius);padding:10px 12px}
+.insight .next b{color:var(--orange);margin-right:6px}
+.insight .method{font-size:12.5px;color:var(--mut);margin-top:10px}
+.istats{display:grid;grid-template-columns:1fr 1fr;gap:10px;align-content:start}
+.istat{background:var(--surf);border:1px solid var(--grid);border-radius:var(--radius);padding:12px 14px}
+.istat .k{font-size:12.5px;color:var(--sec);font-weight:600}
+.istat .v{font-family:var(--serif);font-size:26px;font-weight:700;line-height:1.1;margin-top:2px}
+.istat .v small{font-family:var(--sans);font-size:12px;color:var(--mut);font-weight:500;margin-left:3px}
+.kws{grid-column:1/-1;display:flex;gap:6px;flex-wrap:wrap}
+.kws span{font-size:13px;background:var(--blue-soft);color:var(--blue-ink);border-radius:999px;padding:4px 10px;font-weight:600}
+.kws span small{opacity:.7;margin-left:4px;font-family:var(--mono);font-weight:400}
+.rowhead{display:flex;justify-content:space-between;align-items:baseline;gap:12px;margin:26px 0 12px}
+.rowhead h2{font-family:var(--sans);font-size:19px;font-weight:700;display:flex;align-items:center;gap:8px}
+.rowhead h2 .n{font-family:var(--mono);font-size:13px;color:var(--mut);font-weight:400}
+.rowhead .sub{font-size:13.5px;color:var(--mut)}
+.rowhead a{font-size:14px;color:var(--blue-ink);text-decoration:none;font-weight:600;white-space:nowrap}
+.rowhead a:hover{text-decoration:underline}
+.rowscroll{position:relative}
+.cards{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding:4px 2px 10px;scroll-behavior:smooth}
+.cards::-webkit-scrollbar{display:none}
+.cd{flex:0 0 300px;scroll-snap-align:start;background:var(--card);border:1px solid var(--grid);border-radius:14px;padding:16px 18px;box-shadow:var(--shadow);display:flex;flex-direction:column;gap:8px;min-height:150px;transition:.15s}
+.cd:hover{border-color:var(--base);transform:translateY(-2px)}
+.cd.high{border-top:3px solid var(--orange)}
+.cd h3{font-family:var(--sans);font-size:16px;line-height:1.45;margin:0;font-weight:700;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.cd h3 a{color:var(--ink);text-decoration:none}
+.cd h3 a:hover{color:var(--blue-ink)}
+.cd .org{font-size:13.5px;color:var(--sec);display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.cd .org .dd{color:var(--orange);font-family:var(--mono);font-weight:700}
+.cd .org .dt{color:var(--mut);font-family:var(--mono);font-size:12.5px}
+.cd .chips{display:flex;gap:5px;flex-wrap:wrap}
+.cd .chips span{font-size:12px;background:var(--surf);border:1px solid var(--grid);border-radius:6px;padding:3px 8px;color:var(--sec)}
+.cd .chips .hi{background:var(--orange-soft);color:var(--orange);border-color:transparent;font-weight:600}
+.cd .chips .imp-strengthen{background:var(--green-soft);color:var(--green);border-color:transparent}
+.cd .chips .imp-weaken{background:var(--orange-soft);color:var(--orange);border-color:transparent}
+.cd .one{font-size:13.5px;color:var(--sec);line-height:1.55;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;margin-top:auto}
+.cd .one b{color:var(--orange);margin-right:4px}
+.cd.more{align-items:center;justify-content:center;background:var(--surf);border-style:dashed}
+.cd.more a{color:var(--blue-ink);font-weight:700;text-decoration:none;font-size:15px}
+.arrow{position:absolute;top:50%;transform:translateY(-50%);width:40px;height:40px;border-radius:50%;background:var(--card);border:1px solid var(--grid);box-shadow:0 4px 14px rgba(20,20,18,.12);cursor:pointer;display:grid;place-items:center;font-size:18px;color:var(--ink);z-index:2}
+.arrow.l{left:-16px}.arrow.r{right:-16px}
+.arrow:disabled{opacity:.25;cursor:default}
+.listtoggle{margin-top:34px;border-top:1px solid var(--grid);padding-top:18px}
+.listtoggle summary{cursor:pointer;font-weight:700;font-size:17px;color:var(--ink);list-style:none;display:flex;align-items:center;gap:10px}
+.listtoggle summary:before{content:"+";font-family:var(--mono);width:26px;height:26px;border-radius:50%;border:1.5px solid var(--ink);display:inline-grid;place-items:center;font-size:16px}
+.listtoggle[open] summary:before{content:"–"}
+.listtoggle .feedwrap{padding-top:18px}
+.pipestrip{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}
+.pipestrip span{font-size:13px;color:var(--sec);background:var(--card);border:1px solid var(--grid);border-radius:999px;padding:5px 11px;font-family:var(--mono)}
+@media(max-width:980px){.insight{grid-template-columns:1fr}.feedwrap{grid-template-columns:200px minmax(0,1fr)}}
+@media(max-width:760px){.cd{flex-basis:78vw}.arrow{display:none}.insight{padding:18px}.insight h2{font-size:19px}.istats{grid-template-columns:1fr 1fr}.feedwrap{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -477,35 +536,53 @@ body{font-size:16px}
 
 <!-- ===== 피드 (기본 화면) ===== -->
 <section data-view="feed" class="on" id="view-feed">
-  <div class="wrap">
+  <div class="wrap feedpage">
     <div class="statusbar" id="statusbar"><span>수집 상태 불러오는 중…</span></div>
-    <div class="feedwrap">
-      <aside class="side" aria-label="필터">
-        <div class="grp"><h4>채널</h4><ul class="fl" id="f-channel"></ul></div>
-        <div class="grp"><h4>기간</h4><ul class="fl" id="f-range">
-          <li data-v="today">오늘 수집<span class="n" id="n-today"></span></li>
-          <li data-v="7">7일<span class="n" id="n-7"></span></li>
-          <li data-v="30">30일<span class="n" id="n-30"></span></li>
-          <li data-v="all" class="on">전체<span class="n" id="n-all"></span></li>
-        </ul></div>
-        <div class="grp"><h4>출처</h4><select id="f-source"><option value="">전체 출처</option></select></div>
-        <div class="grp text"><h4 style="grid-column:1/-1">검색</h4><input id="f-q" type="search" placeholder="제목·요약 검색" aria-label="검색"></div>
-      </aside>
+
+    <!-- AI 자동 동향분석: 숫자·키워드는 스크립트, 문장은 검토 때 작성 (content/feed.json insight) -->
+    <section class="insight" id="insight" aria-label="AI 자동 동향분석">
       <div>
-        <div class="feedhead">
-          <h1 id="feed-title">오늘 모인 것</h1>
-          <div class="datenav"><button id="d-prev" aria-label="이전 날">‹</button><span class="cur" id="d-cur">—</span><button id="d-next" aria-label="다음 날">›</button><button class="all" id="d-all">전체 보기</button></div>
-        </div>
-        <div id="clusters"></div>
-        <ol class="feed" id="feed-list"></ol>
-        <p class="feedfoot" id="feedfoot"></p>
+        <div class="ttl"><i>AI</i>AI 자동 동향분석 <span class="method" id="ins-date" style="margin:0 0 0 6px"></span></div>
+        <h2 id="ins-headline">오늘 수집분을 아직 분석하지 않았습니다.</h2>
+        <ol id="ins-points"></ol>
+        <div class="next" id="ins-next" hidden></div>
+        <p class="method" id="ins-method"></p>
       </div>
-      <aside class="rcol" aria-label="상태">
-        <div class="box"><h4>수집 파이프라인</h4><div id="pipes"></div></div>
-        <div class="box"><h4>마감 임박 공고</h4><ul class="mini" id="soon"></ul></div>
-        <div class="box"><h4>오늘의 SQL 5문제</h4><ul class="mini" id="sqltoday"></ul></div>
-      </aside>
-    </div>
+      <div class="istats" id="ins-stats"></div>
+    </section>
+
+    <div id="rows"></div>
+
+    <details class="listtoggle" id="listtoggle">
+      <summary>전체 목록과 필터 <span class="rowhead"><span class="n" id="list-count" style="font-family:var(--mono);font-size:13px;color:var(--mut);font-weight:400"></span></span></summary>
+      <div class="feedwrap">
+        <aside class="side" aria-label="필터">
+          <div class="grp"><h4>채널</h4><ul class="fl" id="f-channel"></ul></div>
+          <div class="grp"><h4>기간</h4><ul class="fl" id="f-range">
+            <li data-v="today">오늘 수집<span class="n" id="n-today"></span></li>
+            <li data-v="7">7일<span class="n" id="n-7"></span></li>
+            <li data-v="30">30일<span class="n" id="n-30"></span></li>
+            <li data-v="all" class="on">전체<span class="n" id="n-all"></span></li>
+          </ul></div>
+          <div class="grp"><h4>출처</h4><select id="f-source"><option value="">전체 출처</option></select></div>
+          <div class="grp text"><h4 style="grid-column:1/-1">검색</h4><input id="f-q" type="search" placeholder="제목·요약 검색" aria-label="검색"></div>
+        </aside>
+        <div>
+          <div class="feedhead">
+            <h1 id="feed-title" style="font-size:22px">모인 것 전체</h1>
+            <div class="datenav"><button id="d-prev" aria-label="이전 날">‹</button><span class="cur" id="d-cur">—</span><button id="d-next" aria-label="다음 날">›</button><button class="all" id="d-all">전체 보기</button></div>
+          </div>
+          <div id="clusters"></div>
+          <ol class="feed" id="feed-list"></ol>
+          <p class="feedfoot" id="feedfoot"></p>
+        </div>
+        <aside class="rcol" aria-label="상태">
+          <div class="box"><h4>수집 파이프라인</h4><div id="pipes"></div></div>
+          <div class="box"><h4>마감 임박 공고</h4><ul class="mini" id="soon"></ul></div>
+          <div class="box"><h4>오늘의 SQL 5문제</h4><ul class="mini" id="sqltoday"></ul></div>
+        </aside>
+      </div>
+    </details>
   </div>
 </section>
 
@@ -1522,9 +1599,53 @@ function renderFeed(F){
 (function(){
   const el=document.getElementById('hub-feed');let F=null;
   try{F=JSON.parse(el&&el.textContent||'null');}catch(e){F=null;}
-  if(F){renderFeed(F);return;}
-  fetch('content/feed.json').then(r=>r.ok?r.json():null).then(renderFeed).catch(()=>{});
+  if(F){renderFeed(F);renderRows(F);return;}
+  fetch('content/feed.json').then(r=>r.ok?r.json():null).then(F=>{renderFeed(F);renderRows(F);}).catch(()=>{});
 })();
+
+// ---------- 피드 v4: 캐러셀 + 동향분석 ----------
+function renderRows(F){
+  const esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+  const CH={};(F.channels||[]).forEach(c=>CH[c.id]=c.name);
+  const rows=document.getElementById('rows');if(!rows)return;
+  const dd=i=>i.dday==null?'':'<span class="dd">'+(i.dday<0?'마감':i.dday===0?'D-day':'D-'+i.dday)+'</span>';
+  const card=i=>{
+    const chips=[];
+    if(i.channel==='jobs'){(i.category||'').split(' · ').filter(Boolean).forEach(c=>chips.push('<span>'+esc(c)+'</span>'));(i.tags||[]).slice(0,2).forEach(t=>chips.push('<span>'+esc(t)+'</span>'));}
+    else{if(i.category)chips.push('<span>'+esc(i.category)+'</span>');if(i.relevance==='high')chips.push('<span class="hi">중요</span>');if(i.impact)chips.push('<span class="imp-'+esc(i.impact)+'">'+({strengthen:'전망 강화',weaken:'전망 약화',neutral:'중립'}[i.impact]||i.impact)+'</span>');if(i.official===false)chips.push('<span class="hi">비공식</span>');(i.tags||[]).slice(0,2).forEach(t=>t&&chips.push('<span>'+esc(t)+'</span>'));}
+    const one=i.channel==='jobs'?(i.summary||''):(i.note?'<b>나에게</b>'+esc(i.note):esc(i.summary||''));
+    const title=i.url?'<a href="'+esc(i.url)+'" target="_blank" rel="noopener noreferrer">'+esc(i.title)+'</a>':esc(i.title);
+    return '<article class="cd '+(i.relevance==='high'?'high':'')+'"><h3>'+title+'</h3><div class="org">'+esc(i.publisher)+dd(i)+'<span class="dt">'+esc(i.published_at||'')+'</span></div><div class="chips">'+chips.join('')+'</div><p class="one">'+(i.channel==='jobs'?esc(one):one)+'</p></article>';
+  };
+  const secs=[
+    {id:'jobs',title:'오늘의 채용 공고',sub:'신입·경력무관 · 마감 가까운 순',pick:()=>F.items.filter(i=>i.channel==='jobs'&&(i.dday==null||i.dday>=0)).sort((a,b)=>(a.dday??999)-(b.dday??999)).slice(0,12)},
+    {id:'health',title:'보건·의료에서 바뀌는 것',sub:'공식 출처 · 검토된 항목만',pick:()=>F.items.filter(i=>i.channel==='health'||i.channel==='research').slice(0,12)},
+    {id:'ai',title:'AI 신호',sub:'전망에 반영된 공식 자료',pick:()=>F.items.filter(i=>i.channel==='ai').slice(0,12)},
+    {id:'sql',title:'오늘의 SQL 5문제',sub:'원문 3 + 생성 2',pick:()=>F.items.filter(i=>i.channel==='sql')}
+  ];
+  rows.innerHTML=secs.map(sec=>{const it=sec.pick();if(!it.length)return '';
+    return '<div class="rowhead"><h2>'+esc(sec.title)+' <span class="n">'+it.length+'</span></h2><span class="sub">'+esc(sec.sub)+'</span><a href="#list" data-ch="'+sec.id+'">전체 보기 →</a></div>'
+      +'<div class="rowscroll"><button class="arrow l" aria-label="이전">‹</button><div class="cards">'+it.map(card).join('')+'<article class="cd more"><a href="#list" data-ch="'+sec.id+'">'+esc(CH[sec.id]||sec.id)+' 전체 →</a></article></div><button class="arrow r" aria-label="다음">›</button></div>';}).join('');
+  rows.querySelectorAll('.rowscroll').forEach(r=>{const c=r.querySelector('.cards');const l=r.querySelector('.arrow.l'),rt=r.querySelector('.arrow.r');
+    const upd=()=>{l.disabled=c.scrollLeft<=2;rt.disabled=c.scrollLeft+c.clientWidth>=c.scrollWidth-2;};
+    l.addEventListener('click',()=>c.scrollBy({left:-c.clientWidth*.8}));rt.addEventListener('click',()=>c.scrollBy({left:c.clientWidth*.8}));c.addEventListener('scroll',upd);upd();});
+  rows.addEventListener('click',e=>{const a=e.target.closest('a[data-ch]');if(!a)return;e.preventDefault();const d=document.getElementById('listtoggle');d.open=true;
+    const li=document.querySelector('#f-channel li[data-v="'+a.dataset.ch+'"]');if(li)li.click();d.scrollIntoView({behavior:'smooth',block:'start'});});
+  // 동향분석
+  const I=F.insight||{};const $=id=>document.getElementById(id);
+  if($('ins-headline')&&I.headline){$('ins-headline').textContent=I.headline;$('ins-points').innerHTML=(I.points||[]).map(p=>'<li>'+esc(p)+'</li>').join('');
+    if(I.watch_next){$('ins-next').hidden=false;$('ins-next').innerHTML='<b>다음 볼 것</b>'+esc(I.watch_next);}
+    $('ins-method').textContent=I.method||'';$('ins-date').textContent=I.text_date?'분석 '+I.text_date:'';}
+  else if($('ins-method')){$('ins-method').textContent=I.method||'';}
+  if($('ins-stats')){const nb=I.new_by_channel||{};
+    $('ins-stats').innerHTML='<div class="istat"><div class="k">오늘 신규</div><div class="v">'+esc(F.meta&&F.meta.today_new||0)+'<small>건</small></div></div>'
+      +'<div class="istat"><div class="k">7일 내 마감 공고</div><div class="v">'+esc(I.deadline_7d||0)+'<small>건</small></div></div>'
+      +'<div class="istat"><div class="k">보건·의료 신규</div><div class="v">'+esc((nb.health||0)+(nb.research||0))+'<small>건</small></div></div>'
+      +'<div class="istat"><div class="k">중요 표시</div><div class="v">'+esc(I.high||0)+'<small>건</small></div></div>'
+      +'<div class="kws">'+(I.keywords||[]).map(k=>'<span>'+esc(k.k)+'<small>'+esc(k.n)+'</small></span>').join('')+'</div>';}
+  const sb=document.getElementById('statusbar');if(sb&&F.pipelines){sb.insertAdjacentHTML('beforeend','');}
+  const lc=document.getElementById('list-count');if(lc)lc.textContent=F.items.length+'건';
+}
 </script>
 </body>
 </html>
