@@ -1061,7 +1061,6 @@ body{font-size:13.5px;line-height:1.55}
         <a href="#about" data-go="about" class="hm-about-link">소개 전문 ›</a>
       </div>
     </div></div></section>
-    <div class="hm-ftr"><div class="hm-wrap hm-ftr-in"><span class="hm-ftr-brand">재용.</span><span class="hm-ftr-note" id="hm-ftr-note"></span></div></div>
   </div>
 </section>
 <section data-view="jobs" id="view-jobs">
@@ -2303,7 +2302,7 @@ function renderRows(F){
     $('hm-prac').textContent='오늘 주제'+(tp(sqlP.note)?' · SQL '+tp(sqlP.note):'')+(tp(pyP.note)?' · Python '+tp(pyP.note):'');
     $('hm-upcoming').textContent=I.deadline_7d||0;$('hm-srccount').textContent=((F.jobs_facets||{}).source||[]).length||'—';
     const wp=pl.find(p=>/보건/.test(p.name));if(wp&&wp.note){const m=wp.note.match(/(\\d+)\\s*곳/);if(m)$('hm-watchcount').textContent=m[1];}
-    $('hm-ftr-note').textContent='매일 아침 자동 수집 · 원문은 링크로만 제공 · 기준 '+(F.meta&&F.meta.updated||'').slice(5);}
+    }
   // --- 뉴스: B 관제 콘솔 (마퀴 + 레일 + 표 행 + 분석 노트)
   const railPipes=()=>'<div class="rail-label">수집 파이프라인</div>'+pl.map(p=>'<div class="pl-row"><i class="pdot '+esc(p.status)+'"></i><div class="pl-info"><div class="pl-name">'+esc(p.name)+'</div><div class="pl-meta">'+esc(p.last_run||'—')+(p.note?' · '+esc(p.note):'')+'</div></div><span class="pl-count">'+esc(p.count)+'</span></div>').join('');
   if($('news-rail'))$('news-rail').innerHTML=railPipes();
