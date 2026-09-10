@@ -79,6 +79,22 @@ if (existsSync(statsFile) && html.includes(STATS_PLACEHOLDER)) {
   console.log("[build] content/stats.json 없음 → KPI 는 런타임 fetch 폴백");
 }
 
+// ── 보건·의료 감시 데이터 주입 (선택) ───────────
+const watchFile = new URL("./content/watch.json", import.meta.url);
+const WATCH_PLACEHOLDER = '<script id="hub-watch" type="application/json">null</script>';
+if (existsSync(watchFile) && html.includes(WATCH_PLACEHOLDER)) {
+  try {
+    const watch = JSON.parse(readFileSync(watchFile, "utf8"));
+    html = html.replace(WATCH_PLACEHOLDER,
+      '<script id="hub-watch" type="application/json">' + JSON.stringify(watch).replace(/<\//g, "<\\/") + "</script>");
+    console.log("[build] watch 주입 완료 (" + (watch.meta && watch.meta.updated || "날짜 없음") + ", " + (watch.items || []).length + "건)");
+  } catch (e) {
+    console.warn("[build] content/watch.json 파싱 실패 → 주입 생략:", e.message);
+  }
+} else {
+  console.log("[build] content/watch.json 없음 → 감시 섹션은 런타임 fetch 폴백");
+}
+
 // ── Worker 로 감싸기 ─────────────────────────────
 const escaped = html
   .replace(/\\/g, "\\\\")

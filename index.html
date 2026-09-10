@@ -292,6 +292,31 @@ span.status{cursor:default}
 .log .meta{display:block;margin-top:3px}
 .ctoday .task{padding:12px 0;min-height:46px}
 
+/* ---------- 보건·의료 변화 감시 ---------- */
+.watchbar{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:22px}
+.watchbar button{font:inherit;font-size:14px;font-weight:600;color:var(--sec);background:var(--card);border:1px solid var(--grid);border-radius:999px;padding:8px 14px;cursor:pointer;min-height:40px}
+.watchbar button.on{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.watchlist{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.witem{background:var(--card);border:1px solid var(--grid);border-radius:var(--radius-lg);padding:20px 22px;box-shadow:var(--shadow);display:flex;flex-direction:column;gap:8px;min-width:0}
+.witem.high{border-left:4px solid var(--orange)}
+.witem .wmeta{display:flex;gap:8px;flex-wrap:wrap;align-items:center;font-size:13px;color:var(--mut);font-family:var(--mono)}
+.witem .wmeta .cat{color:var(--blue-ink);background:var(--blue-soft);border-radius:999px;padding:2px 9px;font-family:var(--sans);font-weight:600}
+.unofficial{color:var(--orange);background:var(--orange-soft);border-radius:999px;padding:2px 9px;font-family:var(--sans);font-size:12px}
+.witem h3{font-family:var(--sans);font-size:17px;line-height:1.45;font-weight:700}
+.witem h3 a{color:var(--ink);text-decoration:none;border-bottom:1px solid var(--base)}
+.witem h3 a:hover{color:var(--blue-ink);border-color:var(--blue)}
+.witem p{font-size:15px;color:var(--sec);line-height:1.65}
+.witem .wnote{font-size:14.5px;color:var(--ink);background:var(--surf);border:1px solid var(--grid);border-radius:var(--radius);padding:10px 12px;margin-top:auto}
+.witem .wnote b{color:var(--orange);font-weight:700;margin-right:6px}
+.wsources{margin-top:28px}
+.wsources summary{cursor:pointer;font-weight:600;color:var(--sec);font-size:15px}
+.wsrc{width:100%;border-collapse:collapse;font-size:14px;margin-top:12px}
+.wsrc th{text-align:left;font-size:12px;letter-spacing:.08em;color:var(--sec);border-bottom:2px solid var(--ink);padding:6px 8px;text-transform:uppercase}
+.wsrc td{padding:9px 8px;border-bottom:1px solid var(--grid);vertical-align:top;color:var(--sec)}
+.wsrc td:first-child{color:var(--ink);font-weight:600}
+.wsrc .ok{color:var(--green);font-family:var(--mono)}.wsrc .fail{color:var(--orange);font-family:var(--mono)}.wsrc .skip{color:var(--mut);font-family:var(--mono)}
+@media(max-width:760px){.watchlist{grid-template-columns:1fr}.wsrc thead{display:none}.wsrc td{display:block;border:0;padding:3px 0}.wsrc tr{display:block;padding:10px 0;border-bottom:1px solid var(--grid)}}
+
 /* ---------- 푸터 ---------- */
 .foot{border-top:1px solid var(--grid);padding:48px 0 64px;color:var(--sec);font-size:15px}
 .foot .row{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;align-items:start}
@@ -355,7 +380,7 @@ span.status{cursor:default}
   <div class="wrap bar">
     <a class="logo" href="#top">재용<span>.</span></a>
     <nav class="menu" aria-label="주요 메뉴">
-      <a href="#about">소개</a><a href="#work">프로젝트</a><a href="#path">경력·역량</a><a href="#direction">방향</a><a href="#now">지금</a><a href="#outlook">AI 전망</a><a href="#ops">운영판</a>
+      <a href="#about">소개</a><a href="#work">프로젝트</a><a href="#path">경력·역량</a><a href="#direction">방향</a><a href="#now">지금</a><a href="#watch">의료 변화</a><a href="#outlook">AI 전망</a><a href="#ops">운영판</a>
     </nav>
     <a class="gh" href="https://github.com/JAEYONG0303/project" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
   </div>
@@ -558,6 +583,19 @@ span.status{cursor:default}
   </div>
 </section>
 
+<!-- 보건·의료 변화 감시 (원본: content/watch.json ← my agent scripts/watch_sites.py) -->
+<section class="sec" id="watch">
+  <div class="wrap">
+    <div class="sechead">
+      <div><p class="eyebrow">Watch</p><h2>보건·의료에서 지금 바뀌는 것</h2></div>
+      <p class="desc" id="watch-sub">복지부·심평원·건보공단·병원협회 등 공식 출처를 매일 한 번 확인해 새 항목만 검토합니다. 수집 실패는 "변화 없음"이 아닙니다.</p>
+    </div>
+    <div class="watchbar" id="watch-filter" role="group" aria-label="분류 필터"></div>
+    <div class="watchlist" id="watch-list"><p class="empty">아직 반영된 항목이 없습니다.</p></div>
+    <details class="wsources"><summary>감시 출처와 최근 수집 상태</summary><div class="tblwrap"><table class="wsrc" id="watch-sources"></table></div></details>
+  </div>
+</section>
+
 <!-- AI 전망 노트 (원본: content/career-ai.json) -->
 <section class="sec alt" id="outlook">
   <div class="wrap">
@@ -685,6 +723,8 @@ span.status{cursor:default}
 <script id="career-ai" type="application/json">null</script>
 <!-- 빌드 시 content/stats.json 이 주입된다. 로컬 미리보기(null)에서는 fetch 로 같은 파일을 읽는다. -->
 <script id="hub-stats" type="application/json">null</script>
+<!-- 빌드 시 content/watch.json 이 주입된다. 로컬 미리보기(null)에서는 fetch 로 같은 파일을 읽는다. -->
+<script id="hub-watch" type="application/json">null</script>
 
 <script>
 (function () {
@@ -1227,6 +1267,39 @@ function renderStats(st){
   try{st=JSON.parse(el&&el.textContent||'null');}catch(e){st=null;}
   if(st){renderStats(st);return;}
   fetch('content/stats.json').then(r=>r.ok?r.json():null).then(renderStats).catch(()=>{});
+})();
+
+// ---------- 보건·의료 변화 감시 (content/watch.json) ----------
+function renderWatch(w){
+  if(!w||!Array.isArray(w.items)) return;
+  const esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+  const cats=Object.assign({},w.meta&&w.meta.categories||{});
+  const list=document.getElementById('watch-list'),bar=document.getElementById('watch-filter'),src=document.getElementById('watch-sources'),sub=document.getElementById('watch-sub');
+  if(!list||!bar) return;
+  let cur='all';
+  const draw=()=>{
+    const items=w.items.filter(i=>cur==='all'||i.category===cur);
+    list.innerHTML=items.length?items.map(i=>'<article class="witem '+(i.relevance==='high'?'high':'')+'">'
+      +'<div class="wmeta"><span class="cat">'+esc(cats[i.category]||i.category)+'</span><span>'+esc(i.published_at)+'</span><span>'+esc(i.publisher)+'</span>'+(i.official===false?'<span class="unofficial">비공식</span>':'')+'</div>'
+      +'<h3><a href="'+esc(i.url)+'" target="_blank" rel="noopener noreferrer">'+esc(i.title)+'</a></h3>'
+      +'<p>'+esc(i.summary)+'</p>'+(i.note?'<div class="wnote"><b>나에게</b>'+esc(i.note)+'</div>':'')+'</article>').join('')
+      :'<p class="empty">이 분류에 반영된 항목이 없습니다.</p>';
+  };
+  const counts={};w.items.forEach(i=>counts[i.category]=(counts[i.category]||0)+1);
+  bar.innerHTML='<button class="on" data-c="all">전체 '+w.items.length+'</button>'+Object.keys(cats).filter(c=>counts[c]).map(c=>'<button data-c="'+c+'">'+esc(cats[c])+' '+counts[c]+'</button>').join('');
+  bar.addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;cur=b.dataset.c;bar.querySelectorAll('button').forEach(x=>x.classList.toggle('on',x===b));draw();});
+  draw();
+  if(src&&w.meta&&w.meta.sources){
+    const st={ok:'정상',fail:'수집 실패',skip:'건너뜀'};
+    src.innerHTML='<thead><tr><th>출처</th><th>분류</th><th>상태</th><th>최근</th><th>비고</th></tr></thead><tbody>'+w.meta.sources.map(s=>'<tr><td><a href="'+esc(s.url)+'" target="_blank" rel="noopener noreferrer">'+esc(s.name)+'</a>'+(s.official?'':' <span class="unofficial">비공식</span>')+'</td><td>'+esc(cats[s.category]||s.category)+'</td><td class="'+esc(s.status)+'">'+esc(st[s.status]||s.status)+'</td><td>'+esc(s.last)+'</td><td>'+esc(s.note||'')+'</td></tr>').join('')+'</tbody>';
+  }
+  if(sub&&w.meta&&w.meta.updated) sub.textContent='공식 출처를 매일 한 번 확인해 새 항목만 검토합니다. 마지막 반영 '+w.meta.updated+'. 수집 실패는 "변화 없음"이 아닙니다.';
+}
+(function(){
+  const el=document.getElementById('hub-watch');let w=null;
+  try{w=JSON.parse(el&&el.textContent||'null');}catch(e){w=null;}
+  if(w){renderWatch(w);return;}
+  fetch('content/watch.json').then(r=>r.ok?r.json():null).then(renderWatch).catch(()=>{});
 })();
 </script>
 </body>
