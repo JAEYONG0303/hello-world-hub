@@ -636,7 +636,14 @@ h1,h2,h3{letter-spacing:-.01em}
 .strip{background:#2965ff;color:#fff;border-radius:16px;padding:22px 26px;display:grid;grid-template-columns:1.2fr repeat(5,1fr);gap:18px;align-items:center;margin:28px 0 36px}
 .strip h4{margin:0 0 4px;font-size:17px}.strip .d{font-size:13px;opacity:.85}.strip .p b{display:block;font-size:22px;font-family:var(--mono);font-weight:500}.strip .p small{font-size:12px;opacity:.85}.strip .p i{display:inline-block;width:7px;height:7px;border-radius:50%;background:#a3ff5e;margin-right:6px}.strip .p i.fail{background:#ffb4a2}.strip .p i.skip{background:#ffe08a}
 /* 문제 풀이 */
-.prac{display:grid;grid-template-columns:minmax(0,1fr) 320px;gap:28px;align-items:start}
+.prac{display:grid;grid-template-columns:1fr;gap:0}
+.panel .mystat{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:4px}
+.panel .mystat div{background:#1f1f1c;border-radius:10px;padding:10px 12px}.panel .mystat b{display:block;font-size:22px;font-weight:800;line-height:1.1;color:#f1efe8}.panel .mystat b small{font-size:11px;color:#8b8880;font-weight:500;margin-left:2px}.panel .mystat span{font-size:12px;color:#c2bfb4}
+.panel .soonlist{list-style:none;padding:0;margin:8px 0 0}.panel .soonlist li{display:grid;grid-template-columns:auto 1fr;gap:8px;padding:6px 0;border-top:1px solid #2f2f2b;font-size:13px;line-height:1.4;color:#c2bfb4}.panel .soonlist li:first-child{border-top:0;padding-top:0}
+.panel .soonlist .dd{font-family:var(--mono);font-size:12px;color:#a3ff5e;white-space:nowrap;padding-top:1px}.panel .soonlist .dd.hot{color:#ff9a7a}.panel .soonlist a{color:#f1efe8;text-decoration:none;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}.panel .soonlist small{display:block;color:#8b8880;font-size:11.5px}
+.panel code{font-family:var(--mono);font-size:12px;background:#1f1f1c;border-radius:4px;padding:1px 5px;color:#f1efe8}
+.panel .datenav.dark{margin-top:6px;display:flex;gap:6px;align-items:center}.panel .datenav.dark button{background:#1f1f1c;color:#f1efe8;border:1px solid #2f2f2b;border-radius:8px;width:30px;height:30px;font:inherit;cursor:pointer}.panel .datenav.dark button:disabled{opacity:.35}.panel .datenav.dark .cur{font-family:var(--mono);font-size:13px;color:#f1efe8}.panel .datenav.dark select{margin-left:auto;font:inherit;font-size:12px;background:#1f1f1c;color:#f1efe8;border:1px solid #2f2f2b;border-radius:8px;padding:5px 6px}
+.panel #pr-stats-body{margin-top:4px;color:#c2bfb4;line-height:1.7}
 .prac .box{border:1px solid var(--grid);border-radius:10px;padding:16px 18px;background:var(--card);margin-bottom:12px}
 .prac h2{font-size:17px;margin:0 0 4px}.prac .sub{font-size:13px;color:var(--mut);margin:0 0 12px}
 .prow{display:grid;grid-template-columns:30px minmax(0,1fr) auto;gap:10px;padding:12px 0;border-top:1px solid var(--grid);align-items:start}
@@ -669,12 +676,25 @@ h1,h2,h3{letter-spacing:-.01em}
 <!-- ===== 1. 채용 공고 (시안 A: 카드 그리드) ===== -->
 <section data-view="jobs" class="on" id="view-jobs">
   <div class="wrap pg">
-    <div class="statusbar" id="statusbar"><span>수집 상태 불러오는 중…</span></div>
-    <div class="mystrip" id="mystrip"></div>
-    <div class="jkhead"><h2>채용 공고 <span class="n" id="jobs-n"></span></h2><div class="more"><a href="#list" data-ch="jobs">전체 목록·필터 ›</a></div></div>
-    <div class="chips" id="jobfam"></div>
-    <div class="jk-grid c4" id="jobgrid"></div>
-    <p class="feedfoot" id="jobs-foot"></p>
+    <div class="zig">
+      <aside class="panel" id="jobpanel">
+        <div class="k">채용 레이더 <span id="jp-date"></span></div>
+        <h2 id="jp-head">오늘 신규 —건</h2>
+        <div class="mystat" id="jp-stat"></div>
+        <div class="k" style="margin-top:14px">마감 임박</div>
+        <ol class="soonlist" id="jp-soon"></ol>
+        <div class="next" id="jp-pipes"></div>
+        <a class="btn" href="#list" data-ch="jobs">전체 목록·필터 ›</a>
+      </aside>
+      <div>
+        <div class="jkhead"><h2>채용 공고 <span class="n" id="jobs-n"></span></h2><div class="more"><a href="#list" data-ch="jobs">전체 목록·필터 ›</a></div></div>
+        <div class="chips" id="jobfam"></div>
+        <div class="jk-grid c3" id="jobgrid"></div>
+        <p class="feedfoot" id="jobs-foot"></p>
+      </div>
+    </div>
+    <div class="statusbar" id="statusbar" hidden></div>
+    <div class="mystrip" id="mystrip" hidden></div>
     <details class="listtoggle" id="listtoggle">
       <summary>전체 목록과 필터 <span id="list-count" style="font-family:var(--mono);font-size:13px;color:var(--mut);font-weight:400"></span></summary>
       <div class="feedwrap">
@@ -733,19 +753,20 @@ h1,h2,h3{letter-spacing:-.01em}
 <!-- ===== 3. 문제 풀이 (SQL · Python) ===== -->
 <section data-view="practice" id="view-practice">
   <div class="wrap pg">
-    <div class="jkhead"><h2>문제 풀이 <span class="n" id="pr-sub"></span></h2>
-      <div class="datenav"><button id="pr-prev" aria-label="이전 날">‹</button><span class="cur" id="pr-cur">—</span><button id="pr-next" aria-label="다음 날">›</button><select id="pr-days" aria-label="날짜 선택" style="font:inherit;font-size:13px;border:1px solid var(--grid);border-radius:8px;padding:6px 8px;background:var(--card)"></select></div>
-    </div>
-    <div class="prac">
-      <div>
+    <div class="zig">
+      <aside class="panel" id="prpanel">
+        <div class="k">문제 풀이 <span id="pr-sub"></span></div>
+        <h2 id="pr-head">SQL 5문제 · Python 5문제</h2>
+        <div class="datenav dark"><button id="pr-prev" aria-label="이전 날">‹</button><span class="cur" id="pr-cur">—</span><button id="pr-next" aria-label="다음 날">›</button><select id="pr-days" aria-label="날짜 선택"></select></div>
+        <div class="k" style="margin-top:16px">푸는 법</div>
+        <ol><li>원문 링크 문제는 해당 사이트에서 풀고 <code>/sql done N</code> · <code>/python done N</code></li><li>생성 문제는 <code>/sql check N &lt;쿼리&gt;</code> · <code>/python check P### &lt;파일&gt;</code>로 채점</li><li>일요일은 이번 주 오답 복습</li></ol>
+        <div class="next" id="pr-stats"><b>풀이 기록</b><div id="pr-stats-body"></div></div>
+        <div class="next" style="border-top:0;padding-top:4px">지난 세트는 지우지 않고 날짜별로 쌓입니다. 위 날짜 선택으로 언제든 다시 볼 수 있습니다.</div>
+      </aside>
+      <div class="prac">
         <div class="box"><h2 id="sql-title">SQL 5문제</h2><p class="sub" id="sql-sub"></p><div id="sqllist"></div></div>
         <div class="box"><h2 id="py-title">Python 5문제</h2><p class="sub" id="py-sub"></p><div id="pylist"></div></div>
       </div>
-      <aside>
-        <div class="box"><h2 style="font-size:15px">푸는 법</h2><ol style="margin:0;padding-left:18px;font-size:14px;color:var(--sec);line-height:1.7"><li>원문 링크 문제는 해당 사이트에서 풀고 <code>/sql done N</code> · <code>/python done N</code></li><li>생성 문제는 <code>/sql check N &lt;쿼리&gt;</code> · <code>/python check P### &lt;파일&gt;</code>로 채점</li><li>일요일은 이번 주 오답 복습</li></ol></div>
-        <div class="box" id="pr-stats"><h2 style="font-size:15px">풀이 기록</h2><div id="pr-stats-body" style="font-size:14px;color:var(--sec);line-height:1.8"></div></div>
-        <div class="soon">지난 세트는 지우지 않고 날짜별로 쌓입니다. 위 날짜 선택으로 언제든 다시 볼 수 있습니다.</div>
-      </aside>
     </div>
   </div>
 </section>
@@ -1861,14 +1882,19 @@ function renderRows(F){
     return '<article class="jc"><span class="star">☆</span><h3><a href="'+esc(i.url)+'" target="_blank" rel="noopener noreferrer">'+esc(i.title)+'</a></h3><div class="co">'+esc(i.publisher)+dd(i)+'<span class="dt">'+esc(i.published_at||'')+'</span></div>'+(i.summary?'<div class="sm">'+esc(i.summary)+'</div>':'')+'<div class="tg">'+tg.join('')+'</div></article>';};
   const JOBFAM=[['all','전체',()=>true],['plan','기획',i=>/기획|전략/.test(i.category+i.summary+i.title)],['research','연구행정',i=>/연구|과제|산학|R&D/.test(i.summary+i.title)],['data','데이터',i=>/데이터|분석|통계|AI/.test(i.summary+i.title+(i.tags||[]).join(''))],['ops','사업운영',i=>/사업|운영|관리/.test(i.summary+i.title)],['admin','행정',i=>/행정|사무|총무/.test(i.summary+i.title)]];
   const jobs=F.items.filter(i=>i.channel==='jobs'&&(i.dday==null||i.dday>=0)).sort((a,b)=>(a.dday??999)-(b.dday??999));
-  let jf='all',jlim=16;
+  let jf='all',jlim=12;
+  if($('jobpanel')){const tn=F.meta&&F.meta.today_new||0;$('jp-date').textContent='· '+(F.meta&&F.meta.updated||'');$('jp-head').textContent='오늘 신규 '+tn+'건, 7일 내 마감 '+(I.deadline_7d||0)+'건';
+    $('jp-stat').innerHTML='<div><b>'+esc(tn)+'<small>건</small></b><span>오늘 신규</span></div><div><b>'+esc(I.deadline_7d||0)+'<small>건</small></b><span>7일 내 마감</span></div>';
+    const soonJ=F.items.filter(i=>i.channel==='jobs'&&i.dday!=null&&i.dday>=0).sort((a,b)=>a.dday-b.dday).slice(0,5);
+    $('jp-soon').innerHTML=soonJ.length?soonJ.map(i=>'<li><span class="dd'+(i.dday<=3?' hot':'')+'">'+(i.dday===0?'D-day':'D-'+i.dday)+'</span><div><a href="'+esc(i.url)+'" target="_blank" rel="noopener noreferrer">'+esc(i.title)+'</a><small>'+esc(i.publisher)+'</small></div></li>').join(''):'<li>마감 예정 공고 없음</li>';
+    $('jp-pipes').innerHTML='<b>마지막 수집</b>'+esc((F.meta&&F.meta.generated_at||'').replace('T',' ').slice(0,16))+' · '+pl.filter(p=>p.status!=='ok').length+'개 소스 실패';}
   const drawJobs=()=>{const f=JOBFAM.find(x=>x[0]===jf)[2];const list=jobs.filter(f);const shown=list.slice(0,jlim);
     $('jobgrid').innerHTML=shown.map(jcard).join('')||'<article class="jc empty">해당 공고 없음</article>';
     $('jobs-foot').innerHTML=(list.length>shown.length?'<button class="more" id="jobs-more">'+(list.length-shown.length)+'건 더 보기</button><br><br>':'')+shown.length+'건 표시 · 조건 '+list.length+'건 · 신입·경력무관 · 마감 가까운 순';
-    const mb=$('jobs-more');if(mb)mb.addEventListener('click',()=>{jlim+=16;drawJobs();});};
+    const mb=$('jobs-more');if(mb)mb.addEventListener('click',()=>{jlim+=12;drawJobs();});};
   if($('jobgrid')){$('jobs-n').textContent='신입·경력무관 '+jobs.length+'건';
     $('jobfam').innerHTML=JOBFAM.map(([k,n,f])=>'<button data-k="'+k+'" class="'+(k==='all'?'on':'')+'">'+n+' '+jobs.filter(f).length+'</button>').join('');
-    $('jobfam').addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;$('jobfam').querySelectorAll('button').forEach(x=>x.classList.toggle('on',x===b));jf=b.dataset.k;jlim=16;drawJobs();});
+    $('jobfam').addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;$('jobfam').querySelectorAll('button').forEach(x=>x.classList.toggle('on',x===b));jf=b.dataset.k;jlim=12;drawJobs();});
     drawJobs();}
   // --- 뉴스: ZIGULAB 배치 (좌 고정 동향 패널 + 우 3열 카드 + 수집 띠 + AI 카드)
   if($('ins-headline')&&I.headline){$('ins-headline').textContent=I.headline;$('ins-points').innerHTML=(I.points||[]).map(p=>'<li>'+esc(p)+'</li>').join('');
@@ -1897,7 +1923,7 @@ function renderRows(F){
     const prow=(i,k)=>'<div class="prow"><div class="num">'+(k+1)+'</div><div><h3>'+(i.url?'<a href="'+esc(i.url)+'" target="_blank" rel="noopener noreferrer">'+esc(i.title)+'</a>':esc(i.title))+'</h3>'+(i.summary?'<div class="d">'+esc(i.summary)+'</div>':'')+'<div class="tg">'+(i.tags||[]).map(t=>'<span>'+esc(t)+'</span>').join('')+'<span>'+esc(i.publisher)+'</span></div></div><div class="st">'+(i.kind==='link'?'원문':'생성')+'</div></div>';
     const drawPr=()=>{const d=PR.days[cur];$('pr-cur').textContent=d.date;$('pr-days').value=d.date;$('pr-prev').disabled=cur>=PR.days.length-1;$('pr-next').disabled=cur<=0;
       $('pr-sub').textContent=(d.date===(F.meta&&F.meta.updated)?'오늘':'지난 세트')+' · 전체 '+PR.days.length+'일 누적';
-      $('sql-title').textContent='SQL '+d.sql.length+'문제';$('sql-sub').textContent=d.sql.length?('주제 '+(d.sql[0].category||'')):'이 날 SQL 세트 없음';
+      $('pr-head').textContent='SQL '+d.sql.length+'문제 · Python '+d.python.length+'문제';$('sql-title').textContent='SQL '+d.sql.length+'문제';$('sql-sub').textContent=d.sql.length?('주제 '+(d.sql[0].category||'')):'이 날 SQL 세트 없음';
       $('sqllist').innerHTML=d.sql.length?d.sql.map(prow).join(''):'<p class="empty">없음</p>';
       $('py-title').textContent='Python '+d.python.length+'문제';$('py-sub').textContent=d.python.length?('주제 '+(d.python[0].category||'')):'이 날 Python 세트 없음';
       $('pylist').innerHTML=d.python.length?d.python.map(prow).join(''):'<p class="empty">없음</p>';};
