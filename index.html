@@ -386,6 +386,7 @@ body{font-size:16px}
 .dot{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:6px;vertical-align:middle}
 .dot.ok{background:var(--green)}.dot.fail{background:var(--orange)}.dot.none{background:var(--base)}
 .feedwrap{display:grid;grid-template-columns:230px minmax(0,1fr) 300px;gap:28px;padding:26px 0 80px;align-items:start}
+.side{position:sticky;top:78px}
 .side h4{font-family:var(--sans);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--mut);margin:0 0 8px;font-weight:700}
 .side .grp{margin-bottom:22px}
 .fl{list-style:none;margin:0;padding:0}
@@ -447,6 +448,7 @@ body{font-size:16px}
 @media(max-width:1080px){.feedwrap{grid-template-columns:200px minmax(0,1fr)}.rcol{grid-column:1/-1}}
 @media(max-width:760px){
  .feedwrap{grid-template-columns:1fr;gap:18px;padding-top:16px}
+ .side{position:static}
  .bar{gap:10px}.tabs a{white-space:nowrap;padding:6px 10px;font-size:14px}.bar .date{display:none}.logo small{display:none}
  .side .grp{margin-bottom:12px}
  .fl{display:flex;gap:6px;overflow-x:auto;scrollbar-width:none;padding-bottom:4px}
@@ -1446,6 +1448,7 @@ function renderFeed(F){
   const $=id=>document.getElementById(id);
   const daysAgo=d=>{if(!d)return 1e9;return Math.round((new Date(today)-new Date(d))/864e5);};
   function pass(i){
+    if(st.channel==='all'&&i.channel==='sql')return false; // SQL 은 오른쪽 열에 이미 있다. 채널로 고르면 목록에도 보인다
     if(st.channel!=='all'&&i.channel!==st.channel)return false;
     if(st.day&&i.seen!==st.day)return false;
     if(!st.day&&st.range!=='all'){const n=st.range==='today'?0:+st.range;if(daysAgo(i.seen||i.published_at)>n)return false;}
@@ -1475,8 +1478,11 @@ function renderFeed(F){
   }
   function draw(){
     const items=F.items.filter(pass);
-    $('feed').innerHTML=items.length?items.map(row).join(''):'<li class="fi"><div></div><p class="empty">조건에 맞는 항목이 없습니다.</p></li>';
-    $('feedfoot').textContent=items.length+'건 표시 · 전체 '+F.items.length+'건 · 원문은 링크로만 연결합니다';
+    const PAGE=40;const shown=items.slice(0,st.limit||PAGE);
+    $('feed').innerHTML=shown.length?shown.map(row).join(''):'<li class="fi"><div></div><p class="empty">조건에 맞는 항목이 없습니다.</p></li>';
+    const more=items.length-shown.length;
+    $('feedfoot').innerHTML=(more>0?'<button class="more" id="feed-more">'+more+'건 더 보기</button><br><br>':'')+shown.length+'건 표시 · 조건에 맞는 '+items.length+'건 · 전체 '+F.items.length+'건 · 원문은 링크로만 연결합니다';
+    const mb=$('feed-more');if(mb)mb.addEventListener('click',()=>{st.limit=(st.limit||PAGE)+PAGE;draw();});
     $('feed-title').textContent=st.day?(st.day===today?'오늘 모인 것':st.day+' 수집분'):(st.channel==='all'?'모인 것 전체':CH[st.channel]);
     // 묶음: 현재 필터에 보이는 항목이 2개 이상인 것만
     const byId={};F.items.forEach(i=>byId[i.id]=i);
@@ -1491,14 +1497,14 @@ function renderFeed(F){
   // 채널 목록
   const counts={};F.items.forEach(i=>counts[i.channel]=(counts[i.channel]||0)+1);
   $('f-channel').innerHTML='<li data-v="all" class="on">전체<span class="n">'+F.items.length+'</span></li>'+(F.channels||[]).filter(c=>counts[c.id]).map(c=>'<li data-v="'+c.id+'">'+esc(c.name)+'<span class="n">'+counts[c.id]+'</span></li>').join('');
-  $('f-channel').addEventListener('click',e=>{const li=e.target.closest('li');if(!li)return;st.channel=li.dataset.v;$('f-channel').querySelectorAll('li').forEach(x=>x.classList.toggle('on',x===li));draw();});
+  $('f-channel').addEventListener('click',e=>{const li=e.target.closest('li');if(!li)return;st.channel=li.dataset.v;st.limit=0;$('f-channel').querySelectorAll('li').forEach(x=>x.classList.toggle('on',x===li));draw();});
   const n=r=>F.items.filter(i=>r==='all'||daysAgo(i.seen||i.published_at)<=(r==='today'?0:+r)).length;
   $('n-today').textContent=n('today');$('n-7').textContent=n('7');$('n-30').textContent=n('30');$('n-all').textContent=F.items.length;
-  $('f-range').addEventListener('click',e=>{const li=e.target.closest('li');if(!li)return;st.range=li.dataset.v;st.day=null;$('f-range').querySelectorAll('li').forEach(x=>x.classList.toggle('on',x===li));draw();});
+  $('f-range').addEventListener('click',e=>{const li=e.target.closest('li');if(!li)return;st.range=li.dataset.v;st.day=null;st.limit=0;$('f-range').querySelectorAll('li').forEach(x=>x.classList.toggle('on',x===li));draw();});
   const srcs=[...new Set(F.items.map(i=>i.source).filter(Boolean))].sort();
   $('f-source').innerHTML='<option value="">전체 출처</option>'+srcs.map(s=>'<option value="'+esc(s)+'">'+esc(s)+'</option>').join('');
   $('f-source').addEventListener('change',e=>{st.source=e.target.value;draw();});
-  $('f-q').addEventListener('input',e=>{st.q=e.target.value.trim();draw();});
+  $('f-q').addEventListener('input',e=>{st.q=e.target.value.trim();st.limit=0;draw();});
   $('d-prev').addEventListener('click',()=>{const idx=st.day?days.indexOf(st.day):-1;st.day=days[idx+1]||days[0];draw();});
   $('d-next').addEventListener('click',()=>{const idx=days.indexOf(st.day);st.day=idx>0?days[idx-1]:null;draw();});
   $('d-all').addEventListener('click',()=>{st.day=null;draw();});
