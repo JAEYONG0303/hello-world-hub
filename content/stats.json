@@ -1,0 +1,29 @@
+{
+  "updated": "2026-09-10",
+  "jobs": {
+    "total": 70,
+    "upcoming7": 29,
+    "next_deadline": "2026-09-10"
+  },
+  "sql": {
+    "bank": 36,
+    "engines": {
+      "bigquery": 18,
+      "mariadb": 18
+    },
+    "solved": 0,
+    "correct": 0,
+    "accuracy": null,
+    "days": 0
+  },
+  "star": {
+    "cards": 5,
+    "confirmed": 0,
+    "open_items": 12
+  },
+  "tracker": {
+    "total": 0,
+    "by_status": {}
+  },
+  "note": "my agent 저장소의 CSV·YAML·MD 에서 센 값. 추정치 없음."
+}

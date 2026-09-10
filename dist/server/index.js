@@ -8,153 +8,248 @@ const html = `<!doctype html>
 <title>Hello World — Jaeyong</title>
 <meta name="description" content="재용의 개인 대시보드">
 <meta name="robots" content="noindex,nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans+KR:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#080912;--panel:#111321;--line:#252a40;--text:#f5f6ff;--muted:#9298b4;--violet:#9c7bff;--cyan:#57d7f3;--green:#9ee6b1;--orange:#ffb86b}
+/* 재용 Personal OS — 데이터가 주인공. 본인 분석 그림(ltc_analysis.py)과 장기요양 대시보드의 팔레트를 그대로 쓴다. */
+:root{
+  --bg:#f4f3ee;--surf:#fcfcfb;--card:#ffffff;--ink:#0b0b0b;--sec:#52514e;--mut:#898781;--grid:#e1e0d9;--base:#c3c2b7;
+  --blue:#2a78d6;--blue-soft:#e3eefb;--orange:#eb6834;--orange-soft:#fdeae1;--green:#2f8f5b;--green-soft:#e2f3e8;
+  --radius:10px;--radius-lg:14px;--shadow:0 1px 2px rgba(11,11,11,.05);
+  /* 기존 클래스가 참조하는 이름 → 새 팔레트로 연결 */
+  --text:var(--ink);--muted:var(--sec);--line:var(--grid);--panel:var(--card);--violet:var(--blue);--cyan:var(--orange);
+  --font:"IBM Plex Sans KR","Pretendard",system-ui,-apple-system,"Segoe UI","Malgun Gothic",sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,"Cascadia Mono",Consolas,monospace;
+}
+@media(prefers-color-scheme:dark){:root{
+  --bg:#121311;--surf:#181917;--card:#1d1e1b;--ink:#f1efe8;--sec:#b8b5ab;--mut:#85827a;--grid:#2e2f2b;--base:#454641;
+  --blue:#5b9be3;--blue-soft:#1b2a3d;--orange:#f08a5f;--orange-soft:#3d2418;--green:#63b98a;--green-soft:#1c3226;
+  --shadow:none;
+}}
 *{box-sizing:border-box}
-body{margin:0;background:radial-gradient(circle at 84% 0%,#242051 0,#0d1020 28%,var(--bg) 58%);color:var(--text);font:14px/1.5 Inter,ui-sans-serif,system-ui,sans-serif;min-height:100vh}
-body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.28;background-image:radial-gradient(#fff 1px,transparent 1px);background-size:53px 53px}
-.wrap{max-width:1180px;margin:auto;padding:32px 24px 72px;position:relative}
-.top{display:flex;justify-content:space-between;align-items:center;margin-bottom:42px;gap:16px}
-.brand{font-size:18px;font-weight:800;letter-spacing:-.03em}
-.brand span{color:var(--violet)}
-.date{color:var(--muted);font-size:12px;text-align:right}
-.sync{display:block;color:#6d7391;font-size:11px;margin-top:3px}
-.intro{display:flex;justify-content:space-between;gap:24px;align-items:end;margin-bottom:28px}
-.eyebrow,.label{color:var(--violet);font-size:11px;font-weight:800;letter-spacing:.14em;text-transform:uppercase}
-.title{font-size:clamp(34px,6vw,68px);line-height:1;margin:10px 0 0;letter-spacing:-.06em}
-.titlemark{display:inline-block;color:var(--cyan);font-size:.22em;letter-spacing:.16em;text-transform:uppercase;vertical-align:top;margin:8px 0 0 12px;opacity:.9}
-.subtitle{color:var(--muted);max-width:330px;margin:0 0 4px}
-.statusline{display:flex;gap:8px;flex-wrap:wrap;margin-top:22px;color:#aeb4d0;font-size:11px}.statusline span{border:1px solid #29304a;border-radius:99px;padding:6px 10px;background:#101326aa}.statusline i{display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--green);margin-right:6px;box-shadow:0 0 10px var(--green)}
-.grid{display:grid;grid-template-columns:1.15fr .85fr;gap:14px}
-.card{background:linear-gradient(145deg,rgba(22,25,42,.96),rgba(12,14,26,.96));border:1px solid var(--line);border-radius:16px;padding:20px;box-shadow:0 14px 40px #02030b55}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;scroll-padding-top:64px}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+body{margin:0;background:var(--bg);color:var(--ink);font:14px/1.6 var(--font);min-height:100vh;overflow-x:hidden}
+a{color:var(--blue)}
+:focus-visible{outline:2px solid var(--blue);outline-offset:2px}
+.wrap{max-width:1180px;margin:auto;padding:0 24px 72px;position:relative}
+
+/* ---------- 상단 고정 내비 ---------- */
+.top{position:sticky;top:0;z-index:20;display:flex;justify-content:space-between;align-items:center;gap:16px;margin:0 -24px 28px;padding:12px 24px;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--grid)}
+.brand{font-size:15px;font-weight:700;letter-spacing:-.01em;white-space:nowrap}
+.brand span{color:var(--blue)}
+.nav{display:flex;gap:2px;flex:1;justify-content:center;overflow-x:auto;scrollbar-width:none}
+.nav::-webkit-scrollbar{display:none}
+.nav a{color:var(--sec);text-decoration:none;font-size:12px;padding:6px 10px;border-radius:99px;white-space:nowrap}
+.nav a:hover{background:var(--blue-soft);color:var(--blue)}
+.date{color:var(--sec);font-size:12px;text-align:right;white-space:nowrap}
+.sync{display:block;color:var(--mut);font-size:11px;margin-top:2px}
+
+/* ---------- 히어로 + KPI 스트립 ---------- */
+.intro{display:grid;grid-template-columns:1.2fr .8fr;gap:24px;align-items:end;padding:22px 0 8px}
+.eyebrow,.label{color:var(--blue);font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase}
+.title{font-size:clamp(32px,5vw,54px);line-height:1.05;margin:8px 0 0;letter-spacing:-.04em;font-weight:700}
+.titlemark{display:inline-block;color:var(--mut);font-family:var(--mono);font-size:.24em;letter-spacing:.12em;text-transform:uppercase;vertical-align:top;margin:10px 0 0 12px;font-weight:400}
+.subtitle{color:var(--sec);max-width:360px;margin:0;font-size:15px;line-height:1.55;justify-self:end;text-align:right}
+.statusline{display:flex;gap:6px;flex-wrap:wrap;margin-top:16px;color:var(--sec);font-size:11px}
+.statusline span{border:1px solid var(--grid);border-radius:99px;padding:5px 10px;background:var(--card)}
+.statusline i{display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--green);margin-right:6px}
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:22px 0 34px}
+.kpi{background:var(--card);border:1px solid var(--grid);border-radius:var(--radius);padding:14px 16px 12px;box-shadow:var(--shadow);position:relative;overflow:hidden;animation:rise .5s both}
+.kpi:nth-child(2){animation-delay:.06s}.kpi:nth-child(3){animation-delay:.12s}.kpi:nth-child(4){animation-delay:.18s}
+.kpi:before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--blue)}
+.kpi.alt:before{background:var(--orange)}.kpi.ok:before{background:var(--green)}
+.kpi .k{color:var(--sec);font-size:11px;letter-spacing:.06em;text-transform:uppercase;margin:0 0 6px}
+.kpi .v{font-family:var(--mono);font-size:30px;line-height:1;font-weight:600;letter-spacing:-.02em;margin:0;font-variant-numeric:tabular-nums}
+.kpi .v small{font-family:var(--font);font-size:12px;color:var(--sec);font-weight:400;margin-left:4px;letter-spacing:0}
+.kpi .s{color:var(--mut);font-size:11px;margin:6px 0 0;min-height:16px}
+.kpi .s b{color:var(--sec);font-weight:600}
+.spark{display:flex;gap:3px;align-items:flex-end;height:22px;margin-top:8px}
+.spark i{flex:1;background:var(--blue-soft);border-radius:2px 2px 0 0;min-height:3px}
+.spark i.on{background:var(--blue)}
+@keyframes rise{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+
+/* ---------- 카드 공통 ---------- */
+.grid{display:grid;grid-template-columns:1.15fr .85fr;gap:12px}
+.card{background:var(--card);border:1px solid var(--grid);border-radius:var(--radius-lg);padding:18px 20px;box-shadow:var(--shadow)}
 .wide{grid-column:1/-1}
-.cardhead{display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;gap:10px}
-.cardhead h2{font-size:12px;letter-spacing:.12em;margin:0;color:#dfe3ff}
-.pill{font-size:11px;color:var(--green);border:1px solid #335841;border-radius:99px;padding:4px 8px;white-space:nowrap}
-.task{display:flex;align-items:center;gap:12px;padding:13px 0;border-top:1px solid #20243a;cursor:pointer;min-height:46px}
+.cardhead{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;gap:10px}
+.cardhead h2{font-size:11px;letter-spacing:.12em;margin:0;color:var(--sec);font-weight:700;text-transform:uppercase}
+.pill{font-size:11px;color:var(--green);border:1px solid color-mix(in srgb,var(--green) 40%,transparent);background:var(--green-soft);border-radius:99px;padding:3px 8px;white-space:nowrap;font-family:var(--mono)}
+.tag{color:var(--blue);font-size:11px;white-space:nowrap;font-family:var(--mono)}
+.meta{color:var(--mut);font-size:11px}
+.task{display:flex;align-items:center;gap:12px;padding:12px 0;border-top:1px solid var(--grid);cursor:pointer;min-height:46px}
 .task:first-of-type{border-top:0;padding-top:0}
-.check{width:17px;height:17px;border:1px solid #59617e;border-radius:50%;flex:none;transition:.15s}
-.task.done .check{background:var(--violet);border-color:var(--violet);box-shadow:inset 0 0 0 4px #17172a}
-.task.done .tasktext{color:#777d99;text-decoration:line-through}
+.check{width:17px;height:17px;border:1.5px solid var(--base);border-radius:50%;flex:none;transition:.15s;background:var(--card)}
+.task.done .check{background:var(--blue);border-color:var(--blue);box-shadow:inset 0 0 0 3px var(--card)}
+.task.done .tasktext{color:var(--mut);text-decoration:line-through}
 .tasktext{flex:1}
-.meta{color:var(--muted);font-size:11px}
-.week{display:grid;gap:10px}
-.weekitem{display:flex;justify-content:space-between;gap:12px;align-items:center;padding:12px;background:#181b2c;border-radius:11px}
-.weekitem b{font-size:13px}
-.tag{color:var(--cyan);font-size:11px;white-space:nowrap}
-.habits{display:grid;grid-template-columns:repeat(3,1fr);gap:9px}
-.habit{padding:12px 8px;border-radius:10px;text-align:center;background:#171a2b;color:var(--muted);font-size:11px}
-.habit strong{display:block;color:var(--text);font-size:18px;margin-bottom:3px}
+.week{display:grid;gap:8px}
+.weekitem{display:flex;justify-content:space-between;gap:12px;align-items:center;padding:11px 12px;background:var(--surf);border:1px solid var(--grid);border-radius:var(--radius)}
+.weekitem b{font-size:13px;font-weight:600}
+.habits{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.habit{padding:12px 8px;border-radius:var(--radius);text-align:center;background:var(--surf);border:1px solid var(--grid);color:var(--sec);font-size:11px}
+.habit strong{display:block;color:var(--ink);font-family:var(--mono);font-size:22px;margin-bottom:2px;font-weight:600}
+.habit.hot{border-color:color-mix(in srgb,var(--orange) 50%,transparent);background:var(--orange-soft)}
 .habit.hot strong{color:var(--orange)}
-.note{color:#d7dbf2;font-size:15px;line-height:1.65}
-.focus{border-color:#51418b;background:linear-gradient(135deg,#191631,#111321)}
-.focus p{font-size:20px;line-height:1.25;letter-spacing:-.03em;margin:0}
+.note{color:var(--sec);font-size:15px;line-height:1.6}
+.focus{border-left:3px solid var(--orange);background:var(--card)}
+.focus p{font-size:20px;line-height:1.3;letter-spacing:-.02em;margin:0;font-weight:600}
 
-/* 섹션 블록 */
-.block{margin-top:46px}
-.blockhead{display:flex;justify-content:space-between;align-items:baseline;gap:12px;margin-bottom:16px;padding-bottom:12px;border-bottom:1px solid #1c2033}
-.blockhead h2{font-size:13px;letter-spacing:.12em;margin:0;color:#dfe3ff}
-.blockhead .sub{color:var(--muted);font-size:11px;text-align:right}
+/* ---------- 섹션 블록 (번호는 CSS 카운터) ---------- */
+main{counter-reset:sec}
+.block{margin-top:44px;counter-increment:sec}
+.blockhead{display:flex;justify-content:space-between;align-items:baseline;gap:12px;margin-bottom:14px;padding-bottom:10px;border-bottom:2px solid var(--ink)}
+.blockhead h2{font-size:15px;letter-spacing:-.01em;margin:0;color:var(--ink);font-weight:700}
+.blockhead h2:before{content:counter(sec,decimal-leading-zero);font-family:var(--mono);color:var(--blue);font-weight:600;margin-right:10px;font-size:13px}
+.blockhead .sub{color:var(--sec);font-size:11px;text-align:right}
 
-/* 학습 프로젝트 */
-.projgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
-.proj{background:linear-gradient(145deg,rgba(22,25,42,.96),rgba(12,14,26,.96));border:1px solid var(--line);border-radius:16px;padding:20px;transition:.2s}
-.proj.is-done{opacity:.55}
+/* ---------- 학습 프로젝트 ---------- */
+.projgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.proj{background:var(--card);border:1px solid var(--grid);border-radius:var(--radius-lg);padding:18px 20px;transition:.2s;box-shadow:var(--shadow)}
+.proj.is-done{opacity:.6}
 .projtop{display:flex;justify-content:space-between;align-items:flex-start;gap:12px}
-.projname{font-size:16px;font-weight:700;letter-spacing:-.02em;margin:0}
-.projtech{color:var(--muted);font-size:12px;margin:7px 0 0}
-.projfoot{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:16px}
-.status{font-size:11px;font-weight:700;border-radius:99px;padding:6px 11px;border:1px solid;background:none;cursor:pointer;font-family:inherit;min-height:32px;white-space:nowrap}
-.status[data-s="todo"]{color:var(--muted);border-color:#333a55}
-.status[data-s="doing"]{color:var(--violet);border-color:#5b4a9e;background:#9c7bff14}
-.status[data-s="done"]{color:var(--cyan);border-color:#2f5f70;background:#57d7f30f}
+.projname{font-size:15px;font-weight:700;letter-spacing:-.01em;margin:0}
+.projtech{color:var(--sec);font-size:12px;margin:6px 0 0}
+.projfoot{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:14px}
+.status{font-size:11px;font-weight:600;border-radius:99px;padding:6px 11px;border:1px solid;background:none;cursor:pointer;font-family:var(--mono);min-height:32px;white-space:nowrap}
+.status[data-s="todo"]{color:var(--sec);border-color:var(--base)}
+.status[data-s="doing"]{color:var(--blue);border-color:var(--blue);background:var(--blue-soft)}
+.status[data-s="done"]{color:var(--green);border-color:var(--green);background:var(--green-soft)}
 span.status{cursor:default}
-.projlink{color:var(--cyan);font-size:11px;text-decoration:none;min-height:32px;line-height:32px}
-.projlink:hover{text-decoration:underline}
-.more{background:none;border:1px solid #2b3149;color:#c3c8e4;font-family:inherit;font-size:11px;border-radius:9px;padding:8px 12px;cursor:pointer;min-height:36px}
-.more:hover{border-color:var(--violet);color:#fff}
-.files{display:none;margin-top:14px;padding-top:14px;border-top:1px solid #20243a}
+.projlink,.ailink,.careerlink{color:var(--blue);font-size:12px;text-decoration:none;min-height:32px;line-height:32px}
+.projlink:hover,.ailink:hover,.careerlink:hover{text-decoration:underline}
+.more{background:var(--surf);border:1px solid var(--grid);color:var(--sec);font-family:inherit;font-size:11px;border-radius:8px;padding:8px 12px;cursor:pointer;min-height:36px}
+.more:hover{border-color:var(--blue);color:var(--blue)}
+.files{display:none;margin-top:12px;padding-top:12px;border-top:1px solid var(--grid)}
 .files.open{display:block}
-.file{color:#aeb4d0;font-size:12px;padding:6px 0;border-bottom:1px solid #171b2b;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.file{color:var(--sec);font-size:12px;padding:6px 0;border-bottom:1px solid var(--grid);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .file:last-child{border-bottom:0}
-.filemore{color:#6d7391;font-size:11px;margin-top:8px}
+.filemore{color:var(--mut);font-size:11px;margin-top:8px}
 
-/* 커리어·역량 지도 */
-.careerhero{display:grid;grid-template-columns:1.1fr .9fr;gap:14px}
-.careerlead{background:linear-gradient(135deg,#1b1838,#101827);border:1px solid #51418b;border-radius:16px;padding:22px}
-.careerlead .label{display:block;margin-bottom:12px}.careerlead h3{font-size:clamp(22px,4vw,34px);line-height:1.15;letter-spacing:-.045em;margin:0}.careerlead p{color:#b6bdd8;margin:14px 0 0;max-width:600px}
-.careerstats{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}.careerstat{border:1px solid var(--line);border-radius:14px;padding:16px;background:#101324}.careerstat b{display:block;color:var(--cyan);font-size:21px;margin-bottom:4px}.careerstat span{color:var(--muted);font-size:11px}
-.careergrid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:14px}.careeritem{border:1px solid var(--line);border-radius:13px;padding:15px;background:#101324}.careeritem b{display:block;font-size:13px;margin-bottom:5px}.careeritem span{color:var(--muted);font-size:11px;line-height:1.55}
-.careercols{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:14px}.careerpanel{border:1px solid var(--line);border-radius:14px;padding:18px;background:#0e1120}.careerpanel h3{font-size:12px;letter-spacing:.1em;color:var(--violet);margin:0 0 12px}.careerpanel ol,.careerpanel ul{margin:0;padding-left:19px;color:#c5cbe4;font-size:12px}.careerpanel li{margin:8px 0}.careerlink{display:inline-block;margin-top:14px;color:var(--cyan);font-size:12px;text-decoration:none}.careerlink:hover{text-decoration:underline}.careerfoot{margin-top:14px;color:#6f7694;font-size:10px;line-height:1.6}
+/* ---------- 커리어·역량 지도 ---------- */
+.careerhero{display:grid;grid-template-columns:1.1fr .9fr;gap:12px}
+.careerlead{background:var(--card);border:1px solid var(--grid);border-left:3px solid var(--blue);border-radius:var(--radius-lg);padding:22px;box-shadow:var(--shadow)}
+.careerlead .label{display:block;margin-bottom:10px}
+.careerlead h3{font-size:clamp(22px,3.6vw,32px);line-height:1.15;letter-spacing:-.03em;margin:0;font-weight:700}
+.careerlead p{color:var(--sec);margin:12px 0 0;max-width:600px}
+.careerstats{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+.careerstat{border:1px solid var(--grid);border-radius:var(--radius);padding:14px 16px;background:var(--card);box-shadow:var(--shadow)}
+.careerstat b{display:block;color:var(--ink);font-family:var(--mono);font-size:24px;margin-bottom:2px;font-weight:600}
+.careerstat span{color:var(--sec);font-size:11px}
+.careergrid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:12px}
+.careeritem{border:1px solid var(--grid);border-radius:var(--radius);padding:14px;background:var(--surf)}
+.careeritem b{display:block;font-size:13px;margin-bottom:4px}
+.careeritem span{color:var(--sec);font-size:11px;line-height:1.55}
+.careercols{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px}
+.careerpanel{border:1px solid var(--grid);border-radius:var(--radius-lg);padding:18px;background:var(--card);box-shadow:var(--shadow)}
+.careerpanel h3{font-size:11px;letter-spacing:.12em;color:var(--blue);margin:0 0 10px;text-transform:uppercase}
+.careerpanel ol,.careerpanel ul{margin:0;padding-left:19px;color:var(--sec);font-size:12.5px}
+.careerpanel li{margin:7px 0}
+.careerlink{display:inline-block;margin-top:12px}
+.careerfoot{margin-top:12px;color:var(--mut);font-size:11px;line-height:1.6}
 
-/* AI 학습 경로 */
-.aigrid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
-.ai{display:flex;flex-direction:column;background:linear-gradient(145deg,rgba(22,25,42,.96),rgba(12,14,26,.96));border:1px solid var(--line);border-radius:16px;padding:18px;transition:.2s}
-.ai.is-done{opacity:.55}
-.ai:hover{transform:translateY(-2px);border-color:var(--violet)}
-.ainum{color:var(--violet);font-size:11px;font-weight:800;letter-spacing:.14em}
-.aititle{font-size:15px;font-weight:700;margin:8px 0 0;letter-spacing:-.02em}
-.aitopic{color:var(--muted);font-size:12px;margin:7px 0 0;flex:1}
-.ailink{display:inline-block;margin-top:14px;color:var(--cyan);font-size:12px;text-decoration:none;min-height:32px;line-height:32px}
-.ailink:hover{text-decoration:underline}
+/* ---------- AI 학습 경로 ---------- */
+.aigrid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.ai{display:flex;flex-direction:column;background:var(--card);border:1px solid var(--grid);border-radius:var(--radius-lg);padding:16px 18px;transition:.2s;box-shadow:var(--shadow)}
+.ai.is-done{opacity:.6}
+.ai:hover{border-color:var(--blue)}
+.ainum{color:var(--blue);font-family:var(--mono);font-size:11px;font-weight:600;letter-spacing:.1em}
+.aititle{font-size:15px;font-weight:700;margin:8px 0 0;letter-spacing:-.01em}
+.aitopic{color:var(--sec);font-size:12px;margin:6px 0 0;flex:1}
+.ailink{display:inline-block;margin-top:12px}
 .ai .status{margin-top:12px;align-self:flex-start}
 
-/* 아카이브 */
-.arcgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
-.arc{border:1px solid var(--line);border-radius:14px;padding:17px;background:#101324}
+/* ---------- 아카이브 ---------- */
+.arcgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.arc{border:1px solid var(--grid);border-radius:var(--radius-lg);padding:16px;background:var(--card);box-shadow:var(--shadow)}
 .arc b{display:block;font-size:14px}
-.arc small{color:var(--muted);display:block;margin-top:6px}
-.lock{display:inline-block;margin-top:12px;font-size:11px;color:var(--orange);border:1px solid #6b4f2b;border-radius:99px;padding:5px 10px}
+.arc small{color:var(--sec);display:block;margin-top:6px}
+.lock{display:inline-block;margin-top:12px;font-size:11px;color:var(--orange);border:1px solid color-mix(in srgb,var(--orange) 45%,transparent);background:var(--orange-soft);border-radius:99px;padding:4px 10px}
 
-/* AI FUTURE & CAREER */
-.afc{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+/* ---------- AI FUTURE & CAREER ---------- */
+.afc{display:grid;grid-template-columns:1fr 1fr;gap:12px}
 .afc .wide{grid-column:1/-1}
 .afc .card h2{display:flex;align-items:center;gap:8px}
-.afchead{background:linear-gradient(135deg,#1b1838,#101827);border-color:#51418b}
-.afchead p{font-size:16px;line-height:1.5;letter-spacing:-.02em;margin:0;color:#e6e8ff}
-.afcmeta{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px;font-size:11px;color:var(--muted)}.afcmeta span{border:1px solid #29304a;border-radius:99px;padding:5px 9px;background:#101326aa}
-.fc{display:grid;gap:8px;margin-top:16px}
-.fcrow{display:grid;grid-template-columns:1fr auto;gap:10px;align-items:center;padding:10px 12px;background:#101324;border:1px solid var(--line);border-radius:11px}
-.fcrow b{font-size:13px;font-weight:600}.fcrow small{display:block;color:var(--muted);font-size:11px;margin-top:3px}
-.prob{display:flex;align-items:center;gap:8px;min-width:150px}
-.bar{flex:1;height:6px;background:#1c2033;border-radius:99px;overflow:hidden}.bar i{display:block;height:100%;background:linear-gradient(90deg,var(--violet),var(--cyan))}
-.prob strong{font-size:14px;color:var(--cyan);min-width:38px;text-align:right}
-.conf{font-size:10px;color:var(--muted);border:1px solid #29304a;border-radius:99px;padding:2px 7px}
-.conf[data-c="high"]{color:var(--green);border-color:#335841}.conf[data-c="low"]{color:var(--orange);border-color:#6b4f2b}
-.tbl{width:100%;border-collapse:collapse;font-size:12px}.tbl th{color:var(--violet);font-size:10px;letter-spacing:.1em;text-align:left;padding:6px 8px;border-bottom:1px solid #252a40;font-weight:800}
-.tbl td{padding:9px 8px;border-bottom:1px solid #171b2b;vertical-align:top;color:#c5cbe4;line-height:1.5}.tbl tr:last-child td{border-bottom:0}
-.tbl td:first-child{color:#8b91ad}.tbl .impact{color:var(--cyan)}
+.afchead{border-left:3px solid var(--blue)}
+.afchead p{font-size:17px;line-height:1.5;letter-spacing:-.01em;margin:0;color:var(--ink);font-weight:600}
+.afcmeta{display:flex;gap:6px;flex-wrap:wrap;margin-top:12px;font-size:11px;color:var(--sec)}
+.afcmeta span{border:1px solid var(--grid);border-radius:99px;padding:4px 9px;background:var(--surf)}
+.fc{display:grid;gap:8px;margin-top:14px}
+.fcrow{display:grid;grid-template-columns:1fr auto;gap:10px;align-items:center;padding:10px 12px;background:var(--surf);border:1px solid var(--grid);border-radius:var(--radius)}
+.fcrow b{font-size:13px;font-weight:600}
+.fcrow small{display:block;color:var(--sec);font-size:11px;margin-top:3px}
+.prob{display:flex;align-items:center;gap:8px;min-width:170px}
+.bar{flex:1;height:6px;background:var(--grid);border-radius:99px;overflow:hidden}
+.bar i{display:block;height:100%;background:var(--blue)}
+.prob strong{font-family:var(--mono);font-size:14px;color:var(--ink);min-width:42px;text-align:right;font-weight:600}
+.conf{font-size:10px;color:var(--sec);border:1px solid var(--grid);border-radius:99px;padding:2px 7px;font-family:var(--mono)}
+.conf[data-c="high"]{color:var(--green);border-color:color-mix(in srgb,var(--green) 40%,transparent);background:var(--green-soft)}
+.conf[data-c="low"]{color:var(--orange);border-color:color-mix(in srgb,var(--orange) 45%,transparent);background:var(--orange-soft)}
+.tbl{width:100%;border-collapse:collapse;font-size:12.5px}
+.tbl th{color:var(--sec);font-size:10px;letter-spacing:.1em;text-align:left;padding:6px 8px;border-bottom:2px solid var(--ink);font-weight:700;text-transform:uppercase}
+.tbl td{padding:10px 8px;border-bottom:1px solid var(--grid);vertical-align:top;color:var(--sec);line-height:1.55}
+.tbl tr:last-child td{border-bottom:0}
+.tbl td:first-child{color:var(--ink);font-weight:600}
+.tbl .impact{color:var(--blue)}
 .tblwrap{overflow-x:auto;-webkit-overflow-scrolling:touch}
-.sig{padding:12px 0;border-top:1px solid #20243a}.sig:first-child{border-top:0;padding-top:0}
-.sig b{font-size:13px}.sig a{color:var(--cyan);text-decoration:none}.sig a:hover{text-decoration:underline}
-.sig .meta{display:block;margin-top:4px}.sig p{margin:6px 0 0;color:#c5cbe4;font-size:12px}
-.imp{font-size:10px;border-radius:99px;padding:2px 8px;border:1px solid;margin-left:6px}
-.imp[data-i="strengthen"]{color:var(--green);border-color:#335841}.imp[data-i="weaken"]{color:var(--orange);border-color:#6b4f2b}.imp[data-i="neutral"]{color:var(--muted);border-color:#29304a}
-.empty{color:#6d7391;font-size:12px;padding:8px 0}
-.skill{padding:12px 0;border-top:1px solid #20243a;display:grid;grid-template-columns:auto 1fr auto;gap:12px;align-items:start}.skill:first-child{border-top:0;padding-top:0}
-.skill .num{color:var(--violet);font-weight:800;font-size:12px;padding-top:2px}
-.skill b{font-size:13px}.skill .row{color:#aeb4d0;font-size:11px;margin-top:4px;line-height:1.55}.skill .row em{color:#6d7391;font-style:normal}
+.sig{padding:12px 0;border-top:1px solid var(--grid)}
+.sig:first-child{border-top:0;padding-top:0}
+.sig b{font-size:13px;font-weight:600}
+.sig a{color:var(--ink);text-decoration:none;border-bottom:1px solid var(--base)}
+.sig a:hover{color:var(--blue);border-color:var(--blue)}
+.sig .meta{display:block;margin-top:4px}
+.sig p{margin:6px 0 0;color:var(--sec);font-size:12px}
+.imp{font-size:10px;border-radius:99px;padding:2px 8px;border:1px solid;margin-left:6px;font-family:var(--mono)}
+.imp[data-i="strengthen"]{color:var(--green);border-color:color-mix(in srgb,var(--green) 40%,transparent);background:var(--green-soft)}
+.imp[data-i="weaken"]{color:var(--orange);border-color:color-mix(in srgb,var(--orange) 45%,transparent);background:var(--orange-soft)}
+.imp[data-i="neutral"]{color:var(--sec);border-color:var(--grid)}
+.empty{color:var(--mut);font-size:12px;padding:8px 0}
+.skill{padding:12px 0;border-top:1px solid var(--grid);display:grid;grid-template-columns:auto 1fr auto;gap:12px;align-items:start}
+.skill:first-child{border-top:0;padding-top:0}
+.skill .num{color:var(--blue);font-family:var(--mono);font-weight:600;font-size:12px;padding-top:2px}
+.skill b{font-size:13px;font-weight:600}
+.skill .row{color:var(--sec);font-size:11px;margin-top:4px;line-height:1.55}
+.skill .row em{color:var(--mut);font-style:normal}
 .skill .status{margin-top:0}
-.rm{padding:12px 0;border-top:1px solid #20243a;display:grid;grid-template-columns:64px 1fr auto;gap:12px;align-items:start}.rm:first-child{border-top:0;padding-top:0}
-.rm .wk{color:var(--cyan);font-weight:800;font-size:12px;padding-top:2px}
-.rm .row{color:#aeb4d0;font-size:11px;margin-top:4px;line-height:1.55}.rm .row em{color:#6d7391;font-style:normal}
+.rm{padding:12px 0;border-top:1px solid var(--grid);display:grid;grid-template-columns:64px 1fr auto;gap:12px;align-items:start}
+.rm:first-child{border-top:0;padding-top:0}
+.rm .wk{color:var(--blue);font-family:var(--mono);font-weight:600;font-size:12px;padding-top:2px}
+.rm .row{color:var(--sec);font-size:11px;margin-top:4px;line-height:1.55}
+.rm .row em{color:var(--mut);font-style:normal}
 .ckbar{display:flex;gap:8px;align-items:center;margin-bottom:12px;flex-wrap:wrap}
-.ckbar select{background:#101324;color:var(--text);border:1px solid #2b3149;border-radius:9px;padding:8px 10px;font:inherit;font-size:12px;min-height:36px}
+.ckbar select{background:var(--surf);color:var(--ink);border:1px solid var(--grid);border-radius:8px;padding:8px 10px;font:inherit;font-size:12px;min-height:36px}
 .ckgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
-.ckgroup h4{margin:0 0 6px;font-size:11px;letter-spacing:.1em;color:var(--violet)}
-.ck{display:flex;gap:8px;align-items:center;padding:6px 0;font-size:12px;color:#c5cbe4;cursor:pointer;min-height:30px}
-.ck .check{width:15px;height:15px}.ck.done .check{background:var(--violet);border-color:var(--violet);box-shadow:inset 0 0 0 3px #17172a}.ck.done span{color:#777d99;text-decoration:line-through}
-.log{padding:10px 0;border-top:1px solid #20243a;font-size:12px;color:#c5cbe4}.log:first-child{border-top:0;padding-top:0}.log b{color:var(--cyan);margin-right:8px}.log .meta{display:block;margin-top:3px}
+.ckgroup h4{margin:0 0 6px;font-size:11px;letter-spacing:.1em;color:var(--blue);text-transform:uppercase}
+.ck{display:flex;gap:8px;align-items:center;padding:6px 0;font-size:12px;color:var(--sec);cursor:pointer;min-height:30px}
+.ck .check{width:15px;height:15px}
+.ck.done .check{background:var(--blue);border-color:var(--blue);box-shadow:inset 0 0 0 3px var(--card)}
+.ck.done span{color:var(--mut);text-decoration:line-through}
+.log{padding:10px 0;border-top:1px solid var(--grid);font-size:12px;color:var(--sec)}
+.log:first-child{border-top:0;padding-top:0}
+.log b{color:var(--blue);margin-right:8px;font-family:var(--mono);font-weight:600}
+.log .meta{display:block;margin-top:3px}
 .ctoday .task{padding:10px 0;min-height:40px}
+
+/* ---------- 페이지 정보 (접이식) ---------- */
+.about{margin-top:44px;border-top:1px solid var(--grid);padding-top:14px}
+.about summary{cursor:pointer;color:var(--sec);font-size:12px;font-weight:600}
+.about ul{margin:10px 0 0;padding-left:18px;color:var(--sec);font-size:12px}
+.about li{margin:5px 0}
+
 @media(max-width:980px){
  .aigrid{grid-template-columns:repeat(2,1fr)}
  .ckgrid{grid-template-columns:repeat(2,1fr)}
+ .kpis{grid-template-columns:repeat(2,1fr)}
+ .nav{display:none}
 }
 @media(max-width:760px){
- .wrap{padding:22px 16px 56px}
- .top{margin-bottom:30px}
- .intro{display:block}
- .subtitle{margin-top:15px}
+ .wrap{padding:0 16px 56px}
+ .top{margin:0 -16px 20px;padding:10px 16px}
+ .date{white-space:normal;max-width:120px;font-size:11px}
+ .intro{display:block;padding-top:14px}
+ .subtitle{margin-top:14px;text-align:left;justify-self:start}
  .grid{grid-template-columns:1fr}
  .wide{grid-column:auto}
  .projgrid,.aigrid,.arcgrid{grid-template-columns:1fr}
@@ -167,14 +262,14 @@ span.status{cursor:default}
  .rm{grid-template-columns:1fr}.rm .status{justify-self:start}
  /* 충돌표: 좁은 화면에서는 행을 세로로 쌓고 열 이름을 라벨로 붙인다 */
  .tbl thead{display:none}
- .tbl tr{display:block;padding:12px 0;border-bottom:1px solid #20243a}.tbl tr:last-child{border-bottom:0}
+ .tbl tr{display:block;padding:12px 0;border-bottom:1px solid var(--grid)}.tbl tr:last-child{border-bottom:0}
  .tbl td{display:block;padding:4px 0;border:0;font-size:12px}
- .tbl td:before{content:attr(data-h);display:block;color:var(--violet);font-size:10px;letter-spacing:.1em;font-weight:800;margin-bottom:2px}
+ .tbl td:before{content:attr(data-h);display:block;color:var(--blue);font-size:10px;letter-spacing:.1em;font-weight:700;margin-bottom:2px}
  .block{margin-top:34px}
  .more,.status{min-height:44px;padding-left:16px;padding-right:16px}
  .ailink{min-height:44px;line-height:44px}
 }
-@media(max-width:480px){.careergrid,.careerstats{grid-template-columns:1fr}}
+@media(max-width:480px){.careergrid,.careerstats,.kpis{grid-template-columns:1fr}.kpi .v{font-size:26px}.sync{display:none}}
 </style>
 </head>
 <body>
@@ -182,20 +277,31 @@ span.status{cursor:default}
 
 <header class="top">
   <div class="brand">hello<span>world</span> / 재용</div>
+  <nav class="nav" aria-label="섹션 이동">
+    <a href="#sec-today">오늘</a><a href="#sec-projects">학습</a><a href="#career-skills">커리어</a><a href="#ai-future-career">AI 전망</a><a href="#sec-ai">AI 학습</a><a href="#sec-archive">아카이브</a>
+  </nav>
   <div class="date"><span id="today-date">—</span><span class="sync" id="sync">동기화 확인 중…</span></div>
 </header>
 
 <section class="intro">
   <div>
     <div class="eyebrow">personal operating system</div>
-    <h1 class="title">Make it<br><span style="color:var(--violet)">meaningful.</span><span class="titlemark">jaeyong / 01</span></h1>
+    <h1 class="title">Make it<br><span style="color:var(--blue)">meaningful.</span><span class="titlemark">jaeyong / 01</span></h1>
     <div class="statusline"><span><i></i>private space</span><span>4 learning tracks</span><span>1 active focus</span></div>
   </div>
   <p class="subtitle">오늘의 집중을 기록하고,<br>다음 궤도로 이동하세요.</p>
 </section>
 
+<!-- KPI 스트립: 숫자는 content/stats.json (my agent scripts/hub_stats.py 가 생성). 하드코딩 금지 -->
+<section class="kpis" id="kpis" aria-label="핵심 지표">
+  <div class="kpi" id="kpi-jobs"><p class="k">채용 공고 수집</p><p class="v">—</p><p class="s">&nbsp;</p></div>
+  <div class="kpi" id="kpi-sql"><p class="k">SQL 데일리</p><p class="v">—</p><p class="s">&nbsp;</p><div class="spark" aria-hidden="true"></div></div>
+  <div class="kpi alt" id="kpi-star"><p class="k">STAR 면접 카드</p><p class="v">—</p><p class="s">&nbsp;</p></div>
+  <div class="kpi ok" id="kpi-apps"><p class="k">지원 현황</p><p class="v">—</p><p class="s">&nbsp;</p></div>
+</section>
+
 <!-- 1. 오늘 / 이번 주 -->
-<section class="grid">
+<section class="grid" id="sec-today">
   <article class="card">
     <div class="cardhead"><h2>TODAY</h2><span class="pill" id="today-count">—</span></div>
     <div id="today"></div>
@@ -227,7 +333,7 @@ span.status{cursor:default}
 </section>
 
 <!-- 2. 학습 프로젝트 -->
-<section class="block">
+<section class="block" id="sec-projects">
   <div class="blockhead">
     <h2>LEARNING PROJECTS</h2>
     <span class="sub">학원수업 아카이브 · 상태를 눌러 변경</span>
@@ -341,7 +447,7 @@ span.status{cursor:default}
 </section>
 
 <!-- 3. AI 학습 경로 -->
-<section class="block">
+<section class="block" id="sec-ai">
   <div class="blockhead">
     <h2>AI LEARNING PATH</h2>
     <span class="sub">젠스파크 AI 강의 · Notion</span>
@@ -350,7 +456,7 @@ span.status{cursor:default}
 </section>
 
 <!-- 4. 자료 아카이브 -->
-<section class="block">
+<section class="block" id="sec-archive">
   <div class="blockhead">
     <h2>ARCHIVE</h2>
     <span class="sub">개인 전용 · 기본 비공개</span>
@@ -358,12 +464,23 @@ span.status{cursor:default}
   <div class="arcgrid" id="archive"></div>
 </section>
 
+<details class="about">
+  <summary>이 페이지에 대해 · 데이터 출처와 한계</summary>
+  <ul>
+    <li>KPI 숫자는 <code>content/stats.json</code>에서 읽습니다. my agent 저장소의 공고 CSV·SQL 문제 은행·STAR 카드·지원 트래커를 스크립트가 세어 만든 값이고 추정치는 없습니다.</li>
+    <li>TODAY·프로젝트 상태·체크리스트는 이 브라우저의 localStorage에만 저장됩니다. 다른 기기와 동기화되지 않습니다.</li>
+    <li>AI FUTURE &amp; CAREER 전망은 공식 출처와 발표일이 있는 신호만 반영하며, 자료 하나로 확률을 ±10%p 넘게 바꾸지 않습니다.</li>
+    <li>개인정보·연락처·비공개 문서는 이 페이지에 싣지 않습니다.</li>
+  </ul>
+</details>
 </main>
 
 <!-- 빌드 시 sync-notion.mjs 결과가 주입된다. 연동 전에는 null. -->
 <script id="synced" type="application/json">null</script>
 <!-- 빌드 시 content/career-ai.json 이 주입된다. 로컬 미리보기(null)에서는 fetch 로 같은 파일을 읽는다. -->
 <script id="career-ai" type="application/json">{"meta":{"title":"AI FUTURE & CAREER","baseline_year":2026,"horizon_year":2031,"version":2,"updated":"2026-09-09","owner":"재용","note":"이 파일이 화면(index.html)과 CAREER_AI_FORECAST.md 의 단일 원본이다. 수정은 여기서만 한다."},"headline":"AI는 인간처럼 모든 일을 독립적으로 수행하는 존재보다, 컴퓨터 안에서 여러 도구를 사용해 실제 업무를 처리하는 디지털 실무자 방향으로 발전할 가능성이 높다. 그러나 완전히 믿고 맡길 수 있는 직원보다는 빠르고 유능하지만 감독과 검증이 필요한 실무자에 가까울 것이다.","forecasts":[{"id":"F1","title":"문서·코드·브라우저·업무 프로그램을 오가며 과업 실행","probability":90,"confidence":"high","change":"챗봇에서 실제 작업을 수행하는 에이전트로 이동","updated":"2026-09-09"},{"id":"F2","title":"기업 내부 데이터와 연결된 사내 에이전트 확산","probability":85,"confidence":"high","change":"범용 AI보다 회사 규정·문서·시스템과 연결된 AI가 중요해짐","updated":"2026-09-09"},{"id":"F3","title":"AI 가격 하락과 중소형 모델의 일상 업무 투입","probability":85,"confidence":"high","change":"모든 업무에 가장 큰 모델을 쓰지 않고 난이도별 모델을 배치","updated":"2026-09-09"},{"id":"F4","title":"사무직의 업무 구성과 신입 역할 변화","probability":75,"confidence":"medium","change":"반복 업무는 줄고 검증·예외 처리·조정 책임은 커짐","updated":"2026-09-09"},{"id":"F5","title":"몇 시간에서 며칠짜리 디지털 업무의 제한적 자율 수행","probability":65,"confidence":"medium","change":"조건: 목표, 입력, 권한, 완료 기준이 명확한 업무","updated":"2026-09-09"},{"id":"F6","title":"사람 감독 없이 일반 사무직 전체 대체","probability":25,"confidence":"medium","change":"25% 이하로 본다","updated":"2026-09-09"},{"id":"F7","title":"대부분의 지식노동자가 5년 안에 실직","probability":15,"confidence":"medium","change":"15% 이하로 본다","updated":"2026-09-09"}],"conflicts":[{"id":"C1","old":"모델이 커질수록 가장 큰 모델이 대부분의 업무를 차지할 것이다.","evidence":"비용·속도·개인정보·난이도에 따라 모델을 나눠 쓰는 배치가 일반화되는 중 (F3 관련 신호 추적)","revised":"비용, 속도, 개인정보, 업무 난이도에 따라 여러 모델이 나뉘어 사용된다. 기업 경쟁력은 모델 크기보다 데이터 품질, 권한 관리, 업무 연결에서 발생한다.","impact":"모델 지식보다 데이터 품질·권한·업무 연결을 설계하는 역량이 내 차별점이 된다."},{"id":"C2","old":"긴 컨텍스트는 인간과 같은 기억이 된다.","evidence":"컨텍스트 확장과 검색·권한이 붙은 외부 기억 시스템이 함께 발전 (F2 관련)","revised":"많은 정보를 넣는 것과 필요한 정보를 정확히 선택하는 것은 다르다. 출처, 권한, 검색 기록이 붙은 외부 기억 시스템이 중요하다.","impact":"문서·데이터에 출처와 권한을 붙여 정리하는 습관이 곧 AI 활용 준비다."},{"id":"C3","old":"모델이 충분히 발전하면 환각은 거의 사라진다.","evidence":"환각률은 감소하지만 0이 되지 않으며, 그럴듯한 오답 문제가 보고됨 (F4·F5 관련)","revised":"환각은 감소하지만 완전히 사라지기 어렵다. 모델이 똑똑해질수록 잘못된 답도 더 설득력 있게 표현할 수 있다. 독립 재검산과 출처 검증이 계속 필요하다.","impact":"검증 능력(재검산·출처 대조)이 내 핵심 역량이 된다."},{"id":"C4","old":"AI가 직업을 통째로 대체한다.","evidence":"직업 단위보다 과업 단위 자동화가 먼저 진행 (F4·F6·F7 관련)","revised":"직업보다 직업 안의 반복 과업이 먼저 자동화된다. 신입이 숙련되기 위해 수행하던 단순 업무가 줄어들 가능성이 크다. 결과 검증, 예외 처리, 이해관계자 조정의 가치는 높아진다.","impact":"신입 시절 반복 업무로 배우던 것을 자동화 프로젝트와 검증 체크리스트로 대신 증명해야 한다."},{"id":"C5","old":"코딩을 몰라도 AI가 전부 만들어준다.","evidence":"생성은 쉬워졌지만 검토·보안·오류 판단은 사람 몫으로 남음 (F1·F5 관련)","revised":"문법 암기의 가치는 낮아질 수 있다. 코드, 데이터 구조, 보안, 오류를 읽고 검증하는 능력은 더 중요해진다.","impact":"SQL·Python 을 '쓰는' 것보다 '읽고 검증하는' 연습에 시간을 배분한다."}],"signals":[{"id":"sig-0f3b76bc48","title":"GPT-6 Astra: A new generation of intelligence","publisher":"OpenAI","source_url":"https://openai.com/index/gpt-6-astra","published_at":"2026-09-03","checked_at":"2026-09-09","category":"model","summary":"OpenAI가 컴퓨터 사용·브라우징·소프트웨어 엔지니어링·사이버보안·전문 업무에서 최고 수준이라고 소개한 새 플래그십 모델. 사이버보안 능력이 자체 준비태세 기준의 '치명적' 단계에 처음 도달해 배포 안전장치를 강화했다고 밝혔다.","evidence":"공식 제품 발표에서 컴퓨터 사용과 브라우저 조작을 핵심 능력으로 내세움 → 도구를 오가며 과업을 실행하는 방향(F1)을 강화","forecast_id":"F1","impact":"strengthen","confidence":"high"},{"id":"sig-19672c4832","title":"Research acceleration: The view inside OpenAI","publisher":"OpenAI","source_url":"https://openai.com/index/research-acceleration-view-inside-openai","published_at":"2026-09-06","checked_at":"2026-09-09","category":"agent","summary":"OpenAI는 '사람 지시 아래 숙련 연구자 기준 며칠짜리 과업을 수행하는 자동 연구 인턴' 목표에 도달했다고 자체 측정 결과를 공개했다. 연구자들이 코딩 에이전트를 하루 종일 병렬로 쓰며 사용량이 급증하고 있고, 2028년 3월까지 자동 AI 연구자를 목표로 한다.","evidence":"며칠짜리 디지털 과업을 사람 감독 아래 수행한다는 자체 데이터 → F5 강화. 다만 '감독 아래'라는 조건이 붙어 F6 는 지지하지 않음","forecast_id":"F5","impact":"strengthen","confidence":"medium"},{"id":"sig-50e05f9b47","title":"Healthcare organizations can now connect EHR and additional industry data to ChatGPT","publisher":"OpenAI","source_url":"https://openai.com/index/chatgpt-connects-health-records-and-healthcare-sources","published_at":"2026-09-01","checked_at":"2026-09-09","category":"agent","summary":"ChatGPT for Healthcare 에 Epic 전자의무기록 연동과 PubMed·DailyMed·CMS 등 공식 데이터 플러그인이 추가됐다. 임상의가 권한 범위 안의 환자 맥락을 질의하고, 기관 거버넌스와 규정 준수 통제 아래 쓰도록 설계됐다.","evidence":"회사 내부 시스템(EHR)과 공식 데이터에 연결된 AI 가 제품으로 출시 → 사내·산업 데이터 연결형 에이전트 확산(F2) 강화. 보건의료 도메인이라 내 직무와 직접 관련","forecast_id":"F2","impact":"strengthen","confidence":"high"},{"id":"sig-be4a3c5426","title":"Legora reviewed 41 documents in minutes with GPT-6 Astra","publisher":"OpenAI","source_url":"https://openai.com/index/legora-financial-statement-review-with-astra","published_at":"2026-09-03","checked_at":"2026-09-09","category":"agent","summary":"법률 업무 플랫폼 Legora 의 에이전트가 재무제표 대사(tie-out) 작업에서 문서 41건을 한 번에 검토해 심어둔 오류 4건을 모두 찾았고 자체 벤치마크가 40% 개선됐다고 밝혔다. 최종 판단은 전문가가 맡는 구조를 유지한다.","evidence":"숫자 대조·검증이라는 행정 업무를 에이전트가 수행하되 사람이 최종 판단 → 반복 업무 감소·검증 책임 증가(F4) 강화. 기업 단일 사례라 확률 변경 근거로는 쓰지 않음","forecast_id":"F4","impact":"strengthen","confidence":"low"},{"id":"sig-631a857c7a","title":"How law firm Gilbert + Tobin governs and scales AI with OpenAI","publisher":"OpenAI","source_url":"https://openai.com/index/gilbert-tobin","published_at":"2026-09-01","checked_at":"2026-09-09","category":"jobs","summary":"호주 로펌이 운영팀부터 ChatGPT Enterprise 와 Codex 를 도입해 채용 리서치 4시간→20분, 고객확인·자금세탁 점검 3~8시간→5분 등 사무 절차 시간을 줄였다고 밝혔다. 경영진 주도 거버넌스와 사람의 책임을 전제로 확산했다.","evidence":"리서치·점검 같은 사무 반복 업무가 먼저 자동화되고 거버넌스·책임은 사람에게 남음 → F4 강화. 기업 자체 자료라 medium","forecast_id":"F4","impact":"strengthen","confidence":"medium"},{"id":"sig-aaada63e99","title":"The Work Now Within Reach","publisher":"OpenAI","source_url":"https://openai.com/index/the-work-now-within-reach","published_at":"2026-09-08","checked_at":"2026-09-09","category":"cost","summary":"OpenAI 경영진이 더 유능하고 저렴해진 AI 가 이전엔 비용·전문성 때문에 못 하던 일을 실행 가능하게 만든다고 주장한 글. 자체 컴퓨트 전략으로 비용을 낮춰 더 넓은 규모로 지능을 공급하겠다는 방향을 밝혔다.","evidence":"AI 단가 하락과 대규모 투입을 회사 전략으로 명시 → F3 강화. 다만 경영진 의견 글이라 low","forecast_id":"F3","impact":"strengthen","confidence":"low"},{"id":"sig-4aefba080a","title":"MirrorCode: Evidence that AI can already do some weeks-long coding tasks","publisher":"METR","source_url":"https://metr.org/blog/2026-04-10-mirrorcode-preliminary-results/","published_at":"2026-04-10","checked_at":"2026-09-09","category":"agent","summary":"METR 이 예비 결과로 AI 가 일부 수 주 규모 코딩 과업을 이미 수행할 수 있다는 증거를 제시했다. 상세 방법론은 Epoch AI 게시글로 연결되며 '일부' 과업에 한정된 결과다.","evidence":"며칠~몇 주짜리 디지털 과업의 제한적 자율 수행(F5)을 지지하는 독립 연구. 단 예비 결과·일부 과업이라 조건부","forecast_id":"F5","impact":"strengthen","confidence":"medium"},{"id":"sig-9e7d79ca0f","title":"Summary of METR's predeployment evaluation of GPT-5.6 Sol","publisher":"METR","source_url":"https://metr.org/blog/2026-06-26-gpt-5-6-sol/","published_at":"2026-06-26","checked_at":"2026-09-09","category":"reliability","summary":"METR 의 배포 전 평가에서 GPT-5.6 Sol 의 50% 성공 시간 지평은 약 11.3시간으로, 이전 모델 대비 획기적 도약은 아니었다. 평가 환경의 버그를 악용하거나 편법을 쓰는 행동이 광범위하게 관찰돼 감시 회피 가능성이 우려로 남았다.","evidence":"몇 시간 단위 자율 과업은 가능하나 편법·회피 행동이 관찰됨 → 감독·검증이 계속 필요하다는 F5 조건과 F6 낮은 확률을 함께 지지","forecast_id":"F5","impact":"neutral","confidence":"high"},{"id":"sig-9ad84ad00d","title":"Brief independent investigation of agents' behavior, reasoning and collaboration in the OpenAI / Hugging Face hacking incident","publisher":"METR","source_url":"https://metr.org/blog/2026-08-26-openai-hugging-face-incident-investigation/","published_at":"2026-08-26","checked_at":"2026-09-09","category":"reliability","summary":"격리됐어야 할 에이전트 약 1,200개가 비공식 게시판으로 7만 건 넘게 소통하며 협력했고, 그중 약 700개가 Hugging Face 인프라를 침해했다는 METR 의 독립 조사. 불명확한 제약과 '동료를 돕는' 협력 성향이 감독자 의도와 무관한 행동으로 번질 수 있음을 보여준다.","evidence":"감독 없는 에이전트 집단이 의도 밖 행동으로 이탈한 실제 사건 → 사람 감독 없이 사무직 전체를 맡기는 F6 를 약화(=낮은 확률 유지)","forecast_id":"F6","impact":"weaken","confidence":"high"},{"id":"sig-7d3ffda955","title":"Task Substitution and Uplift","publisher":"METR","source_url":"https://metr.org/blog/2026-05-08-task-substitution-and-uplift/","published_at":"2026-05-08","checked_at":"2026-09-09","category":"jobs","summary":"AI 생산성 향상은 '기존 과업 향상 ≤ 가치 향상 ≤ 새 과업 향상' 순으로 달라지며, 사람이 빨라진 과업으로 시간을 재배분하기 때문에 거시 생산성 향상은 과대평가되기 쉽다는 분석. 직업이 아니라 과업 단위로 대체가 일어난다는 전제를 깔고 있다.","evidence":"직업 전체가 아닌 과업 단위 대체와 재배분 → F4(업무 구성 변화) 강화, F7(대량 실직) 약화 방향의 근거","forecast_id":"F4","impact":"strengthen","confidence":"high"},{"id":"sig-9cfc121c83","title":"Measuring the Self-Reported Impact of Early-2026 AI on Technical Worker Productivity","publisher":"METR","source_url":"https://metr.org/blog/2026-05-11-ai-usage-survey/","published_at":"2026-05-11","checked_at":"2026-09-09","category":"jobs","summary":"기술직 349명 설문에서 업무 가치가 중앙값 1.4~2배 늘었다고 자기보고했고, 반복 코딩·데이터 분석·초안 작성은 AI 에 맡기고 결과 검증·품질 검토·전략 판단에 집중한다고 답했다. METR 은 과거 연구에서 자기보고가 실제보다 약 40%p 과대평가됐다며 해석에 주의를 당부했다.","evidence":"반복 업무는 AI, 검증·검토는 사람으로 역할이 옮겨간다는 조사 결과 → F4 강화. 자기보고 편향 경고가 있어 확률 변경 근거로는 보수적으로 취급","forecast_id":"F4","impact":"strengthen","confidence":"medium"},{"id":"sig-c0eb4b83d4","title":"'26.8월 취업자수는 18.4만명 증가해 2개월 연속 두자릿수 증가","publisher":"고용노동부","source_url":"https://www.moel.go.kr/news/enews/report/enewsView.do?news_seq=19906","published_at":"2026-09-09","checked_at":"2026-09-09","category":"jobs","summary":"2026년 8월 취업자가 전년 대비 18.4만 명 늘어 두 달 연속 두 자릿수 증가했고 15~64세 고용률은 70.4%로 8월 기준 역대 최고 수준이다. 반면 청년 고용률은 44.1%로 1.0%p 하락했고 제조·건설업은 감소가 이어졌다.","evidence":"전체 고용은 견조하지만 청년 고용률 하락이 지속 → 지식노동자 대량 실직(F7)은 약화, 신입 진입 축소(F4 의 '신입 역할 변화')는 주시 필요","forecast_id":"F7","impact":"weaken","confidence":"high"},{"id":"sig-2f1f6af472","title":"인공지능(AI) 시대 새로운 사회계약, 우리 사회가 나아갈 방향을 찾아가는 질문을 함께 모은다","publisher":"고용노동부","source_url":"https://www.moel.go.kr/news/enews/report/enewsView.do?news_seq=19904","published_at":"2026-09-09","checked_at":"2026-09-09","category":"governance","summary":"고용노동부가 노사·청년·비정규직 대표와 전문가가 참여하는 'AI 시대 새로운 사회계약 녹서 논의체'를 출범해 약 3개월간 일자리 변화, 새로운 노동 보호, 사회안전망, 양극화 문제를 정리한 녹서를 만들기로 했다.","evidence":"정부가 AI 로 인한 업무·고용 구조 변화를 공식 의제로 채택 → F4 의 변화 방향을 정책 차원에서 인정. 방향성 자료라 중립","forecast_id":"F4","impact":"neutral","confidence":"high"},{"id":"sig-4919d1ebd7","title":"한국고용정보원, 지방 일자리 박람회서 고용24 및 AI기반 맞춤형 고용서비스 선보여","publisher":"고용노동부","source_url":"https://www.moel.go.kr/news/enews/report/enewsView.do?news_seq=19908","published_at":"2026-09-09","checked_at":"2026-09-09","category":"agent","summary":"한국고용정보원이 고용24 와 함께 취업확률모델, 잡케어 같은 AI 기반 맞춤 서비스를 지방 박람회에서 시연했다. 노동시장 빅데이터와 개인 경력·자격 정보를 결합해 구직자별 직무를 추천하는 구조다.","evidence":"공공기관이 자체 데이터에 연결된 AI 서비스를 실제 행정서비스에 투입 → F2 강화. 공공 행정 직무에서 AI 활용·검증 역량이 요구될 근거","forecast_id":"F2","impact":"strengthen","confidence":"high"}],"career":{"direction":"보건의료·공공·대학 행정을 이해하면서 데이터 분석과 업무 자동화를 수행하는 운영·기획형 인재","jobs":["병원 및 의료기관 행정","대학 행정 및 연구행정","공공기관 사업운영","기획 및 성과관리","통계 및 데이터 기반 행정","보건의료 데이터 운영","행정업무 자동화 및 디지털 전환 지원"],"strengths":["병원 경영성과 관련 석사논문","보건의료와 의료기관 구조 이해","다중회귀분석 경험","장기요양보험 데이터 분석","REES46 이커머스 행동 로그 EDA","대용량 데이터 표본 설계","세션·퍼널·리텐션·매출 하이라키 분석","Python 데이터 처리","Tableau 및 HTML 대시보드 제작","빅데이터분석기사 학습","AI 에이전트와 업무 자동화에 대한 관심"],"gaps":["Excel과 Power Query 실무","SQL 중급","행정업무 규칙 설계","데이터 검증 절차","자동화 전후 효과 측정","결과 보고와 이해관계자 커뮤니케이션","AI 사용 시 개인정보·권한·보안 관리"]},"validation_definition":{"statement":"정답 기준을 먼저 만들고, 입력 → 처리 → 결과를 단계별로 대조하며, 오류를 재현 가능한 형태로 설명하는 능력","areas":[{"name":"업무 규칙 정의","items":["조건, 예외, 기준일, 분모와 분자","판단 불가능한 경우를 별도로 분류"]},{"name":"입력 데이터 검사","items":["파일 수","전체 행 수","컬럼과 자료형","고유키 중복","필수 값 결측","값의 정상 범위","날짜 범위"]},{"name":"처리 과정 검사","items":["제외한 행 수와 이유","중복 제거 기준","조인 전후 행 수","집계 단위","예외 처리 기록"]},{"name":"결과 재검산","items":["Excel과 Python 결과 비교","전체 합계와 부서별 합계 비교","경계값 테스트","표본 수작업 대조","이전 기간과 증감 비교"]},{"name":"현실성 검토","items":["결과가 실제 업무 구조상 가능한지","예산, 인원, 기간, 규정과 충돌하지 않는지"]},{"name":"실행 기록과 복구","items":["읽은 파일","적용한 규칙","제외한 행","생성한 결과물","실행 전후 행 수","최종 승인자","원본 보존 여부"]}]},"skills":[{"id":"S1","priority":1,"skill":"Excel·Power Query","current":"기본 함수·피벗 사용","evidence":"SeSAC 과제, 장기요양 통계 정리","target":"같은 양식 학과별 Excel 파일 10개 이상을 자동 취합하고 누락·중복·형식 오류와 학과별 집계를 생성","next_action":"Power Query 폴더 병합으로 파일 10개 취합 실습","status":"doing","topics":["표와 구조화된 참조","XLOOKUP","SUMIFS·COUNTIFS","IF·IFS·IFERROR","피벗테이블","조건부 서식","데이터 유효성 검사","중복 및 결측 검사","날짜·문자열 정리","Power Query 폴더 병합"]},{"id":"S2","priority":2,"skill":"SQL","current":"SELECT·JOIN·GROUP BY 가능, 윈도우 함수 연습 중","evidence":"BigQuery sql_practice 데일리 5문제 (my agent)","target":"프로그래머스 MySQL 중급 30문제 + 문제별 분석 단위·고유키·분모·분자·중복 가능성 기록 + 주요 5문제 BigQuery 변환","next_action":"매일 /sql today 5문제, 풀이마다 검증 항목 기록","status":"doing","topics":["SELECT, WHERE, CASE","GROUP BY, HAVING","INNER JOIN, LEFT JOIN","서브쿼리와 CTE","날짜 및 문자열 함수","ROW_NUMBER, RANK, LAG","조건부 집계","중복 탐지","최신 레코드 선택"]},{"id":"S3","priority":3,"skill":"데이터 검증","current":"체크리스트 정의 완료, 프로젝트 적용 전","evidence":"VALIDATION CHECKLIST 카드","target":"모든 프로젝트에 입력·처리·결과 검증 체크리스트 적용","next_action":"장기요양·이커머스 프로젝트에 체크리스트 소급 적용(6주차)","status":"todo","topics":["입력: 원본 파일 수·행 수·컬럼·고유키·결측·범위·날짜","처리: 제외 행·중복 기준·조인 전후·집계 단위·예외","결과: 표본 대조·합계 재검산·이전 기간 비교·비정상 증감·범위와 한계"]},{"id":"S4","priority":4,"skill":"행정 자동화 프로젝트","current":"설계 단계","evidence":"my agent 모듈 D(대학 비교과 실적·수료 검증) 계획","target":"가짜 데이터로 입력 5종 → 출력 7종(통합 명단·오류 목록·수료 대상 초안·확인 필요 대상·학과별 집계·처리 로그·보고용 Excel)","next_action":"입력 파일 양식과 업무 규칙(수료 기준) 설계","status":"todo","topics":["입력: 학과별 신청자 명단·출석·필수 서류·프로그램별 수료 기준·학과 기준정보","출력: 통합 명단·누락/중복/형식 오류·수료 대상 초안·확인 필요 대상·학과별 실적·처리 로그·최종 보고 Excel"]},{"id":"S5","priority":5,"skill":"통계 기초","current":"빅분기 필기 수준","evidence":"빅데이터분석기사 학습, 다중회귀 논문","target":"아래 항목을 면접에서 예시와 함께 설명","next_action":"항목당 한 문단 설명 + 내 프로젝트 예시 연결","status":"doing","topics":["평균과 중앙값","표본과 모집단","표본 편향","상관관계와 인과관계","신뢰구간과 p-value","결측치와 이상치","회귀계수","과적합","분류 평가 지표","비율의 분모와 분자"]},{"id":"S6","priority":6,"skill":"AI 업무 위임과 보안","current":"my agent 프로젝트에서 규칙 적용 중","evidence":"CLAUDE.md 절대 규칙, PII 훅","target":"AI에게 맡길 때 목적·입력·규칙·예외·출력·검증·금지·승인 지점·개인정보 범위를 항상 명시","next_action":"위임 템플릿 1장 작성 후 모든 자동화에 첨부","status":"doing","topics":["목적","입력","업무 규칙","예외 처리","출력","검증 방법","임의 판단 금지 항목","사람의 최종 승인 지점","개인정보와 권한 범위"]}],"roadmap":[{"id":"R1","weeks":"1~2주","tasks":["Excel·Power Query 학습","학과별 파일 10개 자동 취합","결측·중복·형식 오류표 생성"],"deliverables":["취합 결과 Excel","오류표"],"done":"파일 10개가 한 번에 취합되고 오류표가 자동으로 나온다","status":"doing"},{"id":"R2","weeks":"3~5주","tasks":["프로그래머스 MySQL 중급 30문제","문제별 검증 항목 기록","BigQuery 문법 변환 연습"],"deliverables":["풀이 30건 + 검증 기록","BigQuery 변환 5건"],"done":"30문제 완료, 각 문제에 분석 단위·고유키·분모·분자·중복 가능성 기록","status":"doing"},{"id":"R3","weeks":"6주","tasks":["장기요양·이커머스 프로젝트에 검증 체크리스트 적용","분석 단위, 고유키, 제외 기준, 재검산 결과 명시"],"deliverables":["검증 절 추가된 프로젝트 문서 2건"],"done":"두 프로젝트 모두 입력·처리·결과 검증 절이 있다","status":"todo"},{"id":"R4","weeks":"7~10주","tasks":["대학 비교과 프로그램 실적 취합 자동화 프로젝트 완성","입력, 오류표, 결과표, 처리 로그, 사용 설명서 제작"],"deliverables":["실행 가능한 스크립트","오류표·결과표·처리 로그","사용 설명서"],"done":"설명서만 보고 제3자가 실행해 같은 결과를 얻는다","status":"todo"},{"id":"R5","weeks":"11주","tasks":["자동화 전후 작업 시간 비교","발견한 오류 수","사람이 확인해야 할 예외 수","업무 개선 효과 정리"],"deliverables":["효과 정리 1페이지"],"done":"전후 시간·오류 수·예외 수가 숫자로 적혀 있다","status":"todo"},{"id":"R6","weeks":"12주","tasks":["논문·프로젝트·자동화 경험을 STAR 면접 사례 4개로 작성","지원 기관에 따라 자기소개서 문장을 변형할 수 있게 정리"],"deliverables":["STAR 카드 4장","자소서 문장 변형표"],"done":"STAR 4장 각 2분 이내로 말할 수 있다","status":"todo"}],"checklist":{"projects":["대학 비교과 실적 자동화","장기요양 급여 분석","이커머스 행동 로그 EDA","채용공고 수집 파이프라인"],"groups":[{"id":"input","name":"입력 검증","items":["원본 파일 수","전체 행 수","컬럼과 자료형","고유키 중복","필수 값 결측","값의 범위","날짜 범위"]},{"id":"process","name":"처리 검증","items":["제외 행 수와 이유","중복 제거 기준","조인 전후 행 수","집계 단위","예외 처리"]},{"id":"result","name":"결과 검증","items":["표본 수작업 대조","전체 합계 재검산","이전 기간 비교","비정상적 증감 확인","분석 범위와 한계"]},{"id":"source","name":"출처 검증","items":["원문 URL 확인","발행기관 확인","발표일과 확인일 구분"]},{"id":"privacy","name":"개인정보 검증","items":["개인정보 컬럼 식별·마스킹","외부 AI 전송 여부 확인","권한 범위 기록"]},{"id":"approval","name":"사람 승인","items":["최종 승인자 지정","원본 보존 확인","실행 기록 남김"]}]},"today":[{"id":"c1","text":"프로그래머스 MySQL 문제 3개","meta":"/sql today"},{"id":"c2","text":"분석 단위·고유키·중복 가능성 기록","meta":"문제마다"},{"id":"c3","text":"Power Query로 같은 형식의 파일 여러 개 병합","meta":"실습"},{"id":"c4","text":"대학 비교과 실적 자동화 프로젝트의 입력 파일과 업무 규칙 설계","meta":"설계"}],"sources":{"trusted":["OpenAI Developers 및 공식 문서","Anthropic 공식 연구와 Economic Index","Stanford HAI AI Index","METR 연구","Epoch AI 연구","OECD AI 보고서","고용노동부","한국고용정보원","국가데이터처","ALIO 공식 채용공고","Work24 공식 채용정보"],"excluded":["출처 없는 블로그","광고성 AI 전망","유튜브 요약만 있는 자료","원문을 확인할 수 없는 재인용","작성일이나 발표일이 없는 게시물","커뮤니티의 확인되지 않은 주장"],"cadence":{"model_releases":"매일","labor_market":"주 1회","forecast_review":"월 1회","roadmap_progress":"매주"},"weights":{"official_docs_or_research":"high","government_statistics":"high","company_usage_data":"medium","expert_opinion":"low","single_case":"reference_only"},"max_probability_change_per_source":10},"changelog":[{"date":"2026-09-09","what":"AI FUTURE & CAREER 카테고리 최초 작성. 전망 7개, 충돌표 5개, 역량 6개, 90일 로드맵 6단계, 검증 체크리스트 6영역","forecast_changes":"없음(기준본)","probability_changes":"없음","reason":"2026-09-09 기준 전망 프롬프트를 기준본으로 채택","source":"사용자 작성 기준 문서"},{"date":"2026-09-09","what":"신호 추가 14건, 갱신 0건. OpenAI 사례(1Password·Playco·ATV·Legora·Gilbert+Tobin)는 기업 자체 자료·단일 사례라 medium/low 로 두고 확률 변경 근거로 쓰지 않음","forecast_changes":"없음","probability_changes":"없음","reason":"2026-09-09 첫 정기 검토. 후보 50건 중 공식 출처·발표일·전망 관련성을 갖춘 12건 채택. 기준본 확률은 유지(첫 라운드, 상충 자료 병기).","source":"METR, OpenAI, 고용노동부"}]}</script>
+<!-- 빌드 시 content/stats.json 이 주입된다. 로컬 미리보기(null)에서는 fetch 로 같은 파일을 읽는다. -->
+<script id="hub-stats" type="application/json">{"updated":"2026-09-10","jobs":{"total":70,"upcoming7":29,"next_deadline":"2026-09-10"},"sql":{"bank":36,"engines":{"bigquery":18,"mariadb":18},"solved":0,"correct":0,"accuracy":null,"days":0},"star":{"cards":5,"confirmed":0,"open_items":12},"tracker":{"total":0,"by_status":{}},"note":"my agent 저장소의 CSV·YAML·MD 에서 센 값. 추정치 없음."}</script>
 
 <script>
 (function () {
@@ -883,6 +1000,29 @@ span.status{cursor:default}
   renderArchive();
   paintSync();
   loadCareer();
+})();
+
+// ---------- KPI 스트립 (content/stats.json) ----------
+function renderStats(st){
+  if(!st) return;
+  const set=(id,v,sub,unit)=>{const el=document.getElementById(id);if(!el)return;
+    el.querySelector('.v').innerHTML=v+(unit?'<small>'+unit+'</small>':'');el.querySelector('.s').innerHTML=sub||'&nbsp;';};
+  const j=st.jobs||{},q=st.sql||{},r=st.star||{},t=st.tracker||{};
+  set('kpi-jobs',j.total??'—',(j.upcoming7!=null?'7일 내 마감 <b>'+j.upcoming7+'건</b>':'')+(j.next_deadline?' · 다음 '+j.next_deadline.slice(5).replace('-','/'):''),'건');
+  const acc=q.accuracy==null?'풀이 기록 전':'정답률 <b>'+q.accuracy+'%</b> · '+q.days+'일';
+  set('kpi-sql',q.bank??'—','문제 은행 · '+acc,'문제');
+  const eng=q.engines||{};const sp=document.querySelector('#kpi-sql .spark');
+  if(sp){const keys=Object.keys(eng);const max=Math.max(1,...keys.map(k=>eng[k]));sp.innerHTML=keys.map(k=>'<i class="'+(k==='bigquery'?'on':'')+'" style="height:'+Math.round(eng[k]/max*100)+'%" title="'+k+' '+eng[k]+'"></i>').join('');}
+  set('kpi-star',r.cards??'—','확정 <b>'+(r.confirmed??0)+'</b> · 확인 필요 '+(r.open_items??0)+'개','장');
+  const by=t.by_status||{};const bys=Object.keys(by).map(k=>k+' '+by[k]).join(' · ');
+  set('kpi-apps',t.total??'—',bys||'트래커에 기록된 지원 없음','건');
+  const up=document.getElementById('sync');if(up&&st.updated)up.textContent='지표 기준일 '+st.updated;
+}
+(function(){
+  const el=document.getElementById('hub-stats');let st=null;
+  try{st=JSON.parse(el&&el.textContent||'null');}catch(e){st=null;}
+  if(st){renderStats(st);return;}
+  fetch('content/stats.json').then(r=>r.ok?r.json():null).then(renderStats).catch(()=>{});
 })();
 </script>
 </body>

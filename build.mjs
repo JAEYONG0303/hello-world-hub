@@ -62,6 +62,23 @@ try {
   process.exit(1);
 }
 
+// ── KPI 스트립 데이터 주입 (선택) ─────────────────
+// content/stats.json 은 my agent 의 scripts/hub_stats.py 가 만든다. 없으면 null 유지 → 페이지가 fetch 로 폴백.
+const statsFile = new URL("./content/stats.json", import.meta.url);
+const STATS_PLACEHOLDER = '<script id="hub-stats" type="application/json">null</script>';
+if (existsSync(statsFile) && html.includes(STATS_PLACEHOLDER)) {
+  try {
+    const stats = JSON.parse(readFileSync(statsFile, "utf8"));
+    html = html.replace(STATS_PLACEHOLDER,
+      '<script id="hub-stats" type="application/json">' + JSON.stringify(stats).replace(/<\//g, "<\\/") + "</script>");
+    console.log("[build] stats 주입 완료 (" + (stats.updated || "날짜 없음") + ")");
+  } catch (e) {
+    console.warn("[build] content/stats.json 파싱 실패 → 주입 생략:", e.message);
+  }
+} else {
+  console.log("[build] content/stats.json 없음 → KPI 는 런타임 fetch 폴백");
+}
+
 // ── Worker 로 감싸기 ─────────────────────────────
 const escaped = html
   .replace(/\\/g, "\\\\")
