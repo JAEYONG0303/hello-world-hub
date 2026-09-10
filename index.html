@@ -735,6 +735,14 @@ body{font-size:13.5px;line-height:1.55}
 .fcount{margin-left:auto;font-family:var(--mono);font-size:11px;color:var(--lime);font-weight:600}
 .fd-pubL b{display:block;font-weight:600;color:var(--sec);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.fd-pubL small{display:block;font-family:var(--mono);font-size:9.5px;color:var(--mut);margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 @media(max-width:900px){.ftool{padding:10px 16px}.flab{width:100%}.fcount{margin-left:0}#f-q{width:100%}}
+
+.rail-label .wn{float:right;color:var(--lime);letter-spacing:0}
+.wrow{display:grid;grid-template-columns:minmax(0,1fr) auto auto;gap:8px;align-items:center;padding:8px 18px;border-top:1px solid var(--grid-s)}
+.wrow.off .wname,.wrow.off .wopen{color:var(--mut)}
+.wname{font:inherit;font-size:11.5px;font-weight:600;color:var(--ink);background:none;border:0;padding:0;text-align:left;cursor:pointer;line-height:1.3;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}.wname:hover{color:var(--lime)}
+.wopen{font-family:var(--mono);font-size:9.5px;color:var(--mut);white-space:nowrap}.wopen b{color:var(--lime);font-weight:600}.wopen i{font-style:normal}.wopen em{font-style:normal;color:var(--orange)}
+.wtog{display:inline-grid;grid-template-columns:1fr 1fr;border:1px solid var(--grid);cursor:pointer;user-select:none}.wtog b{font-family:var(--mono);font-size:8.5px;font-weight:600;padding:3px 6px;color:var(--mut)}
+.wtog[aria-checked="true"] b:first-child{color:#0c0c0d;background:var(--lime)}.wtog[aria-checked="false"] b:last-child{color:var(--ink);background:var(--grid)}
 </style>
 </head>
 <body>
@@ -756,7 +764,7 @@ body{font-size:13.5px;line-height:1.55}
 <!-- ===== 1. 채용 공고 (시안 A: 카드 그리드) ===== -->
 <section data-view="jobs" class="on" id="view-jobs">
   <div class="pw">
-    <aside class="rail" id="jobs-rail"></aside>
+    <aside class="rail"><div id="jobs-rail"></div><div id="winst"></div></aside>
     <div class="main-col">
       <div class="hl-sec"><div class="hl-kicker">채용 레이더 <span id="jp-date"></span></div><h2 class="hl-text" id="jp-head">공고를 불러오는 중</h2><div class="hl-meta" id="jp-pipes"></div></div>
       <div class="ftool" id="ftool" aria-label="공고 필터">
@@ -764,7 +772,7 @@ body{font-size:13.5px;line-height:1.55}
         <div class="frow"><span class="flab">기관</span><div class="fchips" data-k="org_type"></div></div>
         <div class="frow"><span class="flab">직종</span><div class="fchips" data-k="job_family"></div></div>
         <div class="frow"><span class="flab">조건</span><div class="fchips" data-k="experience"></div><i class="fsep"></i><div class="fchips" data-k="employment"></div><i class="fsep"></i><div class="fchips" data-k="source"></div></div>
-        <div class="frow last"><input id="f-q" type="search" placeholder="기관 · 제목 · 직무 검색" aria-label="검색"><button class="ftog" id="f-soon" type="button">마감 7일 이내</button><button class="freset" id="f-reset" type="button">초기화</button><span class="fcount" id="f-count"></span></div>
+        <div class="frow last"><input id="f-q" type="search" placeholder="기관 · 제목 · 직무 검색" aria-label="검색"><button class="ftog" id="f-soon" type="button">마감 7일 이내</button><button class="ftog" id="f-watch" type="button">관심 기관만</button><button class="freset" id="f-reset" type="button">초기화</button><span class="fcount" id="f-count"></span></div>
       </div>
       <div class="sec-hdr"><span class="sec-lbl">채용 공고</span><span class="sec-cnt" id="jobs-n"></span><span class="sec-divider"></span><span class="sec-more" id="jobs-sort">마감 가까운 순</span></div>
       <div class="feed-thead jobs"><span>마감</span><span>기관 · 지역</span><span>제목</span><span class="r">직종 · 형태</span></div>
@@ -1945,11 +1953,21 @@ function renderRows(F){
     $('jobs-rail').innerHTML='<div class="rail-label">오늘</div><div class="rail-kpi"><div><b>'+esc(tn)+'</b><span>오늘 신규</span></div><div><b>'+esc(I.deadline_7d||0)+'</b><span>7일 내 마감</span></div></div>'
       +'<div class="rail-label" style="margin-top:14px">마감 임박</div>'+(soonJ.length?soonJ.map(i=>'<a class="pl-row soon" href="'+esc(i.url)+'" target="_blank" rel="noopener noreferrer"><span class="pl-dd'+(i.dday<=3?' hot':'')+'">'+(i.dday===0?'D-day':'D-'+i.dday)+'</span><div class="pl-info"><div class="pl-name">'+esc(i.title)+'</div><div class="pl-meta">'+esc(i.publisher)+(i.region?' · '+esc(i.region):'')+'</div></div></a>').join(''):'<div class="pl-row"><div class="pl-meta">마감 예정 공고 없음</div></div>');}
   // 필터 툴: 지역·기관·직종·경력·형태·출처 단일 선택 + 검색 + 마감 7일. facet 건수는 다른 조건을 적용한 상태에서 센다
+  // 관심 기관: content/feed.json watch_institutions (기본 ON/OFF 는 config/watch-institutions.yaml). 브라우저 변경은 localStorage 에만
+  const WI=(F.watch_institutions||[]);let wOff={};try{wOff=JSON.parse(localStorage.getItem('hub.watch.off')||'{}');}catch(e){wOff={};}
+  const wOn=w=>(w.name in wOff)?!wOff[w.name]:w.on;
+  const instOf=i=>WI.find(w=>w.match.some(m=>(i.publisher||'').includes(m)));
+  const drawWatch=()=>{if(!$('winst'))return;const on=WI.filter(wOn).length;
+    $('winst').innerHTML='<div class="rail-label" style="margin-top:18px">관심 기관 <span class="wn">'+on+'/'+WI.length+' ON</span></div>'+WI.map(w=>{const o=wOn(w);
+      return '<div class="wrow'+(o?'':' off')+'"><button class="wname" data-q="'+esc(w.name)+'" title="이 기관 공고만 보기">'+esc(w.name)+'</button><span class="wopen">'+(w.open?'채용중 <b>'+w.open+'</b>':'<i>0</i>')+(w.soon?' <em>D-7 '+w.soon+'</em>':'')+'</span><span class="wtog" data-name="'+esc(w.name)+'" role="switch" aria-checked="'+o+'"><b>ON</b><b>OFF</b></span></div>';}).join('');};
+  if($('winst')){$('winst').addEventListener('click',e=>{const t=e.target.closest('.wtog');if(t){const n=t.dataset.name;const w=WI.find(x=>x.name===n);wOff[n]=wOn(w);try{localStorage.setItem('hub.watch.off',JSON.stringify(wOff));}catch(x){}drawWatch();if(st.watch){jlim=15;drawJobs();}return;}
+      const b=e.target.closest('.wname');if(b){$('f-q').value=b.dataset.q.replace(/\(.*\)$/,'');st.q=$('f-q').value;jlim=15;drawJobs();window.scrollTo({top:0,behavior:'smooth'});}});}
   const FK=['region','org_type','job_family','experience','employment','source'];
-  const st={region:'',org_type:'',job_family:'',experience:'',employment:'',source:'',q:'',soon:false};
+  const st={region:'',org_type:'',job_family:'',experience:'',employment:'',source:'',q:'',soon:false,watch:false};
   const val=(i,k)=>k==='experience'?(i.experience||''):k==='employment'?(i.employment||''):(i[k]||'');
   const pass=(i,skip)=>{for(const k of FK){if(k===skip||!st[k])continue;if(st[k]==='미분류'?val(i,k):val(i,k)!==st[k])return false;}
     if(st.soon&&!(i.dday!=null&&i.dday<=7))return false;
+    if(st.watch){const w=instOf(i);if(!w||!wOn(w))return false;}
     if(st.q){const h=(i.publisher+' '+i.title+' '+(i.summary||'')).toLowerCase();if(!h.includes(st.q.toLowerCase()))return false;}return true;};
   const ORDER={region:['서울','경기','인천','부산','대구','대전','광주','울산','세종','강원','충북','충남','전북','전남','경북','경남','제주','전국']};
   const drawChips=()=>{FK.forEach(k=>{const box=document.querySelector('#ftool .fchips[data-k="'+k+'"]');if(!box)return;
@@ -1965,7 +1983,9 @@ function renderRows(F){
   if($('ftool')){$('ftool').addEventListener('click',e=>{const b=e.target.closest('.fchips button');if(!b)return;const k=b.parentElement.dataset.k;st[k]=b.dataset.v;jlim=15;drawJobs();});
     $('f-q').addEventListener('input',e=>{st.q=e.target.value.trim();jlim=15;drawJobs();});
     $('f-soon').addEventListener('click',()=>{st.soon=!st.soon;$('f-soon').classList.toggle('on',st.soon);jlim=15;drawJobs();});
-    $('f-reset').addEventListener('click',()=>{FK.forEach(k=>st[k]='');st.q='';st.soon=false;$('f-q').value='';$('f-soon').classList.remove('on');jlim=15;drawJobs();});
+    $('f-watch').addEventListener('click',()=>{st.watch=!st.watch;$('f-watch').classList.toggle('on',st.watch);jlim=15;drawJobs();});
+    drawWatch();
+    $('f-reset').addEventListener('click',()=>{FK.forEach(k=>st[k]='');st.q='';st.soon=false;st.watch=false;$('f-q').value='';$('f-soon').classList.remove('on');$('f-watch').classList.remove('on');jlim=15;drawJobs();});
     drawJobs();}
   // --- 뉴스: B 관제 콘솔 (마퀴 + 레일 + 표 행 + 분석 노트)
   const railPipes=()=>'<div class="rail-label">수집 파이프라인</div>'+pl.map(p=>'<div class="pl-row"><i class="pdot '+esc(p.status)+'"></i><div class="pl-info"><div class="pl-name">'+esc(p.name)+'</div><div class="pl-meta">'+esc(p.last_run||'—')+(p.note?' · '+esc(p.note):'')+'</div></div><span class="pl-count">'+esc(p.count)+'</span></div>').join('');
