@@ -48,7 +48,7 @@ h1,h2,h3{font-family:var(--serif);font-weight:700;letter-spacing:-.02em;margin:0
 
 /* ---------- 상단 ---------- */
 .site{position:sticky;top:0;z-index:30;background:color-mix(in srgb,var(--bg) 86%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--grid)}
-.bar{display:flex;align-items:center;justify-content:space-between;gap:20px;height:64px}
+.topbar{display:flex;align-items:center;justify-content:space-between;gap:20px;height:64px}
 .logo{font-family:var(--serif);font-size:22px;font-weight:700;color:var(--ink);text-decoration:none;letter-spacing:-.02em}
 .logo span{color:var(--orange)}
 .menu{display:flex;gap:4px}
@@ -343,7 +343,7 @@ span.status{cursor:default}
 @media(max-width:760px){
  body{font-size:16px}
  .wrap{padding:0 20px}
- .bar{height:58px}
+ .topbar{height:58px}
  .hero{padding:56px 0 48px}
  .hero h1{font-size:clamp(34px,9vw,44px)}
  .lede{font-size:17px}
@@ -451,7 +451,7 @@ body{font-size:16px}
 @media(max-width:760px){
  .feedwrap{grid-template-columns:1fr;gap:18px;padding-top:16px}
  .side{position:static}
- .bar{gap:10px}.tabs a{white-space:nowrap;padding:6px 10px;font-size:14px}.bar .date{display:none}.logo small{display:none}
+ .topbar{gap:10px}.tabs a{white-space:nowrap;padding:6px 10px;font-size:14px}.topbar .date{display:none}.logo small{display:none}
  .side .grp{margin-bottom:12px}
  .fl{display:flex;gap:6px;overflow-x:auto;scrollbar-width:none;padding-bottom:4px}
  .fl li{white-space:nowrap;border:1px solid var(--grid);background:var(--card)}
@@ -466,7 +466,7 @@ body{font-size:16px}
 <body>
 <a class="skip" href="#main">본문으로 건너뛰기</a>
 <header class="site">
-  <div class="wrap bar">
+  <div class="wrap topbar">
     <a class="logo" href="#feed">재용<span>.</span> <small style="font-family:var(--mono);font-size:12px;color:var(--mut);font-weight:400;margin-left:6px">radar</small></a>
     <nav class="tabs" aria-label="화면">
       <a href="#feed" data-go="feed" class="on">피드</a><a href="#about" data-go="about">소개</a><a href="#ops" data-go="ops">운영판</a>
