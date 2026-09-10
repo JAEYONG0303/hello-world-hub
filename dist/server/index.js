@@ -499,7 +499,7 @@ body{font-size:16px}
           <div class="datenav"><button id="d-prev" aria-label="이전 날">‹</button><span class="cur" id="d-cur">—</span><button id="d-next" aria-label="다음 날">›</button><button class="all" id="d-all">전체 보기</button></div>
         </div>
         <div id="clusters"></div>
-        <ol class="feed" id="feed"></ol>
+        <ol class="feed" id="feed-list"></ol>
         <p class="feedfoot" id="feedfoot"></p>
       </div>
       <aside class="rcol" aria-label="상태">
@@ -531,7 +531,7 @@ body{font-size:16px}
 </section>
 
 <!-- 소개 -->
-<section class="sec" id="about">
+<section class="sec" id="about-sec">
   <div class="wrap">
     <div class="sechead">
       <div><p class="eyebrow">About</p><h2>연구와 현장, 두 경험이 만나는 자리</h2></div>
@@ -767,7 +767,7 @@ body{font-size:16px}
 </section>
 
 <!-- 운영판 -->
-<section class="sec" id="ops">
+<section class="sec" id="ops-sec">
   <div class="wrap">
     <div class="sechead">
       <div><p class="eyebrow">Ops · private</p><h2>운영판</h2></div>
@@ -1432,7 +1432,7 @@ function renderWatch(w){
     window.scrollTo({top:0});
   }
   window.addEventListener('hashchange',()=>{const h=location.hash.replace('#','');if(views.includes(h))go(h);});
-  const h=location.hash.replace('#','');go(views.includes(h)?h:'feed');
+  const h=location.hash.replace('#','');go(views.includes(h)?h:'feed');setTimeout(()=>window.scrollTo({top:0}),0);
   // 소개/운영판 안의 앵커(#work 등)는 해당 화면을 먼저 켠다
   document.addEventListener('click',e=>{const a=e.target.closest('a[href^="#"]');if(!a)return;const id=a.getAttribute('href').slice(1);
     const owner=document.getElementById(id)&&document.getElementById(id).closest('section[data-view]');
@@ -1481,7 +1481,7 @@ function renderFeed(F){
   function draw(){
     const items=F.items.filter(pass);
     const PAGE=40;const shown=items.slice(0,st.limit||PAGE);
-    $('feed').innerHTML=shown.length?shown.map(row).join(''):'<li class="fi"><div></div><p class="empty">조건에 맞는 항목이 없습니다.</p></li>';
+    $('feed-list').innerHTML=shown.length?shown.map(row).join(''):'<li class="fi"><div></div><p class="empty">조건에 맞는 항목이 없습니다.</p></li>';
     const more=items.length-shown.length;
     $('feedfoot').innerHTML=(more>0?'<button class="more" id="feed-more">'+more+'건 더 보기</button><br><br>':'')+shown.length+'건 표시 · 조건에 맞는 '+items.length+'건 · 전체 '+F.items.length+'건 · 원문은 링크로만 연결합니다';
     const mb=$('feed-more');if(mb)mb.addEventListener('click',()=>{st.limit=(st.limit||PAGE)+PAGE;draw();});
