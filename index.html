@@ -1430,7 +1430,7 @@ function renderWatch(w){
     window.scrollTo({top:0});
   }
   window.addEventListener('hashchange',()=>{const h=location.hash.replace('#','');if(views.includes(h))go(h);});
-  const h=location.hash.replace('#','');go(views.includes(h)?h:'feed');setTimeout(()=>window.scrollTo({top:0}),0);
+  const qv=new URLSearchParams(location.search).get('view');const h=location.hash.replace('#','');go(views.includes(h)?h:(views.includes(qv)?qv:'feed'));setTimeout(()=>window.scrollTo({top:0}),50);
   // 소개/운영판 안의 앵커(#work 등)는 해당 화면을 먼저 켠다
   document.addEventListener('click',e=>{const a=e.target.closest('a[href^="#"]');if(!a)return;const id=a.getAttribute('href').slice(1);
     const owner=document.getElementById(id)&&document.getElementById(id).closest('section[data-view]');
