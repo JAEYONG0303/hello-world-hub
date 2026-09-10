@@ -1013,6 +1013,18 @@ body{font-size:13.5px;line-height:1.55}
   .hm-num-col:last-child { border-bottom: none; }
   .hm-about-grid { grid-template-columns: 1fr; gap: 20px; }}
 
+
+.afc-nav{display:flex;align-items:center;gap:8px}
+.afc-nav button{font:inherit;font-family:var(--mono);font-size:16px;line-height:1;width:28px;height:28px;background:transparent;color:var(--sec);border:1px solid var(--grid);cursor:pointer}
+.afc-nav button:hover:not(:disabled){color:var(--lime);border-color:var(--lime-ring)}.afc-nav button:disabled{opacity:.3;cursor:default}
+.afc-pos{font-family:var(--mono);font-size:11px;color:var(--mut)}
+#afc-headline.past{color:var(--sec)}
+
+.conf-tags{display:flex;gap:4px;flex-wrap:wrap;margin-bottom:6px}.ctag{font-family:var(--mono);font-size:9.5px;color:var(--mut);border:1px solid var(--grid);padding:1px 6px}.ctag.new{color:var(--lime);border-color:var(--lime-ring)}
+tr.conf-old td{color:var(--mut)}tr.conf-old td.impact{color:var(--mut)}
+tr.conf-debate td{padding-top:0;border-top:0}tr.conf-debate details{font-size:13px}tr.conf-debate summary{cursor:pointer;font-family:var(--mono);font-size:10.5px;color:var(--lime);padding:2px 0 8px}
+.dline{margin:0 0 6px;color:var(--sec);line-height:1.55}.dline b{color:var(--ink);font-weight:600;margin-right:6px}.dline.meta{font-family:var(--mono);font-size:10.5px;color:var(--mut)}
+.conf-toggle{margin-top:10px;font:inherit;font-family:var(--mono);font-size:10.5px;color:var(--sec);background:transparent;border:1px solid var(--grid);padding:5px 10px;cursor:pointer}.conf-toggle:hover{color:var(--lime)}
 </style>
 </head>
 <body>
@@ -1423,7 +1435,7 @@ body{font-size:13.5px;line-height:1.55}
     <div id="ai-future-career">
       <div class="afc" id="afc">
         <article class="card afchead wide">
-          <div class="cardhead"><h2>2031 AI 전망</h2><span class="pill" id="afc-updated">—</span></div>
+          <div class="cardhead"><h2>2031 AI 전망</h2><div class="afc-nav" id="afc-nav"><button type="button" id="afc-prev" aria-label="이전 전망">‹</button><span class="pill" id="afc-updated">—</span><span class="afc-pos" id="afc-pos"></span><button type="button" id="afc-next" aria-label="다음 전망">›</button></div></div>
           <p id="afc-headline"></p>
           <div class="afcmeta" id="afc-meta"></div>
           <div class="fc" id="afc-forecasts"></div>
@@ -1439,10 +1451,6 @@ body{font-size:13.5px;line-height:1.55}
           <article class="card">
             <div class="cardhead"><h2>시장 신호</h2><span class="tag" id="afc-signal-count">—</span></div>
             <div id="afc-signals"></div>
-          </article>
-          <article class="card ctoday">
-            <div class="cardhead"><h2>CAREER TODAY</h2><span class="pill" id="afc-today-count">—</span></div>
-            <div id="afc-today"></div>
           </article>
           <article class="card wide">
             <div class="cardhead"><h2>MY SKILL GAP</h2><span class="meta">우선순위 · 상태를 눌러 변경</span></div>
@@ -1906,22 +1914,39 @@ body{font-size:13.5px;line-height:1.55}
   function renderCareer(d) {
     if (!d || !d.forecasts) { $("afc-sub").textContent = "데이터를 불러오지 못했습니다 (content/career-ai.json)"; return; }
     var m = d.meta || {};
-    $("afc-updated").textContent = "업데이트 " + (m.updated || "—");
-    $("afc-headline").textContent = d.headline || "";
+    // 전망 버전: outlook_history(과거, 오래된 순) + 현재. 화살표는 이 카드(문장·날짜·버전·확률)만 바꾼다
+    var versions = (d.outlook_history || []).map(function (h) {
+      var probs = {}; (h.forecasts || []).forEach(function (f) { probs[f.id] = f; });
+      return { version: h.version, updated: h.updated, headline: h.headline, reason: h.reason || "", probs: probs, past: true };
+    });
+    var curProbs = {}; d.forecasts.forEach(function (f) { curProbs[f.id] = f; });
+    versions.push({ version: m.version, updated: m.updated, headline: d.headline || "", reason: "", probs: curProbs, past: false });
+    if (typeof renderCareer.vi !== "number") { var ovq = parseInt(new URLSearchParams(location.search).get("ov"), 10); if (!isNaN(ovq)) renderCareer.vi = ovq; }  // ?ov=N 로 특정 버전 바로 열기
+    if (typeof renderCareer.vi !== "number" || renderCareer.vi >= versions.length || renderCareer.vi < 0) renderCareer.vi = versions.length - 1;
+    var vi = renderCareer.vi, V = versions[vi];
+    $("afc-updated").textContent = (V.past ? "과거 " : "업데이트 ") + (V.updated || "—");
+    $("afc-headline").textContent = V.headline;
+    $("afc-pos").textContent = "v" + V.version + " · " + (vi + 1) + "/" + versions.length;
+    $("afc-prev").disabled = vi <= 0; $("afc-next").disabled = vi >= versions.length - 1;
+    $("afc-prev").onclick = function () { renderCareer.vi = Math.max(0, vi - 1); renderCareer(d); };
+    $("afc-next").onclick = function () { renderCareer.vi = Math.min(versions.length - 1, vi + 1); renderCareer(d); };
+    $("afc-headline").classList.toggle("past", V.past);
     var meta = $("afc-meta"); meta.innerHTML = "";
-    [ "기준 " + m.baseline_year + " → " + m.horizon_year, "전망 " + d.forecasts.length + "개", "신호 " + (d.signals || []).length + "건", "v" + m.version ]
+    [ "기준 " + m.baseline_year + " → " + m.horizon_year, "전망 " + d.forecasts.length + "개", "신호 " + (d.signals || []).length + "건", "v" + V.version + (V.past ? " (과거)" : " (현재)") ]
       .forEach(function (t) { meta.appendChild(el("span", "", t)); });
+    if (V.past && V.reason) meta.appendChild(el("span", "", "당시 사유 " + V.reason));
 
-    // 1. 전망
+    // 1. 전망 — 확률은 보고 있는 버전의 값, 제목·설명은 현재 것
     var fc = $("afc-forecasts"); fc.innerHTML = "";
     d.forecasts.forEach(function (f) {
+      var pv = V.probs[f.id] || f;
       var row = el("div", "fcrow");
       var left = el("div"); left.appendChild(el("b", "", f.id + " · " + f.title));
       left.appendChild(el("small", "", f.change + " · 업데이트 " + f.updated));
       var prob = el("div", "prob");
-      var bar = el("div", "bar"); var fill = el("i"); fill.style.width = f.probability + "%"; bar.appendChild(fill);
-      prob.appendChild(bar); prob.appendChild(el("strong", "", f.probability + "%"));
-      var conf = el("span", "conf", "신뢰 " + f.confidence); conf.dataset.c = f.confidence; prob.appendChild(conf);
+      var bar = el("div", "bar"); var fill = el("i"); fill.style.width = pv.probability + "%"; bar.appendChild(fill);
+      prob.appendChild(bar); prob.appendChild(el("strong", "", pv.probability + "%" + (V.past && pv.probability !== f.probability ? " → " + f.probability + "%" : "")));
+      var conf = el("span", "conf", "신뢰 " + (pv.confidence || f.confidence)); conf.dataset.c = pv.confidence || f.confidence; prob.appendChild(conf);
       row.appendChild(left); row.appendChild(prob); fc.appendChild(row);
     });
 
@@ -1932,16 +1957,42 @@ body{font-size:13.5px;line-height:1.55}
     thead.appendChild(hr); tb.appendChild(thead);
     var tbody = el("tbody");
     var heads = ["기존 전망", "현재 증거", "수정된 판단", "내게 미치는 영향"];
-    (d.conflicts || []).forEach(function (c) {
-      var tr = el("tr");
+    var allC = d.conflicts || [];
+    var showOld = !!renderCareer.showOld;
+    var rows = allC.filter(function (c) { return showOld || (c.status || "current") === "current"; });
+    rows.forEach(function (c) {
+      var tr = el("tr"); var isNew = c.date && c.date === m.updated; var isOld = (c.status || "current") !== "current";
+      if (isOld) tr.className = "conf-old";
       [c.old, c.evidence, c.revised, c.impact].forEach(function (v, i) {
         var td = el("td", i === 3 ? "impact" : "", v);
         td.setAttribute("data-h", heads[i]);  // 모바일 세로 배치용 라벨
+        if (i === 0) {
+          var tagRow = el("div", "conf-tags");
+          if (c.forecast_id) tagRow.appendChild(el("span", "ctag", c.forecast_id));
+          if (c.date) tagRow.appendChild(el("span", "ctag", (isOld ? "지난 판단 " : "판단 ") + c.date));
+          if (isNew && !isOld) tagRow.appendChild(el("span", "ctag new", "NEW"));
+          if (isOld && c.superseded_at) tagRow.appendChild(el("span", "ctag", "교체 " + c.superseded_at));
+          td.insertBefore(tagRow, td.firstChild);
+        }
         tr.appendChild(td);
       });
       tbody.appendChild(tr);
+      if (c.debate && (c.debate.challenger || c.debate.defender || c.debate.verdict)) {
+        var dr = el("tr", "conf-debate" + (isOld ? " conf-old" : "")); var dtd = el("td"); dtd.colSpan = 4;
+        var det = el("details"); det.appendChild(el("summary", "", "에이전트 토론 보기"));
+        [["도전", c.debate.challenger], ["옹호", c.debate.defender], ["판정", c.debate.verdict]].forEach(function (pair) {
+          if (!pair[1]) return; var line = el("p", "dline"); line.appendChild(el("b", "", pair[0])); line.appendChild(document.createTextNode(" " + pair[1])); det.appendChild(line);
+        });
+        if (c.debate.signals && c.debate.signals.length) det.appendChild(el("p", "dline meta", "근거 신호 " + c.debate.signals.join(", ")));
+        dtd.appendChild(det); dr.appendChild(dtd); tbody.appendChild(dr);
+      }
     });
     tb.appendChild(tbody);
+    var oldN = allC.filter(function (c) { return (c.status || "current") !== "current"; }).length;
+    var wrap = tb.parentNode; var tog = wrap.querySelector(".conf-toggle");
+    if (!tog) { tog = el("button", "conf-toggle"); tog.type = "button"; wrap.appendChild(tog); }
+    if (oldN) { tog.hidden = false; tog.textContent = showOld ? "지난 판단 숨기기" : "지난 판단 " + oldN + "건 보기 ›"; tog.onclick = function () { renderCareer.showOld = !showOld; renderCareer(d); }; }
+    else tog.hidden = true;
 
     // 3. 시장 신호
     var sg = $("afc-signals"); sg.innerHTML = "";
@@ -1958,19 +2009,6 @@ body{font-size:13.5px;line-height:1.55}
       sg.appendChild(box);
     });
 
-    // 3-b. 오늘 할 일 (커리어)
-    var td = $("afc-today"); td.innerHTML = ""; var doneN = 0;
-    (d.today || []).forEach(function (t) {
-      var isDone = !!C.today[t.id]; if (isDone) doneN++;
-      var row = el("div", "task" + (isDone ? " done" : ""));
-      row.setAttribute("role", "button"); row.setAttribute("tabindex", "0");
-      row.appendChild(el("i", "check")); row.appendChild(el("span", "tasktext", t.text)); row.appendChild(el("span", "meta", t.meta || ""));
-      function toggle() { C.today[t.id] = !isDone; save(); renderCareer(d); }
-      row.addEventListener("click", toggle);
-      row.addEventListener("keydown", function (e) { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); toggle(); } });
-      td.appendChild(row);
-    });
-    $("afc-today-count").textContent = doneN + " / " + (d.today || []).length;
 
     // 4. 역량 격차
     var sk = $("afc-skills"); sk.innerHTML = "";
