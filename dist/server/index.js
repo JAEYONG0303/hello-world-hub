@@ -772,7 +772,7 @@ body{font-size:13.5px;line-height:1.55}
 <!-- ===== 1. 채용 공고 (시안 A: 카드 그리드) ===== -->
 <section data-view="jobs" class="on" id="view-jobs">
   <div class="pw">
-    <aside class="rail"><div id="jobs-rail"></div><div id="winst"></div></aside>
+    <aside class="rail" id="jobs-rail"></aside>
     <div class="main-col">
       <div class="hl-sec"><div class="hl-kicker">채용 레이더 <span id="jp-date"></span></div><h2 class="hl-text" id="jp-head">공고를 불러오는 중</h2><div class="hl-meta" id="jp-pipes"></div></div>
       <div class="ftool" id="ftool" aria-label="공고 필터">
@@ -780,7 +780,7 @@ body{font-size:13.5px;line-height:1.55}
         <div class="frow"><span class="flab">기관</span><div class="fchips" data-k="org_type"></div></div>
         <div class="frow"><span class="flab">직종</span><div class="fchips" data-k="job_family"></div></div>
         <div class="frow"><span class="flab">조건</span><div class="fchips" data-k="experience"></div><i class="fsep"></i><div class="fchips" data-k="employment"></div><i class="fsep"></i><div class="fchips" data-k="source"></div></div>
-        <div class="frow last"><input id="f-q" type="search" placeholder="기관 · 제목 · 직무 검색" aria-label="검색"><button class="ftog" id="f-soon" type="button">마감 7일 이내</button><button class="ftog" id="f-watch" type="button">관심 기관만</button><button class="freset" id="f-reset" type="button">초기화</button><span class="fcount" id="f-count"></span></div>
+        <div class="frow last"><input id="f-q" type="search" placeholder="기관 · 제목 · 직무 검색" aria-label="검색"><button class="ftog" id="f-soon" type="button">마감 7일 이내</button><button class="freset" id="f-reset" type="button">초기화</button><span class="fcount" id="f-count"></span></div>
       </div>
       <div class="sec-hdr"><span class="sec-lbl">채용 공고</span><span class="sec-cnt" id="jobs-n"></span><span class="sec-divider"></span><span class="sec-more" id="jobs-sort">마감 가까운 순</span></div>
       <div class="feed-thead jobs"><span>마감</span><span>기관 · 지역</span><span>제목</span><span class="r">직종 · 형태</span></div>
@@ -1996,9 +1996,8 @@ function renderRows(F){
   if($('ftool')){$('ftool').addEventListener('click',e=>{const b=e.target.closest('.fchips button');if(!b)return;const k=b.parentElement.dataset.k;st[k]=b.dataset.v;jpage=1;drawJobs();});
     $('f-q').addEventListener('input',e=>{st.q=e.target.value.trim();jpage=1;drawJobs();});
     $('f-soon').addEventListener('click',()=>{st.soon=!st.soon;$('f-soon').classList.toggle('on',st.soon);jpage=1;drawJobs();});
-    $('f-watch').addEventListener('click',()=>{st.watch=!st.watch;$('f-watch').classList.toggle('on',st.watch);jpage=1;drawJobs();});
-    drawWatch();
-    $('f-reset').addEventListener('click',()=>{FK.forEach(k=>st[k]='');st.q='';st.soon=false;st.watch=false;$('f-q').value='';$('f-soon').classList.remove('on');$('f-watch').classList.remove('on');jpage=1;drawJobs();});
+
+    $('f-reset').addEventListener('click',()=>{FK.forEach(k=>st[k]='');st.q='';st.soon=false;st.watch=false;$('f-q').value='';$('f-soon').classList.remove('on');jpage=1;drawJobs();});
     drawJobs();}
   // --- 뉴스: B 관제 콘솔 (마퀴 + 레일 + 표 행 + 분석 노트)
   const railPipes=()=>'<div class="rail-label">수집 파이프라인</div>'+pl.map(p=>'<div class="pl-row"><i class="pdot '+esc(p.status)+'"></i><div class="pl-info"><div class="pl-name">'+esc(p.name)+'</div><div class="pl-meta">'+esc(p.last_run||'—')+(p.note?' · '+esc(p.note):'')+'</div></div><span class="pl-count">'+esc(p.count)+'</span></div>').join('');
