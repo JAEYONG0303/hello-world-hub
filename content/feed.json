@@ -1,12 +1,12 @@
 {
  "meta": {
   "updated": "2026-09-10",
-  "generated_at": "2026-09-10T15:43:39",
+  "generated_at": "2026-09-10T15:47:35",
   "days": [
    "2026-09-10",
    "2026-09-09"
   ],
-  "today_new": 24,
+  "today_new": 25,
   "note": "수집기 4개의 결과를 스크립트가 합친 값. 원문 복제 없음, 추정치 없음."
  },
  "channels": [
@@ -33,7 +33,7 @@
   {
    "id": "python",
    "name": "Python 오늘의 문제",
-   "count": 4
+   "count": 5
   },
   {
    "id": "research",
@@ -80,7 +80,7 @@
    "last_run": "2026-09-10",
    "status": "ok",
    "note": "주제 함수·정규식·날짜 · 원문 + 생성 · 테스트 채점",
-   "count": 4
+   "count": 5
   }
  ],
  "items": [
@@ -212,8 +212,8 @@
   {
    "id": "python-2026-09-10-1",
    "channel": "python",
-   "title": "[Built-Ins] Input()",
-   "url": "https://www.hackerrank.com/challenges/input/problem",
+   "title": "[Date and Time] Calendar Module",
+   "url": "https://www.hackerrank.com/challenges/calendar-module/problem",
    "publisher": "hackerrank_python",
    "source": "hackerrank_python",
    "published_at": "2026-09-10",
@@ -228,8 +228,8 @@
   {
    "id": "python-2026-09-10-2",
    "channel": "python",
-   "title": "[Built-Ins] Any or All",
-   "url": "https://www.hackerrank.com/challenges/any-or-all/problem",
+   "title": "[Built-Ins] Python Evaluation",
+   "url": "https://www.hackerrank.com/challenges/python-eval/problem",
    "publisher": "hackerrank_python",
    "source": "hackerrank_python",
    "published_at": "2026-09-10",
@@ -244,24 +244,23 @@
   {
    "id": "python-2026-09-10-3",
    "channel": "python",
-   "title": "날짜 표기 통일",
-   "url": "",
-   "publisher": "생성 문제 · Python",
-   "source": "Python",
+   "title": "[Introduction] Arithmetic Operators",
+   "url": "https://www.hackerrank.com/challenges/python-arithmetic-operators/problem",
+   "publisher": "hackerrank_python",
+   "source": "hackerrank_python",
    "published_at": "2026-09-10",
    "seen": "2026-09-10",
    "category": "함수·정규식·날짜",
    "tags": [
-    "Lv3",
-    "P303"
+    "Lv1"
    ],
-   "kind": "generated",
-   "summary": "\"2026.09.10\", \"2026-9-1\", \"2026/09/10\", \"2026년 9월 10일\" 처럼 섞인 날짜 문자열 s 를 \"YYYY-MM-DD\" 로 통일해 반환하는 to_iso 를 작성하세요. 날짜가 아니면 None."
+   "kind": "link",
+   "summary": "원문 링크 문제. 사이트에서 풀고 done 으로 기록."
   },
   {
    "id": "python-2026-09-10-4",
    "channel": "python",
-   "title": "등급 라벨",
+   "title": "고시 번호 추출",
    "url": "",
    "publisher": "생성 문제 · Python",
    "source": "Python",
@@ -269,11 +268,28 @@
    "seen": "2026-09-10",
    "category": "함수·정규식·날짜",
    "tags": [
-    "Lv1",
-    "P001"
+    "Lv2",
+    "P301"
    ],
    "kind": "generated",
-   "summary": "장기요양 등급 정수 grade(1~6)를 받아 1~3이면 \"중증\", 4~5면 \"경증\", 6이면 \"인지지원\", 그 외는 \"미해당\"을 반환하는 함수 grade_label 을 작성하세요."
+   "summary": "\"보건복지부 고시 제2026-187호 ...\" 같은 문자열에서 \"2026-187\" 형태의 고시 번호를 찾아 반환하는 notice_no 를 작성하세요. 없으면 None."
+  },
+  {
+   "id": "python-2026-09-10-5",
+   "channel": "python",
+   "title": "마감일까지 남은 일수",
+   "url": "",
+   "publisher": "생성 문제 · Python",
+   "source": "Python",
+   "published_at": "2026-09-10",
+   "seen": "2026-09-10",
+   "category": "함수·정규식·날짜",
+   "tags": [
+    "Lv2",
+    "P302"
+   ],
+   "kind": "generated",
+   "summary": "\"YYYY-MM-DD\" 문자열 today 와 deadline 을 받아 남은 일수(deadline - today)를 정수로 반환하는 days_left 를 작성하세요. deadline 이 잘못된 형식이면 None."
   },
   {
    "id": "w-b1abd45502",
@@ -2036,8 +2052,8 @@
     ],
     "python": [
      {
-      "title": "[Built-Ins] Input()",
-      "url": "https://www.hackerrank.com/challenges/input/problem",
+      "title": "[Date and Time] Calendar Module",
+      "url": "https://www.hackerrank.com/challenges/calendar-module/problem",
       "publisher": "hackerrank_python",
       "tags": [
        "Lv1"
@@ -2047,8 +2063,8 @@
       "category": "함수·정규식·날짜"
      },
      {
-      "title": "[Built-Ins] Any or All",
-      "url": "https://www.hackerrank.com/challenges/any-or-all/problem",
+      "title": "[Built-Ins] Python Evaluation",
+      "url": "https://www.hackerrank.com/challenges/python-eval/problem",
       "publisher": "hackerrank_python",
       "tags": [
        "Lv1"
@@ -2058,27 +2074,38 @@
       "category": "함수·정규식·날짜"
      },
      {
-      "title": "날짜 표기 통일",
-      "url": "",
-      "publisher": "생성 문제 · Python",
+      "title": "[Introduction] Arithmetic Operators",
+      "url": "https://www.hackerrank.com/challenges/python-arithmetic-operators/problem",
+      "publisher": "hackerrank_python",
       "tags": [
-       "Lv3",
-       "P303"
+       "Lv1"
       ],
-      "kind": "generated",
-      "summary": "\"2026.09.10\", \"2026-9-1\", \"2026/09/10\", \"2026년 9월 10일\" 처럼 섞인 날짜 문자열 s 를 \"YYYY-MM-DD\" 로 통일해 반환하는 to_iso 를 작성하세요. 날짜가 아니면 None.",
+      "kind": "link",
+      "summary": "원문 링크 문제. 사이트에서 풀고 done 으로 기록.",
       "category": "함수·정규식·날짜"
      },
      {
-      "title": "등급 라벨",
+      "title": "고시 번호 추출",
       "url": "",
       "publisher": "생성 문제 · Python",
       "tags": [
-       "Lv1",
-       "P001"
+       "Lv2",
+       "P301"
       ],
       "kind": "generated",
-      "summary": "장기요양 등급 정수 grade(1~6)를 받아 1~3이면 \"중증\", 4~5면 \"경증\", 6이면 \"인지지원\", 그 외는 \"미해당\"을 반환하는 함수 grade_label 을 작성하세요.",
+      "summary": "\"보건복지부 고시 제2026-187호 ...\" 같은 문자열에서 \"2026-187\" 형태의 고시 번호를 찾아 반환하는 notice_no 를 작성하세요. 없으면 None.",
+      "category": "함수·정규식·날짜"
+     },
+     {
+      "title": "마감일까지 남은 일수",
+      "url": "",
+      "publisher": "생성 문제 · Python",
+      "tags": [
+       "Lv2",
+       "P302"
+      ],
+      "kind": "generated",
+      "summary": "\"YYYY-MM-DD\" 문자열 today 와 deadline 을 받아 남은 일수(deadline - today)를 정수로 반환하는 days_left 를 작성하세요. deadline 이 잘못된 형식이면 None.",
       "category": "함수·정규식·날짜"
      }
     ]
@@ -2144,7 +2171,65 @@
       "category": "GROUP BY/HAVING/집계"
      }
     ],
-    "python": []
+    "python": [
+     {
+      "title": "[Numpy] Arrays",
+      "url": "https://www.hackerrank.com/challenges/np-arrays/problem",
+      "publisher": "hackerrank_python",
+      "tags": [
+       "Lv1"
+      ],
+      "kind": "link",
+      "summary": "원문 링크 문제. 사이트에서 풀고 done 으로 기록.",
+      "category": "pandas 전처리"
+     },
+     {
+      "title": "[Numpy] Shape and Reshape",
+      "url": "https://www.hackerrank.com/challenges/np-shape-reshape/problem",
+      "publisher": "hackerrank_python",
+      "tags": [
+       "Lv1"
+      ],
+      "kind": "link",
+      "summary": "원문 링크 문제. 사이트에서 풀고 done 으로 기록.",
+      "category": "pandas 전처리"
+     },
+     {
+      "title": "[Introduction] Say \"Hello, World!\" With Python",
+      "url": "https://www.hackerrank.com/challenges/py-hello-world/problem",
+      "publisher": "hackerrank_python",
+      "tags": [
+       "Lv1"
+      ],
+      "kind": "link",
+      "summary": "원문 링크 문제. 사이트에서 풀고 done 으로 기록.",
+      "category": "pandas 전처리"
+     },
+     {
+      "title": "컬럼명 정규화",
+      "url": "",
+      "publisher": "생성 문제 · Python",
+      "tags": [
+       "Lv2",
+       "P201"
+      ],
+      "kind": "generated",
+      "summary": "Excel 에서 읽은 컬럼명 리스트 cols 를 받아 앞뒤 공백 제거, 내부 공백 제거, 소문자화한 리스트를 반환하는 norm_cols 를 작성하세요. (pandas 없이 문자열 처리만으로도 됩니다)",
+      "category": "pandas 전처리"
+     },
+     {
+      "title": "학과별 수료율",
+      "url": "",
+      "publisher": "생성 문제 · Python",
+      "tags": [
+       "Lv2",
+       "P202"
+      ],
+      "kind": "generated",
+      "summary": "rows 는 {\"dept\": 학과, \"passed\": True/False} 의 리스트입니다. 학과별 수료율(소수 셋째 자리 반올림)을 {학과: 수료율} 로 반환하는 completion_rate 를 작성하세요. pandas 를 써도 되고 순수 파이썬도 됩니다.",
+      "category": "pandas 전처리"
+     }
+    ]
    }
   ],
   "stats": {
