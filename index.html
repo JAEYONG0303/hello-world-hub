@@ -743,6 +743,12 @@ body{font-size:13.5px;line-height:1.55}
 .wopen{font-family:var(--mono);font-size:9.5px;color:var(--mut);white-space:nowrap}.wopen b{color:var(--lime);font-weight:600}.wopen i{font-style:normal}.wopen em{font-style:normal;color:var(--orange)}
 .wtog{display:inline-grid;grid-template-columns:1fr 1fr;border:1px solid var(--grid);cursor:pointer;user-select:none}.wtog b{font-family:var(--mono);font-size:8.5px;font-weight:600;padding:3px 6px;color:var(--mut)}
 .wtog[aria-checked="true"] b:first-child{color:#0c0c0d;background:var(--lime)}.wtog[aria-checked="false"] b:last-child{color:var(--ink);background:var(--grid)}
+
+.feedfoot{padding:22px 28px 30px}
+.pager{display:flex;justify-content:center;align-items:center;gap:4px}
+.pager button{font:inherit;font-family:var(--mono);font-size:12px;color:var(--sec);background:transparent;border:0;width:34px;height:34px;border-radius:50%;cursor:pointer;display:grid;place-items:center}
+.pager button:hover{color:var(--ink);background:var(--hover)}.pager .pn.on{color:var(--ink);background:var(--grid);font-weight:600}
+.pager .pa{color:var(--mut);font-size:16px}.pager .pa:disabled{opacity:.3;cursor:default;background:transparent}
 </style>
 </head>
 <body>
@@ -1946,7 +1952,7 @@ function renderRows(F){
     return '<div class="feed-row"><div class="feed-row-main jobs">'+dl+'<span class="fd-pubL"><b>'+esc(i.publisher)+'</b><small>'+esc(org)+'</small></span><span class="fd-title"><a href="'+esc(i.url)+'" target="_blank" rel="noopener noreferrer">'+esc(i.title)+'</a></span><span class="fd-cats">'+[i.job_family,i.employment].filter(Boolean).map(c=>'<i class="fd-cat">'+esc(c)+'</i>').join('')+'</span></div>'+(i.summary?'<div class="feed-summ"><div class="feed-summ-text">'+esc(i.summary)+(i.experience?' · '+esc(i.experience):'')+(i.deadline?' · 마감 '+esc(i.deadline):'')+' · '+esc(SRC[i.source]||i.source)+'</div></div>':'')+'</div>';};
   const SRC={};((F.jobs_facets||{}).source||[]).forEach(x=>SRC[x.v]=x.name||x.v);
   const jobs=F.items.filter(i=>i.channel==='jobs'&&(i.dday==null||i.dday>=0)).sort((a,b)=>(a.dday??999)-(b.dday??999));
-  let jlim=15;
+  let jpage=1;const JPER=15;
   if($('jobs-rail')){const tn=F.meta&&F.meta.today_new||0;$('jp-date').textContent='· '+(F.meta&&F.meta.updated||'');$('jp-head').textContent='오늘 신규 '+tn+'건, 7일 내 마감 '+(I.deadline_7d||0)+'건';
     $('jp-pipes').textContent='마지막 수집 '+(F.meta&&F.meta.generated_at||'').replace('T',' ').slice(0,16)+' · '+Object.keys(SRC).length+'개 출처 · 신입·경력무관만 · 실패 소스 '+pl.filter(p=>p.status!=='ok').length+'개';
     const soonJ=jobs.filter(i=>i.dday!=null).slice(0,6);
@@ -1960,8 +1966,8 @@ function renderRows(F){
   const drawWatch=()=>{if(!$('winst'))return;const on=WI.filter(wOn).length;
     $('winst').innerHTML='<div class="rail-label" style="margin-top:18px">관심 기관 <span class="wn">'+on+'/'+WI.length+' ON</span></div>'+WI.map(w=>{const o=wOn(w);
       return '<div class="wrow'+(o?'':' off')+'"><button class="wname" data-q="'+esc(w.name)+'" title="이 기관 공고만 보기">'+esc(w.name)+'</button><span class="wopen">'+(w.open?'채용중 <b>'+w.open+'</b>':'<i>0</i>')+(w.soon?' <em>D-7 '+w.soon+'</em>':'')+'</span><span class="wtog" data-name="'+esc(w.name)+'" role="switch" aria-checked="'+o+'"><b>ON</b><b>OFF</b></span></div>';}).join('');};
-  if($('winst')){$('winst').addEventListener('click',e=>{const t=e.target.closest('.wtog');if(t){const n=t.dataset.name;const w=WI.find(x=>x.name===n);wOff[n]=wOn(w);try{localStorage.setItem('hub.watch.off',JSON.stringify(wOff));}catch(x){}drawWatch();if(st.watch){jlim=15;drawJobs();}return;}
-      const b=e.target.closest('.wname');if(b){$('f-q').value=b.dataset.q.replace(/\(.*\)$/,'');st.q=$('f-q').value;jlim=15;drawJobs();window.scrollTo({top:0,behavior:'smooth'});}});}
+  if($('winst')){$('winst').addEventListener('click',e=>{const t=e.target.closest('.wtog');if(t){const n=t.dataset.name;const w=WI.find(x=>x.name===n);wOff[n]=wOn(w);try{localStorage.setItem('hub.watch.off',JSON.stringify(wOff));}catch(x){}drawWatch();if(st.watch){jpage=1;drawJobs();}return;}
+      const b=e.target.closest('.wname');if(b){$('f-q').value=b.dataset.q.replace(/\(.*\)$/,'');st.q=$('f-q').value;jpage=1;drawJobs();window.scrollTo({top:0,behavior:'smooth'});}});}
   const FK=['region','org_type','job_family','experience','employment','source'];
   const st={region:'',org_type:'',job_family:'',experience:'',employment:'',source:'',q:'',soon:false,watch:false};
   const val=(i,k)=>k==='experience'?(i.experience||''):k==='employment'?(i.employment||''):(i[k]||'');
@@ -1975,17 +1981,22 @@ function renderRows(F){
       let keys=Object.keys(c);if(ORDER[k])keys.sort((a,b)=>(ORDER[k].indexOf(a)+1||99)-(ORDER[k].indexOf(b)+1||99));else keys.sort((a,b)=>c[b]-c[a]);
       if(st[k]&&!c[st[k]])keys.push(st[k]);
       box.innerHTML='<button data-v="" class="'+(st[k]?'':'on')+'">전체 <em>'+base.length+'</em></button>'+keys.map(v=>'<button data-v="'+esc(v)+'" class="'+(st[k]===v?'on':'')+'">'+esc(k==='source'?(SRC[v]||v):v)+' <em>'+(c[v]||0)+'</em></button>').join('');});};
-  const drawJobs=()=>{const list=jobs.filter(i=>pass(i,null));const shown=list.slice(0,jlim);
+  const drawJobs=(scroll)=>{const list=jobs.filter(i=>pass(i,null));const pages=Math.max(1,Math.ceil(list.length/JPER));if(jpage>pages)jpage=pages;const shown=list.slice((jpage-1)*JPER,jpage*JPER);
     $('jobgrid').innerHTML=shown.map(jcard).join('')||'<p class="empty">조건에 맞는 공고 없음 · 필터를 풀어 보세요</p>';
     $('jobs-n').textContent=list.length+'건'+(list.length!==jobs.length?' / 전체 '+jobs.length:'');$('f-count').textContent=list.length+'건';
-    $('jobs-foot').innerHTML=(list.length>shown.length?'<button class="more" id="jobs-more">'+(list.length-shown.length)+'건 더 보기</button><br><br>':'')+shown.length+'건 표시 · 신입·경력무관 · 마감 가까운 순';
-    const mb=$('jobs-more');if(mb)mb.addEventListener('click',()=>{jlim+=15;drawJobs();});drawChips();};
-  if($('ftool')){$('ftool').addEventListener('click',e=>{const b=e.target.closest('.fchips button');if(!b)return;const k=b.parentElement.dataset.k;st[k]=b.dataset.v;jlim=15;drawJobs();});
-    $('f-q').addEventListener('input',e=>{st.q=e.target.value.trim();jlim=15;drawJobs();});
-    $('f-soon').addEventListener('click',()=>{st.soon=!st.soon;$('f-soon').classList.toggle('on',st.soon);jlim=15;drawJobs();});
-    $('f-watch').addEventListener('click',()=>{st.watch=!st.watch;$('f-watch').classList.toggle('on',st.watch);jlim=15;drawJobs();});
+    // 페이지 번호: 현재 페이지를 가운데 두고 최대 10개, 양끝 화살표
+    let a=Math.max(1,jpage-4),b=Math.min(pages,a+9);a=Math.max(1,b-9);let h='';
+    for(let n=a;n<=b;n++)h+='<button class="pn'+(n===jpage?' on':'')+'" data-p="'+n+'">'+n+'</button>';
+    $('jobs-foot').innerHTML=pages>1?'<nav class="pager" aria-label="페이지"><button class="pa" data-p="'+(jpage-1)+'"'+(jpage<=1?' disabled':'')+' aria-label="이전">‹</button>'+h+'<button class="pa" data-p="'+(jpage+1)+'"'+(jpage>=pages?' disabled':'')+' aria-label="다음">›</button></nav>':'';
+    if(scroll){const top=$('jobgrid').getBoundingClientRect().top+window.scrollY-120;window.scrollTo({top,behavior:'smooth'});}
+    drawChips();};
+  $('jobs-foot').addEventListener('click',e=>{const b=e.target.closest('button[data-p]');if(!b||b.disabled)return;jpage=parseInt(b.dataset.p,10);drawJobs(true);});
+  if($('ftool')){$('ftool').addEventListener('click',e=>{const b=e.target.closest('.fchips button');if(!b)return;const k=b.parentElement.dataset.k;st[k]=b.dataset.v;jpage=1;drawJobs();});
+    $('f-q').addEventListener('input',e=>{st.q=e.target.value.trim();jpage=1;drawJobs();});
+    $('f-soon').addEventListener('click',()=>{st.soon=!st.soon;$('f-soon').classList.toggle('on',st.soon);jpage=1;drawJobs();});
+    $('f-watch').addEventListener('click',()=>{st.watch=!st.watch;$('f-watch').classList.toggle('on',st.watch);jpage=1;drawJobs();});
     drawWatch();
-    $('f-reset').addEventListener('click',()=>{FK.forEach(k=>st[k]='');st.q='';st.soon=false;st.watch=false;$('f-q').value='';$('f-soon').classList.remove('on');$('f-watch').classList.remove('on');jlim=15;drawJobs();});
+    $('f-reset').addEventListener('click',()=>{FK.forEach(k=>st[k]='');st.q='';st.soon=false;st.watch=false;$('f-q').value='';$('f-soon').classList.remove('on');$('f-watch').classList.remove('on');jpage=1;drawJobs();});
     drawJobs();}
   // --- 뉴스: B 관제 콘솔 (마퀴 + 레일 + 표 행 + 분석 노트)
   const railPipes=()=>'<div class="rail-label">수집 파이프라인</div>'+pl.map(p=>'<div class="pl-row"><i class="pdot '+esc(p.status)+'"></i><div class="pl-info"><div class="pl-name">'+esc(p.name)+'</div><div class="pl-meta">'+esc(p.last_run||'—')+(p.note?' · '+esc(p.note):'')+'</div></div><span class="pl-count">'+esc(p.count)+'</span></div>').join('');
