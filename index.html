@@ -3,21 +3,22 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>재용 radar — 자료 수집 피드</title>
+<title>재용 radar — 매일 모이는 것</title>
 <meta name="description" content="재용 radar — 채용 공고·보건의료 변화·AI 신호·SQL 문제를 매일 자동 수집해 검토한 피드">
 <meta name="robots" content="noindex,nofollow">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans+KR:wght@400;500;600;700&family=Noto+Serif+KR:wght@700&display=swap" rel="stylesheet">
 <style>
 /* 재용 홈페이지 — 읽히는 것이 먼저. 본문 17px, 한 줄 64자 이내, 섹션 사이 여백 넉넉히. 팔레트는 본인 분석 그림(ltc_analysis.py)과 같다. */
 :root{
-  --bg:#f6f5f0;--surf:#fbfbf9;--card:#ffffff;--ink:#141412;--sec:#4d4c48;--mut:#8a8880;--grid:#e3e2db;--base:#c6c5ba;
+  --bg:#ffffff;--surf:#f5f6f8;--card:#ffffff;--ink:#111111;--sec:#4b4d52;--mut:#8b8f96;--grid:#e6e8eb;--base:#c9ccd1;
   --blue:#2a78d6;--blue-ink:#1d5fae;--blue-soft:#e6eefb;--orange:#eb6834;--orange-soft:#fdeee6;--green:#2f8f5b;--green-soft:#e3f3e9;
   --radius:12px;--radius-lg:18px;--shadow:0 1px 2px rgba(20,20,18,.05),0 8px 24px rgba(20,20,18,.04);
   --text:var(--ink);--muted:var(--sec);--line:var(--grid);--panel:var(--card);--violet:var(--blue);--cyan:var(--orange);
-  --serif:"Noto Serif KR","Nanum Myeongjo",Georgia,"Times New Roman",serif;
-  --sans:"IBM Plex Sans KR","Pretendard",system-ui,-apple-system,"Segoe UI","Malgun Gothic",sans-serif;
+  --serif:"Pretendard","IBM Plex Sans KR",system-ui,sans-serif;
+  --sans:"Pretendard","IBM Plex Sans KR",system-ui,-apple-system,"Segoe UI","Malgun Gothic",sans-serif;
   --mono:"IBM Plex Mono",ui-monospace,Consolas,monospace;
 }
 @media(prefers-color-scheme:dark){:root{
@@ -518,6 +519,88 @@ body{font-size:16px}
 .pipestrip span{font-size:13px;color:var(--sec);background:var(--card);border:1px solid var(--grid);border-radius:999px;padding:5px 11px;font-family:var(--mono)}
 @media(max-width:980px){.insight{grid-template-columns:1fr}.feedwrap{grid-template-columns:200px minmax(0,1fr)}}
 @media(max-width:760px){.cd{flex-basis:78vw}.arrow{display:none}.insight{padding:18px}.insight h2{font-size:19px}.istats{grid-template-columns:1fr 1fr}.feedwrap{grid-template-columns:1fr}}
+
+/* ================= v5: 잡코리아 구조 측정값 적용 (1200 컨테이너, 행 섹션, 카드 4/3/5열) ================= */
+body{font-size:16px}
+.wrap{max-width:1200px}
+h1,h2,h3{letter-spacing:-.01em}
+.jk{padding:22px 0 8px}
+.jkrow{display:grid;grid-template-columns:2fr 1fr;gap:16px;margin:16px 0 8px}
+.jkbox{background:var(--card);border:1px solid var(--grid);border-radius:12px;padding:20px 22px}
+.jkbox .t{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:6px}
+.jkbox .t b{font-size:16px;display:flex;align-items:center;gap:8px}
+.jkbox .t b i{font-style:normal;font-size:11px;background:var(--blue);color:#fff;border-radius:5px;padding:1px 6px;font-weight:700}
+.jkbox .t a{font-size:13px;color:var(--blue-ink);text-decoration:none;font-weight:600;white-space:nowrap}
+.jkbox .desc{font-size:13.5px;color:var(--mut);margin-bottom:12px}
+.jkbox h2.hl{font-size:19px;line-height:1.45;margin:0 0 10px;font-weight:700}
+.jkbox ol{margin:0;padding-left:18px;font-size:14.5px;color:var(--sec);line-height:1.65}
+.jkbox ol li{margin:5px 0}
+.jkbox .nx{margin-top:10px;font-size:13.5px;color:var(--sec);background:var(--surf);border-radius:8px;padding:9px 12px}
+.jkbox .nx b{color:var(--orange);margin-right:5px}
+.me{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.me .it{background:var(--surf);border-radius:10px;padding:12px 14px;text-align:center}
+.me .it .v{font-size:24px;font-weight:800;line-height:1.1}.me .it .v small{font-size:12px;color:var(--mut);font-weight:500;margin-left:2px}
+.me .it .k{font-size:12.5px;color:var(--sec);margin-top:3px}
+.me .pipes{grid-column:1/-1;display:flex;gap:6px;flex-wrap:wrap;margin-top:2px}
+.me .pipes span{font-size:12px;color:var(--sec);background:var(--surf);border-radius:999px;padding:4px 10px}
+.jksec{padding:30px 0 8px}
+.jksec.alt{background:var(--surf);margin:16px -24px 0;padding:30px 24px 26px}
+.jkhead{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:12px}
+.jkhead h2{font-size:18px;font-weight:700;display:flex;align-items:center;gap:8px}
+.jkhead h2 .n{font-size:13px;color:var(--mut);font-weight:500}
+.jkhead .more{display:flex;gap:6px;align-items:center}
+.jkhead .more a{font-size:13px;color:var(--sec);text-decoration:none;font-weight:600;border:1px solid var(--grid);border-radius:8px;padding:6px 10px;background:var(--card);cursor:pointer}
+.jkhead .more a:hover{color:var(--blue-ink);border-color:var(--blue)}
+.chips{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:12px}
+.chips button{font:inherit;font-size:13px;font-weight:600;color:var(--sec);background:var(--card);border:1px solid var(--grid);border-radius:999px;padding:6px 12px;cursor:pointer}
+.chips button.on{background:var(--ink);color:#fff;border-color:var(--ink)}
+.jk-grid{display:grid;gap:12px}
+.jk-grid.c4{grid-template-columns:repeat(4,1fr)}.jk-grid.c3{grid-template-columns:repeat(3,1fr)}.jk-grid.c5{grid-template-columns:repeat(5,1fr)}
+.jc{background:var(--card);border:1px solid var(--grid);border-radius:10px;padding:14px 16px;min-height:140px;display:flex;flex-direction:column;gap:6px;position:relative;transition:.12s}
+.jc:hover{border-color:var(--base);box-shadow:0 4px 14px rgba(17,17,17,.06)}
+.jc h3{font-size:15px;line-height:1.45;margin:0;font-weight:700;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;padding-right:22px}
+.jc h3 a{color:var(--ink);text-decoration:none}.jc h3 a:hover{color:var(--blue-ink)}
+.jc .co{font-size:13px;color:var(--sec);display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.jc .co .dd{color:#e53935;font-weight:700}.jc .co .dt{color:var(--mut);font-size:12px}
+.jc .tg{display:flex;gap:4px;flex-wrap:wrap;margin-top:auto}
+.jc .tg span{font-size:12px;background:var(--surf);border-radius:5px;padding:3px 7px;color:var(--sec)}
+.jc .tg .hi{background:var(--orange-soft);color:var(--orange);font-weight:600}
+.jc .tg .imp-strengthen{background:var(--green-soft);color:var(--green)}.jc .tg .imp-weaken{background:var(--orange-soft);color:var(--orange)}
+.jc .star{position:absolute;right:12px;top:12px;color:var(--base);font-size:16px}
+.jc.high{border-top:3px solid var(--orange)}
+.jc .sm{font-size:12.5px;color:var(--mut);line-height:1.5;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.jc.empty{align-items:center;justify-content:center;color:var(--mut);font-size:13px;border-style:dashed}
+/* 소개 탭 = 자동화 결과 페이지 */
+.rs-hero{padding:40px 0 26px;border-bottom:1px solid var(--grid)}
+.rs-hero h1{font-size:30px;line-height:1.35;margin:8px 0 12px;font-weight:800}
+.rs-hero h1 em{font-style:normal;color:var(--blue-ink)}
+.rs-hero .lede{font-size:16px;color:var(--sec);max-width:60em}
+.rs-kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:22px}
+.rs-kpi{background:var(--surf);border-radius:12px;padding:14px 16px}
+.rs-kpi .k{font-size:13px;color:var(--sec);font-weight:600}.rs-kpi .v{font-size:28px;font-weight:800;line-height:1.1;margin-top:3px}.rs-kpi .v small{font-size:12px;color:var(--mut);font-weight:500;margin-left:3px}.rs-kpi .s{font-size:12.5px;color:var(--mut);margin-top:3px}
+.rs{padding:34px 0;border-bottom:1px solid var(--grid)}
+.rs h2{font-size:20px;margin:0 0 4px}
+.rs .sub{color:var(--mut);font-size:13.5px;margin:0 0 16px}
+.rs table{width:100%;border-collapse:collapse;font-size:14px;background:var(--card)}
+.rs th{text-align:left;font-size:12px;letter-spacing:.05em;color:var(--sec);border-bottom:2px solid var(--ink);padding:8px 10px}
+.rs td{padding:10px;border-bottom:1px solid var(--grid);vertical-align:top;color:var(--sec)}
+.rs td:first-child{color:var(--ink);font-weight:600;white-space:nowrap}
+.rs .tblwrap{border:1px solid var(--grid);border-radius:12px}
+.rs .g3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.rs .cardp{background:var(--card);border:1px solid var(--grid);border-radius:12px;padding:16px 18px}
+.rs .cardp h3{margin:6px 0 4px;font-size:15px}.rs .cardp p{margin:0;font-size:13.5px;color:var(--sec)}
+.tag{display:inline-block;font-size:12px;border-radius:6px;padding:2px 8px;background:var(--blue-soft);color:var(--blue-ink);font-weight:600;margin-right:4px}
+.tag.o{background:var(--orange-soft);color:var(--orange)}.tag.g{background:var(--green-soft);color:var(--green)}
+.rs .steps{counter-reset:s;list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.rs .steps li{display:grid;grid-template-columns:30px 1fr;gap:10px;background:var(--card);border:1px solid var(--grid);border-radius:10px;padding:11px 13px;font-size:14px}
+.rs .steps li:before{counter-increment:s;content:counter(s);width:26px;height:26px;border-radius:50%;background:var(--ink);color:#fff;display:grid;place-items:center;font-weight:700;font-size:12px}
+.rs .steps b{display:block}.rs .steps .ev{color:var(--mut);font-size:12.5px;margin-top:2px}
+.rs ul.fail{margin:0;padding-left:18px;font-size:14px;color:var(--sec)}.rs ul.fail li{margin:5px 0}
+.rs .quote{border-left:4px solid var(--orange);background:var(--orange-soft);padding:12px 16px;border-radius:0 10px 10px 0;font-size:15px;font-weight:600;margin:16px 0 0}
+.oldabout{margin-top:26px}.oldabout summary{cursor:pointer;font-weight:700;font-size:16px;padding:12px 0}
+@media(max-width:1080px){.jk-grid.c5{grid-template-columns:repeat(3,1fr)}.jk-grid.c4{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:820px){.jkrow{grid-template-columns:1fr}.jk-grid.c4,.jk-grid.c3,.jk-grid.c5{grid-template-columns:1fr 1fr}.rs-kpis,.rs .g3{grid-template-columns:1fr 1fr}.jksec.alt{margin:16px -20px 0;padding:24px 20px}}
+@media(max-width:520px){.jk-grid.c4,.jk-grid.c3,.jk-grid.c5{grid-template-columns:1fr}.rs-kpis,.rs .g3{grid-template-columns:1fr}.rs-hero h1{font-size:23px}}
 </style>
 </head>
 <body>
@@ -539,21 +622,25 @@ body{font-size:16px}
   <div class="wrap feedpage">
     <div class="statusbar" id="statusbar"><span>수집 상태 불러오는 중…</span></div>
 
-    <!-- AI 자동 동향분석: 숫자·키워드는 스크립트, 문장은 검토 때 작성 (content/feed.json insight) -->
-    <section class="insight" id="insight" aria-label="AI 자동 동향분석">
-      <div>
-        <div class="ttl"><i>AI</i>AI 자동 동향분석 <span class="method" id="ins-date" style="margin:0 0 0 6px"></span></div>
-        <h2 id="ins-headline">오늘 수집분을 아직 분석하지 않았습니다.</h2>
-        <ol id="ins-points"></ol>
-        <div class="next" id="ins-next" hidden></div>
-        <p class="method" id="ins-method"></p>
+    <!-- v5: 잡코리아 메인 구조 (측정값: 2:1 상단 행, 카테고리 칩 + 4열, 3열, 5열) -->
+    <div class="jk">
+      <div class="jkrow">
+        <div class="jkbox" id="insight">
+          <div class="t"><b><i>AI</i>AI 자동 동향분석 <span class="meta" id="ins-date"></span></b><a href="#list" data-ch="health">전체 보기 ›</a></div>
+          <div class="desc" id="ins-method">숫자·키워드는 스크립트가 세고, 문장은 검토할 때 씁니다.</div>
+          <h2 class="hl" id="ins-headline">오늘 수집분을 아직 분석하지 않았습니다.</h2>
+          <ol id="ins-points"></ol>
+          <div class="nx" id="ins-next" hidden></div>
+        </div>
+        <div class="jkbox">
+          <div class="t"><b>나의 상태</b><a href="#ops">운영판 ›</a></div>
+          <div class="me" id="ins-stats"></div>
+        </div>
       </div>
-      <div class="istats" id="ins-stats"></div>
-    </section>
-
+    </div>
     <div id="rows"></div>
 
-    <details class="listtoggle" id="listtoggle">
+<details class="listtoggle" id="listtoggle">
       <summary>전체 목록과 필터 <span class="rowhead"><span class="n" id="list-count" style="font-family:var(--mono);font-size:13px;color:var(--mut);font-weight:400"></span></span></summary>
       <div class="feedwrap">
         <aside class="side" aria-label="필터">
@@ -588,6 +675,80 @@ body{font-size:16px}
 
 <!-- ===== 소개 ===== -->
 <section data-view="about" id="view-about">
+<div class="wrap">
+  <div class="rs-hero">
+    <div class="eyebrow">업무 자동화 포트폴리오 · 출발점 A · 작성 2026-09-10</div>
+    <h1>채용 공고·보건의료 정책·AI 신호 수집기가 매일 아침 자동으로 돌아서,<br>나에게 <em>'어제 새로 뜬 것 중 내 조건에 맞는 것'</em>만 판단이 붙은 피드로 준다.</h1>
+    <p class="lede">직무 연결 — 수집 → 규칙 필터 → 역량 태깅 → 검토·판단 → 정기 발행은 공공기관 성과관리·사업운영 공고의 '관련 동향 모니터링 및 정기 보고', 병원 기획팀의 '제도 변화 자료 수집·보고'와 같은 구조입니다.</p>
+    <div class="rs-kpis" id="rs-kpis">
+      <div class="rs-kpi"><div class="k">채용 공고 수집</div><div class="v">70<small>건</small></div><div class="s">잡알리오 23 · 사람인 26 · 잡코리아 21</div></div>
+      <div class="rs-kpi"><div class="k">보건·의료 감시 출처</div><div class="v">15<small>곳</small></div><div class="s">정상 11 · 건너뜀 4 · 후보 169 → 검토 15</div></div>
+      <div class="rs-kpi"><div class="k">AI 신호 · SQL 문제</div><div class="v">14 · 36</div><div class="s">공식 출처 신호 · 매일 5문제 출제·채점</div></div>
+      <div class="rs-kpi"><div class="k">스케줄</div><div class="v">4<small>개</small></div><div class="s">07:30 SQL · 08:00 AI · 08:10 의료 · 일 21:00</div></div>
+    </div>
+  </div>
+
+  <div class="rs">
+    <h2>무엇이 매일 도는가</h2><p class="sub">수집은 스크립트, 판단은 검토 단계에서만 (컬리 데일리 브리핑 A12 원칙)</p>
+    <div class="g3">
+      <div class="cardp"><span class="tag">채용</span><span class="tag g">스케줄</span><h3>fetch_posting.py → tag_competency.py</h3><p>3개 사이트 목록 diff → 경력 조건·제외어 규칙 → 코드북 13개 코드 자동 태깅 → 산업×직무 리포트, 마감 ics.</p></div>
+      <div class="cardp"><span class="tag">보건·의료</span><span class="tag g">08:10</span><h3>watch_sites.py</h3><p>RSS 4 · 목록 파서 6 · 표 1 · KCI 1. 스냅샷과 비교해 새 항목만. 실패는 fetch-log에 ok/fail/skip으로 남겨 '변화 없음'과 구분.</p></div>
+      <div class="cardp"><span class="tag">AI 신호</span><span class="tag g">08:00</span><h3>ai_signals.py</h3><p>OpenAI·METR RSS, 고용노동부 목록. 발표일 없는 자료 제외. 전망 확률은 자료 하나당 ±10%p 상한.</p></div>
+      <div class="cardp"><span class="tag">SQL</span><span class="tag g">07:30</span><h3>sql_daily.py → sql_grade.py</h3><p>요일별 주제, 원문 3 + 생성 2. 정답 쿼리를 BigQuery·MariaDB에서 실행해 결과가 있어야 출제.</p></div>
+      <div class="cardp"><span class="tag o">검토</span><span class="tag">수동</span><h3>/watch review · /career-signals review · /code-jobs</h3><p>relevance·요약·"나에게" 한 줄, 동향분석 3줄, 코드북 수정. 여기만 판단이고 나머지는 규칙.</p></div>
+      <div class="cardp"><span class="tag o">발행</span><span class="tag">수동</span><h3>hub_stats.py → hub_feed.py → npm run build</h3><p>content/*.json 주입 → index.html 하나 → validate(시크릿·날짜·모바일) 통과 시 커밋. 푸시는 사람이.</p></div>
+    </div>
+  </div>
+
+  <div class="rs">
+    <h2>벤치마킹 3건 — 빌린 것과 바꾼 것</h2><p class="sub">케이스 15선 패턴표. 데이터·주기·산출물 셋 다 바꿨다.</p>
+    <div class="tblwrap"><table><thead><tr><th>케이스</th><th>빌린 것</th><th>바꾼 것</th></tr></thead><tbody>
+      <tr><td>A12 컬리 데일리 브리핑</td><td>수집(스크립트)과 판단(AI) 분리, 중간 산출물을 파일로</td><td>Slack → 한국 채용·복지부·심평원. 슬랙 메시지 → 홈페이지 피드 + 동향분석</td></tr>
+      <tr><td>A13 매일 아침 AI 트렌드 리포트</td><td>RSS 몇 개로 시작, 막힌 기록 남기기, 키는 코드 밖</td><td>GitHub Actions → 데스크톱 스케줄. AI → 보건·의료 + 채용. 실패는 fetch-log.csv</td></tr>
+      <tr><td>A15 읽기 전용 데이터 품질 MCP</td><td>행 수·결측·중복·범위를 코드로 매번 점검</td><td>웨어하우스 → 취합 Excel·수집 CSV. 오류 목록 + 처리 로그 + 승인자 칸, pytest 9개</td></tr>
+    </tbody></table></div>
+  </div>
+
+  <div class="rs">
+    <h2>설계 시트</h2><p class="sub">워크북 선택지 사전 코드</p>
+    <div class="tblwrap"><table><thead><tr><th>항목</th><th>선택</th><th>실제</th></tr></thead><tbody>
+      <tr><td>의도</td><td>I1 반복 제거 (+I5 신뢰 확보)</td><td>매일 18곳을 눈으로 훑던 일 → 스케줄. 수집 실패를 '변화 없음'과 구분</td></tr>
+      <tr><td>연결 데이터</td><td>D4 크롤링·RSS, D2 공개 데이터셋</td><td>채용 3곳, 복지부·심평원·건보공단·병원협회·병원신문·메디파나, OpenAI·METR·고용노동부 / 장기요양 통계연보 15개년, Kaggle REES46</td></tr>
+      <tr><td>연결 방식</td><td>C5 크롤링·RSS (+C4 bq CLI)</td><td>robots·약관 확인, 하루 1회, 원문 미저장</td></tr>
+      <tr><td>산출물</td><td>O9 스케줄 파이프라인, O3 인터랙티브 리포트</td><td>스케줄 4개 · 이 홈페이지 피드</td></tr>
+      <tr><td>검증</td><td>V3 체크리스트, V4 한계 명시, V1 원본 대조</td><td>발표일 필수·URL 중복 금지·±10%p 상한·시크릿 검사·모바일 검사 / 출처 상태표에 fail·skip / 공고 URL 6건·정답 쿼리 36개 실행 확인</td></tr>
+      <tr><td>트리거</td><td>T2 스케줄 (+T1 커맨드 7개)</td><td>07:30 · 08:00 · 08:10 · 일 21:00</td></tr>
+      <tr><td>스킬</td><td>찾은 것 3 + 직접 만든 것 4</td><td>superpowers · frontend-design · python-patterns / kr-job-sources · competency-coding · sql-daily · star-writer</td></tr>
+      <tr><td>사람/기계 경계</td><td>기계: 수집·파싱·중복·필터·태깅·채점·집계·빌드</td><td>사람: fit 판단, relevance·요약·"나에게", 동향분석, 확률 변경, 코드북, 푸시</td></tr>
+    </tbody></table></div>
+  </div>
+
+  <div class="rs">
+    <h2>실행표 — 밟은 순서와 남긴 증거</h2><p class="sub">순서를 바꾸지 않았다. 스케줄은 마지막에 붙였다.</p>
+    <ol class="steps">
+      <li><div><b>손으로 한 번</b> 잡알리오·사람인 직접 검색으로 조건 확정. 17개 출처 접속 탐색<div class="ev">증거: config/sources.yaml, config/watch.yaml 주석(404·410·JS 기록)</div></div></li>
+      <li><div><b>수집 스크립트</b> fetch_posting.py · watch_sites.py · ai_signals.py<div class="ev">증거: postings.csv 70행, watch inbox 169건, ai inbox 50건</div></div></li>
+      <li><div><b>적재(멱등)</b> 중복 키, 스냅샷 diff, apply 시 이력 파일<div class="ev">증거: data/watch/snapshots, content/watch-history.jsonl, content/signals-history.jsonl</div></div></li>
+      <li><div><b>자동 점검</b> 발표일 없는 항목 제외, 시크릿·모바일 검사, PII 훅, ±10%p 상한<div class="ev">증거: "[validate] 통과 (신호 14건, 전망 7개, 경고 0)", fetch-log의 skip 4행</div></div></li>
+      <li><div><b>산출물 생성</b> hub_stats.py · hub_feed.py → 피드 104건 · 묶음 · 동향분석<div class="ev">증거: 빌드 로그 "feed 주입 완료 (104건)", 콘솔 에러 0, 375px 넘침 0</div></div></li>
+      <li><div><b>스케줄 + 실패 알림</b> 스케줄 4개, 완료 시 세션 알림<div class="ev">증거: ~/.claude/scheduled-tasks/ 4개. <span class="tag o">연속 실행 로그 0일 — 내일부터 축적</span></div></div></li>
+    </ol>
+  </div>
+
+  <div class="rs">
+    <h2>실패·한계 기록</h2><p class="sub">"돌리다가 계속 실패해요 → 기록이 제출물이다"</p>
+    <ul class="fail">
+      <li>잡알리오 복수 단어 키워드 0건 → 단어 1개씩. 고용24·KCI는 GET 검색어 무시 → 보류 / 키워드 필터.</li>
+      <li>장기요양 공지·자료실, KOSIS는 JS 렌더링이라 건너뜀. Playwright 연결 후 과제.</li>
+      <li>사람인은 헤드리스 접속 차단. 브라우저 패널로만 구조 측정.</li>
+      <li>코드북 v1이 "규정" 한 단어로 인사규정·결격사유까지 태깅 → v2에서 정확 키워드·부정어·절 제외(사용자 검수).</li>
+      <li>홈페이지를 4번 다시 만들었다. 참고 사이트를 측정하지 않고 짠 것이 원인. 이후 잡코리아·사람인 DOM 측정값으로 다시 짰다.</li>
+    </ul>
+    <p class="quote">다음 2주: 매일 08:10 수집 → 검토 → 피드. 연속 실행 로그와 실패·복구 기록을 그대로 쌓는다.</p>
+  </div>
+
+  <details class="oldabout"><summary>이력·프로젝트·경력 (이전 소개 페이지)</summary>
+
 <!-- 히어로 -->
 <section class="hero" id="top">
   <div class="wrap hero-in">
@@ -740,6 +901,9 @@ body{font-size:16px}
   </div>
 </section>
 
+
+  </details>
+</div>
 </section>
 
 <!-- ===== 운영판 ===== -->
@@ -1603,48 +1767,43 @@ function renderFeed(F){
   fetch('content/feed.json').then(r=>r.ok?r.json():null).then(F=>{renderFeed(F);renderRows(F);}).catch(()=>{});
 })();
 
-// ---------- 피드 v4: 캐러셀 + 동향분석 ----------
+// ---------- 피드 v5: 잡코리아 구조 (행 섹션 + 고정 그리드) ----------
 function renderRows(F){
   const esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
-  const CH={};(F.channels||[]).forEach(c=>CH[c.id]=c.name);
   const rows=document.getElementById('rows');if(!rows)return;
+  const $=id=>document.getElementById(id);
   const dd=i=>i.dday==null?'':'<span class="dd">'+(i.dday<0?'마감':i.dday===0?'D-day':'D-'+i.dday)+'</span>';
-  const card=i=>{
-    const chips=[];
-    if(i.channel==='jobs'){(i.category||'').split(' · ').filter(Boolean).forEach(c=>chips.push('<span>'+esc(c)+'</span>'));(i.tags||[]).slice(0,2).forEach(t=>chips.push('<span>'+esc(t)+'</span>'));}
-    else{if(i.category)chips.push('<span>'+esc(i.category)+'</span>');if(i.relevance==='high')chips.push('<span class="hi">중요</span>');if(i.impact)chips.push('<span class="imp-'+esc(i.impact)+'">'+({strengthen:'전망 강화',weaken:'전망 약화',neutral:'중립'}[i.impact]||i.impact)+'</span>');if(i.official===false)chips.push('<span class="hi">비공식</span>');(i.tags||[]).slice(0,2).forEach(t=>t&&chips.push('<span>'+esc(t)+'</span>'));}
-    const one=i.channel==='jobs'?(i.summary||''):(i.note?'<b>나에게</b>'+esc(i.note):esc(i.summary||''));
+  const card=i=>{const tg=[];
+    if(i.channel==='jobs'){(i.category||'').split(' · ').filter(Boolean).forEach(c=>tg.push('<span>'+esc(c)+'</span>'));}
+    else{if(i.category)tg.push('<span>'+esc(i.category)+'</span>');if(i.relevance==='high')tg.push('<span class="hi">중요</span>');if(i.impact)tg.push('<span class="imp-'+esc(i.impact)+'">'+({strengthen:'전망 강화',weaken:'전망 약화',neutral:'중립'}[i.impact]||i.impact)+'</span>');if(i.official===false)tg.push('<span class="hi">비공식</span>');(i.tags||[]).slice(0,1).forEach(t=>t&&tg.push('<span>'+esc(t)+'</span>'));}
     const title=i.url?'<a href="'+esc(i.url)+'" target="_blank" rel="noopener noreferrer">'+esc(i.title)+'</a>':esc(i.title);
-    return '<article class="cd '+(i.relevance==='high'?'high':'')+'"><h3>'+title+'</h3><div class="org">'+esc(i.publisher)+dd(i)+'<span class="dt">'+esc(i.published_at||'')+'</span></div><div class="chips">'+chips.join('')+'</div><p class="one">'+(i.channel==='jobs'?esc(one):one)+'</p></article>';
-  };
-  const secs=[
-    {id:'jobs',title:'오늘의 채용 공고',sub:'신입·경력무관 · 마감 가까운 순',pick:()=>F.items.filter(i=>i.channel==='jobs'&&(i.dday==null||i.dday>=0)).sort((a,b)=>(a.dday??999)-(b.dday??999)).slice(0,12)},
-    {id:'health',title:'보건·의료에서 바뀌는 것',sub:'공식 출처 · 검토된 항목만',pick:()=>F.items.filter(i=>i.channel==='health'||i.channel==='research').slice(0,12)},
-    {id:'ai',title:'AI 신호',sub:'전망에 반영된 공식 자료',pick:()=>F.items.filter(i=>i.channel==='ai').slice(0,12)},
-    {id:'sql',title:'오늘의 SQL 5문제',sub:'원문 3 + 생성 2',pick:()=>F.items.filter(i=>i.channel==='sql')}
-  ];
-  rows.innerHTML=secs.map(sec=>{const it=sec.pick();if(!it.length)return '';
-    return '<div class="rowhead"><h2>'+esc(sec.title)+' <span class="n">'+it.length+'</span></h2><span class="sub">'+esc(sec.sub)+'</span><a href="#list" data-ch="'+sec.id+'">전체 보기 →</a></div>'
-      +'<div class="rowscroll"><button class="arrow l" aria-label="이전">‹</button><div class="cards">'+it.map(card).join('')+'<article class="cd more"><a href="#list" data-ch="'+sec.id+'">'+esc(CH[sec.id]||sec.id)+' 전체 →</a></article></div><button class="arrow r" aria-label="다음">›</button></div>';}).join('');
-  rows.querySelectorAll('.rowscroll').forEach(r=>{const c=r.querySelector('.cards');const l=r.querySelector('.arrow.l'),rt=r.querySelector('.arrow.r');
-    const upd=()=>{l.disabled=c.scrollLeft<=2;rt.disabled=c.scrollLeft+c.clientWidth>=c.scrollWidth-2;};
-    l.addEventListener('click',()=>c.scrollBy({left:-c.clientWidth*.8}));rt.addEventListener('click',()=>c.scrollBy({left:c.clientWidth*.8}));c.addEventListener('scroll',upd);upd();});
-  rows.addEventListener('click',e=>{const a=e.target.closest('a[data-ch]');if(!a)return;e.preventDefault();const d=document.getElementById('listtoggle');d.open=true;
-    const li=document.querySelector('#f-channel li[data-v="'+a.dataset.ch+'"]');if(li)li.click();d.scrollIntoView({behavior:'smooth',block:'start'});});
-  // 동향분석
-  const I=F.insight||{};const $=id=>document.getElementById(id);
-  if($('ins-headline')&&I.headline){$('ins-headline').textContent=I.headline;$('ins-points').innerHTML=(I.points||[]).map(p=>'<li>'+esc(p)+'</li>').join('');
-    if(I.watch_next){$('ins-next').hidden=false;$('ins-next').innerHTML='<b>다음 볼 것</b>'+esc(I.watch_next);}
-    $('ins-method').textContent=I.method||'';$('ins-date').textContent=I.text_date?'분석 '+I.text_date:'';}
-  else if($('ins-method')){$('ins-method').textContent=I.method||'';}
-  if($('ins-stats')){const nb=I.new_by_channel||{};
-    $('ins-stats').innerHTML='<div class="istat"><div class="k">오늘 신규</div><div class="v">'+esc(F.meta&&F.meta.today_new||0)+'<small>건</small></div></div>'
-      +'<div class="istat"><div class="k">7일 내 마감 공고</div><div class="v">'+esc(I.deadline_7d||0)+'<small>건</small></div></div>'
-      +'<div class="istat"><div class="k">보건·의료 신규</div><div class="v">'+esc((nb.health||0)+(nb.research||0))+'<small>건</small></div></div>'
-      +'<div class="istat"><div class="k">중요 표시</div><div class="v">'+esc(I.high||0)+'<small>건</small></div></div>'
-      +'<div class="kws">'+(I.keywords||[]).map(k=>'<span>'+esc(k.k)+'<small>'+esc(k.n)+'</small></span>').join('')+'</div>';}
-  const sb=document.getElementById('statusbar');if(sb&&F.pipelines){sb.insertAdjacentHTML('beforeend','');}
-  const lc=document.getElementById('list-count');if(lc)lc.textContent=F.items.length+'건';
+    const sm=i.channel==='jobs'?'':(i.note?'<div class="sm">'+esc(i.note)+'</div>':'');
+    return '<article class="jc '+(i.relevance==='high'&&i.channel!=='ai'?'high':'')+'"><span class="star">☆</span><h3>'+title+'</h3><div class="co">'+esc(i.publisher)+dd(i)+'<span class="dt">'+esc(i.published_at||'')+'</span></div>'+sm+'<div class="tg">'+tg.join('')+'</div></article>';};
+  const fill=(items,n)=>{const out=items.slice(0,n).map(card);while(out.length<n)out.push('<article class="jc empty">—</article>');return out.join('');};
+  const JOBFAM=[['all','전체',()=>true],['plan','기획',i=>/기획|전략/.test(i.category+i.summary+i.title)],['research','연구행정',i=>/연구|과제|산학|R&D/.test(i.summary+i.title)],['data','데이터',i=>/데이터|분석|통계|AI/.test(i.summary+i.title+(i.tags||[]).join(''))],['ops','사업운영',i=>/사업|운영|관리/.test(i.summary+i.title)],['admin','행정',i=>/행정|사무|총무/.test(i.summary+i.title)]];
+  const jobs=F.items.filter(i=>i.channel==='jobs'&&(i.dday==null||i.dday>=0)).sort((a,b)=>(a.dday??999)-(b.dday??999));
+  const health=F.items.filter(i=>i.channel==='health'||i.channel==='research');
+  const ai=F.items.filter(i=>i.channel==='ai');const sql=F.items.filter(i=>i.channel==='sql');
+  rows.innerHTML=
+    '<section class="jksec"><div class="jkhead"><h2>채용 공고 <span class="n">신입·경력무관 '+jobs.length+'건 · 마감 가까운 순</span></h2><div class="more"><a href="#list" data-ch="jobs">더보기 ›</a></div></div>'
+    +'<div class="chips" id="jobfam">'+JOBFAM.map(([k,n,f])=>'<button data-k="'+k+'" class="'+(k==='all'?'on':'')+'">'+n+' '+jobs.filter(f).length+'</button>').join('')+'</div>'
+    +'<div class="jk-grid c4" id="jobgrid">'+fill(jobs,8)+'</div></section>'
+    +'<section class="jksec alt"><div class="jkhead"><h2>보건·의료에서 바뀌는 것 <span class="n">공식 출처 · 검토 '+health.length+'건</span></h2><div class="more"><a href="#list" data-ch="health">더보기 ›</a></div></div><div class="jk-grid c3">'+fill(health,6)+'</div></section>'
+    +'<section class="jksec"><div class="jkhead"><h2>AI 신호 <span class="n">전망에 반영된 공식 자료 '+ai.length+'건</span></h2><div class="more"><a href="#list" data-ch="ai">더보기 ›</a></div></div><div class="jk-grid c5">'+fill(ai,5)+'</div></section>'
+    +'<section class="jksec alt"><div class="jkhead"><h2>오늘의 SQL 5문제 <span class="n">원문 3 + 생성 2</span></h2><div class="more"><a href="#list" data-ch="sql">더보기 ›</a></div></div><div class="jk-grid c5">'+fill(sql,5)+'</div></section>';
+  const jf=$('jobfam');if(jf){jf.addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;jf.querySelectorAll('button').forEach(x=>x.classList.toggle('on',x===b));const f=JOBFAM.find(x=>x[0]===b.dataset.k)[2];$('jobgrid').innerHTML=fill(jobs.filter(f),8);});}
+  rows.addEventListener('click',e=>{const a=e.target.closest('a[data-ch]');if(!a)return;e.preventDefault();const d=$('listtoggle');d.open=true;const li=document.querySelector('#f-channel li[data-v="'+a.dataset.ch+'"]');if(li)li.click();d.scrollIntoView({behavior:'smooth',block:'start'});});
+  const ib=document.querySelector('#insight a[data-ch]');if(ib)ib.addEventListener('click',e=>{e.preventDefault();const d=$('listtoggle');d.open=true;const li=document.querySelector('#f-channel li[data-v="health"]');if(li)li.click();d.scrollIntoView({behavior:'smooth'});});
+  const I=F.insight||{};
+  if(I.headline){$('ins-headline').textContent=I.headline;$('ins-points').innerHTML=(I.points||[]).map(p=>'<li>'+esc(p)+'</li>').join('');if(I.watch_next){$('ins-next').hidden=false;$('ins-next').innerHTML='<b>다음 볼 것</b>'+esc(I.watch_next);}$('ins-date').textContent=I.text_date?'· 분석 '+I.text_date:'';}
+  if(I.method)$('ins-method').textContent=I.method;
+  const nb=I.new_by_channel||{};const pl=F.pipelines||[];const st={ok:'정상',fail:'실패',none:'없음'};
+  $('ins-stats').innerHTML='<div class="it"><div class="v">'+esc(F.meta&&F.meta.today_new||0)+'<small>건</small></div><div class="k">오늘 신규</div></div>'
+    +'<div class="it"><div class="v">'+esc(I.deadline_7d||0)+'<small>건</small></div><div class="k">7일 내 마감 공고</div></div>'
+    +'<div class="it"><div class="v">'+esc((nb.health||0)+(nb.research||0))+'<small>건</small></div><div class="k">보건·의료 신규</div></div>'
+    +'<div class="it"><div class="v">'+esc(I.high||0)+'<small>건</small></div><div class="k">중요 표시</div></div>'
+    +'<div class="pipes">'+pl.map(p=>'<span><i class="dot '+esc(p.status)+'"></i>'+esc(p.name.replace(' 수집','').replace(' 출제','').replace(' 감시',''))+' '+esc(p.last_run?p.last_run.slice(5):'—')+'</span>').join('')+'</div>';
+  const lc=$('list-count');if(lc)lc.textContent=F.items.length+'건';
 }
 </script>
 </body>
