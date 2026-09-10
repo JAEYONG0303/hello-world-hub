@@ -449,6 +449,7 @@ body{font-size:16px}
 @media(max-width:1080px){.feedwrap{grid-template-columns:200px minmax(0,1fr)}.rcol{grid-column:1/-1}}
 @media(max-width:760px){
  .feedwrap{grid-template-columns:1fr;gap:18px;padding-top:16px}
+ .bar{gap:10px}.tabs a{white-space:nowrap;padding:6px 10px;font-size:14px}.bar .date{display:none}.logo small{display:none}
  .side .grp{margin-bottom:12px}
  .fl{display:flex;gap:6px;overflow-x:auto;scrollbar-width:none;padding-bottom:4px}
  .fl li{white-space:nowrap;border:1px solid var(--grid);background:var(--card)}
