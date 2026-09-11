@@ -891,11 +891,12 @@ body{font-size:13.5px;line-height:1.55}
   color: var(--lime);
 }
 
-/* CARDS */
+/* CARDS — bento: card 1 tall on the left, 2·3 stacked on the right */
 .hm-cards { border-bottom: 1px solid var(--ln); }
 .hm-cards-row {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 1.3fr 1fr;
+  grid-template-rows: repeat(2, 1fr);
   gap: 0;
   border-top: 1px solid var(--ln);
 }
@@ -906,9 +907,30 @@ body{font-size:13.5px;line-height:1.55}
   transition: background 0.15s;
   color: inherit;
   border-right: 1px solid var(--ln);
+  border-bottom: 1px solid var(--ln);
+  position: relative;
+  overflow: hidden;
 }
-.hm-card:last-child { border-right: none; }
+.hm-card:nth-child(1) { grid-row: 1 / 3; border-bottom: none; }
+.hm-card:nth-child(2) { border-right: none; }
+.hm-card:nth-child(3) { border-right: none; border-bottom: none; }
 .hm-card:hover { background: #111113; }
+.hm-card:before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(260px circle at var(--mx,50%) var(--my,50%), rgba(196,241,53,.14), transparent 70%);
+  opacity: 0;
+  transition: opacity .25s ease;
+  pointer-events: none;
+}
+.hm-card:hover:before { opacity: 1; }
+.hm-reveal {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity .6s ease, transform .6s ease;
+}
+.hm-reveal.hm-in { opacity: 1; transform: none; }
 .hm-card-num {
   font-size: 12px;
   color: var(--t3);
@@ -1065,8 +1087,8 @@ body{font-size:13.5px;line-height:1.55}
   .hm-hero h1 { font-size: 34px; line-height: 1.18; }
   .hm-hero-in { padding: 64px 0 32px; }
   .hm-hero-meta { display: block; bottom: 0; margin-top: 24px; box-shadow: none; }
-  .hm-cards-row { grid-template-columns: 1fr; }
-  .hm-card { border-right: none; border-bottom: 1px solid var(--ln); }
+  .hm-cards-row { grid-template-columns: 1fr; grid-template-rows: none; }
+  .hm-card, .hm-card:nth-child(1), .hm-card:nth-child(2), .hm-card:nth-child(3) { grid-row: auto; border-right: none; border-bottom: 1px solid var(--ln); }
   .hm-card:last-child { border-bottom: none; }
   .hm-nums-row { grid-template-columns: 1fr; }
   .hm-num-col {
@@ -1119,16 +1141,16 @@ tr.conf-debate td{padding-top:0;border-top:0}tr.conf-debate details{font-size:13
       </div></div>
     </section>
     <section class="hm-cards"><div class="hm-wrap"><div class="hm-cards-row">
-      <a href="#jobs" data-go="jobs" class="hm-card"><span class="hm-card-num"><span class="hm-mono">01</span> · 매일 아침 수집</span><h3>채용 공고</h3><p class="hm-card-desc">보건·공공·대학 행정 직무의 신입·경력무관 공고를 매일 수집합니다.</p><div class="hm-card-live-wrap"><p class="hm-card-live" id="hm-soon"></p><p class="hm-card-live-pub" id="hm-soon-pub"></p></div></a>
-      <a href="#news" data-go="news" class="hm-card"><span class="hm-card-num"><span class="hm-mono">02</span> · <span class="hm-mono">15</span>개 출처 감시</span><h3>보건·의료 뉴스</h3><p class="hm-card-desc">복지부·심평원·병원협회 등 15개 출처의 정책과 고시를 모니터링합니다.</p><div class="hm-card-live-wrap"><p class="hm-card-live" id="hm-news"></p></div></a>
-      <a href="#practice" data-go="practice" class="hm-card"><span class="hm-card-num"><span class="hm-mono">03</span> · 매일 <span class="hm-mono">5</span>문제</span><h3>문제 풀이</h3><p class="hm-card-desc">매일 SQL 5문제, Python 5문제를 자동 출제하고 BigQuery로 채점합니다.</p><div class="hm-card-live-wrap"><p class="hm-card-live" id="hm-prac"></p></div></a>
+      <a href="#jobs" data-go="jobs" class="hm-card hm-reveal"><span class="hm-card-num"><span class="hm-mono">01</span> · 매일 아침 수집</span><h3>채용 공고</h3><p class="hm-card-desc">보건·공공·대학 행정 직무의 신입·경력무관 공고를 매일 수집합니다.</p><div class="hm-card-live-wrap"><p class="hm-card-live" id="hm-soon"></p><p class="hm-card-live-pub" id="hm-soon-pub"></p></div></a>
+      <a href="#news" data-go="news" class="hm-card hm-reveal"><span class="hm-card-num"><span class="hm-mono">02</span> · <span class="hm-mono">15</span>개 출처 감시</span><h3>보건·의료 뉴스</h3><p class="hm-card-desc">복지부·심평원·병원협회 등 15개 출처의 정책과 고시를 모니터링합니다.</p><div class="hm-card-live-wrap"><p class="hm-card-live" id="hm-news"></p></div></a>
+      <a href="#practice" data-go="practice" class="hm-card hm-reveal"><span class="hm-card-num"><span class="hm-mono">03</span> · 매일 <span class="hm-mono">5</span>문제</span><h3>문제 풀이</h3><p class="hm-card-desc">매일 SQL 5문제, Python 5문제를 자동 출제하고 BigQuery로 채점합니다.</p><div class="hm-card-live-wrap"><p class="hm-card-live" id="hm-prac"></p></div></a>
     </div></div></section>
     <section class="hm-nums"><div class="hm-wrap"><div class="hm-nums-row">
-      <div class="hm-num-col"><div class="hm-num-val-wrap"><span class="hm-num-val" id="hm-upcoming">—</span><span class="hm-num-unit">건</span></div><span class="hm-num-lbl">7일 내 마감</span></div>
-      <div class="hm-num-col"><div class="hm-num-val-wrap"><span class="hm-num-val" id="hm-srccount">—</span><span class="hm-num-unit">곳</span></div><span class="hm-num-lbl">채용 소스</span></div>
-      <div class="hm-num-col"><div class="hm-num-val-wrap"><span class="hm-num-val" id="hm-watchcount">15</span><span class="hm-num-unit">곳</span></div><span class="hm-num-lbl">감시 출처</span></div>
+      <div class="hm-num-col hm-reveal"><div class="hm-num-val-wrap"><span class="hm-num-val" id="hm-upcoming">—</span><span class="hm-num-unit">건</span></div><span class="hm-num-lbl">7일 내 마감</span></div>
+      <div class="hm-num-col hm-reveal"><div class="hm-num-val-wrap"><span class="hm-num-val" id="hm-srccount">—</span><span class="hm-num-unit">곳</span></div><span class="hm-num-lbl">채용 소스</span></div>
+      <div class="hm-num-col hm-reveal"><div class="hm-num-val-wrap"><span class="hm-num-val" id="hm-watchcount">15</span><span class="hm-num-unit">곳</span></div><span class="hm-num-lbl">감시 출처</span></div>
     </div></div></section>
-    <section class="hm-about"><div class="hm-wrap"><div class="hm-about-grid">
+    <section class="hm-about"><div class="hm-wrap"><div class="hm-about-grid hm-reveal">
       <div class="hm-about-left"><span class="hm-about-lbl">ABOUT</span><span class="hm-about-heading">지금 하는 일</span></div>
       <div class="hm-about-body">
         <p><span class="hm-bold-first">살펴보는 자리 —</span> 보건·공공·대학 쪽 기획·성과관리·사업운영·통계·연구행정 공고 (신입·경력무관)</p>
@@ -2452,7 +2474,27 @@ function renderRows(F){
   document.addEventListener('click',e=>{const a=e.target.closest('a[data-ch]');if(!a)return;e.preventDefault();const d=$('listtoggle');if(!d)return;d.open=true;const li=document.querySelector('#f-channel li[data-v="'+a.dataset.ch+'"]');if(li)li.click();d.scrollIntoView({behavior:'smooth',block:'start'});});
 }
 
-
+// --- 홈: 스크롤 등장 애니메이션 + 카드 커서 스포트라이트
+(function () {
+  "use strict";
+  if (window.IntersectionObserver) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) { e.target.classList.add("hm-in"); io.unobserve(e.target); }
+      });
+    }, { threshold: 0.15, rootMargin: "0px 0px -40px 0px" });
+    document.querySelectorAll(".hm-reveal").forEach(function (el) { io.observe(el); });
+  } else {
+    document.querySelectorAll(".hm-reveal").forEach(function (el) { el.classList.add("hm-in"); });
+  }
+  document.querySelectorAll(".hm-card").forEach(function (card) {
+    card.addEventListener("mousemove", function (e) {
+      var r = card.getBoundingClientRect();
+      card.style.setProperty("--mx", (e.clientX - r.left) + "px");
+      card.style.setProperty("--my", (e.clientY - r.top) + "px");
+    });
+  });
+})();
 </script>
 </body>
 </html>
