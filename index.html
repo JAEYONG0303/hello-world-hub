@@ -196,8 +196,8 @@ h1,h2,h3{font-family:var(--serif);font-weight:700;letter-spacing:-.02em;margin:0
 .status[data-s="doing"]{color:var(--blue-ink);border-color:var(--blue);background:var(--blue-soft)}
 .status[data-s="done"]{color:var(--green);border-color:var(--green);background:var(--green-soft)}
 span.status{cursor:default}
-.projlink,.ailink,.careerlink{color:var(--blue-ink);font-size:14.5px;text-decoration:none;min-height:36px;line-height:36px;font-weight:600}
-.projlink:hover,.ailink:hover,.careerlink:hover{text-decoration:underline}
+.projlink,.careerlink{color:var(--blue-ink);font-size:14.5px;text-decoration:none;min-height:36px;line-height:36px;font-weight:600}
+.projlink:hover,.careerlink:hover{text-decoration:underline}
 .more{background:var(--surf);border:1px solid var(--grid);color:var(--sec);font-family:inherit;font-size:13.5px;border-radius:9px;padding:8px 14px;cursor:pointer;min-height:38px}
 .more:hover{border-color:var(--blue);color:var(--blue-ink)}
 .files{display:none;margin-top:14px;padding-top:14px;border-top:1px solid var(--grid)}
@@ -212,7 +212,7 @@ span.status{cursor:default}
 .ainum{color:var(--blue-ink);font-family:var(--mono);font-size:13px;font-weight:600;letter-spacing:.1em}
 .aititle{font-family:var(--sans);font-size:18px;font-weight:700;margin:8px 0 0}
 .aitopic{color:var(--sec);font-size:14.5px;margin:6px 0 0;flex:1}
-.ailink{display:inline-block;margin-top:12px}
+.aipath{display:inline-block;margin-top:12px;font-family:var(--mono);font-size:12.5px;color:var(--mut);letter-spacing:.01em}
 .ai .status{margin-top:12px;align-self:flex-start}
 .arcgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
 .arc{border:1px solid var(--grid);border-radius:var(--radius-lg);padding:20px 22px;background:var(--card);box-shadow:var(--shadow)}
@@ -365,7 +365,6 @@ span.status{cursor:default}
  .tbl td:before{content:attr(data-h);display:block;color:var(--blue-ink);font-size:12px;letter-spacing:.1em;font-weight:700;margin-bottom:2px}
  .block{margin-top:36px}
  .more,.status{min-height:44px;padding-left:16px;padding-right:16px}
- .ailink{min-height:44px;line-height:44px}
  .steps li{grid-template-columns:30px 1fr;font-size:15px}.steps .st{grid-column:2;justify-self:start}
 }
 @media(max-width:480px){.kpis,.habits{grid-template-columns:1fr}.kpi .v{font-size:32px}.sync{display:none}.cta .btn{width:100%;justify-content:center}}
@@ -1825,11 +1824,12 @@ tr.conf-debate td{padding-top:0;border-top:0}tr.conf-debate details{font-size:13
       card.className = "ai";
       card.innerHTML =
         '<div class="ainum"></div><h3 class="aititle"></h3><p class="aitopic"></p>' +
-        '<a class="ailink" target="_blank" rel="noopener noreferrer">Notion 열기 ↗</a>';
+        '<span class="aipath"></span>';
       card.querySelector(".ainum").textContent = "PART " + a.num;
       card.querySelector(".aititle").textContent = a.title;
       card.querySelector(".aitopic").textContent = a.topic;
-      card.querySelector(".ailink").href = a.url;
+      // 외부 Notion 원본은 공개 링크로 노출하지 않는다. 내부 경로만 표시(원본 url은 DATA.ai에 보관).
+      card.querySelector(".aipath").textContent = "path: notes/ai/" + a.id;
 
       function sync() { card.classList.toggle("is-done", statusOf(a.id, a.status) === "done"); }
       card.appendChild(statusButton(a.id, a.status, sync));
