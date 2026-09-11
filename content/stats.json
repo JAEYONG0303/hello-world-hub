@@ -40,7 +40,14 @@
     "run_dates": [
       "2026-09-09",
       "2026-09-10"
-    ]
+    ],
+    "success_rate": null,
+    "avg_duration_ms": null,
+    "last_success_at": null,
+    "success_streak_days": null,
+    "by_source_success_rate": {},
+    "sample_days": 0,
+    "sample_ready": false
   },
   "sql": {
     "bank": 36,

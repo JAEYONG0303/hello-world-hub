@@ -114,6 +114,54 @@ if (stats && feed) {
 } else if (!stats) {
   fail("content/stats.json 없음 — hub_stats.py 를 먼저 실행해야 함");
 }
+
+// ── 채용 데이터 품질 (postings.csv 직접 파싱) ─────────
+function parseCsv(text) {
+  const rows = [];
+  let row = [], field = "", inQuotes = false;
+  for (let i = 0; i < text.length; i++) {
+    const c = text[i];
+    if (inQuotes) {
+      if (c === '"' && text[i + 1] === '"') { field += '"'; i++; }
+      else if (c === '"') inQuotes = false;
+      else field += c;
+    } else if (c === '"') inQuotes = true;
+    else if (c === ",") { row.push(field); field = ""; }
+    else if (c === "\n" || c === "\r") {
+      if (c === "\r" && text[i + 1] === "\n") i++;
+      row.push(field); field = ""; rows.push(row); row = [];
+    } else field += c;
+  }
+  if (field || row.length) { row.push(field); rows.push(row); }
+  if (!rows.length) return [];
+  const header = rows[0].map((h) => h.replace(/^﻿/, ""));
+  return rows.slice(1).filter((r) => r.length > 1 || r[0]).map((r) => Object.fromEntries(header.map((h, i) => [h, r[i] ?? ""])));
+}
+// my agent 저장소는 hub와 별개 위치(다른 부모 디렉토리)에 있어 상대경로로 못 찾는다. 고정 경로.
+const POSTINGS_PATH = "C:\\Users\\wodyd\\Desktop\\my agent\\data\\jobs\\postings.csv";
+let postings = null;
+try { postings = parseCsv(readFileSync(POSTINGS_PATH, "utf8")); } catch (e) { /* my agent 를 못 찾으면 건너뜀 — 이 검사는 선택적(다른 환경에서 빌드할 때 대비) */ }
+if (postings && postings.length) {
+  const ids = new Map();
+  const bySourceUrl = new Map();
+  const JOB_FAMILY_STATUS = new Set(["confirmed", "review_needed", ""]);
+  for (const r of postings) {
+    if (r.id) ids.set(r.id, (ids.get(r.id) || 0) + 1);
+    const key = `${r.source}|${r.source_url}`;
+    if (r.source_url) bySourceUrl.set(key, (bySourceUrl.get(key) || 0) + 1);
+    if (r.deadline_date && r.posted_date && r.deadline_date < r.posted_date)
+      fail(`postings.csv: ${r.id} 마감일(${r.deadline_date})이 등록일(${r.posted_date})보다 빠름`);
+    if (r.source_url && !/^https?:\/\//.test(r.source_url))
+      fail(`postings.csv: ${r.id} source_url 이 http(s) 스킴이 아님: ${r.source_url}`);
+    if (!JOB_FAMILY_STATUS.has(r.job_family_status || ""))
+      fail(`postings.csv: ${r.id} job_family_status 허용값 아님: ${r.job_family_status}`);
+    if ((r.excluded_reason || "").trim() && !(r.deadline_date && r.deadline_date < todayStr()))
+      warn.push(`postings.csv: ${r.id} excluded_reason 있는 채로 저장됨(persist 는 기본적으로 저장하지 않는데 예외 케이스로 보임) — 확인 필요`);
+  }
+  for (const [id, n] of ids) if (n > 1) fail(`postings.csv: 중복 id ${id} (${n}건)`);
+  for (const [key, n] of bySourceUrl) if (n > 1) fail(`postings.csv: 같은 source+source_url 중복 ${key} (${n}건)`);
+}
+function todayStr() { return new Date().toISOString().slice(0, 10); }
 if (stats && stats.pipeline && stats.pipeline.reconciled === false) {
   warn.push(`파이프라인 집계 불일치: 수집(${stats.pipeline.collected}) !== 추가+중복제거+경력제외 합(오차 ${stats.pipeline.reconcile_diff}) — fetch-log.csv 기록 누락 가능성, 빌드는 계속 진행`);
 }
