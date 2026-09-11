@@ -94,6 +94,31 @@ if (html) {
   if (opens !== closes) fail(`section 태그 불일치: 열림 ${opens} / 닫힘 ${closes}`);
 }
 
+// ── KPI 일치성 (소개 탭·채용 탭·홈 숫자가 서로 다른 곳에서 계산되어 어긋나는 것을 막는다) ──
+const STATS_PATH = new URL("./content/stats.json", import.meta.url);
+const FEED_PATH = new URL("./content/feed.json", import.meta.url);
+let stats = null, feed = null;
+try { if (existsSync(STATS_PATH)) stats = JSON.parse(readFileSync(STATS_PATH, "utf8")); } catch (e) { fail("stats.json 파싱 실패: " + e.message); }
+try { if (existsSync(FEED_PATH)) feed = JSON.parse(readFileSync(FEED_PATH, "utf8")); } catch (e) { fail("feed.json 파싱 실패: " + e.message); }
+if (stats && feed) {
+  const feedJobsCount = (feed.items || []).filter((i) => i.channel === "jobs").length;
+  if (stats.jobs && typeof stats.jobs.total === "number" && stats.jobs.total !== feedJobsCount)
+    fail(`KPI 불일치: stats.json jobs.total(${stats.jobs.total}) !== feed.json 채용 항목 수(${feedJobsCount})`);
+  const feedSourcesCount = ((feed.jobs_facets || {}).source || []).length;
+  if (stats.jobs && typeof stats.jobs.sources_count === "number" && stats.jobs.sources_count !== feedSourcesCount)
+    fail(`KPI 불일치: stats.json jobs.sources_count(${stats.jobs.sources_count}) !== feed.json 출처 수(${feedSourcesCount})`);
+  if (stats.jobs && stats.jobs.by_source) {
+    const sum = Object.values(stats.jobs.by_source).reduce((a, b) => a + b, 0);
+    if (sum !== stats.jobs.total) fail(`KPI 불일치: stats.json jobs.by_source 합계(${sum}) !== jobs.total(${stats.jobs.total})`);
+  }
+} else if (!stats) {
+  fail("content/stats.json 없음 — hub_stats.py 를 먼저 실행해야 함");
+}
+if (html) {
+  const m = html.match(/<div class="rs-kpi" id="rs-kpi-jobs">([\s\S]*?)<\/div>\s*<\/div>/);
+  if (m && /\d{2,}/.test(m[1])) fail("소개 탭 채용 공고 KPI 카드에 숫자가 하드코딩되어 있음(JS 로 채워야 함)");
+}
+
 // ── built ────────────────────────────────────────
 if (args.has("--built")) {
   if (!existsSync(DIST_PATH)) fail("dist/server/index.js 없음");

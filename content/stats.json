@@ -1,9 +1,19 @@
 {
   "updated": "2026-09-11",
   "jobs": {
-    "total": 77,
+    "total": 75,
     "upcoming7": 35,
-    "next_deadline": "2026-09-11"
+    "next_deadline": "2026-09-11",
+    "sources_count": 5,
+    "by_source": {
+      "사람인": 26,
+      "잡알리오": 23,
+      "잡코리아": 19,
+      "경제·인문사회연구회": 4,
+      "메디컬잡": 3
+    },
+    "last_fetched_at": "2026-09-10",
+    "new_this_week": 75
   },
   "sql": {
     "bank": 36,
