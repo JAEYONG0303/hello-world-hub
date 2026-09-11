@@ -772,21 +772,53 @@ body{font-size:13.5px;line-height:1.55}
 .hm-hero {
   display: block;
   min-height: auto;
+  position: relative;
   border-bottom: 1px solid var(--ln);
   opacity: 0;
   transform: translateY(18px);
   animation: fu 0.5s cubic-bezier(0.22, 1, 0.36, 1) 0.08s forwards;
 }
-.hm-hero .hm-wrap { width: 100%; }
+.hm-hero:before {
+  content: "";
+  position: absolute;
+  right: -14%;
+  top: -38%;
+  width: 56%;
+  height: 130%;
+  background: radial-gradient(closest-side, rgba(196,241,53,.10), transparent 72%);
+  pointer-events: none;
+}
+.hm-hero .hm-wrap { width: 100%; position: relative; }
 .hm-hero-in {
   max-width:840px;
-  padding: 96px 0 80px;
+  padding: 108px 0 64px;
+  position: relative;
+}
+.hm-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  letter-spacing: .02em;
+  color: var(--lime);
+  border: 1px solid var(--lime-ring);
+  background: rgba(196,241,53,.06);
+  padding: 5px 12px;
+  margin-bottom: 22px;
+}
+.hm-badge:before {
+  content: "";
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--lime);
+  box-shadow: 0 0 0 3px rgba(196,241,53,.15);
 }
 .hm-hero h1 {
-  font-size:48px;
+  font-size:60px;
   font-weight: 700;
-  letter-spacing: -0.02em;
-  line-height: 1.2;
+  letter-spacing: -0.03em;
+  line-height: 1.08;
   color: var(--t1);
   margin-bottom: 24px;
 }
@@ -797,7 +829,7 @@ body{font-size:13.5px;line-height:1.55}
   max-width:720px;
   margin-bottom: 32px;
 }
-.hm-hero-btns { display: flex; gap: 12px; margin-bottom: 22px; flex-wrap: wrap; }
+.hm-hero-btns { display: flex; gap: 12px; margin-bottom: 40px; flex-wrap: wrap; }
 .hm-btn-p {
   display: inline-flex; align-items: center;
   height: 44px; padding: 0 22px;
@@ -817,13 +849,23 @@ body{font-size:13.5px;line-height:1.55}
 }
 .hm-btn-g:hover { border-color: var(--t2); }
 .hm-hero-meta {
-  font-size: 12px;
+  display: inline-block;
+  font-size: 13px;
   color: var(--t3);
   letter-spacing: 0;
+  background: #111113;
+  border: 1px solid var(--ln);
+  padding: 14px 20px;
+  margin: 0;
+  position: relative;
+  bottom: -40px;
+  z-index: 2;
+  box-shadow: 0 28px 56px -30px rgba(0,0,0,.65);
 }
 .hm-hero-meta .hm-mono {
   font-family: 'JetBrains Mono', monospace;
   font-size: 12px;
+  color: var(--lime);
 }
 
 /* CARDS */
@@ -997,9 +1039,9 @@ body{font-size:13.5px;line-height:1.55}
 
 /* RESPONSIVE */
 @media (max-width: 900px) {
-  .hm-hero h1 { font-size: 32px; }
-  .hm-hero-in { padding: 56px 0 48px; }
-  .hm-hero-meta { display: flex; flex-direction: column; gap: 4px; }
+  .hm-hero h1 { font-size: 34px; line-height: 1.18; }
+  .hm-hero-in { padding: 64px 0 32px; }
+  .hm-hero-meta { display: block; bottom: 0; margin-top: 24px; box-shadow: none; }
   .hm-cards-row { grid-template-columns: 1fr; }
   .hm-card { border-right: none; border-bottom: 1px solid var(--ln); }
   .hm-card:last-child { border-bottom: none; }
@@ -1046,6 +1088,7 @@ tr.conf-debate td{padding-top:0;border-top:0}tr.conf-debate details{font-size:13
   <div class="hm">
     <section class="hm-hero">
       <div class="hm-wrap"><div class="hm-hero-in">
+        <span class="hm-badge">매일 자동 갱신</span>
         <h1>매일 아침, 공고와 뉴스를 모으고<br>문제를 풉니다.</h1>
         <p>보건·공공·대학 쪽 채용 공고, 보건·의료 정책 뉴스, 코딩테스트 문제.<br>스크립트를 모으는 사이트, 바로 여기입니다! 재용입니다.</p>
         <div class="hm-hero-btns"><a href="#jobs" data-go="jobs" class="hm-btn-p">오늘 공고 보기 ›</a><a href="#about" data-go="about" class="hm-btn-g">만든 과정 보기 ›</a></div>
