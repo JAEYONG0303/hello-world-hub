@@ -585,6 +585,23 @@ h1,h2,h3{letter-spacing:-.01em}
 .rs-hero h1{font-size:30px;line-height:1.35;margin:8px 0 12px;font-weight:800}
 .rs-hero h1 em{font-style:normal;color:var(--blue-ink)}
 .rs-hero .lede{font-size:16px;color:var(--sec);max-width:60em}
+.role-list{margin:14px 0 0;padding-left:18px;font-size:14.5px;color:var(--sec);line-height:1.9}
+.role-list li{margin:0}
+.proj3-wrap{padding:64px 0}
+.proj3-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:36px}
+.proj3-card{background:var(--card);border:1px solid var(--grid);border-radius:12px;padding:26px 24px;display:flex;flex-direction:column;box-shadow:var(--shadow);min-width:0}
+.proj3-card .kind{font-size:12.5px;color:var(--blue-ink);font-weight:700;letter-spacing:.04em;text-transform:uppercase;margin:0 0 8px}
+.proj3-card h3{font-size:19px;line-height:1.4;margin:0 0 16px;font-weight:700}
+.proj3-fields{margin:0;display:grid;gap:14px}
+.proj3-fields dt{font-size:11px;color:var(--sec);font-weight:700;letter-spacing:.05em;text-transform:uppercase;margin-bottom:3px}
+.proj3-fields dd{margin:0;font-size:14.5px;color:var(--sec);line-height:1.65}
+.proj3-links{display:flex;gap:14px;flex-wrap:wrap;margin-top:18px;padding-top:16px;border-top:1px solid var(--grid)}
+.proj3-links a{font-size:13.5px;font-weight:600;color:var(--ink);text-decoration:none;border-bottom:2px solid var(--orange)}
+.proj3-links a:hover{color:var(--blue-ink);border-color:var(--blue)}
+.proj3-more{margin:28px 0 0;font-size:14px;color:var(--mut)}
+.proj3-more a{color:var(--blue-ink)}
+@media(max-width:980px){.proj3-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:640px){.proj3-grid{grid-template-columns:1fr}.proj3-wrap{padding:40px 0}}
 .rs-origin{font-size:15px;color:var(--sec);max-width:60em;margin:14px 0 0;line-height:1.7;font-style:italic}
 .rs-quick{list-style:none;margin:18px 0 0;padding:0;display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
 .rs-quick li{background:var(--card);border:1px solid var(--grid);border-radius:8px;padding:12px 14px;font-size:13.5px;color:var(--sec);line-height:1.5}
@@ -723,13 +740,13 @@ body{font-size:13.5px;line-height:1.55}
 .feed-row-main{display:grid;grid-template-columns:64px 96px minmax(0,1fr) 150px;gap:0 14px;padding:11px 28px;align-items:center;transition:background .12s}.feed-row-main.jobs{grid-template-columns:64px minmax(0,1fr) 220px}.feed-row-main.pr{grid-template-columns:34px 60px minmax(0,1fr) 60px;align-items:flex-start}
 .feed-row-main.jobs.jcard2{display:block;padding:16px 28px}
 .jc-head{display:flex;align-items:center;gap:10px;margin-bottom:6px}
-.jfit{display:inline-flex;align-items:center;gap:5px;font-size:11px;font-weight:700;letter-spacing:.02em;padding:3px 9px;border-radius:999px;font-family:var(--mono)}
+.jfit{display:inline-flex;align-items:center;gap:5px;font-size:12.5px;font-weight:700;letter-spacing:.02em;padding:4px 10px;border-radius:999px;font-family:var(--mono)}
 .jfit i{font-style:normal;font-size:10px}
 .jfit-높음{background:var(--lime);color:#0c0c0d}
 .jfit-보통{background:var(--surf);border:1px solid var(--base);color:var(--sec)}
 .jfit-낮음{background:transparent;border:1px solid var(--orange);color:var(--orange)}
 .jfit-검토필요{background:transparent;border:1px dashed var(--grid);color:var(--mut)}
-.jc-title{font-size:16px;font-weight:700;color:var(--ink);line-height:1.4;margin-bottom:4px}
+.jc-title{font-size:17.5px;font-weight:700;color:var(--ink);line-height:1.4;margin-bottom:4px}
 .jc-title a{color:inherit;text-decoration:none;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
 .jc-title a:hover{color:var(--lime)}
 .jc-title mark,.jc-meta mark{background:var(--lime-faint);color:var(--lime-ink);padding:0 1px;border-radius:2px}
@@ -746,7 +763,7 @@ body{font-size:13.5px;line-height:1.55}
 .jc-note::placeholder{color:var(--mut)}
 .feed-row:hover .feed-row-main{background:var(--hover)}
 .fd-date,.fd-num{font-family:var(--mono);font-size:10.5px;color:var(--mut);white-space:nowrap}.fd-num{color:var(--lime);font-weight:600}
-.fd-dd{font-family:var(--mono);font-size:10.5px;font-weight:600;color:var(--lime);white-space:nowrap}.fd-dd.hot{color:var(--orange)}
+.fd-dd{font-family:var(--mono);font-size:12.5px;font-weight:700;color:var(--lime);white-space:nowrap}.fd-dd.hot{color:var(--orange)}
 .fd-cat{display:inline-block;font-family:var(--mono);font-style:normal;font-size:9.5px;color:var(--lime);border:1px solid var(--lime-ring);padding:2px 7px;letter-spacing:.04em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100%}.fd-cats{display:flex;gap:4px;justify-content:flex-end;flex-wrap:wrap}.fd-cats .fd-cat{color:var(--sec);border-color:var(--grid)}
 .fd-title{font-size:13px;font-weight:600;color:var(--ink);line-height:1.4;min-width:0}.fd-title a{color:inherit;text-decoration:none;transition:color .15s;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}.fd-title a:hover{color:var(--lime)}.fd-title .fd-sub{display:block;font-family:var(--mono);font-size:9.5px;font-weight:400;color:var(--mut);margin-top:3px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .fd-hi{font-style:normal;font-family:var(--mono);font-size:9px;color:var(--orange);border:1px solid rgba(255,154,122,.35);padding:1px 5px;margin-right:6px;vertical-align:1px}
@@ -916,7 +933,10 @@ body{font-size:13.5px;line-height:1.55}
   max-width:720px;
   margin-bottom: 32px;
 }
-.hm-hero-btns { display: flex; gap: 12px; margin-bottom: 40px; flex-wrap: wrap; }
+.hm-hero-btns { display: flex; gap: 12px; margin-bottom: 14px; flex-wrap: wrap; }
+.hm-hero-sub { margin: 0 0 26px; }
+.hm-hero-sub a { font-size: 13.5px; color: var(--t3); text-decoration: none; border-bottom: 1px solid transparent; }
+.hm-hero-sub a:hover { color: var(--lime); border-color: var(--lime); }
 .hm-btn-p {
   display: inline-flex; align-items: center;
   height: 44px; padding: 0 22px;
@@ -1208,7 +1228,7 @@ tr.conf-debate td{padding-top:0;border-top:0}tr.conf-debate details{font-size:13
   <div class="wrap topbar">
     <a class="logo" href="#home">재용<span>.</span> <small style="font-family:var(--mono);font-size:12px;color:var(--mut);font-weight:400;margin-left:6px">radar</small></a>
     <nav class="tabs" aria-label="화면">
-      <a href="#home" data-go="home" class="on">홈</a><a href="#jobs" data-go="jobs">채용 공고</a><a href="#news" data-go="news">뉴스</a><a href="#practice" data-go="practice">문제 풀이</a>
+      <a href="#home" data-go="home" class="on">홈</a><a href="#projects" data-go="projects">프로젝트</a><a href="#jobs" data-go="jobs">채용 공고</a><a href="#news" data-go="news">뉴스</a><a href="#practice" data-go="practice">문제 풀이</a>
     </nav>
     <nav class="tabs sub" aria-label="보조"><a href="#about" data-go="about">소개</a><a href="#ops" data-go="ops">운영판</a></nav>
     <div class="date"><span id="today-date">—</span><span class="sync" id="sync">동기화 확인 중…</span></div>
@@ -1224,9 +1244,10 @@ tr.conf-debate td{padding-top:0;border-top:0}tr.conf-debate details{font-size:13
     <section class="hm-hero">
       <div class="hm-wrap"><div class="hm-hero-in">
         <span class="hm-badge">매일 자동 갱신</span>
-        <h1>의료·공공·대학 채용과 정책을 매일 자동 수집해<br>지원 가능한 공고만 분류·검증해 보여줍니다.</h1>
-        <p>보건·공공·대학 행정 직무의 신입·경력무관 공고, 보건·의료 정책 변화를 매일 아침 모읍니다.<br>SQL·Python 문제 풀이는 부가 학습 영역으로 함께 운영합니다.</p>
-        <div class="hm-hero-btns"><a href="#jobs" data-go="jobs" class="hm-btn-p">오늘 공고 보기 ›</a><a href="#about" data-go="about" class="hm-btn-g">만든 과정 보기 ›</a></div>
+        <h1 class="hm-hero-name">의료·공공 데이터를 수집하고<br>업무에 필요한 정보로 정리하는<br>권재용입니다.</h1>
+        <p>의료·공공·대학 분야의 채용공고와 정책 자료를 매일 수집하고, 조건에 맞는 정보만 분류·검증하는 시스템을 직접 설계하고 운영하고 있습니다.</p>
+        <div class="hm-hero-btns"><a href="#projects" data-go="projects" class="hm-btn-p">대표 프로젝트 보기 ›</a><a href="#about" data-go="about" class="hm-btn-g">만든 과정과 역할 보기 ›</a></div>
+        <p class="hm-hero-sub"><a href="#ops" data-go="ops">실제 운영 화면 보기 ›</a></p>
         <p class="hm-hero-meta" id="hm-meta"></p>
       </div></div>
     </section>
@@ -1268,6 +1289,53 @@ tr.conf-debate td{padding-top:0;border-top:0}tr.conf-debate details{font-size:13
     </div></div></section>
   </div>
 </section>
+
+<!-- ===== 프로젝트 ===== -->
+<section data-view="projects" id="view-projects">
+<div class="wrap proj3-wrap">
+  <div class="sechead">
+    <div><p class="eyebrow">Projects</p><h2>대표 프로젝트 3건</h2></div>
+    <p class="desc">문제 → 내가 직접 한 일 → 결과 순서로 짧게 정리했습니다. 원본 코드와 대시보드는 링크에서 바로 확인할 수 있습니다.</p>
+  </div>
+  <div class="proj3-grid">
+    <article class="proj3-card">
+      <p class="kind">개인 운영 시스템 · 이 사이트</p>
+      <h3>여러 사이트에 흩어진 공고를 매일 자동으로 모아 걸러낸다</h3>
+      <dl class="proj3-fields">
+        <div><dt>문제</dt><dd>의료·공공·대학 분야 채용공고와 정책 자료가 여러 사이트에 흩어져 있어 매일 반복해서 찾아봐야 했습니다.</dd></div>
+        <div><dt>내가 직접 한 일</dt><dd>수집 출처 선정, 데이터 구조·정규화 기준 설계, 중복 판정 기준(기관명·제목·마감일)과 적합도 규칙 정의, 분류 결과 검토.</dd></div>
+        <div><dt>사용한 도구</dt><dd>Python, BigQuery·MariaDB, YAML 규칙 파일, GitHub Pages</dd></div>
+        <div><dt>핵심 결과</dt><dd>현재 이 사이트에서 실제로 매일 운영 중입니다. 실행 로그와 처리 건수는 운영판에서 그대로 확인할 수 있습니다.</dd></div>
+      </dl>
+      <div class="proj3-links"><a href="#jobs" data-go="jobs">채용 공고 →</a><a href="#news" data-go="news">뉴스 →</a><a href="#ops" data-go="ops">운영판 →</a></div>
+    </article>
+    <article class="proj3-card">
+      <p class="kind">공개 통계 · 인터랙티브 대시보드</p>
+      <h3>15년 만에 4.7배, 그 돈은 어디에 쓰였나</h3>
+      <dl class="proj3-fields">
+        <div><dt>문제</dt><dd>국민건강보험공단 장기요양보험 통계연보가 15개년에 걸쳐 집계 기준이 여러 번 바뀌어 있어 연도별·지역별 비교가 어려웠습니다.</dd></div>
+        <div><dt>내가 직접 한 일</dt><dd>17개 시도 패널을 직접 구성, 집계 기준이 바뀐 구간을 통일, 전산 오류 정정, 고정효과 패널로 증가 요인 분해.</dd></div>
+        <div><dt>사용한 도구</dt><dd>Python·pandas, 고정효과 패널, ECharts, GitHub Pages</dd></div>
+        <div><dt>핵심 결과</dt><dd>지출 증가의 대부분은 고령화가 아니라 노인 1인당 급여에서 왔고, 지역 격차는 수급률 차이에서 비롯됩니다(인과관계를 주장하지 않으며, 한계는 대시보드 안에 적어뒀습니다).</dd></div>
+      </dl>
+      <div class="proj3-links"><a href="https://jaeyong0303.github.io/project/ltc_dashboard/" target="_blank" rel="noopener noreferrer">대시보드 열기 ↗</a><a href="https://github.com/JAEYONG0303/project/tree/main/ltc_dashboard" target="_blank" rel="noopener noreferrer">코드와 PRD ↗</a></div>
+    </article>
+    <article class="proj3-card">
+      <p class="kind">행동 로그 EDA · Kaggle REES46</p>
+      <h3>장바구니 이탈은 어디서 생기는가</h3>
+      <dl class="proj3-fields">
+        <div><dt>문제</dt><dd>화장품 쇼핑몰에서 장바구니 이탈이 가격 때문인지, 어느 단계에서 발생하는지 불분명했습니다.</dd></div>
+        <div><dt>내가 직접 한 일</dt><dd>2,069만 행 중 사용자 기준 2%를 해시로 결정적 추출해 전체 대비 검증, 퍼널·가격대별 전환·리텐션 코호트 분석, 매출을 네 가지 요인으로 분해해 검산.</dd></div>
+        <div><dt>사용한 도구</dt><dd>표본 검증, 세션 정의, AARRR, Tableau Public</dd></div>
+        <div><dt>핵심 결과</dt><dd>"가격 저항은 장바구니 제거보다 조회→담기 단계에서 크게 나타났다." 제거율 자체는 가격대와 무관하게 16~22%로 고르게 나타났습니다(한 몰·5개월·2% 표본 기준).</dd></div>
+      </dl>
+      <div class="proj3-links"><a href="https://jaeyong0303.github.io/project/cosmetics_cart_eda/dashboard/cosmetics_dashboard.html" target="_blank" rel="noopener noreferrer">대시보드 열기 ↗</a><a href="https://github.com/JAEYONG0303/project/tree/main/cosmetics_cart_eda" target="_blank" rel="noopener noreferrer">보고서와 코드 ↗</a></div>
+    </article>
+  </div>
+  <p class="proj3-more">그 외 학사행정 자동화 등은 <a href="#about" data-go="about">소개 페이지</a> 하단 "이력·프로젝트·경력"에서 더 볼 수 있습니다.</p>
+</div>
+</section>
+
 <section data-view="jobs" id="view-jobs">
   <div class="pw">
     <button class="rail-toggle" id="rail-toggle" type="button" aria-expanded="false" aria-controls="jobs-rail">마감 임박 <span class="rail-arrow">▾</span></button>
@@ -1377,7 +1445,37 @@ tr.conf-debate td{padding-top:0;border-top:0}tr.conf-debate details{font-size:13
       <div class="rs-kpi" id="rs-kpi-jobs"><div class="k">채용 공고 수집</div><div class="v">—<small>건</small></div><div class="s">&nbsp;</div></div>
       <div class="rs-kpi"><div class="k">보건·의료 감시 출처</div><div class="v">15<small>곳</small></div><div class="s">정상 11 · 건너뜀 4 · 후보 169 → 검토 15</div></div>
       <div class="rs-kpi"><div class="k">AI 신호 · SQL 문제</div><div class="v">14 · 36</div><div class="s">공식 출처 신호 · 매일 5문제 출제·채점</div></div>
-      <div class="rs-kpi"><div class="k">스케줄</div><div class="v">4<small>개</small></div><div class="s">07:30 SQL · 08:00 AI · 08:10 의료 · 일 21:00</div></div>
+      <div class="rs-kpi"><div class="k">자동 실행 스케줄</div><div class="v">6<small>개</small></div><div class="s">07:30 SQL · 07:40 Python · 08:00 AI · 08:10 의료 · 08:30 배포 · 일 21:00 로드맵</div></div>
+    </div>
+  </div>
+
+  <div class="rs rs-roles">
+    <h2>내 역할과 자동화의 경계</h2><p class="sub">단순히 자동화 도구가 대신 만든 게 아니라, 기준을 제가 정하고 결과를 제가 검토합니다.</p>
+    <div class="g3 roles3">
+      <div class="cardp"><span class="tag">직접 한 일</span>
+        <ul class="role-list">
+          <li>수집 대상(출처) 선정</li>
+          <li>데이터 구조 설계</li>
+          <li>적합도 판정 규칙 정의</li>
+          <li>중복 제거 기준 설정</li>
+          <li>분류 결과 검토</li>
+        </ul>
+      </div>
+      <div class="cardp"><span class="tag g">자동화한 일</span>
+        <ul class="role-list">
+          <li>정기 수집</li>
+          <li>데이터 정제</li>
+          <li>조건별 분류</li>
+          <li>화면 반영</li>
+        </ul>
+      </div>
+      <div class="cardp"><span class="tag o">최종 판단</span>
+        <ul class="role-list">
+          <li>공고 원문 확인</li>
+          <li>직무 적합성 판단</li>
+          <li>실제 지원 여부 결정</li>
+        </ul>
+      </div>
     </div>
   </div>
 
@@ -1771,7 +1869,8 @@ tr.conf-debate td{padding-top:0;border-top:0}tr.conf-debate details{font-size:13
 <footer class="foot">
   <div class="wrap">
     <div class="row">
-      <div><a class="logo" href="#top">재용<span>.</span></a><p style="margin-top:8px">매일 아침 공고·뉴스·문제를 모으는 개인 기록입니다.</p></div>
+      <!-- 이력서·이메일 등 연락처는 실제 코드에 없어 표시하지 않는다. TODO: 공개해도 되는 연락 경로가 정해지면 여기 추가 -->
+      <div><a class="logo" href="#top">재용<span>.</span></a><p style="margin-top:8px">이름 권재용 · 관심 직무 — 의료·공공·대학 행정, 사업운영, 연구행정, 데이터 기반 경영지원</p></div>
       <div><a class="gh" href="https://github.com/JAEYONG0303/project" target="_blank" rel="noopener noreferrer">GitHub ↗</a></div>
     </div>
     <details>
@@ -2475,7 +2574,7 @@ document.querySelectorAll('details').forEach(function(d){
 
 // ---------- 화면 전환 (피드 / 소개 / 운영판) ----------
 (function(){
-  const views=['home','jobs','news','practice','about','ops'];
+  const views=['home','projects','jobs','news','practice','about','ops'];
   function go(v,scroll){
     if(!views.includes(v)) v='home';
     document.querySelectorAll('.views>section[data-view]').forEach(el=>el.classList.toggle('on',el.dataset.view===v));
