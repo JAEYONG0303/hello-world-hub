@@ -1,7 +1,7 @@
 {
  "meta": {
   "updated": "2026-09-11",
-  "generated_at": "2026-09-11T13:00:01",
+  "generated_at": "2026-09-11T13:42:30",
   "days": [
    "2026-09-10",
    "2026-09-09"
@@ -715,7 +715,19 @@
    "org_type": "대학병원",
    "job_family": "사업운영·관리",
    "experience": "경력무관",
-   "employment": "계약직·기간제"
+   "employment": "계약직·기간제",
+   "also_sources": [],
+   "fit_level": "보통",
+   "fit_reasons": [
+    "사업운영·성과관리 업무",
+    "의료·보건 관련 기관",
+    "신입 또는 경력무관"
+   ],
+   "fit_cautions": [
+    "단기 계약직",
+    "근무지역 확인 필요"
+   ],
+   "fit_exclusions": []
   },
   {
    "id": "medicaljob-2f7eabfc",
@@ -736,7 +748,17 @@
    "org_type": "대학병원",
    "job_family": "행정·사무",
    "experience": "미상",
-   "employment": "계약직·기간제"
+   "employment": "계약직·기간제",
+   "also_sources": [],
+   "fit_level": "보통",
+   "fit_reasons": [
+    "의료·보건 관련 기관",
+    "서울·경기·인천·대전·충청권"
+   ],
+   "fit_cautions": [
+    "단기 계약직"
+   ],
+   "fit_exclusions": []
   },
   {
    "id": "medicaljob-8bfe4c9b",
@@ -757,7 +779,20 @@
    "org_type": "대학병원",
    "job_family": "의료행정·원무기획",
    "experience": "미상",
-   "employment": "계약직·기간제"
+   "employment": "계약직·기간제",
+   "also_sources": [],
+   "fit_level": "낮음",
+   "fit_reasons": [
+    "병원 행정 경험 활용 가능",
+    "의료·보건 관련 기관",
+    "서울·경기·인천·대전·충청권"
+   ],
+   "fit_cautions": [
+    "단기 계약직"
+   ],
+   "fit_exclusions": [
+    "보험심사·청구 중심"
+   ]
   },
   {
    "id": "nrc-c68d9a43",
@@ -778,7 +813,18 @@
    "org_type": "국책연구기관",
    "job_family": "인턴",
    "experience": "신입",
-   "employment": "인턴"
+   "employment": "인턴",
+   "also_sources": [],
+   "fit_level": "보통",
+   "fit_reasons": [
+    "의료·보건 관련 기관",
+    "신입 또는 경력무관"
+   ],
+   "fit_cautions": [
+    "단기 계약직",
+    "근무지역 확인 필요"
+   ],
+   "fit_exclusions": []
   },
   {
    "id": "nrc-c0d1e9de",
@@ -799,7 +845,18 @@
    "org_type": "국책연구기관",
    "job_family": "인턴",
    "experience": "신입",
-   "employment": "인턴"
+   "employment": "인턴",
+   "also_sources": [],
+   "fit_level": "보통",
+   "fit_reasons": [
+    "의료·보건 관련 기관",
+    "신입 또는 경력무관"
+   ],
+   "fit_cautions": [
+    "단기 계약직",
+    "근무지역 확인 필요"
+   ],
+   "fit_exclusions": []
   },
   {
    "id": "nrc-85b36cba",
@@ -820,7 +877,16 @@
    "org_type": "국책연구기관",
    "job_family": "",
    "experience": "미상",
-   "employment": "미상"
+   "employment": "미상",
+   "also_sources": [],
+   "fit_level": "검토 필요",
+   "fit_reasons": [
+    "의료·보건 관련 기관"
+   ],
+   "fit_cautions": [
+    "근무지역 확인 필요"
+   ],
+   "fit_exclusions": []
   },
   {
    "id": "nrc-e24ba165",
@@ -841,7 +907,18 @@
    "org_type": "국책연구기관",
    "job_family": "인턴",
    "experience": "신입",
-   "employment": "인턴"
+   "employment": "인턴",
+   "also_sources": [],
+   "fit_level": "보통",
+   "fit_reasons": [
+    "의료·보건 관련 기관",
+    "신입 또는 경력무관"
+   ],
+   "fit_cautions": [
+    "단기 계약직",
+    "근무지역 확인 필요"
+   ],
+   "fit_exclusions": []
   },
   {
    "id": "w-1a4d843091",
@@ -1265,7 +1342,19 @@
    "org_type": "국책연구기관",
    "job_family": "검토 필요",
    "experience": "신입/경력",
-   "employment": "계약직·기간제"
+   "employment": "계약직·기간제",
+   "also_sources": [],
+   "fit_level": "보통",
+   "fit_reasons": [
+    "의료·보건 관련 기관",
+    "신입 또는 경력무관",
+    "서울·경기·인천·대전·충청권"
+   ],
+   "fit_cautions": [
+    "담당 업무 불명확",
+    "단기 계약직"
+   ],
+   "fit_exclusions": []
   },
   {
    "id": "alio-083a1643",
@@ -1288,7 +1377,18 @@
    "org_type": "국책연구기관",
    "job_family": "행정·사무",
    "experience": "신입/경력",
-   "employment": "계약직·기간제"
+   "employment": "계약직·기간제",
+   "also_sources": [],
+   "fit_level": "보통",
+   "fit_reasons": [
+    "의료·보건 관련 기관",
+    "신입 또는 경력무관",
+    "서울·경기·인천·대전·충청권"
+   ],
+   "fit_cautions": [
+    "단기 계약직"
+   ],
+   "fit_exclusions": []
   },
   {
    "id": "alio-22122cda",
@@ -1311,7 +1411,15 @@
    "org_type": "연구기관",
    "job_family": "행정·사무",
    "experience": "신입/경력",
-   "employment": "정규직"
+   "employment": "정규직",
+   "also_sources": [],
+   "fit_level": "보통",
+   "fit_reasons": [
+    "신입 또는 경력무관",
+    "서울·경기·인천·대전·충청권"
+   ],
+   "fit_cautions": [],
+   "fit_exclusions": []
   },
   {
    "id": "alio-9c3dc5d1",
@@ -1337,7 +1445,20 @@
    "org_type": "공공병원",
    "job_family": "데이터·통계",
    "experience": "신입/경력",
-   "employment": "계약직·기간제"
+   "employment": "계약직·기간제",
+   "also_sources": [],
+   "fit_level": "낮음",
+   "fit_reasons": [
+    "의료·보건 관련 기관",
+    "신입 또는 경력무관",
+    "서울·경기·인천·대전·충청권"
+   ],
+   "fit_cautions": [
+    "단기 계약직"
+   ],
+   "fit_exclusions": [
+    "통계 전공 필수"
+   ]
   },
   {
    "id": "alio-ad19e3db",
@@ -1361,7 +1482,19 @@
    "org_type": "공공병원",
    "job_family": "검토 필요",
    "experience": "신입/경력",
-   "employment": "계약직·기간제"
+   "employment": "계약직·기간제",
+   "also_sources": [],
+   "fit_level": "보통",
+   "fit_reasons": [
+    "의료·보건 관련 기관",
+    "신입 또는 경력무관",
+    "서울·경기·인천·대전·충청권"
+   ],
+   "fit_cautions": [
+    "담당 업무 불명확",
+    "단기 계약직"
+   ],
+   "fit_exclusions": []
   },
   {
    "id": "alio-cea9fec5",
@@ -1382,7 +1515,20 @@
    "org_type": "공공기관",
    "job_family": "데이터·통계",
    "experience": "신입/경력",
-   "employment": "계약직·기간제"
+   "employment": "계약직·기간제",
+   "also_sources": [],
+   "fit_level": "낮음",
+   "fit_reasons": [
+    "의료·보건 관련 기관",
+    "신입 또는 경력무관",
+    "서울·경기·인천·대전·충청권"
+   ],
+   "fit_cautions": [
+    "단기 계약직"
+   ],
+   "fit_exclusions": [
+    "통계 전공 필수"
+   ]
   },
   {
    "id": "alio-eceefea2",
@@ -1403,7 +1549,17 @@
    "org_type": "공공기관",
    "job_family": "인턴",
    "experience": "신입",
-   "employment": "인턴"
+   "employment": "인턴",
+   "also_sources": [],
+   "fit_level": "보통",
+   "fit_reasons": [
+    "의료·보건 관련 기관",
+    "신입 또는 경력무관"
+   ],
+   "fit_cautions": [
+    "단기 계약직"
+   ],
+   "fit_exclusions": []
   },
   {
    "id": "alio-cbe95010",
@@ -1424,7 +1580,18 @@
    "org_type": "공공기관",
    "job_family": "인턴",
    "experience": "신입",
-   "employment": "인턴"
+   "employment": "인턴",
+   "also_sources": [],
+   "fit_level": "보통",
+   "fit_reasons": [
+    "의료·보건 관련 기관",
+    "신입 또는 경력무관",
+    "서울·경기·인천·대전·충청권"
+   ],
+   "fit_cautions": [
+    "단기 계약직"
+   ],
+   "fit_exclusions": []
   },
   {
    "id": "alio-5ec14d59",
@@ -1445,7 +1612,17 @@
    "org_type": "공공기관",
    "job_family": "인턴",
    "experience": "신입",
-   "employment": "인턴"
+   "employment": "인턴",
+   "also_sources": [],
+   "fit_level": "보통",
+   "fit_reasons": [
+    "의료·보건 관련 기관",
+    "신입 또는 경력무관"
+   ],
+   "fit_cautions": [
+    "단기 계약직"
+   ],
+   "fit_exclusions": []
   },
   {
    "id": "alio-5a679ea5",
@@ -1466,7 +1643,18 @@
    "org_type": "공공기관",
    "job_family": "행정·사무",
    "experience": "신입",
-   "employment": "인턴"
+   "employment": "인턴",
+   "also_sources": [],
+   "fit_level": "보통",
+   "fit_reasons": [
+    "의료·보건 관련 기관",
+    "신입 또는 경력무관",
+    "서울·경기·인천·대전·충청권"
+   ],
+   "fit_cautions": [
+    "단기 계약직"
+   ],
+   "fit_exclusions": []
   },
   {
    "id": "saramin-a030a8ec",
@@ -1487,7 +1675,16 @@
    "org_type": "종합병원",
    "job_family": "인사·회계·총무",
    "experience": "신입",
-   "employment": "정규직"
+   "employment": "정규직",
+   "also_sources": [],
+   "fit_level": "보통",
+   "fit_reasons": [
+    "의료·보건 관련 기관",
+    "신입 또는 경력무관",
+    "서울·경기·인천·대전·충청권"
+   ],
+   "fit_cautions": [],
+   "fit_exclusions": []
   },
   {
    "id": "saramin-4edfea88",
@@ -1512,7 +1709,17 @@
    "org_type": "공공기관",
    "job_family": "사업운영·관리",
    "experience": "신입",
-   "employment": "정규직"
+   "employment": "정규직",
+   "also_sources": [],
+   "fit_level": "높음",
+   "fit_reasons": [
+    "사업운영·성과관리 업무",
+    "의료·보건 관련 기관",
+    "신입 또는 경력무관",
+    "서울·경기·인천·대전·충청권"
+   ],
+   "fit_cautions": [],
+   "fit_exclusions": []
   },
   {
    "id": "saramin-9e644f46",
@@ -1539,7 +1746,19 @@
    "org_type": "대학·산학",
    "job_family": "검토 필요",
    "experience": "경력무관",
-   "employment": "계약직·기간제"
+   "employment": "계약직·기간제",
+   "also_sources": [],
+   "fit_level": "보통",
+   "fit_reasons": [
+    "대학 또는 연구기관 행정",
+    "신입 또는 경력무관",
+    "서울·경기·인천·대전·충청권"
+   ],
+   "fit_cautions": [
+    "담당 업무 불명확",
+    "단기 계약직"
+   ],
+   "fit_exclusions": []
   },
   {
    "id": "saramin-865ee747",
@@ -1565,7 +1784,18 @@
    "org_type": "연구기관",
    "job_family": "연구행정·연구원",
    "experience": "신입/경력",
-   "employment": "계약직·기간제"
+   "employment": "계약직·기간제",
+   "also_sources": [],
+   "fit_level": "보통",
+   "fit_reasons": [
+    "연구행정 경험 활용 가능",
+    "신입 또는 경력무관",
+    "서울·경기·인천·대전·충청권"
+   ],
+   "fit_cautions": [
+    "단기 계약직"
+   ],
+   "fit_exclusions": []
   },
   {
    "id": "saramin-37654608",
@@ -1590,7 +1820,15 @@
    "org_type": "대학·산학",
    "job_family": "행정·사무",
    "experience": "신입",
-   "employment": "정규직"
+   "employment": "정규직",
+   "also_sources": [],
+   "fit_level": "보통",
+   "fit_reasons": [
+    "대학 또는 연구기관 행정",
+    "신입 또는 경력무관"
+   ],
+   "fit_cautions": [],
+   "fit_exclusions": []
   },
   {
    "id": "saramin-d7e95bb0",
@@ -1615,7 +1853,18 @@
    "org_type": "대학·산학",
    "job_family": "행정·사무",
    "experience": "신입/경력",
-   "employment": "계약직·기간제"
+   "employment": "계약직·기간제",
+   "also_sources": [],
+   "fit_level": "보통",
+   "fit_reasons": [
+    "대학 또는 연구기관 행정",
+    "신입 또는 경력무관",
+    "서울·경기·인천·대전·충청권"
+   ],
+   "fit_cautions": [
+    "단기 계약직"
+   ],
+   "fit_exclusions": []
   },
   {
    "id": "saramin-0e5a3d31",
@@ -1639,7 +1888,18 @@
    "org_type": "대학·산학",
    "job_family": "연구행정·연구원",
    "experience": "신입",
-   "employment": "계약직·기간제"
+   "employment": "계약직·기간제",
+   "also_sources": [],
+   "fit_level": "보통",
+   "fit_reasons": [
+    "연구행정 경험 활용 가능",
+    "대학 또는 연구기관 행정",
+    "신입 또는 경력무관"
+   ],
+   "fit_cautions": [
+    "단기 계약직"
+   ],
+   "fit_exclusions": []
   },
   {
    "id": "saramin-c9937af4",
@@ -1664,7 +1924,18 @@
    "org_type": "대학·산학",
    "job_family": "행정·사무",
    "experience": "경력무관",
-   "employment": "계약직·기간제"
+   "employment": "계약직·기간제",
+   "also_sources": [],
+   "fit_level": "보통",
+   "fit_reasons": [
+    "대학 또는 연구기관 행정",
+    "신입 또는 경력무관",
+    "서울·경기·인천·대전·충청권"
+   ],
+   "fit_cautions": [
+    "단기 계약직"
+   ],
+   "fit_exclusions": []
   },
   {
    "id": "saramin-da7431b1",
@@ -1691,7 +1962,19 @@
    "org_type": "대학·산학",
    "job_family": "검토 필요",
    "experience": "경력무관",
-   "employment": "계약직·기간제"
+   "employment": "계약직·기간제",
+   "also_sources": [],
+   "fit_level": "보통",
+   "fit_reasons": [
+    "대학 또는 연구기관 행정",
+    "신입 또는 경력무관",
+    "서울·경기·인천·대전·충청권"
+   ],
+   "fit_cautions": [
+    "담당 업무 불명확",
+    "단기 계약직"
+   ],
+   "fit_exclusions": []
   },
   {
    "id": "saramin-035c3b9e",
@@ -1716,7 +1999,19 @@
    "org_type": "대학·산학",
    "job_family": "연구행정·연구원",
    "experience": "신입",
-   "employment": "계약직·기간제"
+   "employment": "계약직·기간제",
+   "also_sources": [],
+   "fit_level": "보통",
+   "fit_reasons": [
+    "연구행정 경험 활용 가능",
+    "대학 또는 연구기관 행정",
+    "신입 또는 경력무관",
+    "서울·경기·인천·대전·충청권"
+   ],
+   "fit_cautions": [
+    "단기 계약직"
+   ],
+   "fit_exclusions": []
   },
   {
    "id": "saramin-da7b073f",
@@ -1740,7 +2035,19 @@
    "org_type": "대학·산학",
    "job_family": "검토 필요",
    "experience": "신입/경력",
-   "employment": "계약직·기간제"
+   "employment": "계약직·기간제",
+   "also_sources": [],
+   "fit_level": "보통",
+   "fit_reasons": [
+    "대학 또는 연구기관 행정",
+    "신입 또는 경력무관",
+    "서울·경기·인천·대전·충청권"
+   ],
+   "fit_cautions": [
+    "담당 업무 불명확",
+    "단기 계약직"
+   ],
+   "fit_exclusions": []
   },
   {
    "id": "saramin-e485121e",
@@ -1764,7 +2071,17 @@
    "org_type": "연구기관",
    "job_family": "전문연구직",
    "experience": "신입/경력",
-   "employment": "정규직"
+   "employment": "정규직",
+   "also_sources": [],
+   "fit_level": "낮음",
+   "fit_reasons": [
+    "신입 또는 경력무관",
+    "서울·경기·인천·대전·충청권"
+   ],
+   "fit_cautions": [],
+   "fit_exclusions": [
+    "전문 연구직"
+   ]
   },
   {
    "id": "saramin-a7bbb088",
@@ -1790,7 +2107,19 @@
    "org_type": "대학·산학",
    "job_family": "검토 필요",
    "experience": "경력무관",
-   "employment": "계약직·기간제"
+   "employment": "계약직·기간제",
+   "also_sources": [],
+   "fit_level": "보통",
+   "fit_reasons": [
+    "대학 또는 연구기관 행정",
+    "신입 또는 경력무관",
+    "서울·경기·인천·대전·충청권"
+   ],
+   "fit_cautions": [
+    "담당 업무 불명확",
+    "단기 계약직"
+   ],
+   "fit_exclusions": []
   },
   {
    "id": "saramin-5ca1a744",
@@ -1817,7 +2146,16 @@
    "org_type": "협회·재단",
    "job_family": "기획·성과관리",
    "experience": "신입",
-   "employment": "정규직"
+   "employment": "정규직",
+   "also_sources": [],
+   "fit_level": "높음",
+   "fit_reasons": [
+    "사업운영·성과관리 업무",
+    "신입 또는 경력무관",
+    "서울·경기·인천·대전·충청권"
+   ],
+   "fit_cautions": [],
+   "fit_exclusions": []
   },
   {
    "id": "saramin-06434db6",
@@ -1838,7 +2176,18 @@
    "org_type": "연구기관",
    "job_family": "사업운영·관리",
    "experience": "신입",
-   "employment": "계약직·기간제"
+   "employment": "계약직·기간제",
+   "also_sources": [],
+   "fit_level": "보통",
+   "fit_reasons": [
+    "사업운영·성과관리 업무",
+    "신입 또는 경력무관",
+    "서울·경기·인천·대전·충청권"
+   ],
+   "fit_cautions": [
+    "단기 계약직"
+   ],
+   "fit_exclusions": []
   },
   {
    "id": "alio-5e7cd815",
@@ -1861,7 +2210,17 @@
    "org_type": "공공기관",
    "job_family": "인턴",
    "experience": "신입",
-   "employment": "인턴"
+   "employment": "인턴",
+   "also_sources": [],
+   "fit_level": "보통",
+   "fit_reasons": [
+    "의료·보건 관련 기관",
+    "신입 또는 경력무관"
+   ],
+   "fit_cautions": [
+    "단기 계약직"
+   ],
+   "fit_exclusions": []
   },
   {
    "id": "alio-1c2a0ad1",
@@ -1882,7 +2241,17 @@
    "org_type": "공공기관",
    "job_family": "행정·사무",
    "experience": "신입",
-   "employment": "인턴"
+   "employment": "인턴",
+   "also_sources": [],
+   "fit_level": "보통",
+   "fit_reasons": [
+    "의료·보건 관련 기관",
+    "신입 또는 경력무관"
+   ],
+   "fit_cautions": [
+    "단기 계약직"
+   ],
+   "fit_exclusions": []
   },
   {
    "id": "alio-3ca02727",
@@ -1903,7 +2272,18 @@
    "org_type": "공공기관",
    "job_family": "행정·사무",
    "experience": "신입",
-   "employment": "계약직·기간제"
+   "employment": "계약직·기간제",
+   "also_sources": [],
+   "fit_level": "보통",
+   "fit_reasons": [
+    "의료·보건 관련 기관",
+    "신입 또는 경력무관",
+    "서울·경기·인천·대전·충청권"
+   ],
+   "fit_cautions": [
+    "단기 계약직"
+   ],
+   "fit_exclusions": []
   },
   {
    "id": "alio-f40ad957",
@@ -1924,7 +2304,17 @@
    "org_type": "공공기관",
    "job_family": "행정·사무",
    "experience": "신입",
-   "employment": "계약직·기간제"
+   "employment": "계약직·기간제",
+   "also_sources": [],
+   "fit_level": "보통",
+   "fit_reasons": [
+    "의료·보건 관련 기관",
+    "신입 또는 경력무관"
+   ],
+   "fit_cautions": [
+    "단기 계약직"
+   ],
+   "fit_exclusions": []
   },
   {
    "id": "alio-0a186c01",
@@ -1945,7 +2335,17 @@
    "org_type": "연구기관",
    "job_family": "검토 필요",
    "experience": "신입",
-   "employment": "정규직"
+   "employment": "정규직",
+   "also_sources": [],
+   "fit_level": "보통",
+   "fit_reasons": [
+    "신입 또는 경력무관",
+    "서울·경기·인천·대전·충청권"
+   ],
+   "fit_cautions": [
+    "담당 업무 불명확"
+   ],
+   "fit_exclusions": []
   },
   {
    "id": "alio-6f7dc367",
@@ -1968,7 +2368,18 @@
    "org_type": "공공기관",
    "job_family": "검토 필요",
    "experience": "신입",
-   "employment": "정규직"
+   "employment": "정규직",
+   "also_sources": [],
+   "fit_level": "보통",
+   "fit_reasons": [
+    "의료·보건 관련 기관",
+    "신입 또는 경력무관",
+    "서울·경기·인천·대전·충청권"
+   ],
+   "fit_cautions": [
+    "담당 업무 불명확"
+   ],
+   "fit_exclusions": []
   },
   {
    "id": "alio-0ff2a16f",
@@ -1991,7 +2402,19 @@
    "org_type": "국책연구기관",
    "job_family": "검토 필요",
    "experience": "신입/경력",
-   "employment": "계약직·기간제"
+   "employment": "계약직·기간제",
+   "also_sources": [],
+   "fit_level": "보통",
+   "fit_reasons": [
+    "의료·보건 관련 기관",
+    "신입 또는 경력무관",
+    "서울·경기·인천·대전·충청권"
+   ],
+   "fit_cautions": [
+    "담당 업무 불명확",
+    "단기 계약직"
+   ],
+   "fit_exclusions": []
   },
   {
    "id": "alio-dd528866",
@@ -2015,7 +2438,19 @@
    "org_type": "국책연구기관",
    "job_family": "검토 필요",
    "experience": "신입/경력",
-   "employment": "인턴"
+   "employment": "인턴",
+   "also_sources": [],
+   "fit_level": "보통",
+   "fit_reasons": [
+    "의료·보건 관련 기관",
+    "신입 또는 경력무관",
+    "서울·경기·인천·대전·충청권"
+   ],
+   "fit_cautions": [
+    "담당 업무 불명확",
+    "단기 계약직"
+   ],
+   "fit_exclusions": []
   },
   {
    "id": "alio-521158e9",
@@ -2039,7 +2474,19 @@
    "org_type": "국책연구기관",
    "job_family": "검토 필요",
    "experience": "신입/경력",
-   "employment": "계약직·기간제"
+   "employment": "계약직·기간제",
+   "also_sources": [],
+   "fit_level": "보통",
+   "fit_reasons": [
+    "의료·보건 관련 기관",
+    "신입 또는 경력무관",
+    "서울·경기·인천·대전·충청권"
+   ],
+   "fit_cautions": [
+    "담당 업무 불명확",
+    "단기 계약직"
+   ],
+   "fit_exclusions": []
   },
   {
    "id": "alio-aafdddac",
@@ -2060,7 +2507,18 @@
    "org_type": "연구기관",
    "job_family": "검토 필요",
    "experience": "신입",
-   "employment": "계약직·기간제"
+   "employment": "계약직·기간제",
+   "also_sources": [],
+   "fit_level": "보통",
+   "fit_reasons": [
+    "신입 또는 경력무관",
+    "서울·경기·인천·대전·충청권"
+   ],
+   "fit_cautions": [
+    "담당 업무 불명확",
+    "단기 계약직"
+   ],
+   "fit_exclusions": []
   },
   {
    "id": "alio-f2880646",
@@ -2081,7 +2539,18 @@
    "org_type": "국책연구기관",
    "job_family": "검토 필요",
    "experience": "신입/경력",
-   "employment": "인턴"
+   "employment": "인턴",
+   "also_sources": [],
+   "fit_level": "보통",
+   "fit_reasons": [
+    "의료·보건 관련 기관",
+    "신입 또는 경력무관"
+   ],
+   "fit_cautions": [
+    "담당 업무 불명확",
+    "단기 계약직"
+   ],
+   "fit_exclusions": []
   },
   {
    "id": "alio-b7e6c14e",
@@ -2104,7 +2573,18 @@
    "org_type": "연구기관",
    "job_family": "검토 필요",
    "experience": "신입",
-   "employment": "인턴"
+   "employment": "인턴",
+   "also_sources": [],
+   "fit_level": "보통",
+   "fit_reasons": [
+    "신입 또는 경력무관",
+    "서울·경기·인천·대전·충청권"
+   ],
+   "fit_cautions": [
+    "담당 업무 불명확",
+    "단기 계약직"
+   ],
+   "fit_exclusions": []
   },
   {
    "id": "alio-f714648b",
@@ -2125,7 +2605,19 @@
    "org_type": "공공기관",
    "job_family": "검토 필요",
    "experience": "신입/경력",
-   "employment": "계약직·기간제"
+   "employment": "계약직·기간제",
+   "also_sources": [],
+   "fit_level": "보통",
+   "fit_reasons": [
+    "의료·보건 관련 기관",
+    "신입 또는 경력무관",
+    "서울·경기·인천·대전·충청권"
+   ],
+   "fit_cautions": [
+    "담당 업무 불명확",
+    "단기 계약직"
+   ],
+   "fit_exclusions": []
   },
   {
    "id": "saramin-0edcf204",
@@ -2152,7 +2644,17 @@
    "org_type": "공공기관",
    "job_family": "기획·성과관리",
    "experience": "신입",
-   "employment": "정규직"
+   "employment": "정규직",
+   "also_sources": [],
+   "fit_level": "높음",
+   "fit_reasons": [
+    "사업운영·성과관리 업무",
+    "의료·보건 관련 기관",
+    "신입 또는 경력무관",
+    "서울·경기·인천·대전·충청권"
+   ],
+   "fit_cautions": [],
+   "fit_exclusions": []
   },
   {
    "id": "saramin-4106acea",
@@ -2177,7 +2679,19 @@
    "org_type": "대학병원",
    "job_family": "검토 필요",
    "experience": "신입/경력",
-   "employment": "계약직·기간제"
+   "employment": "계약직·기간제",
+   "also_sources": [],
+   "fit_level": "보통",
+   "fit_reasons": [
+    "의료·보건 관련 기관",
+    "신입 또는 경력무관",
+    "서울·경기·인천·대전·충청권"
+   ],
+   "fit_cautions": [
+    "담당 업무 불명확",
+    "단기 계약직"
+   ],
+   "fit_exclusions": []
   },
   {
    "id": "saramin-abba4a2b",
@@ -2202,7 +2716,16 @@
    "org_type": "연구기관",
    "job_family": "전문연구직",
    "experience": "신입",
-   "employment": "정규직"
+   "employment": "정규직",
+   "also_sources": [],
+   "fit_level": "낮음",
+   "fit_reasons": [
+    "신입 또는 경력무관"
+   ],
+   "fit_cautions": [],
+   "fit_exclusions": [
+    "전문 연구직"
+   ]
   },
   {
    "id": "saramin-66d341ba",
@@ -2227,7 +2750,18 @@
    "org_type": "대학병원",
    "job_family": "검토 필요",
    "experience": "신입",
-   "employment": "계약직·기간제"
+   "employment": "계약직·기간제",
+   "also_sources": [],
+   "fit_level": "보통",
+   "fit_reasons": [
+    "의료·보건 관련 기관",
+    "신입 또는 경력무관"
+   ],
+   "fit_cautions": [
+    "담당 업무 불명확",
+    "단기 계약직"
+   ],
+   "fit_exclusions": []
   },
   {
    "id": "saramin-cc580b0e",
@@ -2251,7 +2785,18 @@
    "org_type": "대학병원",
    "job_family": "검토 필요",
    "experience": "신입",
-   "employment": "계약직·기간제"
+   "employment": "계약직·기간제",
+   "also_sources": [],
+   "fit_level": "보통",
+   "fit_reasons": [
+    "의료·보건 관련 기관",
+    "신입 또는 경력무관"
+   ],
+   "fit_cautions": [
+    "담당 업무 불명확",
+    "단기 계약직"
+   ],
+   "fit_exclusions": []
   },
   {
    "id": "saramin-265621ba",
@@ -2272,7 +2817,21 @@
    "org_type": "공공기관",
    "job_family": "전문연구직",
    "experience": "신입",
-   "employment": "계약직·기간제"
+   "employment": "계약직·기간제",
+   "also_sources": [],
+   "fit_level": "낮음",
+   "fit_reasons": [
+    "의료·보건 관련 기관",
+    "신입 또는 경력무관",
+    "서울·경기·인천·대전·충청권"
+   ],
+   "fit_cautions": [
+    "단기 계약직",
+    "석·박사 요구"
+   ],
+   "fit_exclusions": [
+    "전문 연구직"
+   ]
   },
   {
    "id": "saramin-8ef0b500",
@@ -2299,7 +2858,17 @@
    "org_type": "연구기관",
    "job_family": "검토 필요",
    "experience": "경력무관",
-   "employment": "정규직"
+   "employment": "정규직",
+   "also_sources": [],
+   "fit_level": "보통",
+   "fit_reasons": [
+    "신입 또는 경력무관",
+    "서울·경기·인천·대전·충청권"
+   ],
+   "fit_cautions": [
+    "담당 업무 불명확"
+   ],
+   "fit_exclusions": []
   },
   {
    "id": "saramin-e0c93e68",
@@ -2323,7 +2892,18 @@
    "org_type": "연구기관",
    "job_family": "검토 필요",
    "experience": "신입",
-   "employment": "계약직·기간제"
+   "employment": "계약직·기간제",
+   "also_sources": [],
+   "fit_level": "보통",
+   "fit_reasons": [
+    "신입 또는 경력무관",
+    "서울·경기·인천·대전·충청권"
+   ],
+   "fit_cautions": [
+    "담당 업무 불명확",
+    "단기 계약직"
+   ],
+   "fit_exclusions": []
   },
   {
    "id": "saramin-d3bd9627",
@@ -2350,7 +2930,17 @@
    "org_type": "연구기관",
    "job_family": "검토 필요",
    "experience": "신입/경력",
-   "employment": "계약직·기간제"
+   "employment": "계약직·기간제",
+   "also_sources": [],
+   "fit_level": "검토 필요",
+   "fit_reasons": [
+    "신입 또는 경력무관"
+   ],
+   "fit_cautions": [
+    "담당 업무 불명확",
+    "단기 계약직"
+   ],
+   "fit_exclusions": []
   },
   {
    "id": "saramin-c6a47fb6",
@@ -2377,7 +2967,17 @@
    "org_type": "연구기관",
    "job_family": "검토 필요",
    "experience": "신입/경력",
-   "employment": "계약직·기간제"
+   "employment": "계약직·기간제",
+   "also_sources": [],
+   "fit_level": "검토 필요",
+   "fit_reasons": [
+    "신입 또는 경력무관"
+   ],
+   "fit_cautions": [
+    "담당 업무 불명확",
+    "단기 계약직"
+   ],
+   "fit_exclusions": []
   },
   {
    "id": "saramin-f1f4e52f",
@@ -2402,7 +3002,18 @@
    "org_type": "국책연구기관",
    "job_family": "인턴",
    "experience": "신입/경력",
-   "employment": "인턴"
+   "employment": "인턴",
+   "also_sources": [],
+   "fit_level": "보통",
+   "fit_reasons": [
+    "의료·보건 관련 기관",
+    "신입 또는 경력무관",
+    "서울·경기·인천·대전·충청권"
+   ],
+   "fit_cautions": [
+    "단기 계약직"
+   ],
+   "fit_exclusions": []
   },
   {
    "id": "jobkorea-0deb9974",
@@ -2425,7 +3036,16 @@
    "org_type": "공공병원",
    "job_family": "행정·사무",
    "experience": "신입",
-   "employment": "정규직"
+   "employment": "정규직",
+   "also_sources": [],
+   "fit_level": "보통",
+   "fit_reasons": [
+    "의료·보건 관련 기관",
+    "신입 또는 경력무관",
+    "서울·경기·인천·대전·충청권"
+   ],
+   "fit_cautions": [],
+   "fit_exclusions": []
   },
   {
    "id": "jobkorea-beb45486",
@@ -2446,7 +3066,16 @@
    "org_type": "종합병원",
    "job_family": "기획·성과관리",
    "experience": "미상",
-   "employment": "정규직"
+   "employment": "정규직",
+   "also_sources": [],
+   "fit_level": "높음",
+   "fit_reasons": [
+    "사업운영·성과관리 업무",
+    "의료·보건 관련 기관",
+    "서울·경기·인천·대전·충청권"
+   ],
+   "fit_cautions": [],
+   "fit_exclusions": []
   },
   {
    "id": "jobkorea-f3e82af4",
@@ -2469,7 +3098,17 @@
    "org_type": "공공기관",
    "job_family": "인턴",
    "experience": "신입/경력",
-   "employment": "인턴"
+   "employment": "인턴",
+   "also_sources": [],
+   "fit_level": "보통",
+   "fit_reasons": [
+    "의료·보건 관련 기관",
+    "신입 또는 경력무관"
+   ],
+   "fit_cautions": [
+    "단기 계약직"
+   ],
+   "fit_exclusions": []
   },
   {
    "id": "jobkorea-28c63178",
@@ -2490,7 +3129,18 @@
    "org_type": "협회·재단",
    "job_family": "검토 필요",
    "experience": "신입/경력",
-   "employment": "계약직·기간제"
+   "employment": "계약직·기간제",
+   "also_sources": [],
+   "fit_level": "보통",
+   "fit_reasons": [
+    "신입 또는 경력무관",
+    "서울·경기·인천·대전·충청권"
+   ],
+   "fit_cautions": [
+    "담당 업무 불명확",
+    "단기 계약직"
+   ],
+   "fit_exclusions": []
   },
   {
    "id": "jobkorea-9af4b451",
@@ -2511,7 +3161,18 @@
    "org_type": "연구기관",
    "job_family": "검토 필요",
    "experience": "신입/경력",
-   "employment": "계약직·기간제"
+   "employment": "계약직·기간제",
+   "also_sources": [],
+   "fit_level": "보통",
+   "fit_reasons": [
+    "신입 또는 경력무관",
+    "서울·경기·인천·대전·충청권"
+   ],
+   "fit_cautions": [
+    "담당 업무 불명확",
+    "단기 계약직"
+   ],
+   "fit_exclusions": []
   },
   {
    "id": "jobkorea-837692c4",
@@ -2535,7 +3196,18 @@
    "org_type": "연구기관",
    "job_family": "검토 필요",
    "experience": "신입",
-   "employment": "계약직·기간제"
+   "employment": "계약직·기간제",
+   "also_sources": [],
+   "fit_level": "보통",
+   "fit_reasons": [
+    "신입 또는 경력무관",
+    "서울·경기·인천·대전·충청권"
+   ],
+   "fit_cautions": [
+    "담당 업무 불명확",
+    "단기 계약직"
+   ],
+   "fit_exclusions": []
   },
   {
    "id": "jobkorea-e251e3cb",
@@ -2556,7 +3228,19 @@
    "org_type": "국책연구기관",
    "job_family": "검토 필요",
    "experience": "신입/경력",
-   "employment": "계약직·기간제"
+   "employment": "계약직·기간제",
+   "also_sources": [],
+   "fit_level": "보통",
+   "fit_reasons": [
+    "의료·보건 관련 기관",
+    "신입 또는 경력무관",
+    "서울·경기·인천·대전·충청권"
+   ],
+   "fit_cautions": [
+    "담당 업무 불명확",
+    "단기 계약직"
+   ],
+   "fit_exclusions": []
   },
   {
    "id": "jobkorea-8f1bcfda",
@@ -2579,7 +3263,19 @@
    "org_type": "국책연구기관",
    "job_family": "검토 필요",
    "experience": "신입/경력",
-   "employment": "계약직·기간제"
+   "employment": "계약직·기간제",
+   "also_sources": [],
+   "fit_level": "보통",
+   "fit_reasons": [
+    "의료·보건 관련 기관",
+    "신입 또는 경력무관",
+    "서울·경기·인천·대전·충청권"
+   ],
+   "fit_cautions": [
+    "담당 업무 불명확",
+    "단기 계약직"
+   ],
+   "fit_exclusions": []
   },
   {
    "id": "jobkorea-d5758b53",
@@ -2605,7 +3301,18 @@
    "org_type": "협회·재단",
    "job_family": "사업운영·관리",
    "experience": "신입/경력",
-   "employment": "계약직·기간제"
+   "employment": "계약직·기간제",
+   "also_sources": [],
+   "fit_level": "보통",
+   "fit_reasons": [
+    "사업운영·성과관리 업무",
+    "신입 또는 경력무관",
+    "서울·경기·인천·대전·충청권"
+   ],
+   "fit_cautions": [
+    "단기 계약직"
+   ],
+   "fit_exclusions": []
   },
   {
    "id": "jobkorea-c04702c9",
@@ -2628,7 +3335,17 @@
    "org_type": "종합병원",
    "job_family": "기획·성과관리",
    "experience": "신입/경력",
-   "employment": "정규직"
+   "employment": "정규직",
+   "also_sources": [],
+   "fit_level": "높음",
+   "fit_reasons": [
+    "사업운영·성과관리 업무",
+    "의료·보건 관련 기관",
+    "신입 또는 경력무관",
+    "서울·경기·인천·대전·충청권"
+   ],
+   "fit_cautions": [],
+   "fit_exclusions": []
   },
   {
    "id": "jobkorea-c561738a",
@@ -2653,7 +3370,16 @@
    "org_type": "종합병원",
    "job_family": "인사·회계·총무",
    "experience": "신입",
-   "employment": "정규직"
+   "employment": "정규직",
+   "also_sources": [],
+   "fit_level": "보통",
+   "fit_reasons": [
+    "의료·보건 관련 기관",
+    "신입 또는 경력무관",
+    "서울·경기·인천·대전·충청권"
+   ],
+   "fit_cautions": [],
+   "fit_exclusions": []
   },
   {
    "id": "jobkorea-fcc0f550",
@@ -2674,7 +3400,15 @@
    "org_type": "요양·재활",
    "job_family": "인사·회계·총무",
    "experience": "신입/경력",
-   "employment": "정규직"
+   "employment": "정규직",
+   "also_sources": [],
+   "fit_level": "보통",
+   "fit_reasons": [
+    "의료·보건 관련 기관",
+    "신입 또는 경력무관"
+   ],
+   "fit_cautions": [],
+   "fit_exclusions": []
   },
   {
    "id": "jobkorea-680bbd84",
@@ -2695,7 +3429,18 @@
    "org_type": "종합병원",
    "job_family": "검토 필요",
    "experience": "신입/경력",
-   "employment": "정규직"
+   "employment": "정규직",
+   "also_sources": [],
+   "fit_level": "보통",
+   "fit_reasons": [
+    "의료·보건 관련 기관",
+    "신입 또는 경력무관",
+    "서울·경기·인천·대전·충청권"
+   ],
+   "fit_cautions": [
+    "담당 업무 불명확"
+   ],
+   "fit_exclusions": []
   },
   {
    "id": "jobkorea-31971b75",
@@ -2716,7 +3461,17 @@
    "org_type": "대학병원",
    "job_family": "기획·성과관리",
    "experience": "신입",
-   "employment": "정규직"
+   "employment": "정규직",
+   "also_sources": [],
+   "fit_level": "높음",
+   "fit_reasons": [
+    "사업운영·성과관리 업무",
+    "의료·보건 관련 기관",
+    "신입 또는 경력무관",
+    "서울·경기·인천·대전·충청권"
+   ],
+   "fit_cautions": [],
+   "fit_exclusions": []
   },
   {
    "id": "jobkorea-a9eb6193",
@@ -2739,7 +3494,19 @@
    "org_type": "대학·산학",
    "job_family": "사업운영·관리",
    "experience": "신입/경력",
-   "employment": "계약직·기간제"
+   "employment": "계약직·기간제",
+   "also_sources": [],
+   "fit_level": "보통",
+   "fit_reasons": [
+    "사업운영·성과관리 업무",
+    "대학 또는 연구기관 행정",
+    "신입 또는 경력무관",
+    "서울·경기·인천·대전·충청권"
+   ],
+   "fit_cautions": [
+    "단기 계약직"
+   ],
+   "fit_exclusions": []
   },
   {
    "id": "jobkorea-d054b630",
@@ -2763,7 +3530,18 @@
    "org_type": "대학·산학",
    "job_family": "연구행정·연구원",
    "experience": "신입/경력",
-   "employment": "계약직·기간제"
+   "employment": "계약직·기간제",
+   "also_sources": [],
+   "fit_level": "보통",
+   "fit_reasons": [
+    "연구행정 경험 활용 가능",
+    "대학 또는 연구기관 행정",
+    "신입 또는 경력무관"
+   ],
+   "fit_cautions": [
+    "단기 계약직"
+   ],
+   "fit_exclusions": []
   },
   {
    "id": "jobkorea-66491712",
@@ -2784,7 +3562,17 @@
    "org_type": "협회·재단",
    "job_family": "기획·성과관리",
    "experience": "미상",
-   "employment": "계약직·기간제"
+   "employment": "계약직·기간제",
+   "also_sources": [],
+   "fit_level": "보통",
+   "fit_reasons": [
+    "사업운영·성과관리 업무",
+    "서울·경기·인천·대전·충청권"
+   ],
+   "fit_cautions": [
+    "단기 계약직"
+   ],
+   "fit_exclusions": []
   },
   {
    "id": "jobkorea-9c1131e5",
@@ -2807,7 +3595,18 @@
    "org_type": "대학·산학",
    "job_family": "행정·사무",
    "experience": "신입/경력",
-   "employment": "계약직·기간제"
+   "employment": "계약직·기간제",
+   "also_sources": [],
+   "fit_level": "보통",
+   "fit_reasons": [
+    "대학 또는 연구기관 행정",
+    "신입 또는 경력무관",
+    "서울·경기·인천·대전·충청권"
+   ],
+   "fit_cautions": [
+    "단기 계약직"
+   ],
+   "fit_exclusions": []
   },
   {
    "id": "jobkorea-dbd80a5e",
@@ -2828,7 +3627,18 @@
    "org_type": "대학병원",
    "job_family": "행정·사무",
    "experience": "신입",
-   "employment": "계약직·기간제"
+   "employment": "계약직·기간제",
+   "also_sources": [],
+   "fit_level": "보통",
+   "fit_reasons": [
+    "의료·보건 관련 기관",
+    "신입 또는 경력무관",
+    "서울·경기·인천·대전·충청권"
+   ],
+   "fit_cautions": [
+    "단기 계약직"
+   ],
+   "fit_exclusions": []
   },
   {
    "id": "sig-c0eb4b83d4",

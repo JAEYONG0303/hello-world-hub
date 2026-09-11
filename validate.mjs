@@ -114,6 +114,9 @@ if (stats && feed) {
 } else if (!stats) {
   fail("content/stats.json 없음 — hub_stats.py 를 먼저 실행해야 함");
 }
+if (stats && stats.pipeline && stats.pipeline.reconciled === false) {
+  warn.push(`파이프라인 집계 불일치: 수집(${stats.pipeline.collected}) !== 추가+중복제거+경력제외 합(오차 ${stats.pipeline.reconcile_diff}) — fetch-log.csv 기록 누락 가능성, 빌드는 계속 진행`);
+}
 if (html) {
   const m = html.match(/<div class="rs-kpi" id="rs-kpi-jobs">([\s\S]*?)<\/div>\s*<\/div>/);
   if (m && /\d{2,}/.test(m[1])) fail("소개 탭 채용 공고 KPI 카드에 숫자가 하드코딩되어 있음(JS 로 채워야 함)");

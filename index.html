@@ -175,6 +175,16 @@ h1,h2,h3{font-family:var(--serif);font-weight:700;letter-spacing:-.02em;margin:0
 .habit.hot{border-color:color-mix(in srgb,var(--orange) 50%,transparent);background:var(--orange-soft)}
 .habit.hot strong{color:var(--orange)}
 .note{color:var(--sec);font-size:17px;line-height:1.7}
+.pipeline-flow{display:flex;align-items:stretch;gap:8px;flex-wrap:wrap;margin-top:6px}
+.pf-step{flex:1;min-width:90px;background:var(--surf);border:1px solid var(--grid);border-radius:8px;padding:14px 10px;text-align:center}
+.pf-step.hi{border-color:var(--blue);background:var(--blue-soft)}
+.pf-step b{display:block;font-family:var(--mono);font-size:22px;font-weight:700;color:var(--ink);font-variant-numeric:tabular-nums}
+.pf-step span{font-size:12px;color:var(--sec)}
+.pf-arrow{display:flex;align-items:center;color:var(--mut);font-size:16px}
+.pf-note{font-size:13px;color:var(--mut);margin:10px 0 0}
+.pf-sources{display:flex;gap:14px;flex-wrap:wrap;margin-top:10px;font-size:13px;color:var(--sec)}
+.pf-sources b{color:var(--ink)}
+@media(max-width:760px){.pipeline-flow{flex-direction:column}.pf-arrow{justify-content:center;transform:rotate(90deg)}}
 .focus{border-left:4px solid var(--orange)}
 .focus p{font-family:var(--serif);font-size:26px;line-height:1.35;margin:0;font-weight:700}
 .focus p span{color:var(--blue-ink)}
@@ -570,7 +580,8 @@ h1,h2,h3{letter-spacing:-.01em}
 .rs-hero h1{font-size:30px;line-height:1.35;margin:8px 0 12px;font-weight:800}
 .rs-hero h1 em{font-style:normal;color:var(--blue-ink)}
 .rs-hero .lede{font-size:16px;color:var(--sec);max-width:60em}
-.rs-quick{list-style:none;margin:18px 0 0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.rs-origin{font-size:15px;color:var(--sec);max-width:60em;margin:14px 0 0;line-height:1.7;font-style:italic}
+.rs-quick{list-style:none;margin:18px 0 0;padding:0;display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
 .rs-quick li{background:var(--card);border:1px solid var(--grid);border-radius:8px;padding:12px 14px;font-size:13.5px;color:var(--sec);line-height:1.5}
 .rs-quick b{display:block;font-size:12px;color:var(--blue-ink);font-weight:700;letter-spacing:.02em;margin-bottom:4px}
 .rs-kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:22px}
@@ -705,6 +716,29 @@ body{font-size:13.5px;line-height:1.55}
 .feed-thead.jobs{grid-template-columns:64px minmax(0,1fr) 220px}.feed-thead.pr{grid-template-columns:34px 60px minmax(0,1fr) 60px}.feed-thead .r{text-align:right}
 .feed-row{border-bottom:1px solid var(--grid-s);animation:fadeup .4s ease both}
 .feed-row-main{display:grid;grid-template-columns:64px 96px minmax(0,1fr) 150px;gap:0 14px;padding:11px 28px;align-items:center;transition:background .12s}.feed-row-main.jobs{grid-template-columns:64px minmax(0,1fr) 220px}.feed-row-main.pr{grid-template-columns:34px 60px minmax(0,1fr) 60px;align-items:flex-start}
+.feed-row-main.jobs.jcard2{display:block;padding:16px 28px}
+.jc-head{display:flex;align-items:center;gap:10px;margin-bottom:6px}
+.jfit{display:inline-flex;align-items:center;gap:5px;font-size:11px;font-weight:700;letter-spacing:.02em;padding:3px 9px;border-radius:999px;font-family:var(--mono)}
+.jfit i{font-style:normal;font-size:10px}
+.jfit-높음{background:var(--lime);color:#0c0c0d}
+.jfit-보통{background:var(--surf);border:1px solid var(--base);color:var(--sec)}
+.jfit-낮음{background:transparent;border:1px solid var(--orange);color:var(--orange)}
+.jfit-검토필요{background:transparent;border:1px dashed var(--grid);color:var(--mut)}
+.jc-title{font-size:16px;font-weight:700;color:var(--ink);line-height:1.4;margin-bottom:4px}
+.jc-title a{color:inherit;text-decoration:none;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.jc-title a:hover{color:var(--lime)}
+.jc-title mark,.jc-meta mark{background:var(--lime-faint);color:var(--lime-ink);padding:0 1px;border-radius:2px}
+.jc-meta{font-size:13px;color:var(--sec);margin-bottom:3px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.jc-also{font-family:var(--mono);font-size:11px;color:var(--mut);border:1px solid var(--grid);border-radius:999px;padding:1px 7px;margin-left:4px}
+.jc-reason{font-size:12.5px;color:var(--lime-ink);margin-top:4px}
+.jc-caution{font-size:12.5px;color:var(--orange);margin-top:3px}
+.jnote-view{font-size:12.5px;color:var(--sec);margin-top:4px;font-style:italic}
+.jc-actions{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;margin-top:12px}
+.jc-orig{font-size:13.5px;font-weight:600;color:var(--ink);text-decoration:none;border-bottom:2px solid var(--orange);white-space:nowrap}
+.jc-orig:hover{color:var(--lime-ink);border-color:var(--lime)}
+.jc-status{font:inherit;font-size:13px;background:var(--surf);color:var(--ink);border:1px solid var(--grid);border-radius:8px;padding:8px 10px;min-height:36px;cursor:pointer}
+.jc-note{display:block;width:100%;box-sizing:border-box;margin-top:8px;font:inherit;font-size:12.5px;background:var(--surf);color:var(--ink);border:1px solid var(--grid);border-radius:8px;padding:8px 10px;resize:vertical;min-height:36px}
+.jc-note::placeholder{color:var(--mut)}
 .feed-row:hover .feed-row-main{background:var(--hover)}
 .fd-date,.fd-num{font-family:var(--mono);font-size:10.5px;color:var(--mut);white-space:nowrap}.fd-num{color:var(--lime);font-weight:600}
 .fd-dd{font-family:var(--mono);font-size:10.5px;font-weight:600;color:var(--lime);white-space:nowrap}.fd-dd.hot{color:var(--orange)}
@@ -722,11 +756,10 @@ body{font-size:13.5px;line-height:1.55}
 @media(max-width:900px){.pw{grid-template-columns:1fr;border:0}.rail{position:static;max-height:none;border-right:0;border-bottom:1px solid var(--grid);padding:10px 0}
  .feed-thead{display:none}.feed-row-main,.feed-row-main.jobs,.feed-row-main.pr{grid-template-columns:64px minmax(0,1fr);grid-template-rows:auto auto;gap:6px 10px;padding:12px 16px}
  .feed-row-main>:nth-child(1){grid-row:1;grid-column:1}.feed-row-main>:nth-child(2){grid-row:2;grid-column:1}.feed-row-main>:nth-child(3){grid-row:1/3;grid-column:2}.feed-row-main>:nth-child(4){display:none}
- /* 채용 카드는 마감·제목·태그 3칸 구조라 위 규칙과 다르게 카드형으로 짠다 (표처럼 보이지 않게) */
- .feed-row-main.jobs{grid-template-columns:56px minmax(0,1fr);grid-template-rows:auto auto}
- .feed-row-main.jobs>:nth-child(1){grid-row:1;grid-column:1}
- .feed-row-main.jobs>:nth-child(2){grid-row:1;grid-column:2}
- .feed-row-main.jobs>:nth-child(3){grid-row:2;grid-column:1/3;display:flex;flex-wrap:wrap;gap:5px;margin-top:2px}
+ /* 채용 카드는 자체 block 레이아웃(jcard2)이라 위 표 형태 규칙 대상이 아니다 — 표처럼 보이지 않게 카드형 유지 */
+ .feed-row-main.jobs.jcard2{padding:14px 16px}
+ .jc-actions{justify-content:flex-start}
+ .jc-status{width:100%}
  .feed-summ,.feed-row-main.jobs+.feed-summ,.feed-row-main.pr+.feed-summ{padding-left:16px;padding-right:16px}
  .cg{grid-template-columns:1fr}.notes-col{position:static;border-left:0;border-top:1px solid var(--grid);max-height:none}
  .hl-sec{padding:24px 16px 20px}.hl-text{font-size:18px}.sec-hdr{padding:16px 16px 12px;flex-wrap:wrap}.main-col .pad{padding:0 16px}.feedfoot{padding:14px 16px}
@@ -744,6 +777,11 @@ body{font-size:13.5px;line-height:1.55}
 .ftags:empty{margin:0}
 .ftag{display:inline-flex;align-items:center;gap:5px;font:inherit;font-size:12px;color:var(--lime-ink);background:var(--lime-faint);border:1px solid var(--lime-ring);border-radius:999px;padding:4px 10px;cursor:pointer}
 .ftag .x{font-weight:700}
+.jlegal{font-size:12.5px;color:var(--sec);margin:18px 28px 0;line-height:1.6}
+.jlegal-more{margin:8px 28px 0}.jlegal-more summary{cursor:pointer;font-size:12.5px;color:var(--mut);padding:6px 0}.jlegal-more summary:hover{color:var(--sec)}
+.jlegal-more ul{margin:6px 0 0;padding-left:18px;font-size:12.5px;color:var(--sec);line-height:1.7}
+.jreset-personal{display:block;margin:14px 28px 24px;font:inherit;font-size:12.5px;color:var(--orange);background:transparent;border:1px solid var(--grid);border-radius:8px;padding:8px 14px;cursor:pointer}
+.jreset-personal:hover{border-color:var(--orange)}
 .rail-toggle{display:none}
 @media(max-width:900px){
   .rail-toggle{display:flex;align-items:center;justify-content:space-between;width:100%;background:var(--surf);border:1px solid var(--grid);color:var(--ink);font:inherit;font-size:14px;font-weight:600;padding:12px 16px;cursor:pointer}
@@ -794,6 +832,7 @@ body{font-size:13.5px;line-height:1.55}
   display: block;
   min-height: auto;
   position: relative;
+  overflow: hidden;
   border-bottom: 1px solid var(--ln);
   opacity: 0;
   transform: translateY(18px);
@@ -1009,6 +1048,22 @@ body{font-size:13.5px;line-height:1.55}
   margin-right: 4px;
 }
 
+/* TODAY REVIEW FLOW */
+.hm-review { border-bottom: 1px solid var(--ln); padding: 56px 0; }
+.hm-review-hd { margin-bottom: 22px; }
+.hm-steps { list-style: none; margin: 0 0 28px; padding: 0; display: grid; grid-template-columns: repeat(4,1fr); gap: 12px; counter-reset: none; }
+.hm-steps a { display: flex; align-items: center; gap: 10px; background: #111113; border: 1px solid var(--ln); border-radius: 8px; padding: 14px 16px; font-size: 14px; color: var(--t1); transition: border-color .15s; }
+.hm-steps a:hover { border-color: var(--lime); }
+.hm-steps b { font-family: 'JetBrains Mono', monospace; font-size: 13px; color: var(--lime); border: 1px solid var(--lime); border-radius: 50%; width: 22px; height: 22px; flex: none; display: grid; place-items: center; }
+.hm-kpirow { display: grid; grid-template-columns: repeat(6,1fr); gap: 0; border: 1px solid var(--ln); }
+.hm-kpi { display: flex; flex-direction: column; gap: 4px; padding: 16px 10px; text-align: center; border-right: 1px solid var(--ln); color: inherit; transition: background .15s; }
+.hm-kpi:last-child { border-right: none; }
+.hm-kpi:hover { background: #111113; }
+.hm-kpi b { font-family: 'JetBrains Mono', monospace; font-size: 24px; font-weight: 600; color: var(--lime); }
+.hm-kpi span { font-size: 11.5px; color: var(--t3); }
+@media (max-width: 900px) { .hm-steps { grid-template-columns: 1fr 1fr; } .hm-kpirow { grid-template-columns: repeat(3,1fr); } .hm-kpi:nth-child(3) { border-right: none; } .hm-kpi:nth-child(-n+3) { border-bottom: 1px solid var(--ln); } }
+@media (max-width: 480px) { .hm-steps { grid-template-columns: 1fr; } .hm-kpirow { grid-template-columns: repeat(2,1fr); } .hm-kpi:nth-child(even) { border-right: none; } }
+
 /* NUMBERS */
 .hm-nums { border-bottom: 1px solid var(--ln); }
 .hm-nums-row {
@@ -1175,10 +1230,27 @@ tr.conf-debate td{padding-top:0;border-top:0}tr.conf-debate details{font-size:13
       <a href="#news" data-go="news" class="hm-card hm-reveal"><span class="hm-card-num"><span class="hm-mono">02</span> · <span class="hm-mono">15</span>개 출처 감시</span><h3>보건·의료 뉴스</h3><p class="hm-card-desc">복지부·심평원·병원협회 등 15개 출처의 정책과 고시를 모니터링합니다.</p><div class="hm-card-live-wrap"><p class="hm-card-live" id="hm-news"></p></div></a>
       <a href="#practice" data-go="practice" class="hm-card hm-reveal"><span class="hm-card-num"><span class="hm-mono">03</span> · 매일 <span class="hm-mono">5</span>문제 <span class="hm-side-badge">부가·학습</span></span><h3>문제 풀이</h3><p class="hm-card-desc">매일 SQL 5문제, Python 5문제를 자동 출제하고 BigQuery로 채점합니다.</p><div class="hm-card-live-wrap"><p class="hm-card-live" id="hm-prac"></p></div></a>
     </div></div></section>
+    <section class="hm-review"><div class="hm-wrap">
+      <div class="hm-review-hd"><span class="hm-about-lbl">TODAY</span><span class="hm-about-heading">오늘의 검토 흐름</span></div>
+      <ol class="hm-steps">
+        <li><a href="#jobs" data-go="jobs" data-preset="new"><b>1</b>오늘 신규 공고 확인</a></li>
+        <li><a href="#jobs" data-go="jobs" data-preset="fitHigh"><b>2</b>적합도 높은 공고 확인</a></li>
+        <li><a href="#jobs" data-go="jobs" data-preset="soon"><b>3</b>7일 이내 마감 공고 확인</a></li>
+        <li><a href="#jobs" data-go="jobs" data-preset="pipeline"><b>4</b>지원 예정·결과 대기 공고 확인</a></li>
+      </ol>
+      <div class="hm-kpirow" id="hm-kpirow">
+        <a href="#jobs" data-go="jobs" data-preset="new" class="hm-kpi"><b id="kpi-new">—</b><span>오늘 신규</span></a>
+        <a href="#jobs" data-go="jobs" data-preset="all" class="hm-kpi"><b id="kpi-week">—</b><span>이번 주 신규</span></a>
+        <a href="#jobs" data-go="jobs" data-preset="fitHigh" class="hm-kpi"><b id="kpi-fithigh">—</b><span>적합도 높음</span></a>
+        <a href="#jobs" data-go="jobs" data-preset="soon" class="hm-kpi"><b id="hm-upcoming">—</b><span>7일 내 마감</span></a>
+        <a href="#jobs" data-go="jobs" data-preset="planned" class="hm-kpi"><b id="kpi-planned">—</b><span>지원 예정</span></a>
+        <a href="#jobs" data-go="jobs" data-preset="waiting" class="hm-kpi"><b id="kpi-waiting">—</b><span>결과 대기</span></a>
+      </div>
+    </div></section>
     <section class="hm-nums"><div class="hm-wrap"><div class="hm-nums-row">
-      <div class="hm-num-col hm-reveal"><div class="hm-num-val-wrap"><span class="hm-num-val" id="hm-upcoming">—</span><span class="hm-num-unit">건</span></div><span class="hm-num-lbl">7일 내 마감</span></div>
       <div class="hm-num-col hm-reveal"><div class="hm-num-val-wrap"><span class="hm-num-val" id="hm-srccount">—</span><span class="hm-num-unit">곳</span></div><span class="hm-num-lbl">채용 소스</span></div>
       <div class="hm-num-col hm-reveal"><div class="hm-num-val-wrap"><span class="hm-num-val" id="hm-watchcount">15</span><span class="hm-num-unit">곳</span></div><span class="hm-num-lbl">감시 출처</span></div>
+      <div class="hm-num-col hm-reveal"><div class="hm-num-val-wrap"><span class="hm-num-val" id="kpi-streak">—</span><span class="hm-num-unit">일</span></div><span class="hm-num-lbl">최근 실행 기록일수</span></div>
     </div></div></section>
     <section class="hm-about"><div class="hm-wrap"><div class="hm-about-grid hm-reveal">
       <div class="hm-about-left"><span class="hm-about-lbl">ABOUT</span><span class="hm-about-heading">지금 하는 일</span></div>
@@ -1201,7 +1273,9 @@ tr.conf-debate td{padding-top:0;border-top:0}tr.conf-debate details{font-size:13
         <div class="frow"><span class="flab">지역</span><div class="fchips" data-k="region"></div></div>
         <div class="frow"><span class="flab">기관</span><div class="fchips" data-k="org_type"></div></div>
         <div class="frow"><span class="flab">직종</span><div class="fchips" data-k="job_family"></div></div>
-        <div class="frow last"><input id="f-q" type="search" placeholder="기관 · 제목 · 직무 검색" aria-label="검색"><button class="ftog" id="f-soon" type="button">마감 7일 이내</button><button class="freset" id="f-reset" type="button">초기화</button><span class="fcount" id="f-count"></span></div>
+        <div class="frow"><span class="flab">적합도</span><div class="fchips" data-k="fit"></div></div>
+        <div class="frow"><span class="flab">지원상태</span><div class="fchips" data-k="appStatus"></div></div>
+        <div class="frow last"><input id="f-q" type="search" placeholder="기관명·직무·지역·메모 검색" aria-label="검색"><button class="ftog" id="f-soon" type="button">마감 7일 이내</button><button class="ftog" id="f-hide-excl" type="button">제외 공고 숨김</button><button class="freset" id="f-reset" type="button">초기화</button><span class="fcount" id="f-count"></span></div>
         <details class="filter-more"><summary>상세 필터 — 경력 · 고용형태 · 출처</summary>
           <div class="frow"><span class="flab">조건</span><div class="fchips" data-k="experience"></div><i class="fsep"></i><div class="fchips" data-k="employment"></div><i class="fsep"></i><div class="fchips" data-k="source"></div></div>
         </details>
@@ -1211,6 +1285,17 @@ tr.conf-debate td{padding-top:0;border-top:0}tr.conf-debate details{font-size:13
       <div class="feed-thead jobs"><span>마감</span><span>제목 · 기관 · 지역</span><span class="r">직종 · 조건 · 출처</span></div>
       <div id="jobgrid"></div>
       <p class="feedfoot" id="jobs-foot"></p>
+      <p class="jlegal">공개된 채용공고의 최소 정보만 수집하며 공고 전문은 저장하지 않습니다. 세부 자격조건과 지원 여부는 반드시 원문에서 확인해야 합니다.</p>
+      <details class="jlegal-more"><summary>운영 한계 및 권리 안내</summary>
+        <ul>
+          <li>각 공고의 권리는 원 게시기관에 있습니다.</li>
+          <li>일부 공고는 갱신 지연 또는 분류 오류가 있을 수 있습니다.</li>
+          <li>자동 분류(적합도 포함) 결과는 지원 자격을 보장하지 않습니다.</li>
+          <li>최종 지원 전 반드시 원문을 확인하세요.</li>
+          <li>삭제·수정 요청은 이 페이지 하단 소개의 연락 경로를 이용해 주세요.</li>
+        </ul>
+      </details>
+      <button class="jreset-personal" id="jreset-personal" type="button">개인 기록 초기화 (지원상태·메모 전체 삭제)</button>
     </div>
   </div>
   <div id="statusbar" hidden></div><div id="mystrip" hidden></div>
@@ -1274,11 +1359,13 @@ tr.conf-debate td{padding-top:0;border-top:0}tr.conf-debate details{font-size:13
     <div class="eyebrow">업무 자동화 포트폴리오 · 출발점 A · 작성 2026-09-10</div>
     <h1>채용 공고·보건의료 정책·AI 신호 수집기가 매일 아침 자동으로 돌아서,<br>나에게 <em>'어제 새로 뜬 것 중 내 조건에 맞는 것'</em>만 판단이 붙은 피드로 준다.</h1>
     <p class="lede">직무 연결 — 수집 → 규칙 필터 → 역량 태깅 → 검토·판단 → 정기 발행은 공공기관 성과관리·사업운영 공고의 '관련 동향 모니터링 및 정기 보고', 병원 기획팀의 '제도 변화 자료 수집·보고'와 같은 구조입니다.</p>
+    <p class="rs-origin">의료경영을 전공하고 대학 연구·학사행정과 병원 대외협력 업무를 경험하며, 실제 구직 과정에서 반복되는 공고 탐색과 조건 확인을 줄이기 위해 만들었습니다.</p>
     <ul class="rs-quick">
-      <li><b>해결하려던 문제</b>채용 공고·보건의료 정책·AI 신호를 매일 손으로 찾아보던 일</li>
-      <li><b>자동화한 업무</b>수집 → 필터 → 태깅 → 집계까지 스크립트가 매일 처리</li>
-      <li><b>현재 결과</b>아래 숫자(채용·감시·신호·문제)로 매일 갱신</li>
-      <li><b>검증·사람의 판단</b>발표일 없는 자료 제외, 확률 변경 상한, 최종 승인은 사람이</li>
+      <li><b>문제</b>의료·공공·대학 행정 공고가 여러 사이트에 흩어져 있음</li>
+      <li><b>해결</b>공고를 매일 수집하고 조건에 맞지 않는 공고를 자동으로 정리</li>
+      <li><b>결과</b>지원 가능한 공고와 마감일을 한 화면에서 확인</li>
+      <li><b>사람의 역할</b>최종 적합성 판단과 지원 여부 결정</li>
+      <li><b>기계의 역할</b>수집·정규화·중복 제거·분류·집계</li>
     </ul>
     <div class="rs-kpis" id="rs-kpis">
       <!-- 숫자는 content/stats.json (hub_stats.py) 에서만 채운다. 하드코딩 금지 -->
@@ -1289,6 +1376,7 @@ tr.conf-debate td{padding-top:0;border-top:0}tr.conf-debate details{font-size:13
     </div>
   </div>
 
+  <details class="about-more"><summary>기술 상세 보기 — 무엇이 매일 도는가</summary>
   <div class="rs">
     <h2>무엇이 매일 도는가</h2><p class="sub">수집은 스크립트, 판단은 검토 단계에서만 (컬리 데일리 브리핑 A12 원칙)</p>
     <div class="g3">
@@ -1300,6 +1388,7 @@ tr.conf-debate td{padding-top:0;border-top:0}tr.conf-debate details{font-size:13
       <div class="cardp"><span class="tag o">발행</span><span class="tag">수동</span><h3>hub_stats.py → hub_feed.py → npm run build</h3><p>content/*.json 주입 → index.html 하나 → validate(시크릿·날짜·모바일) 통과 시 커밋. 푸시는 사람이.</p></div>
     </div>
   </div>
+  </details>
 
   <details class="about-more"><summary>더 보기 — 벤치마킹 · 설계 시트 · 실행표 · 실패·한계 기록</summary>
   <div class="rs">
@@ -1525,6 +1614,25 @@ tr.conf-debate td{padding-top:0;border-top:0}tr.conf-debate details{font-size:13
       <div class="kpi alt" id="kpi-star"><p class="k">STAR 면접 카드</p><p class="v">—</p><p class="s">&nbsp;</p></div>
       <div class="kpi ok" id="kpi-apps"><p class="k">지원 현황</p><p class="v">—</p><p class="s">&nbsp;</p></div>
     </div>
+    <!-- 파이프라인 단계별 건수: content/stats.json pipeline (scripts/hub_stats.py pipeline_funnel). 하드코딩 금지 -->
+    <article class="card wide" id="pipeline-card">
+      <div class="cardhead"><h2>데이터 처리 흐름</h2><span class="pill" id="pipeline-recon">—</span></div>
+      <div class="pipeline-flow" id="pipeline-flow">
+        <div class="pf-step"><b id="pf-collected">—</b><span>원본 수집</span></div>
+        <div class="pf-arrow">→</div>
+        <div class="pf-step"><b id="pf-dedup">—</b><span>중복 제거</span></div>
+        <div class="pf-arrow">→</div>
+        <div class="pf-step"><b id="pf-career">—</b><span>조건 불일치 제외</span></div>
+        <div class="pf-arrow">→</div>
+        <div class="pf-step"><b id="pf-classified">—</b><span>자동 분류</span></div>
+        <div class="pf-arrow">→</div>
+        <div class="pf-step"><b id="pf-review">—</b><span>수동 검토</span></div>
+        <div class="pf-arrow">→</div>
+        <div class="pf-step hi"><b id="pf-final">—</b><span>최종 노출</span></div>
+      </div>
+      <p class="pf-note" id="pf-note"></p>
+      <div class="pf-sources" id="pf-sources"></div>
+    </article>
     <div class="grid" id="sec-today">
       <article class="card">
         <div class="cardhead"><h2>TODAY</h2><span class="pill" id="today-count">—</span></div>
@@ -1685,6 +1793,26 @@ tr.conf-debate td{padding-top:0;border-top:0}tr.conf-debate details{font-size:13
 <script id="hub-feed" type="application/json">null</script>
 
 <script>
+// ---------- 지원 상태 관리 (localStorage, 운영판 상태와는 별도 키) ----------
+// 저장 항목은 공고 ID · 상태 · 메모 · 관심여부 · 수정시각뿐이다. 이름·연락처 등 개인정보는 저장하지 않는다.
+var JobState = (function () {
+  "use strict";
+  var KEY = "hw.jobs.v1";
+  var STATUSES = ["검토 전", "관심", "지원 예정", "지원 완료", "결과 대기", "면접", "최종 결과", "제외"];
+  function loadAll() { try { return JSON.parse(localStorage.getItem(KEY)) || {}; } catch (e) { return {}; } }
+  function saveAll(all) { try { localStorage.setItem(KEY, JSON.stringify(all)); } catch (e) {} }
+  function get(id) { return loadAll()[id] || { status: "검토 전", note: "", interested: false, updatedAt: null }; }
+  function set(id, patch) {
+    var all = loadAll();
+    var cur = all[id] || { status: "검토 전", note: "", interested: false };
+    all[id] = Object.assign({}, cur, patch, { updatedAt: new Date().toISOString() });
+    saveAll(all);
+    return all[id];
+  }
+  function resetAll() { try { localStorage.removeItem(KEY); } catch (e) {} }
+  return { STATUSES: STATUSES, get: get, set: set, loadAll: loadAll, resetAll: resetAll };
+})();
+
 (function () {
   "use strict";
 
@@ -2266,6 +2394,19 @@ function renderStats(st){
   const by=t.by_status||{};const bys=Object.keys(by).map(k=>k+' '+by[k]).join(' · ');
   set('kpi-apps',t.total??'—',bys||'트래커에 기록된 지원 없음','건');
   const up=document.getElementById('sync');if(up&&st.updated)up.textContent='지표 기준일 '+st.updated;
+  const fit=st.fit||{},pipe=st.pipeline||{};
+  const kw=document.getElementById('kpi-week');if(kw)kw.textContent=j.new_this_week??'—';
+  const kf=document.getElementById('kpi-fithigh');if(kf)kf.textContent=fit.high??'—';
+  const ks=document.getElementById('kpi-streak');if(ks)ks.textContent=pipe.run_days??'—';
+  const pf=(id,v)=>{const el=document.getElementById(id);if(el)el.textContent=v==null?'집계 준비 중':v;};
+  pf('pf-collected',pipe.collected);pf('pf-dedup',pipe.dedup_removed);pf('pf-career',pipe.career_excluded);
+  pf('pf-classified',pipe.auto_classified);pf('pf-review',pipe.review_needed);pf('pf-final',pipe.final_exposed);
+  const recon=document.getElementById('pipeline-recon');
+  if(recon)recon.textContent=pipe.reconciled===false?'집계 오차 '+pipe.reconcile_diff+'건':'집계 일치';
+  const note=document.getElementById('pf-note');
+  if(note)note.textContent='제외 직무 단계는 아직 로그가 없어 집계 준비 중입니다. 자동 분류는 확정, 수동 검토는 애매해 사람 확인이 필요한 건수입니다.';
+  const srcs=document.getElementById('pf-sources');
+  if(srcs&&pipe.sources)srcs.innerHTML='<span><b>'+(pipe.sources.ok??0)+'</b> 정상</span><span><b>'+(pipe.sources.fail??0)+'</b> 실패</span><span><b>'+(pipe.sources.skip??0)+'</b> 건너뜀</span><span>최근 <b>'+(pipe.run_days??0)+'</b>일 실행 기록</span>';
 }
 (function(){
   const el=document.getElementById('hub-stats');let st=null;
@@ -2307,6 +2448,12 @@ function renderWatch(w){
   fetch('content/watch.json').then(r=>r.ok?r.json():null).then(renderWatch).catch(()=>{});
 })();
 
+// ---------- 접이식 영역 aria-expanded 동기화 ----------
+document.querySelectorAll('details').forEach(function(d){
+  if(!d.hasAttribute('aria-expanded'))d.setAttribute('aria-expanded',String(d.open));
+  d.addEventListener('toggle',function(){d.setAttribute('aria-expanded',String(d.open));});
+});
+
 // ---------- 화면 전환 (피드 / 소개 / 운영판) ----------
 (function(){
   const views=['home','jobs','news','practice','about','ops'];
@@ -2314,6 +2461,7 @@ function renderWatch(w){
     if(!views.includes(v)) v='home';
     document.querySelectorAll('.views>section[data-view]').forEach(el=>el.classList.toggle('on',el.dataset.view===v));
     document.querySelectorAll('.tabs a').forEach(a=>a.classList.toggle('on',a.dataset.go===v));
+    if(v==='jobs'&&window.applyJobsPreset)window.applyJobsPreset();
     if(scroll)window.scrollTo({top:0,behavior:'instant'});
   }
   window.addEventListener('hashchange',()=>{const h=location.hash.replace('#','');if(views.includes(h))go(h,true);});
@@ -2322,6 +2470,9 @@ function renderWatch(w){
   document.addEventListener('click',e=>{const a=e.target.closest('a[href^="#"]');if(!a)return;const id=a.getAttribute('href').slice(1);
     const owner=document.getElementById(id)&&document.getElementById(id).closest('section[data-view]');
     if(owner&&!owner.classList.contains('on')){go(owner.dataset.view,false);}});
+  // 홈의 "오늘의 검토 흐름" 링크는 채용 탭으로 이동하면서 필터 프리셋을 한 번만 적용한다
+  document.addEventListener('click',e=>{const a=e.target.closest('a[data-preset]');if(!a)return;
+    try{sessionStorage.setItem('hw.jobs.preset',a.dataset.preset);}catch(err){}});
 })();
 
 // ---------- 피드 (content/feed.json) ----------
@@ -2427,13 +2578,28 @@ function renderRows(F){
   // --- 채용: A 카드 그리드
   const dd=i=>i.dday==null?'':'<span class="dd">'+(i.dday<0?'마감':i.dday===0?'D-day':'D-'+i.dday)+'</span>';
   // 표시 순서: 마감 D-day → 제목 → 기관·지역 → 직종 → 고용형태·경력 → 출처
+  const FIT_ICON={높음:'●',보통:'◐',낮음:'○','검토 필요':'?'};
+  const hl=(s)=>{if(!st.q)return esc(s);const q=st.q.trim();if(!q)return esc(s);
+    const idx=s.toLowerCase().indexOf(q.toLowerCase());if(idx<0)return esc(s);
+    return esc(s.slice(0,idx))+'<mark>'+esc(s.slice(idx,idx+q.length))+'</mark>'+esc(s.slice(idx+q.length));};
+  // 표시 순서: D-day → 적합도 → 제목 → 기관·지역 → 직종·조건 → 적합근거 → 주의조건 → 원문보기 → 지원상태
   const jcard=i=>{const dl=i.dday==null?'<span class="fd-date">'+esc((i.deadline||'').slice(5))+'</span>':'<span class="fd-dd'+(i.dday<=3?' hot':'')+'">'+(i.dday<0?'마감':i.dday===0?'D-day':'D-'+i.dday)+'</span>';
     const org=[i.org_type,i.region+(i.sigungu?' '+i.sigungu:'')].filter(Boolean).join(' · ');
-    const cond=[i.employment,i.experience].filter(Boolean).join('·');
-    const cats=[i.job_family,cond,SRC[i.source]||i.source].filter(Boolean);
-    return '<div class="feed-row"><div class="feed-row-main jobs">'+dl
-      +'<span class="fd-title" title="'+esc(i.title)+'"><a href="'+esc(i.url)+'" target="_blank" rel="noopener noreferrer">'+esc(i.title)+'</a><small class="fd-sub">'+esc(org)+' · '+esc(i.publisher)+'</small></span>'
-      +'<span class="fd-cats">'+cats.map(c=>'<i class="fd-cat">'+esc(c)+'</i>').join('')+'</span></div>'
+    const cond=[i.job_family,i.employment,i.experience].filter(Boolean).join(' · ');
+    const fitLv=i.fit_level||'검토 필요';
+    const fitBadge='<span class="jfit jfit-'+esc(fitLv.replace(' ',''))+'" title="적합도: '+esc(fitLv)+'"><i aria-hidden="true">'+(FIT_ICON[fitLv]||'?')+'</i>'+esc(fitLv)+'</span>';
+    const st0=JobState.get(i.id);
+    return '<div class="feed-row"><div class="feed-row-main jobs jcard2">'
+      +'<div class="jc-head">'+dl+fitBadge+'</div>'
+      +'<div class="jc-title" title="'+esc(i.title)+'"><a href="'+esc(i.url)+'" target="_blank" rel="noopener noreferrer">'+hl(i.title)+'</a></div>'
+      +'<div class="jc-meta">'+hl(org)+' · '+hl(i.publisher)+'</div>'
+      +'<div class="jc-meta jc-cond">'+hl(cond)+' · '+esc(SRC[i.source]||i.source)+(i.also_sources&&i.also_sources.length?' <span class="jc-also" title="다른 출처에도 같은 공고: '+esc(i.also_sources.join(', '))+'">외 '+i.also_sources.length+'곳</span>':'')+'</div>'
+      +(i.fit_reasons&&i.fit_reasons.length?'<div class="jc-reason">근거: '+i.fit_reasons.slice(0,2).map(esc).join(' · ')+'</div>':'')
+      +(i.fit_cautions&&i.fit_cautions.length?'<div class="jc-caution">주의: '+i.fit_cautions.map(esc).join(' · ')+'</div>':'')
+      +'<div class="jc-actions"><a class="jc-orig" href="'+esc(i.url)+'" target="_blank" rel="noopener noreferrer">원문 보기 ↗</a>'
+      +'<select class="jc-status" data-id="'+esc(i.id)+'" aria-label="지원 상태">'+JobState.STATUSES.map(s=>'<option value="'+esc(s)+'"'+(st0.status===s?' selected':'')+'>'+esc(s)+'</option>').join('')+'</select></div>'
+      +'<textarea class="jc-note" data-id="'+esc(i.id)+'" placeholder="메모 (예: 자소서 항목, 면접 후기)" rows="1">'+esc(st0.note||'')+'</textarea>'
+      +'</div>'
       +(i.summary?'<div class="feed-summ"><div class="feed-summ-text" title="'+esc(i.summary)+'">'+esc(i.summary)+(i.deadline?' · 마감 '+esc(i.deadline):'')+'</div></div>':'')+'</div>';};
   const SRC={};((F.jobs_facets||{}).source||[]).forEach(x=>SRC[x.v]=x.name||x.v);
   // feed.json 이 이미 "지금 유효한 공고"만 담고 있다(scripts/jobs_common.py active_postings 기준).
@@ -2456,21 +2622,28 @@ function renderRows(F){
       return '<div class="wrow"><button class="wname" data-q="'+esc(w.name)+'" title="이 기관 공고만 보기">'+esc(w.name)+'</button><span class="wopen">'+(w.open?'채용중 <b>'+w.open+'</b>':'<i>0</i>')+(w.soon?' <em>D-7 '+w.soon+'</em>':'')+'</span></div>';}).join('');};
   if($('winst')){$('winst').addEventListener('click',e=>{
       const b=e.target.closest('.wname');if(b){$('f-q').value=b.dataset.q.replace(/\(.*\)$/,'');st.q=$('f-q').value;jpage=1;drawJobs();window.scrollTo({top:0,behavior:'smooth'});}});}
-  const FK=['region','org_type','job_family','experience','employment','source'];
-  const st={region:'',org_type:'',job_family:'',experience:'',employment:'',source:'',q:'',soon:false,watch:false};
-  const val=(i,k)=>k==='experience'?(i.experience||''):k==='employment'?(i.employment||''):(i[k]||'');
+  const FK=['region','org_type','job_family','fit','appStatus','experience','employment','source'];
+  const st={region:'',org_type:'',job_family:'',fit:'',appStatus:'',experience:'',employment:'',source:'',q:'',soon:false,watch:false,hideExcluded:true,onlyNew:false,pendingOnly:false};
+  const val=(i,k)=>k==='experience'?(i.experience||''):k==='employment'?(i.employment||''):k==='fit'?(i.fit_level||'검토 필요'):k==='appStatus'?(JobState.get(i.id).status||'검토 전'):(i[k]||'');
   const pass=(i,skip)=>{for(const k of FK){if(k===skip||!st[k])continue;if(st[k]==='미분류'?val(i,k):val(i,k)!==st[k])return false;}
     if(st.soon&&!(i.dday!=null&&i.dday<=7))return false;
+    if(st.onlyNew&&i.seen!==today)return false;
+    if(st.pendingOnly&&!['지원 예정','결과 대기'].includes(val(i,'appStatus')))return false;
     if(st.watch){const w=instOf(i);if(!w||!wOn(w))return false;}
-    if(st.q){const h=(i.publisher+' '+i.title+' '+(i.summary||'')).toLowerCase();if(!h.includes(st.q.toLowerCase()))return false;}return true;};
-  const ORDER={region:['서울','경기','인천','부산','대구','대전','광주','울산','세종','강원','충북','충남','전북','전남','경북','경남','제주','전국']};
+    if(st.hideExcluded&&skip!=='appStatus'&&val(i,'appStatus')==='제외')return false;
+    if(st.q){const js=JobState.get(i.id);
+      const h=[i.publisher,i.title,i.region,i.sigungu,i.job_family,i.summary,(i.fit_reasons||[]).join(' '),(i.fit_cautions||[]).join(' '),js.note||''].join(' ').toLowerCase();
+      if(!h.includes(st.q.toLowerCase()))return false;}
+    return true;};
+  const ORDER={region:['서울','경기','인천','부산','대구','대전','광주','울산','세종','강원','충북','충남','전북','전남','경북','경남','제주','전국'],
+    fit:['높음','보통','낮음','검토 필요'],appStatus:JobState.STATUSES};
   const drawChips=()=>{FK.forEach(k=>{const box=document.querySelector('#ftool .fchips[data-k="'+k+'"]');if(!box)return;
       const base=jobs.filter(i=>pass(i,k));const c={};base.forEach(i=>{const v=val(i,k)||'미분류';c[v]=(c[v]||0)+1;});
       let keys=Object.keys(c);if(ORDER[k])keys.sort((a,b)=>(ORDER[k].indexOf(a)+1||99)-(ORDER[k].indexOf(b)+1||99));else keys.sort((a,b)=>c[b]-c[a]);
       if(st[k]&&!c[st[k]])keys.push(st[k]);
-      box.innerHTML='<button data-v="" class="fall '+(st[k]?'':'on')+'">전체 <em>'+base.length+'</em></button>'+keys.map(v=>'<button data-v="'+esc(v)+'" class="'+(st[k]===v?'on':'')+'">'+esc(k==='source'?(SRC[v]||v):v)+' <em>'+(c[v]||0)+'</em></button>').join('');});
+      box.innerHTML='<button data-v="" class="fall '+(st[k]?'':'on')+'" aria-pressed="'+(st[k]?'false':'true')+'">전체 <em>'+base.length+'</em></button>'+keys.map(v=>'<button data-v="'+esc(v)+'" class="'+(st[k]===v?'on':'')+'" aria-pressed="'+(st[k]===v?'true':'false')+'">'+esc(k==='source'?(SRC[v]||v):v)+' <em>'+(c[v]||0)+'</em></button>').join('');});
     drawTags();};
-  const FLABEL={region:'지역',org_type:'기관',job_family:'직종',experience:'경력',employment:'고용형태',source:'출처'};
+  const FLABEL={region:'지역',org_type:'기관',job_family:'직종',fit:'적합도',appStatus:'지원상태',experience:'경력',employment:'고용형태',source:'출처'};
   const drawTags=()=>{const box=$('f-tags');if(!box)return;const tags=[];
     FK.forEach(k=>{if(st[k])tags.push({k,label:(FLABEL[k]||k)+': '+(k==='source'?(SRC[st[k]]||st[k]):st[k])});});
     if(st.q)tags.push({k:'q',label:'검색: '+st.q});
@@ -2488,16 +2661,45 @@ function renderRows(F){
   $('jobs-foot').addEventListener('click',e=>{const b=e.target.closest('button[data-p]');if(!b||b.disabled)return;jpage=parseInt(b.dataset.p,10);drawJobs(true);});
   if($('ftool')){$('ftool').addEventListener('click',e=>{const b=e.target.closest('.fchips button');if(!b)return;const k=b.parentElement.dataset.k;st[k]=b.dataset.v;jpage=1;drawJobs();});
     $('f-q').addEventListener('input',e=>{st.q=e.target.value.trim();jpage=1;drawJobs();});
-    $('f-soon').addEventListener('click',()=>{st.soon=!st.soon;$('f-soon').classList.toggle('on',st.soon);jpage=1;drawJobs();});
+    $('f-soon').addEventListener('click',()=>{st.soon=!st.soon;$('f-soon').classList.toggle('on',st.soon);$('f-soon').setAttribute('aria-pressed',String(st.soon));jpage=1;drawJobs();});
     if($('f-tags'))$('f-tags').addEventListener('click',e=>{const b=e.target.closest('.ftag');if(!b)return;const k=b.dataset.k;
       if(k==='q'){st.q='';$('f-q').value='';}else if(k==='soon'){st.soon=false;$('f-soon').classList.remove('on');}else{st[k]='';}
       jpage=1;drawJobs();});
 
-    $('f-reset').addEventListener('click',()=>{FK.forEach(k=>st[k]='');st.q='';st.soon=false;st.watch=false;$('f-q').value='';$('f-soon').classList.remove('on');jpage=1;drawJobs();});
-    drawJobs();}
+    $('f-reset').addEventListener('click',()=>{FK.forEach(k=>st[k]='');st.q='';st.soon=false;st.watch=false;st.hideExcluded=true;$('f-q').value='';$('f-soon').classList.remove('on');$('f-soon').setAttribute('aria-pressed','false');$('f-hide-excl').classList.add('on');$('f-hide-excl').setAttribute('aria-pressed','true');jpage=1;drawJobs();});
+    $('f-hide-excl').classList.add('on');$('f-hide-excl').setAttribute('aria-pressed','true');
+    $('f-hide-excl').addEventListener('click',()=>{st.hideExcluded=!st.hideExcluded;$('f-hide-excl').classList.toggle('on',st.hideExcluded);$('f-hide-excl').setAttribute('aria-pressed',String(st.hideExcluded));jpage=1;drawJobs();});
+    $('jobgrid').addEventListener('change',e=>{const sel=e.target.closest('.jc-status');if(!sel)return;JobState.set(sel.dataset.id,{status:sel.value});jpage=1;drawJobs();});
+    $('jobgrid').addEventListener('blur',e=>{const ta=e.target.closest&&e.target.closest('.jc-note');if(!ta)return;JobState.set(ta.dataset.id,{note:ta.value});},true);
+    if($('jreset-personal'))$('jreset-personal').addEventListener('click',()=>{
+      if(!confirm('저장된 모든 지원상태·메모를 삭제합니다. 되돌릴 수 없습니다. 계속할까요?'))return;
+      JobState.resetAll();drawJobs();});
+    // 홈 "오늘의 검토 흐름"에서 넘어온 프리셋을 채용 탭에 들어올 때마다 확인해서 적용한다(한 번 쓰고 지움)
+    window.applyJobsPreset=function(){
+      let preset=null;
+      try{preset=sessionStorage.getItem('hw.jobs.preset');}catch(e){}
+      if(!preset)return false;
+      try{sessionStorage.removeItem('hw.jobs.preset');}catch(e){}
+      FK.forEach(k=>st[k]='');st.q='';st.soon=false;st.onlyNew=false;st.pendingOnly=false;
+      $('f-soon').classList.remove('on');$('f-soon').setAttribute('aria-pressed','false');
+      if(preset==='new')st.onlyNew=true;
+      else if(preset==='fitHigh')st.fit='높음';
+      else if(preset==='soon'){st.soon=true;$('f-soon').classList.add('on');$('f-soon').setAttribute('aria-pressed','true');}
+      else if(preset==='pipeline')st.pendingOnly=true;
+      else if(preset==='planned')st.appStatus='지원 예정';
+      else if(preset==='waiting')st.appStatus='결과 대기';
+      jpage=1;drawJobs();
+      return true;
+    };
+    if(!window.applyJobsPreset())drawJobs();}
   // --- 홈: 히어로 메타 · 카드 라이브 줄 · 숫자 · 푸터 (feed.json + stats)
   if($('hm-meta')){const g=(F.meta&&F.meta.generated_at||'');const jobsAll=F.items.filter(i=>i.channel==='jobs');
     $('hm-meta').innerHTML='마지막 수집 <span class="hm-mono">'+esc(g.slice(5,10)+' '+g.slice(11,16))+'</span> · 오늘 신규 <span class="hm-mono">'+esc(F.meta&&F.meta.today_new||0)+'</span>건 · 7일 내 마감 <span class="hm-mono">'+esc(I.deadline_7d||0)+'</span>건';
+    const kn=$('kpi-new');if(kn)kn.textContent=(F.meta&&F.meta.today_new)||0;
+    const planned=jobsAll.filter(j=>JobState.get(j.id).status==='지원 예정').length;
+    const waiting=jobsAll.filter(j=>JobState.get(j.id).status==='결과 대기').length;
+    const kp=$('kpi-planned');if(kp)kp.textContent=planned;
+    const kwait=$('kpi-waiting');if(kwait)kwait.textContent=waiting;
     const soon=jobsAll.filter(i=>i.dday!=null&&i.dday>=0).sort((a,b)=>a.dday-b.dday)[0];
     if(soon){$('hm-soon').innerHTML='<span class="hm-card-dday">'+(soon.dday===0?'D-day':'D-'+soon.dday)+'</span>'+esc(soon.title);$('hm-soon-pub').textContent=soon.publisher;}else{$('hm-soon').textContent='마감 예정 공고 없음';}
     const h0=F.items.find(i=>i.channel==='health');if(h0)$('hm-news').textContent=(h0.published_at||'').slice(5)+' · '+h0.title+' ('+h0.publisher+')';
