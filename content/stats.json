@@ -1,52 +1,54 @@
 {
-  "updated": "2026-09-14",
+  "updated": "2026-09-15",
   "jobs": {
-    "total": 64,
-    "upcoming7": 28,
-    "next_deadline": "2026-09-14",
-    "sources_count": 5,
+    "total": 61,
+    "upcoming7": 39,
+    "next_deadline": "2026-09-15",
+    "sources_count": 6,
     "by_source": {
-      "사람인": 21,
       "잡알리오": 20,
-      "잡코리아": 16,
+      "사람인": 20,
+      "잡코리아": 12,
       "경제·인문사회연구회": 4,
-      "메디컬잡": 3
+      "gojobs": 4,
+      "메디컬잡": 1
     },
-    "last_fetched_at": "2026-09-10",
-    "new_this_week": 64
+    "last_fetched_at": "2026-09-14",
+    "new_this_week": 61
   },
   "fit": {
     "high": 6,
-    "medium": 49,
-    "low": 6,
+    "medium": 48,
+    "low": 4,
     "review": 3
   },
   "pipeline": {
-    "collected": 162,
+    "collected": 167,
     "dedup_removed": 38,
-    "career_excluded": 35,
+    "career_excluded": 36,
     "job_excluded": null,
-    "auto_classified": 48,
+    "auto_classified": 52,
     "review_needed": 29,
-    "final_exposed": 64,
+    "final_exposed": 61,
     "reconciled": false,
     "reconcile_diff": 3,
     "sources": {
-      "ok": 5,
+      "ok": 6,
       "fail": 0,
-      "skip": 1
+      "skip": 2
     },
-    "run_days": 2,
+    "run_days": 3,
     "run_dates": [
       "2026-09-09",
-      "2026-09-10"
+      "2026-09-10",
+      "2026-09-14"
     ],
     "success_rate": null,
-    "avg_duration_ms": null,
-    "last_success_at": null,
+    "avg_duration_ms": 5336,
+    "last_success_at": "2026-09-14T15:57:06",
     "success_streak_days": null,
     "by_source_success_rate": {},
-    "sample_days": 0,
+    "sample_days": 1,
     "sample_ready": false
   },
   "sql": {
@@ -82,21 +84,21 @@
       {
         "id": "health_watch",
         "label": "보건·의료 변화 감시",
-        "days_run": 3,
-        "success_rate": 70.8,
+        "days_run": 4,
+        "success_rate": 71.4,
         "note": null
       },
       {
         "id": "sql_daily",
         "label": "SQL 데일리 5문제",
-        "days_run": 4,
+        "days_run": 5,
         "success_rate": null,
         "note": "성공/실패 로그 없음 — 파일 생성일수만 집계"
       },
       {
         "id": "python_daily",
         "label": "Python 5문제 출제",
-        "days_run": 3,
+        "days_run": 4,
         "success_rate": null,
         "note": "성공/실패 로그 없음 — 파일 생성일수만 집계"
       },
@@ -117,12 +119,12 @@
       {
         "id": "jobs",
         "label": "채용 공고 수집",
-        "days_run": 2,
+        "days_run": 3,
         "success_rate": null,
         "note": "표본 3일 미만 — 집계 준비 중"
       }
     ],
-    "total_days_logged": 16
+    "total_days_logged": 20
   },
   "note": "my agent 저장소의 CSV·YAML·MD 에서 센 값. 추정치 없음."
 }

@@ -1,22 +1,23 @@
 {
  "meta": {
-  "updated": "2026-09-14",
-  "generated_at": "2026-09-14T14:54:08",
+  "updated": "2026-09-15",
+  "generated_at": "2026-09-15T08:55:17",
   "days": [
+   "2026-09-15",
    "2026-09-14",
    "2026-09-11",
    "2026-09-10",
    "2026-09-09",
    "2026-09-08"
   ],
-  "today_new": 26,
+  "today_new": 8,
   "note": "수집기 4개의 결과를 스크립트가 합친 값. 원문 복제 없음, 추정치 없음."
  },
  "channels": [
   {
    "id": "jobs",
    "name": "채용 공고",
-   "count": 64
+   "count": 61
   },
   {
    "id": "health",
@@ -46,18 +47,18 @@
   {
    "id": "changelog",
    "name": "자동화 변경사항",
-   "count": 111
+   "count": 121
   }
  ],
  "jobs_facets": {
   "region": [
    {
     "v": "서울",
-    "n": 18
+    "n": 17
    },
    {
     "v": "경기",
-    "n": 11
+    "n": 10
    },
    {
     "v": "세종",
@@ -76,11 +77,11 @@
     "n": 4
    },
    {
-    "v": "충북",
-    "n": 4
+    "v": "부산",
+    "n": 3
    },
    {
-    "v": "부산",
+    "v": "충북",
     "n": 3
    },
    {
@@ -123,22 +124,22 @@
    },
    {
     "v": "대학·산학",
-    "n": 8
+    "n": 10
    },
    {
     "v": "대학병원",
-    "n": 8
+    "n": 5
    },
    {
     "v": "종합병원",
     "n": 4
    },
    {
-    "v": "협회·재단",
-    "n": 4
+    "v": "공공병원",
+    "n": 2
    },
    {
-    "v": "공공병원",
+    "v": "협회·재단",
     "n": 2
    },
    {
@@ -149,7 +150,7 @@
   "job_family": [
    {
     "v": "검토 필요",
-    "n": 24
+    "n": 22
    },
    {
     "v": "인턴",
@@ -157,7 +158,7 @@
    },
    {
     "v": "행정·사무",
-    "n": 9
+    "n": 8
    },
    {
     "v": "기획·성과관리",
@@ -165,14 +166,14 @@
    },
    {
     "v": "사업운영·관리",
-    "n": 5
+    "n": 4
    },
    {
     "v": "인사·회계·총무",
-    "n": 3
+    "n": 4
    },
    {
-    "v": "전문연구직",
+    "v": "연구행정·연구원",
     "n": 3
    },
    {
@@ -180,69 +181,70 @@
     "n": 2
    },
    {
+    "v": "전문연구직",
+    "n": 2
+   },
+   {
     "v": "미분류",
-    "n": 1
-   },
-   {
-    "v": "연구행정·연구원",
-    "n": 1
-   },
-   {
-    "v": "의료행정·원무기획",
     "n": 1
    }
   ],
   "experience": [
    {
     "v": "신입",
-    "n": 27
+    "n": 25
    },
    {
     "v": "신입/경력",
-    "n": 26
+    "n": 23
+   },
+   {
+    "v": "미상",
+    "n": 7
    },
    {
     "v": "경력무관",
     "n": 6
-   },
-   {
-    "v": "미상",
-    "n": 5
    }
   ],
   "employment": [
    {
     "v": "계약직·기간제",
-    "n": 34
-   },
-   {
-    "v": "정규직",
-    "n": 15
+    "n": 31
    },
    {
     "v": "인턴",
     "n": 14
    },
    {
+    "v": "정규직",
+    "n": 14
+   },
+   {
     "v": "미상",
-    "n": 1
+    "n": 2
    }
   ],
   "source": [
-   {
-    "v": "saramin",
-    "n": 21,
-    "name": "사람인"
-   },
    {
     "v": "alio",
     "n": 20,
     "name": "잡알리오"
    },
    {
+    "v": "saramin",
+    "n": 20,
+    "name": "사람인"
+   },
+   {
     "v": "jobkorea",
-    "n": 16,
+    "n": 12,
     "name": "잡코리아"
+   },
+   {
+    "v": "gojobs",
+    "n": 4,
+    "name": "gojobs"
    },
    {
     "v": "nrc",
@@ -251,7 +253,7 @@
    },
    {
     "v": "medicaljob",
-    "n": 3,
+    "n": 1,
     "name": "메디컬잡"
    }
   ]
@@ -294,7 +296,7 @@
    ],
    "on": true,
    "open": 1,
-   "soon": 0
+   "soon": 1
   },
   {
    "group": "nrc",
@@ -305,7 +307,7 @@
    ],
    "on": true,
    "open": 1,
-   "soon": 0
+   "soon": 1
   },
   {
    "group": "nrc",
@@ -427,7 +429,7 @@
    ],
    "on": true,
    "open": 2,
-   "soon": 1
+   "soon": 2
   },
   {
    "group": "nrc",
@@ -526,7 +528,7 @@
    ],
    "on": true,
    "open": 2,
-   "soon": 1
+   "soon": 2
   },
   {
    "group": "nrc",
@@ -661,17 +663,17 @@
   {
    "id": "jobs",
    "name": "채용 공고 수집",
-   "last_run": "2026-09-10",
+   "last_run": "2026-09-14",
    "status": "ok",
-   "note": "잡알리오 · 잡코리아 · 메디컬잡 · 경제·인문사회연구회 · 사람인, 신입/경력무관만",
-   "count": 64
+   "note": "잡알리오 · gojobs · 잡코리아 · 메디컬잡 · 경제·인문사회연구회 · 사람인, 신입/경력무관만",
+   "count": 61
   },
   {
    "id": "watch",
    "name": "보건·의료 변화 감시",
-   "last_run": "2026-09-14",
+   "last_run": "2026-09-15",
    "status": "ok",
-   "note": "정상 9 · 실패 2 · 건너뜀 4",
+   "note": "정상 11 · 실패 0 · 건너뜀 4",
    "count": 15
   },
   {
@@ -685,17 +687,17 @@
   {
    "id": "sql",
    "name": "SQL 데일리 출제",
-   "last_run": "2026-09-14",
+   "last_run": "2026-09-15",
    "status": "ok",
-   "note": "주제 SELECT/WHERE/ORDER BY · 원문 3 + 생성 2",
+   "note": "주제 JOIN · 원문 3 + 생성 2",
    "count": 3
   },
   {
    "id": "python",
    "name": "Python 데일리 출제",
-   "last_run": "2026-09-14",
+   "last_run": "2026-09-15",
    "status": "ok",
-   "note": "주제 문자열·조건문 · 원문 + 생성 · 테스트 채점",
+   "note": "주제 리스트·딕셔너리·집계 · 원문 + 생성 · 테스트 채점",
    "count": 5
   },
   {
@@ -704,10 +706,259 @@
    "last_run": "2026-09-14",
    "status": "ok",
    "note": "git 커밋 로그에서 자동 추출, 데일리 동기화 커밋 제외",
-   "count": 111
+   "count": 121
   }
  ],
  "items": [
+  {
+   "id": "sql-2026-09-15-1",
+   "channel": "sql",
+   "title": "[Basic Joins] Replace Employee ID With The Unique Identifier",
+   "url": "https://leetcode.com/problems/replace-employee-id-with-the-unique-identifier/",
+   "publisher": "leetcode",
+   "source": "leetcode",
+   "published_at": "2026-09-15",
+   "seen": "2026-09-15",
+   "category": "JOIN",
+   "tags": [
+    "Lv1"
+   ],
+   "summary": "원문 링크 문제. 사이트에서 풀고 /sql done 으로 기록."
+  },
+  {
+   "id": "sql-2026-09-15-2",
+   "channel": "sql",
+   "title": "[JOIN] 조건에 맞는 도서와 저자 리스트 출력하기",
+   "url": "https://school.programmers.co.kr/learn/courses/30/lessons/144854",
+   "publisher": "programmers",
+   "source": "programmers",
+   "published_at": "2026-09-15",
+   "seen": "2026-09-15",
+   "category": "JOIN",
+   "tags": [
+    "Lv2"
+   ],
+   "summary": "원문 링크 문제. 사이트에서 풀고 /sql done 으로 기록."
+  },
+  {
+   "id": "sql-2026-09-15-3",
+   "channel": "sql",
+   "title": "[JOIN] 없어진 기록 찾기",
+   "url": "https://school.programmers.co.kr/learn/courses/30/lessons/59042",
+   "publisher": "programmers",
+   "source": "programmers",
+   "published_at": "2026-09-15",
+   "seen": "2026-09-15",
+   "category": "JOIN",
+   "tags": [
+    "Lv3"
+   ],
+   "summary": "원문 링크 문제. 사이트에서 풀고 /sql done 으로 기록."
+  },
+  {
+   "id": "python-2026-09-15-1",
+   "channel": "python",
+   "title": "[Basic Data Types] Find the Runner-Up Score!  ",
+   "url": "https://www.hackerrank.com/challenges/find-second-maximum-number-in-a-list/problem",
+   "publisher": "hackerrank_python",
+   "source": "hackerrank_python",
+   "published_at": "2026-09-15",
+   "seen": "2026-09-15",
+   "category": "리스트·딕셔너리·집계",
+   "tags": [
+    "Lv1"
+   ],
+   "kind": "link",
+   "summary": "원문 링크 문제. 사이트에서 풀고 done 으로 기록."
+  },
+  {
+   "id": "python-2026-09-15-2",
+   "channel": "python",
+   "title": "[Sets] No Idea!",
+   "url": "https://www.hackerrank.com/challenges/no-idea/problem",
+   "publisher": "hackerrank_python",
+   "source": "hackerrank_python",
+   "published_at": "2026-09-15",
+   "seen": "2026-09-15",
+   "category": "리스트·딕셔너리·집계",
+   "tags": [
+    "Lv2"
+   ],
+   "kind": "link",
+   "summary": "원문 링크 문제. 사이트에서 풀고 done 으로 기록."
+  },
+  {
+   "id": "python-2026-09-15-3",
+   "channel": "python",
+   "title": "[Easy] Pascal's Triangle",
+   "url": "https://leetcode.com/problems/pascals-triangle/",
+   "publisher": "leetcode_easy",
+   "source": "leetcode_easy",
+   "published_at": "2026-09-15",
+   "seen": "2026-09-15",
+   "category": "리스트·딕셔너리·집계",
+   "tags": [
+    "Lv1"
+   ],
+   "kind": "link",
+   "summary": "원문 링크 문제. 사이트에서 풀고 done 으로 기록."
+  },
+  {
+   "id": "python-2026-09-15-4",
+   "channel": "python",
+   "title": "조인 전후 행 수 검증",
+   "url": "",
+   "publisher": "생성 문제 · Python",
+   "source": "Python",
+   "published_at": "2026-09-15",
+   "seen": "2026-09-15",
+   "category": "리스트·딕셔너리·집계",
+   "tags": [
+    "Lv3",
+    "P402"
+   ],
+   "kind": "generated",
+   "summary": "조인 전 행 수 before 와 조인 후 행 수 after 를 받아 after > before 이면 \"중단: 행 증가 N행\", after < before 이면 \"경고: 행 감소 N행\", 같으면 \"정상\" 을 반환하는 join_check 를 작성하세요."
+  },
+  {
+   "id": "python-2026-09-15-5",
+   "channel": "python",
+   "title": "부서별 실적 합계",
+   "url": "",
+   "publisher": "생성 문제 · Python",
+   "source": "Python",
+   "published_at": "2026-09-15",
+   "seen": "2026-09-15",
+   "category": "리스트·딕셔너리·집계",
+   "tags": [
+    "Lv1",
+    "P101"
+   ],
+   "kind": "generated",
+   "summary": "rows 는 {\"dept\": 부서명, \"revenue\": 정수} 딕셔너리의 리스트입니다. 부서별 revenue 합계를 {부서명: 합계} 딕셔너리로 반환하는 sum_by_dept 를 작성하세요."
+  },
+  {
+   "id": "gojobs-ba9e0b75",
+   "channel": "jobs",
+   "title": "국립외교원 외교안보연구소 연구행정과 기간제 근로자(사무 나급) 채용 공고",
+   "url": "https://www.gojobs.go.kr/apmView.do?menuNo=401&selMenuNo=400&searchJobsecode=020&empmnsn=303466",
+   "publisher": "외교부 국립외교원 외교안보연구소",
+   "source": "gojobs",
+   "published_at": "2026-09-14",
+   "seen": "2026-09-14",
+   "category": "미상 · 계약직·기간제",
+   "tags": [],
+   "summary": "직무: 기간제근로자 1명",
+   "deadline": "2026-09-22",
+   "dday": 7,
+   "region": "서울",
+   "sigungu": "서초구",
+   "org_type": "연구기관",
+   "job_family": "연구행정·연구원",
+   "experience": "미상",
+   "employment": "계약직·기간제",
+   "also_sources": [],
+   "fit_level": "보통",
+   "fit_reasons": [
+    "연구행정 경험 활용 가능",
+    "서울·경기·인천·대전·충청권"
+   ],
+   "fit_cautions": [
+    "단기 계약직"
+   ],
+   "fit_exclusions": []
+  },
+  {
+   "id": "gojobs-236823d3",
+   "channel": "jobs",
+   "title": "국립외교원 외교안보연구소 연구행정과 기간제 근로자(연구원 다급) 채용 공고",
+   "url": "https://www.gojobs.go.kr/apmView.do?menuNo=401&selMenuNo=400&searchJobsecode=020&empmnsn=303463",
+   "publisher": "외교부 국립외교원 외교안보연구소",
+   "source": "gojobs",
+   "published_at": "2026-09-14",
+   "seen": "2026-09-14",
+   "category": "미상 · 계약직·기간제",
+   "tags": [],
+   "summary": "직무: 기간제근로자 1명",
+   "deadline": "2026-09-22",
+   "dday": 7,
+   "region": "서울",
+   "sigungu": "서초구",
+   "org_type": "연구기관",
+   "job_family": "연구행정·연구원",
+   "experience": "미상",
+   "employment": "계약직·기간제",
+   "also_sources": [],
+   "fit_level": "보통",
+   "fit_reasons": [
+    "연구행정 경험 활용 가능",
+    "서울·경기·인천·대전·충청권"
+   ],
+   "fit_cautions": [
+    "단기 계약직"
+   ],
+   "fit_exclusions": []
+  },
+  {
+   "id": "gojobs-44421a86",
+   "channel": "jobs",
+   "title": "2026학년도 예일초등학교 사무행정실무사 모집 재공고",
+   "url": "http://work.sen.go.kr/work/search/recInfo/BD_selectRecDetail.do?q_rcrtSn=110259",
+   "publisher": "서울특별시교육청 서울특별시서부교육지원청 예일초등학교",
+   "source": "gojobs",
+   "published_at": "2026-09-14",
+   "seen": "2026-09-14",
+   "category": "미상 · 미상",
+   "tags": [],
+   "summary": "직무: 사무행정실무사 1명",
+   "deadline": "2026-09-18",
+   "dday": 3,
+   "region": "서울",
+   "sigungu": "은평구",
+   "org_type": "대학·산학",
+   "job_family": "행정·사무",
+   "experience": "미상",
+   "employment": "미상",
+   "also_sources": [],
+   "fit_level": "보통",
+   "fit_reasons": [
+    "대학 또는 연구기관 행정",
+    "서울·경기·인천·대전·충청권"
+   ],
+   "fit_cautions": [],
+   "fit_exclusions": []
+  },
+  {
+   "id": "gojobs-dbc7e0a7",
+   "channel": "jobs",
+   "title": "서울과학기술대학교 교양대학 대학회계 기간제직원(행정원) 공개경쟁채용 공고",
+   "url": "http://seoultech.ac.kr/service/info/recruit?do=commonview&searchtext=&searchtype=-1&nowpage=1&bnum=3601&bidx=895414&qidx=3601&cate=10&allboard=false&nowpage=1",
+   "publisher": "서울과학기술대학교",
+   "source": "gojobs",
+   "published_at": "2026-09-14",
+   "seen": "2026-09-14",
+   "category": "미상 · 계약직·기간제",
+   "tags": [],
+   "summary": "직무: 기간제직원(행정원) 1명",
+   "deadline": "2026-09-21",
+   "dday": 6,
+   "region": "서울",
+   "sigungu": "노원구",
+   "org_type": "대학·산학",
+   "job_family": "인사·회계·총무",
+   "experience": "미상",
+   "employment": "계약직·기간제",
+   "also_sources": [],
+   "fit_level": "보통",
+   "fit_reasons": [
+    "대학 또는 연구기관 행정",
+    "서울·경기·인천·대전·충청권"
+   ],
+   "fit_cautions": [
+    "단기 계약직"
+   ],
+   "fit_exclusions": []
+  },
   {
    "id": "sig-12e9dd6851",
    "channel": "ai",
@@ -727,131 +978,64 @@
    "relevance": "low"
   },
   {
-   "id": "sql-2026-09-14-1",
-   "channel": "sql",
-   "title": "[SELECT] 평균 일일 대여 요금 구하기",
-   "url": "https://school.programmers.co.kr/learn/courses/30/lessons/151136",
-   "publisher": "programmers",
-   "source": "programmers",
-   "published_at": "2026-09-14",
-   "seen": "2026-09-14",
-   "category": "SELECT/WHERE/ORDER BY",
-   "tags": [
-    "Lv1"
-   ],
-   "summary": "원문 링크 문제. 사이트에서 풀고 /sql done 으로 기록."
-  },
-  {
-   "id": "sql-2026-09-14-2",
-   "channel": "sql",
-   "title": "[SELECT] 3월에 태어난 여성 회원 목록 출력하기",
-   "url": "https://school.programmers.co.kr/learn/courses/30/lessons/131120",
-   "publisher": "programmers",
-   "source": "programmers",
-   "published_at": "2026-09-14",
-   "seen": "2026-09-14",
-   "category": "SELECT/WHERE/ORDER BY",
-   "tags": [
-    "Lv2"
-   ],
-   "summary": "원문 링크 문제. 사이트에서 풀고 /sql done 으로 기록."
-  },
-  {
-   "id": "sql-2026-09-14-3",
-   "channel": "sql",
-   "title": "[Sorting and Grouping] Product Sales Analysis III",
-   "url": "https://leetcode.com/problems/product-sales-analysis-iii/",
-   "publisher": "leetcode",
-   "source": "leetcode",
-   "published_at": "2026-09-14",
-   "seen": "2026-09-14",
-   "category": "SELECT/WHERE/ORDER BY",
-   "tags": [
-    "Lv2"
-   ],
-   "summary": "원문 링크 문제. 사이트에서 풀고 /sql done 으로 기록."
-  },
-  {
-   "id": "python-2026-09-14-1",
-   "channel": "python",
-   "title": "문자열 출력하기",
-   "url": "https://school.programmers.co.kr/learn/courses/30/lessons/181952",
-   "publisher": "programmers_python",
-   "source": "programmers_python",
-   "published_at": "2026-09-14",
-   "seen": "2026-09-14",
-   "category": "문자열·조건문",
-   "tags": [
-    "Lv0"
-   ],
-   "kind": "link",
-   "summary": "원문 링크 문제. 사이트에서 풀고 done 으로 기록."
-  },
-  {
-   "id": "python-2026-09-14-2",
-   "channel": "python",
-   "title": "[Introduction] Python: Division",
-   "url": "https://www.hackerrank.com/challenges/python-division/problem",
-   "publisher": "hackerrank_python",
-   "source": "hackerrank_python",
-   "published_at": "2026-09-14",
-   "seen": "2026-09-14",
-   "category": "문자열·조건문",
-   "tags": [
-    "Lv1"
-   ],
-   "kind": "link",
-   "summary": "원문 링크 문제. 사이트에서 풀고 done 으로 기록."
-  },
-  {
-   "id": "python-2026-09-14-3",
-   "channel": "python",
-   "title": "[Strings] The Minion Game",
-   "url": "https://www.hackerrank.com/challenges/the-minion-game/problem",
-   "publisher": "hackerrank_python",
-   "source": "hackerrank_python",
-   "published_at": "2026-09-14",
-   "seen": "2026-09-14",
-   "category": "문자열·조건문",
-   "tags": [
-    "Lv2"
-   ],
-   "kind": "link",
-   "summary": "원문 링크 문제. 사이트에서 풀고 done 으로 기록."
-  },
-  {
-   "id": "python-2026-09-14-4",
-   "channel": "python",
-   "title": "우대역량 태깅",
+   "id": "changelog-my agent-2faefb8fb0",
+   "channel": "changelog",
+   "title": "fix(module-d-api): real timeout cancellation, streaming size cap, corrupt xlsx/rules → 400 (review fixes) + 4 tests",
    "url": "",
-   "publisher": "생성 문제 · Python",
-   "source": "Python",
+   "publisher": "my agent",
+   "source": "my agent",
    "published_at": "2026-09-14",
    "seen": "2026-09-14",
-   "category": "문자열·조건문",
+   "category": "fix",
    "tags": [
-    "Lv3",
-    "P501"
+    "fix"
    ],
-   "kind": "generated",
-   "summary": "공고 문장 text 와 codebook({코드: [키워드, ...]}) 을 받아 text 에 키워드가 하나라도 들어 있는 코드를 코드명 오름차순 리스트로 반환하는 tag_codes 를 작성하세요. 대소문자는 구분하지 않습니다."
+   "summary": "fix(module-d-api): real timeout cancellation, streaming size cap, corrupt xlsx/rules → 400 (review fixes) + 4 tests"
   },
   {
-   "id": "python-2026-09-14-5",
-   "channel": "python",
-   "title": "등급 라벨",
+   "id": "changelog-my agent-131bfa58f7",
+   "channel": "changelog",
+   "title": "feat(module-d): stateless FastAPI wrapper — validate/consolidate endpoints, temp-dir per request, input digest, 11 API tests",
    "url": "",
-   "publisher": "생성 문제 · Python",
-   "source": "Python",
+   "publisher": "my agent",
+   "source": "my agent",
    "published_at": "2026-09-14",
    "seen": "2026-09-14",
-   "category": "문자열·조건문",
+   "category": "feat",
    "tags": [
-    "Lv1",
-    "P001"
+    "feat"
    ],
-   "kind": "generated",
-   "summary": "장기요양 등급 정수 grade(1~6)를 받아 1~3이면 \"중증\", 4~5면 \"경증\", 6이면 \"인지지원\", 그 외는 \"미해당\"을 반환하는 함수 grade_label 을 작성하세요."
+   "summary": "feat(module-d): stateless FastAPI wrapper — validate/consolidate endpoints, temp-dir per request, input digest, 11 API tests"
+  },
+  {
+   "id": "changelog-my agent-ee8a42ede2",
+   "channel": "changelog",
+   "title": "feat(jobs): connect gojobs (나라일터), correct hibrain's actual robots status",
+   "url": "",
+   "publisher": "my agent",
+   "source": "my agent",
+   "published_at": "2026-09-14",
+   "seen": "2026-09-14",
+   "category": "feat",
+   "tags": [
+    "feat"
+   ],
+   "summary": "feat(jobs): connect gojobs (나라일터), correct hibrain's actual robots status"
+  },
+  {
+   "id": "changelog-my agent-e4a1fa5b0e",
+   "channel": "changelog",
+   "title": "docs(sources): fix 나라일터 (gojobs) list URL, verify fetch access",
+   "url": "",
+   "publisher": "my agent",
+   "source": "my agent",
+   "published_at": "2026-09-14",
+   "seen": "2026-09-14",
+   "category": "docs",
+   "tags": [
+    "docs"
+   ],
+   "summary": "docs(sources): fix 나라일터 (gojobs) list URL, verify fetch access"
   },
   {
    "id": "changelog-my agent-d33923fb64",
@@ -942,6 +1126,96 @@
     "fix"
    ],
    "summary": "fix(ai-signals): look up inbox rows by source_url, parse \"Mon D, YYYY\" dates"
+  },
+  {
+   "id": "changelog-hello-world-hub-13a2d9c285",
+   "channel": "changelog",
+   "title": "fix(projects): dedupe automation project, remove misleading link; audit links",
+   "url": "https://github.com/JAEYONG0303/hello-world-hub/commit/13a2d9c2850fdde422c85d6e1245540c74163d70",
+   "publisher": "hello-world-hub",
+   "source": "hello-world-hub",
+   "published_at": "2026-09-14",
+   "seen": "2026-09-14",
+   "category": "fix",
+   "tags": [
+    "fix"
+   ],
+   "summary": "fix(projects): dedupe automation project, remove misleading link; audit links"
+  },
+  {
+   "id": "changelog-hello-world-hub-da0aba6748",
+   "channel": "changelog",
+   "title": "feat(projects): surface the extracurricular-automation project",
+   "url": "https://github.com/JAEYONG0303/hello-world-hub/commit/da0aba674835d4bc53e3be01735ac325dbb7032f",
+   "publisher": "hello-world-hub",
+   "source": "hello-world-hub",
+   "published_at": "2026-09-14",
+   "seen": "2026-09-14",
+   "category": "feat",
+   "tags": [
+    "feat"
+   ],
+   "summary": "feat(projects): surface the extracurricular-automation project"
+  },
+  {
+   "id": "changelog-hello-world-hub-87fe3fc503",
+   "channel": "changelog",
+   "title": "copy(home): drop name from hero headline, de-duplicate subtitle",
+   "url": "https://github.com/JAEYONG0303/hello-world-hub/commit/87fe3fc50396eda699da9cd0af4c12d3e5ff7693",
+   "publisher": "hello-world-hub",
+   "source": "hello-world-hub",
+   "published_at": "2026-09-14",
+   "seen": "2026-09-14",
+   "category": "copy",
+   "tags": [
+    "copy"
+   ],
+   "summary": "copy(home): drop name from hero headline, de-duplicate subtitle"
+  },
+  {
+   "id": "changelog-hello-world-hub-da6e6f55bc",
+   "channel": "changelog",
+   "title": "copy(home): simplify hero headline",
+   "url": "https://github.com/JAEYONG0303/hello-world-hub/commit/da6e6f55bc1eb387959a86b6ffa62952db62ba6f",
+   "publisher": "hello-world-hub",
+   "source": "hello-world-hub",
+   "published_at": "2026-09-14",
+   "seen": "2026-09-14",
+   "category": "copy",
+   "tags": [
+    "copy"
+   ],
+   "summary": "copy(home): simplify hero headline"
+  },
+  {
+   "id": "changelog-hello-world-hub-734d795133",
+   "channel": "changelog",
+   "title": "fix(projects): value labels hidden behind tall bars in mini visuals",
+   "url": "https://github.com/JAEYONG0303/hello-world-hub/commit/734d7951337d258fe8f41f89fefc84c2faab8d54",
+   "publisher": "hello-world-hub",
+   "source": "hello-world-hub",
+   "published_at": "2026-09-14",
+   "seen": "2026-09-14",
+   "category": "fix",
+   "tags": [
+    "fix"
+   ],
+   "summary": "fix(projects): value labels hidden behind tall bars in mini visuals"
+  },
+  {
+   "id": "changelog-hello-world-hub-feae80fcf2",
+   "channel": "changelog",
+   "title": "chore(hub): pick up fixed programmers_python indexer (Lv0 problems now show)",
+   "url": "https://github.com/JAEYONG0303/hello-world-hub/commit/feae80fcf2d2ee1322ca675ad2f83fc5d66c465d",
+   "publisher": "hello-world-hub",
+   "source": "hello-world-hub",
+   "published_at": "2026-09-14",
+   "seen": "2026-09-14",
+   "category": "chore",
+   "tags": [
+    "chore"
+   ],
+   "summary": "chore(hub): pick up fixed programmers_python indexer (Lv0 problems now show)"
   },
   {
    "id": "changelog-hello-world-hub-989737da7e",
@@ -1532,7 +1806,7 @@
    "tags": [],
    "summary": "직무: 무관 병원 대학병원/종합병원",
    "deadline": "2026-09-14",
-   "dday": 0,
+   "dday": -1,
    "region": "",
    "sigungu": "",
    "org_type": "대학병원",
@@ -1553,71 +1827,6 @@
    "fit_exclusions": []
   },
   {
-   "id": "medicaljob-2f7eabfc",
-   "channel": "jobs",
-   "title": "경기지역암센터 사무(계약직/휴직대체)",
-   "url": "https://www.medicaljob.co.kr/job/view.asp?jsn=593445",
-   "publisher": "아주대학교병원",
-   "source": "medicaljob",
-   "published_at": "2026-09-10",
-   "seen": "2026-09-10",
-   "category": "미상 · 계약직·기간제",
-   "tags": [],
-   "summary": "직무: 경기 병원 대학병원/종합병원",
-   "deadline": "2026-09-13",
-   "dday": -1,
-   "region": "경기",
-   "sigungu": "",
-   "org_type": "대학병원",
-   "job_family": "행정·사무",
-   "experience": "미상",
-   "employment": "계약직·기간제",
-   "also_sources": [],
-   "fit_level": "보통",
-   "fit_reasons": [
-    "의료·보건 관련 기관",
-    "서울·경기·인천·대전·충청권"
-   ],
-   "fit_cautions": [
-    "단기 계약직"
-   ],
-   "fit_exclusions": []
-  },
-  {
-   "id": "medicaljob-8bfe4c9b",
-   "channel": "jobs",
-   "title": "보험심사팀 행정(휴직대체) 모집",
-   "url": "https://www.medicaljob.co.kr/job/view.asp?jsn=593452",
-   "publisher": "중앙대학교병원",
-   "source": "medicaljob",
-   "published_at": "2026-09-10",
-   "seen": "2026-09-10",
-   "category": "미상 · 계약직·기간제",
-   "tags": [],
-   "summary": "직무: 서울 병원 대학병원/종합병원",
-   "deadline": "2026-09-13",
-   "dday": -1,
-   "region": "서울",
-   "sigungu": "",
-   "org_type": "대학병원",
-   "job_family": "의료행정·원무기획",
-   "experience": "미상",
-   "employment": "계약직·기간제",
-   "also_sources": [],
-   "fit_level": "낮음",
-   "fit_reasons": [
-    "병원 행정 경험 활용 가능",
-    "의료·보건 관련 기관",
-    "서울·경기·인천·대전·충청권"
-   ],
-   "fit_cautions": [
-    "단기 계약직"
-   ],
-   "fit_exclusions": [
-    "보험심사·청구 중심"
-   ]
-  },
-  {
    "id": "nrc-c68d9a43",
    "channel": "jobs",
    "title": "2026년 제9차 인턴직원 채용(하반기 KOICA YP)",
@@ -1630,7 +1839,7 @@
    "tags": [],
    "summary": "직무: 국책연구기관 인턴",
    "deadline": "2026-09-22",
-   "dday": 8,
+   "dday": 7,
    "region": "",
    "sigungu": "",
    "org_type": "국책연구기관",
@@ -1662,7 +1871,7 @@
    "tags": [],
    "summary": "직무: 국책연구기관 인턴",
    "deadline": "2026-09-23",
-   "dday": 9,
+   "dday": 8,
    "region": "",
    "sigungu": "",
    "org_type": "국책연구기관",
@@ -1694,7 +1903,7 @@
    "tags": [],
    "summary": "직무: 국책연구기관 직원",
    "deadline": "2026-09-21",
-   "dday": 7,
+   "dday": 6,
    "region": "",
    "sigungu": "",
    "org_type": "국책연구기관",
@@ -1724,7 +1933,7 @@
    "tags": [],
    "summary": "직무: 국책연구기관 인턴",
    "deadline": "2026-09-16",
-   "dday": 2,
+   "dday": 1,
    "region": "",
    "sigungu": "",
    "org_type": "국책연구기관",
@@ -2855,7 +3064,7 @@
    ],
    "summary": "직무: 경영.회계.사무,연구",
    "deadline": "2026-09-21",
-   "dday": 7,
+   "dday": 6,
    "region": "세종",
    "sigungu": "",
    "org_type": "국책연구기관",
@@ -2890,7 +3099,7 @@
    ],
    "summary": "직무: 사업관리",
    "deadline": "2026-09-17",
-   "dday": 3,
+   "dday": 2,
    "region": "충북",
    "sigungu": "",
    "org_type": "국책연구기관",
@@ -2924,7 +3133,7 @@
    ],
    "summary": "직무: 사업관리,경영.회계.사무",
    "deadline": "2026-09-17",
-   "dday": 3,
+   "dday": 2,
    "region": "경기",
    "sigungu": "",
    "org_type": "연구기관",
@@ -2958,7 +3167,7 @@
    ],
    "summary": "직무: 보건.의료",
    "deadline": "2026-09-16",
-   "dday": 2,
+   "dday": 1,
    "region": "서울",
    "sigungu": "",
    "org_type": "공공병원",
@@ -2995,7 +3204,7 @@
    ],
    "summary": "직무: 보건.의료",
    "deadline": "2026-09-16",
-   "dday": 2,
+   "dday": 1,
    "region": "서울",
    "sigungu": "",
    "org_type": "공공병원",
@@ -3028,7 +3237,7 @@
    "tags": [],
    "summary": "직무: 경영.회계.사무,정보통신",
    "deadline": "2026-09-16",
-   "dday": 2,
+   "dday": 1,
    "region": "대전",
    "sigungu": "",
    "org_type": "공공기관",
@@ -3062,7 +3271,7 @@
    "tags": [],
    "summary": "직무: 경영.회계.사무",
    "deadline": "2026-09-22",
-   "dday": 8,
+   "dday": 7,
    "region": "경북",
    "sigungu": "",
    "org_type": "공공기관",
@@ -3093,7 +3302,7 @@
    "tags": [],
    "summary": "직무: 경영.회계.사무",
    "deadline": "2026-09-22",
-   "dday": 8,
+   "dday": 7,
    "region": "대전",
    "sigungu": "",
    "org_type": "공공기관",
@@ -3125,7 +3334,7 @@
    "tags": [],
    "summary": "직무: 경영.회계.사무",
    "deadline": "2026-09-22",
-   "dday": 8,
+   "dday": 7,
    "region": "울산",
    "sigungu": "",
    "org_type": "공공기관",
@@ -3156,7 +3365,7 @@
    "tags": [],
    "summary": "직무: 경영.회계.사무",
    "deadline": "2026-09-22",
-   "dday": 8,
+   "dday": 7,
    "region": "경기",
    "sigungu": "",
    "org_type": "공공기관",
@@ -3188,7 +3397,7 @@
    "tags": [],
    "summary": "직무: 병원총무 , 정신병원 등록일 26/09/01",
    "deadline": "2026-10-01",
-   "dday": 17,
+   "dday": 16,
    "region": "경기",
    "sigungu": "여주시",
    "org_type": "종합병원",
@@ -3222,7 +3431,7 @@
    ],
    "summary": "직무: 사무직 , 문서작성 , 비품관리 , 사무보조 , 사무행정 외 등록일 26/08/21",
    "deadline": "2026-09-20",
-   "dday": 6,
+   "dday": 5,
    "region": "경기",
    "sigungu": "성남시 중원구",
    "org_type": "공공기관",
@@ -3259,7 +3468,7 @@
    ],
    "summary": "직무: 연구원 , 대학교",
    "deadline": "2026-09-14",
-   "dday": 0,
+   "dday": -1,
    "region": "경기",
    "sigungu": "안산시 상록구",
    "org_type": "대학·산학",
@@ -3296,7 +3505,7 @@
    ],
    "summary": "직무: 대학교 , 교육기관 , 대학교",
    "deadline": "2026-09-19",
-   "dday": 5,
+   "dday": 4,
    "region": "경기",
    "sigungu": "수원시 장안구",
    "org_type": "대학·산학",
@@ -3334,7 +3543,7 @@
    ],
    "summary": "직무: 교육행정 , 사무보조 , 사무행정 , 연구원 , 대학교 등록일 26/08/21",
    "deadline": "2026-09-20",
-   "dday": 6,
+   "dday": 5,
    "region": "서울",
    "sigungu": "노원구",
    "org_type": "대학·산학",
@@ -3391,41 +3600,6 @@
    "fit_exclusions": []
   },
   {
-   "id": "saramin-e485121e",
-   "channel": "jobs",
-   "title": "서울대 소프트파운드리연구소 전임 연구원 채용(경력&신입)",
-   "url": "https://www.saramin.co.kr/zf_user/jobs/view?rec_idx=54881365",
-   "publisher": "서울대학교 소프트파운드리연구소",
-   "source": "saramin",
-   "published_at": "2026-09-09",
-   "seen": "2026-09-09",
-   "category": "신입/경력 · 정규직",
-   "tags": [
-    "조정·소통·협업",
-    "회계·예산·정산"
-   ],
-   "summary": "직무: 교육행정 , 연구원 , R&D , 기술연구 , 전자파 외 26/08/28",
-   "deadline": "2026-09-13",
-   "dday": -1,
-   "region": "서울",
-   "sigungu": "관악구",
-   "org_type": "연구기관",
-   "job_family": "전문연구직",
-   "experience": "신입/경력",
-   "employment": "정규직",
-   "also_sources": [],
-   "fit_level": "낮음",
-   "fit_reasons": [
-    "신입 또는 경력무관",
-    "서울·경기·인천·대전·충청권"
-   ],
-   "fit_cautions": [],
-   "fit_exclusions": [
-    "전문 연구직",
-    "전문 연구직"
-   ]
-  },
-  {
    "id": "saramin-a7bbb088",
    "channel": "jobs",
    "title": "건양대학교 산학협력단 계약직 직원 채용 공고(연구지원팀)",
@@ -3443,7 +3617,7 @@
    ],
    "summary": "직무: 사무직 , 교육기관 , 대학교",
    "deadline": "2026-10-10",
-   "dday": 26,
+   "dday": 25,
    "region": "대전",
    "sigungu": "서구",
    "org_type": "대학·산학",
@@ -3482,7 +3656,7 @@
    ],
    "summary": "직무: 실적관리 , 사업관리 , 사업기획 , 전략기획 , 시장조사 외 26/08/31",
    "deadline": "2026-09-22",
-   "dday": 8,
+   "dday": 7,
    "region": "서울",
    "sigungu": "강남구",
    "org_type": "협회·재단",
@@ -3546,7 +3720,7 @@
    ],
    "summary": "직무: 경영.회계.사무",
    "deadline": "2026-09-22",
-   "dday": 8,
+   "dday": 7,
    "region": "경북",
    "sigungu": "",
    "org_type": "공공기관",
@@ -3577,7 +3751,7 @@
    "tags": [],
    "summary": "직무: 경영.회계.사무",
    "deadline": "2026-09-22",
-   "dday": 8,
+   "dday": 7,
    "region": "경북",
    "sigungu": "",
    "org_type": "공공기관",
@@ -3608,7 +3782,7 @@
    "tags": [],
    "summary": "직무: 경영.회계.사무,문화.예술.디자인.방송",
    "deadline": "2026-09-17",
-   "dday": 3,
+   "dday": 2,
    "region": "부산",
    "sigungu": "",
    "org_type": "공공기관",
@@ -3639,7 +3813,7 @@
    "tags": [],
    "summary": "직무: 연구",
    "deadline": "2026-09-30",
-   "dday": 16,
+   "dday": 15,
    "region": "충북",
    "sigungu": "",
    "org_type": "연구기관",
@@ -3672,7 +3846,7 @@
    ],
    "summary": "직무: 보건.의료,연구",
    "deadline": "2026-09-22",
-   "dday": 8,
+   "dday": 7,
    "region": "인천",
    "sigungu": "",
    "org_type": "공공기관",
@@ -3706,7 +3880,7 @@
    ],
    "summary": "직무: 사업관리",
    "deadline": "2026-09-22",
-   "dday": 8,
+   "dday": 7,
    "region": "충북",
    "sigungu": "",
    "org_type": "국책연구기관",
@@ -3742,7 +3916,7 @@
    ],
    "summary": "직무: 사업관리,환경.에너지.안전",
    "deadline": "2026-09-22",
-   "dday": 8,
+   "dday": 7,
    "region": "세종",
    "sigungu": "",
    "org_type": "국책연구기관",
@@ -3778,7 +3952,7 @@
    ],
    "summary": "직무: 연구",
    "deadline": "2026-09-18",
-   "dday": 4,
+   "dday": 3,
    "region": "세종",
    "sigungu": "",
    "org_type": "국책연구기관",
@@ -3811,7 +3985,7 @@
    "tags": [],
    "summary": "직무: 경영.회계.사무",
    "deadline": "2026-09-21",
-   "dday": 7,
+   "dday": 6,
    "region": "울산",
    "sigungu": "",
    "org_type": "국책연구기관",
@@ -3845,7 +4019,7 @@
    ],
    "summary": "직무: 사업관리,경영.회계.사무,연구",
    "deadline": "2026-09-20",
-   "dday": 6,
+   "dday": 5,
    "region": "경기",
    "sigungu": "",
    "org_type": "연구기관",
@@ -3883,7 +4057,7 @@
    ],
    "summary": "직무: 데이터분석 , AI(인공지능) , Python , 전략기획 , 사업기획 외 26/08/27",
    "deadline": "2026-09-18",
-   "dday": 4,
+   "dday": 3,
    "region": "서울",
    "sigungu": "중구",
    "org_type": "공공기관",
@@ -3918,7 +4092,7 @@
    ],
    "summary": "직무: AI(인공지능) , Python , 머신러닝 , 종합병원 등록일 26/08/27",
    "deadline": "2026-09-26",
-   "dday": 12,
+   "dday": 11,
    "region": "서울",
    "sigungu": "종로구",
    "org_type": "대학병원",
@@ -3955,7 +4129,7 @@
    ],
    "summary": "직무: 연구원 , R&D , 기술연구 , 신소재 , 학술연구 외 등록일 26/09/08",
    "deadline": "2026-10-08",
-   "dday": 24,
+   "dday": 23,
    "region": "대구",
    "sigungu": "북구",
    "org_type": "연구기관",
@@ -3990,7 +4164,7 @@
    ],
    "summary": "직무: 연구원 , 대학병원 등록일 26/09/03",
    "deadline": "2026-09-16",
-   "dday": 2,
+   "dday": 1,
    "region": "부산",
    "sigungu": "부산진구",
    "org_type": "대학병원",
@@ -4025,7 +4199,7 @@
    ],
    "summary": "직무: 연구원 , 대학병원 등록일 26/09/07",
    "deadline": "2026-09-20",
-   "dday": 6,
+   "dday": 5,
    "region": "부산",
    "sigungu": "부산진구",
    "org_type": "대학병원",
@@ -4057,7 +4231,7 @@
    "tags": [],
    "summary": "직무: 연구원 , 제약/바이오 , R&D , 생명과학 , 동물실험 외 등록일 26/09/09",
    "deadline": "2026-10-09",
-   "dday": 25,
+   "dday": 24,
    "region": "서울",
    "sigungu": "노원구",
    "org_type": "공공기관",
@@ -4099,7 +4273,7 @@
    ],
    "summary": "직무: 연구원 , 학술연구 , 사회조사 , 통계/분석 , 경영분석 외 26/09/04",
    "deadline": "2026-09-26",
-   "dday": 12,
+   "dday": 11,
    "region": "서울",
    "sigungu": "성북구",
    "org_type": "연구기관",
@@ -4133,7 +4307,7 @@
    ],
    "summary": "직무: 이화학시험 , 조사분석 등록일 26/08/24",
    "deadline": "2026-09-23",
-   "dday": 9,
+   "dday": 8,
    "region": "경기",
    "sigungu": "부천시 원미구",
    "org_type": "연구기관",
@@ -4171,7 +4345,7 @@
    ],
    "summary": "직무: 연구원 , 의료기기연구 , 의료기기 등록일 26/09/08",
    "deadline": "2026-11-07",
-   "dday": 54,
+   "dday": 53,
    "region": "전남",
    "sigungu": "",
    "org_type": "연구기관",
@@ -4208,7 +4382,7 @@
    ],
    "summary": "직무: 기술지원 , 데이터분석가 , 유지보수 , IT컨설팅 , QA/테스터 외 26/09/02",
    "deadline": "2026-09-14",
-   "dday": 0,
+   "dday": -1,
    "region": "경북",
    "sigungu": "포항시",
    "org_type": "연구기관",
@@ -4243,7 +4417,7 @@
    ],
    "summary": "직무: 사무보조 , 사무행정 , 콘텐츠관리 , 콘텐츠기획 , 사업기획 외 26/09/07",
    "deadline": "2026-09-22",
-   "dday": 8,
+   "dday": 7,
    "region": "세종",
    "sigungu": "특별자치시",
    "org_type": "국책연구기관",
@@ -4307,7 +4481,7 @@
    ],
    "summary": "직무:  한국보훈복지의료공단 강원 원주시 공기업·공공기관, 사무담당자, 운영보조·매니저 홈페이지 지원 신입·경력 • 연차제도 , 4대보험",
    "deadline": "2026-09-17",
-   "dday": 3,
+   "dday": 2,
    "region": "강원",
    "sigungu": "",
    "org_type": "공공기관",
@@ -4326,73 +4500,6 @@
    "fit_exclusions": []
   },
   {
-   "id": "jobkorea-28c63178",
-   "channel": "jobs",
-   "title": "본부 및 연구원 기간제 채용",
-   "url": "https://www.jobkorea.co.kr/Recruit/GI_Read/49924451",
-   "publisher": "㈔대한산업보건협회",
-   "source": "jobkorea",
-   "published_at": "2026-09-09",
-   "seen": "2026-09-09",
-   "category": "신입/경력 · 계약직·기간제",
-   "tags": [],
-   "summary": "직무:  ㈔대한산업보건협회 충북 청주시 협회·단체, 경영·비즈니스기획, 마케팅기획, PL·PM·PO 홈페이지 지원 신입·경력",
-   "deadline": "2026-09-13",
-   "dday": -1,
-   "region": "충북",
-   "sigungu": "",
-   "org_type": "협회·재단",
-   "job_family": "검토 필요",
-   "experience": "신입/경력",
-   "employment": "계약직·기간제",
-   "also_sources": [],
-   "fit_level": "보통",
-   "fit_reasons": [
-    "신입 또는 경력무관",
-    "서울·경기·인천·대전·충청권"
-   ],
-   "fit_cautions": [
-    "담당 업무 불명확",
-    "단기 계약직"
-   ],
-   "fit_exclusions": []
-  },
-  {
-   "id": "jobkorea-837692c4",
-   "channel": "jobs",
-   "title": "한국건설생활환경시험연구원 과제계약직 모집 (인천)",
-   "url": "https://www.jobkorea.co.kr/Recruit/GI_Read/49934972",
-   "publisher": "한국건설생활환경시험연구원",
-   "source": "jobkorea",
-   "published_at": "2026-09-09",
-   "seen": "2026-09-09",
-   "category": "신입 · 계약직·기간제",
-   "tags": [
-    "조정·소통·협업",
-    "자격증"
-   ],
-   "summary": "직무:  한국건설생활환경시험연구원 서울 금천구 컨설팅·연구·조사, 총무, 사무보조, R&D·연구원 즉시 지원 신입 • 건강보험 , 국민연금",
-   "deadline": "2026-09-13",
-   "dday": -1,
-   "region": "서울",
-   "sigungu": "",
-   "org_type": "연구기관",
-   "job_family": "검토 필요",
-   "experience": "신입",
-   "employment": "계약직·기간제",
-   "also_sources": [],
-   "fit_level": "보통",
-   "fit_reasons": [
-    "신입 또는 경력무관",
-    "서울·경기·인천·대전·충청권"
-   ],
-   "fit_cautions": [
-    "담당 업무 불명확",
-    "단기 계약직"
-   ],
-   "fit_exclusions": []
-  },
-  {
    "id": "jobkorea-e251e3cb",
    "channel": "jobs",
    "title": "임시직(공공기관 적응대책) 채용",
@@ -4405,7 +4512,7 @@
    "tags": [],
    "summary": "직무:  한국환경연구원 세종 공기업·공공기관, 사무담당자, R&D·연구원 홈페이지 지원 신입·경력",
    "deadline": "2026-09-14",
-   "dday": 0,
+   "dday": -1,
    "region": "세종",
    "sigungu": "",
    "org_type": "국책연구기관",
@@ -4440,7 +4547,7 @@
    ],
    "summary": "직무:  국토연구원 세종 공기업·공공기관, R&D·연구원 홈페이지 지원 신입·경력 • 4대보험",
    "deadline": "2026-09-18",
-   "dday": 4,
+   "dday": 3,
    "region": "세종",
    "sigungu": "",
    "org_type": "국책연구기관",
@@ -4461,43 +4568,6 @@
    "fit_exclusions": []
   },
   {
-   "id": "jobkorea-d5758b53",
-   "channel": "jobs",
-   "title": "(사)한국산업지능화협회 직원 채용(정부지원사업, 국제협력사업)",
-   "url": "https://www.jobkorea.co.kr/Recruit/GI_Read/49903586",
-   "publisher": "㈔한국산업지능화협회",
-   "source": "jobkorea",
-   "published_at": "2026-09-09",
-   "seen": "2026-09-09",
-   "category": "신입/경력 · 계약직·기간제",
-   "tags": [
-    "Excel·오피스 활용",
-    "문서 작성·보고",
-    "자격증",
-    "연구·사업 행정"
-   ],
-   "summary": "직무:  ㈔한국산업지능화협회 서울 금천구 협회·단체, 경영·비즈니스기획 즉시 지원 신입·경력2년↑",
-   "deadline": "2026-09-13",
-   "dday": -1,
-   "region": "서울",
-   "sigungu": "",
-   "org_type": "협회·재단",
-   "job_family": "사업운영·관리",
-   "experience": "신입/경력",
-   "employment": "계약직·기간제",
-   "also_sources": [],
-   "fit_level": "보통",
-   "fit_reasons": [
-    "사업운영·성과관리 업무",
-    "신입 또는 경력무관",
-    "서울·경기·인천·대전·충청권"
-   ],
-   "fit_cautions": [
-    "단기 계약직"
-   ],
-   "fit_exclusions": []
-  },
-  {
    "id": "jobkorea-c04702c9",
    "channel": "jobs",
    "title": "경영기획실 행정관리 사원을 모집합니다.",
@@ -4512,7 +4582,7 @@
    ],
    "summary": "직무:  치유한방병원 인천 미추홀구 의료(병원분류별), 총무, 인사담당자 즉시 지원 신입·경력",
    "deadline": "2026-10-01",
-   "dday": 17,
+   "dday": 16,
    "region": "인천",
    "sigungu": "",
    "org_type": "종합병원",
@@ -4577,7 +4647,7 @@
    "tags": [],
    "summary": "직무:  친절요양병원 경남 창원시 의료(병원분류별), 사무담당자 월급 2,800만원~ 즉시 지원 신입·경력 • 경조사 지원 , 임직원 할인 , 장기근속",
    "deadline": "2026-09-21",
-   "dday": 7,
+   "dday": 6,
    "region": "경남",
    "sigungu": "",
    "org_type": "요양·재활",
@@ -4606,7 +4676,7 @@
    "tags": [],
    "summary": "직무:  삼성서울병원 서울 강남구 의료(병원분류별), 경영·비즈니스기획, 경영지원, 인사담당자 홈페이지 지원 신입",
    "deadline": "2026-09-15",
-   "dday": 1,
+   "dday": 0,
    "region": "서울",
    "sigungu": "",
    "org_type": "대학병원",
@@ -4639,7 +4709,7 @@
    ],
    "summary": "직무:  신한대학교 경기 의정부시 학교(초·중·고·대학·특수), 사무담당자 월급 240만원~ 즉시 지원 신입·경력",
    "deadline": "2026-09-18",
-   "dday": 4,
+   "dday": 3,
    "region": "경기",
    "sigungu": "",
    "org_type": "대학·산학",
@@ -4675,7 +4745,7 @@
    ],
    "summary": "직무:  포항공과대학교산학협력단 경북 포항시 학교(초·중·고·대학·특수), 사무담당자 즉시 지원 신입·경력 • 4대보험 , 퇴직연금",
    "deadline": "2026-09-30",
-   "dday": 16,
+   "dday": 15,
    "region": "경북",
    "sigungu": "",
    "org_type": "대학·산학",
@@ -4707,7 +4777,7 @@
    "tags": [],
    "summary": "직무:  ㈔한국이스포츠협회 서울 마포구 게임·애니메이션, 사무담당자 즉시 지원 신입·경력1년↑ • 연차제도 , 4대보험 , 공휴일 휴무",
    "deadline": "2026-09-14",
-   "dday": 0,
+   "dday": -1,
    "region": "서울",
    "sigungu": "",
    "org_type": "협회·재단",
@@ -4740,7 +4810,7 @@
    ],
    "summary": "직무:  대전외국인학교 대전 유성구 외 7 학교(초·중·고·대학·특수), 경영·비즈니스기획, 마케팅기획, 사무담당자 즉시 지원 신입·경력 • 육아휴직 ",
    "deadline": "2026-09-30",
-   "dday": 16,
+   "dday": 15,
    "region": "대전",
    "sigungu": "",
    "org_type": "대학·산학",
@@ -4751,38 +4821,6 @@
    "fit_level": "보통",
    "fit_reasons": [
     "대학 또는 연구기관 행정",
-    "신입 또는 경력무관",
-    "서울·경기·인천·대전·충청권"
-   ],
-   "fit_cautions": [
-    "단기 계약직"
-   ],
-   "fit_exclusions": []
-  },
-  {
-   "id": "jobkorea-dbd80a5e",
-   "channel": "jobs",
-   "title": "[일반-신촌] 기능원(계약직) 세브)교육수련팀 모집",
-   "url": "https://www.jobkorea.co.kr/Recruit/GI_Read/49945621",
-   "publisher": "연세대학교 의료원",
-   "source": "jobkorea",
-   "published_at": "2026-09-09",
-   "seen": "2026-09-09",
-   "category": "신입 · 계약직·기간제",
-   "tags": [],
-   "summary": "직무:  연세대학교 의료원 서울 서대문구 의료(병원분류별), 사무보조 홈페이지 지원 신입",
-   "deadline": "2026-09-13",
-   "dday": -1,
-   "region": "서울",
-   "sigungu": "",
-   "org_type": "대학병원",
-   "job_family": "행정·사무",
-   "experience": "신입",
-   "employment": "계약직·기간제",
-   "also_sources": [],
-   "fit_level": "보통",
-   "fit_reasons": [
-    "의료·보건 관련 기관",
     "신입 또는 경력무관",
     "서울·경기·인천·대전·충청권"
    ],
@@ -5340,7 +5378,7 @@
    }
   ],
   "new_by_channel": {
-   "jobs": 0,
+   "jobs": 4,
    "health": 0,
    "ai": 8,
    "sql": 0,
@@ -5348,7 +5386,7 @@
    "research": 0,
    "changelog": 0
   },
-  "deadline_7d": 28,
+  "deadline_7d": 39,
   "high": 3,
   "headline": "치료재료·의료기기 보상 체계가 동시에 움직이고, 공공기관 채용은 절차가 엄격해진다",
   "points": [
@@ -5362,6 +5400,103 @@
  },
  "practice": {
   "days": [
+   {
+    "date": "2026-09-15",
+    "sql": [
+     {
+      "title": "[Basic Joins] Replace Employee ID With The Unique Identifier",
+      "url": "https://leetcode.com/problems/replace-employee-id-with-the-unique-identifier/",
+      "publisher": "leetcode",
+      "tags": [
+       "Lv1"
+      ],
+      "kind": "link",
+      "summary": "원문 링크 문제. 사이트에서 풀고 done 으로 기록.",
+      "category": "JOIN"
+     },
+     {
+      "title": "[JOIN] 조건에 맞는 도서와 저자 리스트 출력하기",
+      "url": "https://school.programmers.co.kr/learn/courses/30/lessons/144854",
+      "publisher": "programmers",
+      "tags": [
+       "Lv2"
+      ],
+      "kind": "link",
+      "summary": "원문 링크 문제. 사이트에서 풀고 done 으로 기록.",
+      "category": "JOIN"
+     },
+     {
+      "title": "[JOIN] 없어진 기록 찾기",
+      "url": "https://school.programmers.co.kr/learn/courses/30/lessons/59042",
+      "publisher": "programmers",
+      "tags": [
+       "Lv3"
+      ],
+      "kind": "link",
+      "summary": "원문 링크 문제. 사이트에서 풀고 done 으로 기록.",
+      "category": "JOIN"
+     }
+    ],
+    "python": [
+     {
+      "title": "[Basic Data Types] Find the Runner-Up Score!  ",
+      "url": "https://www.hackerrank.com/challenges/find-second-maximum-number-in-a-list/problem",
+      "publisher": "hackerrank_python",
+      "tags": [
+       "Lv1"
+      ],
+      "kind": "link",
+      "summary": "원문 링크 문제. 사이트에서 풀고 done 으로 기록.",
+      "category": "리스트·딕셔너리·집계"
+     },
+     {
+      "title": "[Sets] No Idea!",
+      "url": "https://www.hackerrank.com/challenges/no-idea/problem",
+      "publisher": "hackerrank_python",
+      "tags": [
+       "Lv2"
+      ],
+      "kind": "link",
+      "summary": "원문 링크 문제. 사이트에서 풀고 done 으로 기록.",
+      "category": "리스트·딕셔너리·집계"
+     },
+     {
+      "title": "[Easy] Pascal's Triangle",
+      "url": "https://leetcode.com/problems/pascals-triangle/",
+      "publisher": "leetcode_easy",
+      "tags": [
+       "Lv1"
+      ],
+      "kind": "link",
+      "summary": "원문 링크 문제. 사이트에서 풀고 done 으로 기록.",
+      "category": "리스트·딕셔너리·집계"
+     },
+     {
+      "title": "조인 전후 행 수 검증",
+      "url": "",
+      "publisher": "생성 문제 · Python",
+      "tags": [
+       "Lv3",
+       "P402"
+      ],
+      "kind": "generated",
+      "summary": "조인 전 행 수 before 와 조인 후 행 수 after 를 받아 after > before 이면 \"중단: 행 증가 N행\", after < before 이면 \"경고: 행 감소 N행\", 같으면 \"정상\" 을 반환하는 join_check 를 작성하세요.",
+      "category": "리스트·딕셔너리·집계"
+     },
+     {
+      "title": "부서별 실적 합계",
+      "url": "",
+      "publisher": "생성 문제 · Python",
+      "tags": [
+       "Lv1",
+       "P101"
+      ],
+      "kind": "generated",
+      "summary": "rows 는 {\"dept\": 부서명, \"revenue\": 정수} 딕셔너리의 리스트입니다. 부서별 revenue 합계를 {부서명: 합계} 딕셔너리로 반환하는 sum_by_dept 를 작성하세요.",
+      "category": "리스트·딕셔너리·집계"
+     }
+    ]
+   },
    {
     "date": "2026-09-14",
     "sql": [
