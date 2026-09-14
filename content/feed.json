@@ -1,7 +1,7 @@
 {
  "meta": {
   "updated": "2026-09-14",
-  "generated_at": "2026-09-14T14:45:46",
+  "generated_at": "2026-09-14T14:54:08",
   "days": [
    "2026-09-14",
    "2026-09-11",
@@ -9,7 +9,7 @@
    "2026-09-09",
    "2026-09-08"
   ],
-  "today_new": 24,
+  "today_new": 26,
   "note": "수집기 4개의 결과를 스크립트가 합친 값. 원문 복제 없음, 추정치 없음."
  },
  "channels": [
@@ -46,7 +46,7 @@
   {
    "id": "changelog",
    "name": "자동화 변경사항",
-   "count": 109
+   "count": 111
   }
  ],
  "jobs_facets": {
@@ -704,7 +704,7 @@
    "last_run": "2026-09-14",
    "status": "ok",
    "note": "git 커밋 로그에서 자동 추출, 데일리 동기화 커밋 제외",
-   "count": 109
+   "count": 111
   }
  ],
  "items": [
@@ -774,8 +774,24 @@
   {
    "id": "python-2026-09-14-1",
    "channel": "python",
-   "title": "[Introduction] Loops",
-   "url": "https://www.hackerrank.com/challenges/python-loops/problem",
+   "title": "문자열 출력하기",
+   "url": "https://school.programmers.co.kr/learn/courses/30/lessons/181952",
+   "publisher": "programmers_python",
+   "source": "programmers_python",
+   "published_at": "2026-09-14",
+   "seen": "2026-09-14",
+   "category": "문자열·조건문",
+   "tags": [
+    "Lv0"
+   ],
+   "kind": "link",
+   "summary": "원문 링크 문제. 사이트에서 풀고 done 으로 기록."
+  },
+  {
+   "id": "python-2026-09-14-2",
+   "channel": "python",
+   "title": "[Introduction] Python: Division",
+   "url": "https://www.hackerrank.com/challenges/python-division/problem",
    "publisher": "hackerrank_python",
    "source": "hackerrank_python",
    "published_at": "2026-09-14",
@@ -788,10 +804,10 @@
    "summary": "원문 링크 문제. 사이트에서 풀고 done 으로 기록."
   },
   {
-   "id": "python-2026-09-14-2",
+   "id": "python-2026-09-14-3",
    "channel": "python",
-   "title": "[Introduction] Write a function",
-   "url": "https://www.hackerrank.com/challenges/write-a-function/problem",
+   "title": "[Strings] The Minion Game",
+   "url": "https://www.hackerrank.com/challenges/the-minion-game/problem",
    "publisher": "hackerrank_python",
    "source": "hackerrank_python",
    "published_at": "2026-09-14",
@@ -804,25 +820,9 @@
    "summary": "원문 링크 문제. 사이트에서 풀고 done 으로 기록."
   },
   {
-   "id": "python-2026-09-14-3",
-   "channel": "python",
-   "title": "[Easy] Fizz Buzz",
-   "url": "https://leetcode.com/problems/fizz-buzz/",
-   "publisher": "leetcode_easy",
-   "source": "leetcode_easy",
-   "published_at": "2026-09-14",
-   "seen": "2026-09-14",
-   "category": "문자열·조건문",
-   "tags": [
-    "Lv1"
-   ],
-   "kind": "link",
-   "summary": "원문 링크 문제. 사이트에서 풀고 done 으로 기록."
-  },
-  {
    "id": "python-2026-09-14-4",
    "channel": "python",
-   "title": "날짜 표기 통일",
+   "title": "우대역량 태깅",
    "url": "",
    "publisher": "생성 문제 · Python",
    "source": "Python",
@@ -831,15 +831,15 @@
    "category": "문자열·조건문",
    "tags": [
     "Lv3",
-    "P303"
+    "P501"
    ],
    "kind": "generated",
-   "summary": "\"2026.09.10\", \"2026-9-1\", \"2026/09/10\", \"2026년 9월 10일\" 처럼 섞인 날짜 문자열 s 를 \"YYYY-MM-DD\" 로 통일해 반환하는 to_iso 를 작성하세요. 날짜가 아니면 None."
+   "summary": "공고 문장 text 와 codebook({코드: [키워드, ...]}) 을 받아 text 에 키워드가 하나라도 들어 있는 코드를 코드명 오름차순 리스트로 반환하는 tag_codes 를 작성하세요. 대소문자는 구분하지 않습니다."
   },
   {
    "id": "python-2026-09-14-5",
    "channel": "python",
-   "title": "마감 D-day 표기",
+   "title": "등급 라벨",
    "url": "",
    "publisher": "생성 문제 · Python",
    "source": "Python",
@@ -847,11 +847,26 @@
    "seen": "2026-09-14",
    "category": "문자열·조건문",
    "tags": [
-    "Lv2",
-    "P003"
+    "Lv1",
+    "P001"
    ],
    "kind": "generated",
-   "summary": "마감까지 남은 일수 days(정수, 음수 가능)를 받아 0이면 \"D-day\", 양수면 \"D-3\" 형식, 음수면 \"마감\" 을 반환하는 dday_label 을 작성하세요."
+   "summary": "장기요양 등급 정수 grade(1~6)를 받아 1~3이면 \"중증\", 4~5면 \"경증\", 6이면 \"인지지원\", 그 외는 \"미해당\"을 반환하는 함수 grade_label 을 작성하세요."
+  },
+  {
+   "id": "changelog-my agent-d33923fb64",
+   "channel": "changelog",
+   "title": "fix(python-daily): programmers_python indexer was scraping a client-rendered page",
+   "url": "",
+   "publisher": "my agent",
+   "source": "my agent",
+   "published_at": "2026-09-14",
+   "seen": "2026-09-14",
+   "category": "fix",
+   "tags": [
+    "fix"
+   ],
+   "summary": "fix(python-daily): programmers_python indexer was scraping a client-rendered page"
   },
   {
    "id": "changelog-my agent-5443a318aa",
@@ -927,6 +942,21 @@
     "fix"
    ],
    "summary": "fix(ai-signals): look up inbox rows by source_url, parse \"Mon D, YYYY\" dates"
+  },
+  {
+   "id": "changelog-hello-world-hub-989737da7e",
+   "channel": "changelog",
+   "title": "chore(hub): pick up mixed-difficulty SQL/Python daily sets",
+   "url": "https://github.com/JAEYONG0303/hello-world-hub/commit/989737da7eb11a4b9a6cd37177ef674f16ce305f",
+   "publisher": "hello-world-hub",
+   "source": "hello-world-hub",
+   "published_at": "2026-09-14",
+   "seen": "2026-09-14",
+   "category": "chore",
+   "tags": [
+    "chore"
+   ],
+   "summary": "chore(hub): pick up mixed-difficulty SQL/Python daily sets"
   },
   {
    "id": "changelog-hello-world-hub-ab9dbaef90",
@@ -5371,8 +5401,19 @@
     ],
     "python": [
      {
-      "title": "[Introduction] Loops",
-      "url": "https://www.hackerrank.com/challenges/python-loops/problem",
+      "title": "문자열 출력하기",
+      "url": "https://school.programmers.co.kr/learn/courses/30/lessons/181952",
+      "publisher": "programmers_python",
+      "tags": [
+       "Lv0"
+      ],
+      "kind": "link",
+      "summary": "원문 링크 문제. 사이트에서 풀고 done 으로 기록.",
+      "category": "문자열·조건문"
+     },
+     {
+      "title": "[Introduction] Python: Division",
+      "url": "https://www.hackerrank.com/challenges/python-division/problem",
       "publisher": "hackerrank_python",
       "tags": [
        "Lv1"
@@ -5382,8 +5423,8 @@
       "category": "문자열·조건문"
      },
      {
-      "title": "[Introduction] Write a function",
-      "url": "https://www.hackerrank.com/challenges/write-a-function/problem",
+      "title": "[Strings] The Minion Game",
+      "url": "https://www.hackerrank.com/challenges/the-minion-game/problem",
       "publisher": "hackerrank_python",
       "tags": [
        "Lv2"
@@ -5393,38 +5434,27 @@
       "category": "문자열·조건문"
      },
      {
-      "title": "[Easy] Fizz Buzz",
-      "url": "https://leetcode.com/problems/fizz-buzz/",
-      "publisher": "leetcode_easy",
-      "tags": [
-       "Lv1"
-      ],
-      "kind": "link",
-      "summary": "원문 링크 문제. 사이트에서 풀고 done 으로 기록.",
-      "category": "문자열·조건문"
-     },
-     {
-      "title": "날짜 표기 통일",
+      "title": "우대역량 태깅",
       "url": "",
       "publisher": "생성 문제 · Python",
       "tags": [
        "Lv3",
-       "P303"
+       "P501"
       ],
       "kind": "generated",
-      "summary": "\"2026.09.10\", \"2026-9-1\", \"2026/09/10\", \"2026년 9월 10일\" 처럼 섞인 날짜 문자열 s 를 \"YYYY-MM-DD\" 로 통일해 반환하는 to_iso 를 작성하세요. 날짜가 아니면 None.",
+      "summary": "공고 문장 text 와 codebook({코드: [키워드, ...]}) 을 받아 text 에 키워드가 하나라도 들어 있는 코드를 코드명 오름차순 리스트로 반환하는 tag_codes 를 작성하세요. 대소문자는 구분하지 않습니다.",
       "category": "문자열·조건문"
      },
      {
-      "title": "마감 D-day 표기",
+      "title": "등급 라벨",
       "url": "",
       "publisher": "생성 문제 · Python",
       "tags": [
-       "Lv2",
-       "P003"
+       "Lv1",
+       "P001"
       ],
       "kind": "generated",
-      "summary": "마감까지 남은 일수 days(정수, 음수 가능)를 받아 0이면 \"D-day\", 양수면 \"D-3\" 형식, 음수면 \"마감\" 을 반환하는 dday_label 을 작성하세요.",
+      "summary": "장기요양 등급 정수 grade(1~6)를 받아 1~3이면 \"중증\", 4~5면 \"경증\", 6이면 \"인지지원\", 그 외는 \"미해당\"을 반환하는 함수 grade_label 을 작성하세요.",
       "category": "문자열·조건문"
      }
     ]
