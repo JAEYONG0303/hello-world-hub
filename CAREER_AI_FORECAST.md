@@ -1,6 +1,6 @@
 # CAREER_AI_FORECAST — AI 미래 전망과 내 준비 기준 문서
 
-> 생성물. 원본은 `content/career-ai.json` (v2, 마지막 업데이트 2026-09-09). 수정은 JSON 에서만 하고 `node gen-forecast-doc.mjs` 로 다시 만든다.
+> 생성물. 원본은 `content/career-ai.json` (v3, 마지막 업데이트 2026-09-14). 수정은 JSON 에서만 하고 `node gen-forecast-doc.mjs` 로 다시 만든다.
 > 기준 시점 2026년, 전망 범위 2031년까지. 홈페이지 "AI FUTURE & CAREER" 카테고리와 같은 데이터다.
 
 ## 1. 나의 직무 방향
@@ -44,10 +44,10 @@
 
 | ID | 전망 | 확률 | 신뢰 | 변화·조건 | 업데이트 |
 |---|---|---|---|---|---|
-| F1 | 문서·코드·브라우저·업무 프로그램을 오가며 과업 실행 | 90% | high | 챗봇에서 실제 작업을 수행하는 에이전트로 이동 | 2026-09-09 |
-| F2 | 기업 내부 데이터와 연결된 사내 에이전트 확산 | 85% | high | 범용 AI보다 회사 규정·문서·시스템과 연결된 AI가 중요해짐 | 2026-09-09 |
+| F1 | 문서·코드·브라우저·업무 프로그램을 오가며 과업 실행 | 92% | high | 챗봇에서 실제 작업을 수행하는 에이전트로 이동 | 2026-09-14 |
+| F2 | 기업 내부 데이터와 연결된 사내 에이전트 확산 | 87% | high | 범용 AI보다 회사 규정·문서·시스템과 연결된 AI가 중요해짐 | 2026-09-14 |
 | F3 | AI 가격 하락과 중소형 모델의 일상 업무 투입 | 85% | high | 모든 업무에 가장 큰 모델을 쓰지 않고 난이도별 모델을 배치 | 2026-09-09 |
-| F4 | 사무직의 업무 구성과 신입 역할 변화 | 75% | medium | 반복 업무는 줄고 검증·예외 처리·조정 책임은 커짐 | 2026-09-09 |
+| F4 | 사무직의 업무 구성과 신입 역할 변화 | 77% | medium | 반복 업무는 줄고 검증·예외 처리·조정 책임은 커짐 | 2026-09-14 |
 | F5 | 몇 시간에서 며칠짜리 디지털 업무의 제한적 자율 수행 | 65% | medium | 조건: 목표, 입력, 권한, 완료 기준이 명확한 업무 | 2026-09-09 |
 | F6 | 사람 감독 없이 일반 사무직 전체 대체 | 25% | medium | 25% 이하로 본다 | 2026-09-09 |
 | F7 | 대부분의 지식노동자가 5년 안에 실직 | 15% | medium | 15% 이하로 본다 | 2026-09-09 |
@@ -66,6 +66,14 @@
 
 | 날짜 | 기관 | 제목 | 분류 | 전망 | 영향 | 신뢰 | 확인일 |
 |---|---|---|---|---|---|---|---|
+| 2026-09-14 | OpenAI | [Perplexity trusts GPT-6 Astra with end-to-end systems](https://openai.com/index/perplexity-improving-accuracy-with-astra) | agent | F5 | strengthen | low | 2026-09-14 |
+| 2026-09-11 | OpenAI | [Cognition helps Devin test its own work with GPT‑6 Astra](https://openai.com/index/cognition-devin-testing-with-astra) | reliability | F5 | strengthen | low | 2026-09-14 |
+| 2026-09-11 | 고용노동부 | [공정 자동화와 사업전환으로 경쟁력은 높이고, 일자리도 늘리다](https://www.moel.go.kr/news/enews/report/enewsView.do?news_seq=19931) | jobs | F7 | weaken | low | 2026-09-14 |
+| 2026-09-11 | 고용노동부 | [인공지능(AI)부터 제조·물류까지... 기업이 만든 현장형 인재양성, 우수사례로 확산](https://www.moel.go.kr/news/enews/report/enewsView.do?news_seq=19932) | jobs | F4 | strengthen | medium | 2026-09-14 |
+| 2026-09-10 | OpenAI | [Introducing the Agents API](https://openai.com/index/introducing-the-agents-api) | agent | F1 | strengthen | high | 2026-09-14 |
+| 2026-09-10 | OpenAI | [Now everyone can put data to work](https://openai.com/index/put-data-to-work) | agent | F2 | strengthen | high | 2026-09-14 |
+| 2026-09-10 | OpenAI | [Introducing ChatGPT for Financial Services](https://openai.com/index/introducing-chatgpt-financial-services) | agent | F2 | strengthen | high | 2026-09-14 |
+| 2026-09-10 | OpenAI | [Expanding AI access and cyber defense for federal, state, local, and tribal governments](https://openai.com/index/expanding-ai-access-us-government) | cost | F3 | strengthen | high | 2026-09-14 |
 | 2026-09-09 | 고용노동부 | ['26.8월 취업자수는 18.4만명 증가해 2개월 연속 두자릿수 증가](https://www.moel.go.kr/news/enews/report/enewsView.do?news_seq=19906) | jobs | F7 | weaken | high | 2026-09-09 |
 | 2026-09-09 | 고용노동부 | [인공지능(AI) 시대 새로운 사회계약, 우리 사회가 나아갈 방향을 찾아가는 질문을 함께 모은다](https://www.moel.go.kr/news/enews/report/enewsView.do?news_seq=19904) | governance | F4 | neutral | high | 2026-09-09 |
 | 2026-09-09 | 고용노동부 | [한국고용정보원, 지방 일자리 박람회서 고용24 및 AI기반 맞춤형 고용서비스 선보여](https://www.moel.go.kr/news/enews/report/enewsView.do?news_seq=19908) | agent | F2 | strengthen | high | 2026-09-09 |
@@ -278,7 +286,8 @@
 
 | 날짜 | 무엇이 추가됐나 | 전망 변경 | 확률 변경 | 이유 | 출처 |
 |---|---|---|---|---|---|
+| 2026-09-14 | 신호 추가 8건, 갱신 0건. openai.com 본문은 403 이라 우회하지 않고 공식 RSS 요약만으로 판단. 고객 사례(Perplexity·Cognition)와 조일공업 현장방문은 단일 사례라 low, 확률 변경 근거로 쓰지 않음. 고용노동부 게시일은 상세 페이지 등록일(2026-09-11) 기준 | 확률 변경 3건 | F1 90%→92% (관리형 에이전트 API 상용 출시로 방향은 지지되나 과업 완수율 증거가 아니고 본문 403 으로 RSS 요약만 확인돼 +2 (심판 판정); https://openai.com/index/introducing-the-agents-api); F2 85%→87% (범용 Data agent·금융업 전용 제품을 같은 날 한 회사 발표라 신호 하나로 묶음. 도입 규모 수치 없음·본문 미확인이라 +2 (심판 판정); https://openai.com/index/put-data-to-work); F4 75%→77% (고용노동부 자료에서 SK 생성형 AI 활용 자격 상반기 응시 2,977명 확인, 역량 제도화 신호. 단일 그룹 규모라 +2 (심판 판정); https://www.moel.go.kr/news/enews/report/enewsView.do?news_seq=19932) | 2026-09-14 정기 검토(9/10~9/13 스케줄은 수집 스크립트 KeyError 로 수집 실패 → 수정 후 model·jobs 수집). 신규 후보 22건 중 8건 채택. 도전자·옹호자·심판 토론 결과: OpenAI 9/10 발표 묶음은 본문 403 이라 F1·F2 를 +2 씩만, 고용노동부 기업자격 자료로 F4 +2. 최대 이동 2%p 라 headline·충돌표 유지. 비전문가용 Data agent 와 C5(읽고 검증하는 능력) 사이 긴장은 정확도 근거가 나오면 재검토. | OpenAI, 고용노동부 |
 | 2026-09-09 | 신호 추가 14건, 갱신 0건. OpenAI 사례(1Password·Playco·ATV·Legora·Gilbert+Tobin)는 기업 자체 자료·단일 사례라 medium/low 로 두고 확률 변경 근거로 쓰지 않음 | 없음 | 없음 | 2026-09-09 첫 정기 검토. 후보 50건 중 공식 출처·발표일·전망 관련성을 갖춘 12건 채택. 기준본 확률은 유지(첫 라운드, 상충 자료 병기). | METR, OpenAI, 고용노동부 |
 | 2026-09-09 | AI FUTURE & CAREER 카테고리 최초 작성. 전망 7개, 충돌표 5개, 역량 6개, 90일 로드맵 6단계, 검증 체크리스트 6영역 | 없음(기준본) | 없음 | 2026-09-09 기준 전망 프롬프트를 기준본으로 채택 | 사용자 작성 기준 문서 |
 
-_마지막 업데이트: 2026-09-09 · 생성: 2026-09-14_
+_마지막 업데이트: 2026-09-14 · 생성: 2026-09-14_

@@ -3,8 +3,8 @@
     "title": "AI FUTURE & CAREER",
     "baseline_year": 2026,
     "horizon_year": 2031,
-    "version": 2,
-    "updated": "2026-09-09",
+    "version": 3,
+    "updated": "2026-09-14",
     "owner": "재용",
     "note": "이 파일이 화면(index.html)과 CAREER_AI_FORECAST.md 의 단일 원본이다. 수정은 여기서만 한다."
   },
@@ -13,18 +13,18 @@
     {
       "id": "F1",
       "title": "문서·코드·브라우저·업무 프로그램을 오가며 과업 실행",
-      "probability": 90,
+      "probability": 92,
       "confidence": "high",
       "change": "챗봇에서 실제 작업을 수행하는 에이전트로 이동",
-      "updated": "2026-09-09"
+      "updated": "2026-09-14"
     },
     {
       "id": "F2",
       "title": "기업 내부 데이터와 연결된 사내 에이전트 확산",
-      "probability": 85,
+      "probability": 87,
       "confidence": "high",
       "change": "범용 AI보다 회사 규정·문서·시스템과 연결된 AI가 중요해짐",
-      "updated": "2026-09-09"
+      "updated": "2026-09-14"
     },
     {
       "id": "F3",
@@ -37,10 +37,10 @@
     {
       "id": "F4",
       "title": "사무직의 업무 구성과 신입 역할 변화",
-      "probability": 75,
+      "probability": 77,
       "confidence": "medium",
       "change": "반복 업무는 줄고 검증·예외 처리·조정 책임은 커짐",
-      "updated": "2026-09-09"
+      "updated": "2026-09-14"
     },
     {
       "id": "F5",
@@ -300,6 +300,118 @@
       "forecast_id": "F2",
       "impact": "strengthen",
       "confidence": "high"
+    },
+    {
+      "id": "sig-2b26a80665",
+      "title": "Introducing the Agents API",
+      "publisher": "OpenAI",
+      "source_url": "https://openai.com/index/introducing-the-agents-api",
+      "published_at": "2026-09-10",
+      "checked_at": "2026-09-14",
+      "category": "agent",
+      "summary": "OpenAI가 Codex 하네스를 기반으로 클라우드 에이전트를 만들고 운영하는 관리형 서비스 Agents API 를 공개했다. 공식 소개는 여러 단계 작업 조율, 장시간 세션 유지, 도구 사용을 핵심 기능으로 든다.",
+      "evidence": "장시간 세션·도구 사용 에이전트를 개발자용 관리형 서비스로 출시 → 도구를 오가며 과업을 실행하는 방향(F1) 강화. 본문 403 으로 공식 RSS 요약만 확인했고 완수율 증거가 아니라 토론 판정으로 +2 만 반영",
+      "forecast_id": "F1",
+      "impact": "strengthen",
+      "confidence": "high"
+    },
+    {
+      "id": "sig-4d4e7920d8",
+      "title": "Now everyone can put data to work",
+      "publisher": "OpenAI",
+      "source_url": "https://openai.com/index/put-data-to-work",
+      "published_at": "2026-09-10",
+      "checked_at": "2026-09-14",
+      "category": "agent",
+      "summary": "ChatGPT Work 에 회사 데이터를 연결해 자연어로 분석하고 대화형 대시보드까지 만드는 Data agent 가 추가됐다. 데이터 전문 인력이 아닌 직원도 분석 결과물을 직접 만들게 하려는 공식 제품 발표다.",
+      "evidence": "사내 데이터에 연결된 분석 에이전트가 범용 업무 제품에 들어감 → 사내 데이터 연결형 에이전트 확산(F2) 강화. 데이터 기반 행정 직무에서 분석 작성보다 결과 검증 역할이 커질 근거. 금융업판과 한 신호로 묶어 +2",
+      "forecast_id": "F2",
+      "impact": "strengthen",
+      "confidence": "high"
+    },
+    {
+      "id": "sig-016c3ec9b7",
+      "title": "Introducing ChatGPT for Financial Services",
+      "publisher": "OpenAI",
+      "source_url": "https://openai.com/index/introducing-chatgpt-financial-services",
+      "published_at": "2026-09-10",
+      "checked_at": "2026-09-14",
+      "category": "agent",
+      "summary": "OpenAI가 금융 데이터를 내장하고 GPT-6 Astra 를 결합한 금융업 전용 ChatGPT 를 출시했다. 리서치, 재무 모델링, 고객에게 낼 자료 작성을 주요 업무로 제시했다.",
+      "evidence": "9월 1일 보건의료판(EHR 연동)에 이어 산업 데이터가 연결된 업무용 AI 가 금융업으로 확장 → F2 강화. 같은 날 Data agent 발표와 한 신호로 묶어 +2",
+      "forecast_id": "F2",
+      "impact": "strengthen",
+      "confidence": "high"
+    },
+    {
+      "id": "sig-1ef5285e67",
+      "title": "Expanding AI access and cyber defense for federal, state, local, and tribal governments",
+      "publisher": "OpenAI",
+      "source_url": "https://openai.com/index/expanding-ai-access-us-government",
+      "published_at": "2026-09-10",
+      "checked_at": "2026-09-14",
+      "category": "cost",
+      "summary": "OpenAI와 미국 연방조달청(GSA)이 연방·주·지방·부족 정부에 라이선스 비용 면제와 사용료 50% 할인, 사이버 방어 지원 확대를 제공하기로 했다. 공공기관이 AI 를 들이는 비용 장벽을 낮추는 공식 가격 조건이다.",
+      "evidence": "공공부문 대상 단가 인하를 공식 조건으로 발표 → AI 가격 하락(F3) 방향. 다만 정부 조달 계약 조건이지 시장 단가·중소형 모델 투입 증거는 아니라 토론 판정으로 확률 유지",
+      "forecast_id": "F3",
+      "impact": "strengthen",
+      "confidence": "high"
+    },
+    {
+      "id": "sig-12e9dd6851",
+      "title": "Perplexity trusts GPT-6 Astra with end-to-end systems",
+      "publisher": "OpenAI",
+      "source_url": "https://openai.com/index/perplexity-improving-accuracy-with-astra",
+      "published_at": "2026-09-14",
+      "checked_at": "2026-09-14",
+      "category": "agent",
+      "summary": "Perplexity 가 GPT-6 Astra 에 대외 커뮤니케이션 작성, 소프트웨어 변경, 운영 시스템 모니터링을 맡긴다고 소개한 OpenAI 고객 사례다. 이전 모델을 쓸 때보다 사람이 중간에 확인하는 빈도가 크게 줄었다고 밝혔다.",
+      "evidence": "중간 점검 빈도가 줄어든 end-to-end 위임 사례 → 제한적 자율 수행(F5) 강화. 공급사가 낸 단일 기업 사례라 low, 확률 변경 금지. 점검이 없어진 것은 아니므로 F6 근거는 아님",
+      "forecast_id": "F5",
+      "impact": "strengthen",
+      "confidence": "low"
+    },
+    {
+      "id": "sig-c3aa338264",
+      "title": "Cognition helps Devin test its own work with GPT‑6 Astra",
+      "publisher": "OpenAI",
+      "source_url": "https://openai.com/index/cognition-devin-testing-with-astra",
+      "published_at": "2026-09-11",
+      "checked_at": "2026-09-14",
+      "category": "reliability",
+      "summary": "Cognition 이 GPT-6 Astra 로 코딩 에이전트 Devin 이 자기 작업을 테스트하고 동작을 입증하는 능력을 높였다고 소개한 사례다. 엔지니어가 검토해야 할 코드를 줄이는 것을 목표로 든다.",
+      "evidence": "에이전트가 스스로 검증 증거를 내는 방향 → 감독 비용을 낮춰 F5 의 적용 범위를 넓힘. 단일 기업 사례라 low. 사람의 최종 검증이 사라진다는 근거는 없어 C3·C5 판단은 유지",
+      "forecast_id": "F5",
+      "impact": "strengthen",
+      "confidence": "low"
+    },
+    {
+      "id": "sig-f15d6fbb69",
+      "title": "공정 자동화와 사업전환으로 경쟁력은 높이고, 일자리도 늘리다",
+      "publisher": "고용노동부",
+      "source_url": "https://www.moel.go.kr/news/enews/report/enewsView.do?news_seq=19931",
+      "published_at": "2026-09-11",
+      "checked_at": "2026-09-14",
+      "category": "jobs",
+      "summary": "고용노동부 장관이 프레스·용접 공정에 로봇 자동화를 들이고 전기차 부품으로 사업을 바꾼 울산의 자동차 부품 중소기업을 찾았다. 이 회사는 4년간 고용이 37% 늘었고, 노사는 숙련 인력 직무전환과 AI 인력 확보, 새 설비 안전기준을 과제로 꼽았다.",
+      "evidence": "자동화 도입이 고용 감소가 아니라 직무전환과 함께 고용 증가로 이어진 사례 → 대량 실직(F7) 약화 방향. 제조업 단일 사례라 low, 지식노동 확률 변경 근거로 쓰지 않음",
+      "forecast_id": "F7",
+      "impact": "weaken",
+      "confidence": "low"
+    },
+    {
+      "id": "sig-ddd873ee22",
+      "title": "인공지능(AI)부터 제조·물류까지... 기업이 만든 현장형 인재양성, 우수사례로 확산",
+      "publisher": "고용노동부",
+      "source_url": "https://www.moel.go.kr/news/enews/report/enewsView.do?news_seq=19932",
+      "published_at": "2026-09-11",
+      "checked_at": "2026-09-14",
+      "category": "jobs",
+      "summary": "고용노동부와 한국산업인력공단이 기업이 직접 만든 자격을 정부가 인정하는 제도의 우수사례를 시상했다. 금상을 받은 SK(주)의 생성형 AI 활용 자격에는 2026년 상반기에만 2,977명이 응시했다.",
+      "evidence": "생성형 AI 활용 능력이 대기업 내부 직무자격으로 들어가 대규모로 평가됨 → 사무직 업무 구성 변화(F4) 강화. 기업 운영 자료를 정부가 전달한 형태라 medium, 단일 그룹 규모라 +2 만 반영",
+      "forecast_id": "F4",
+      "impact": "strengthen",
+      "confidence": "medium"
     }
   ],
   "career": {
@@ -752,6 +864,59 @@
       "probability_changes": "없음",
       "reason": "2026-09-09 첫 정기 검토. 후보 50건 중 공식 출처·발표일·전망 관련성을 갖춘 12건 채택. 기준본 확률은 유지(첫 라운드, 상충 자료 병기).",
       "source": "METR, OpenAI, 고용노동부"
+    },
+    {
+      "date": "2026-09-14",
+      "what": "신호 추가 8건, 갱신 0건. openai.com 본문은 403 이라 우회하지 않고 공식 RSS 요약만으로 판단. 고객 사례(Perplexity·Cognition)와 조일공업 현장방문은 단일 사례라 low, 확률 변경 근거로 쓰지 않음. 고용노동부 게시일은 상세 페이지 등록일(2026-09-11) 기준",
+      "forecast_changes": "확률 변경 3건",
+      "probability_changes": "F1 90%→92% (관리형 에이전트 API 상용 출시로 방향은 지지되나 과업 완수율 증거가 아니고 본문 403 으로 RSS 요약만 확인돼 +2 (심판 판정); https://openai.com/index/introducing-the-agents-api); F2 85%→87% (범용 Data agent·금융업 전용 제품을 같은 날 한 회사 발표라 신호 하나로 묶음. 도입 규모 수치 없음·본문 미확인이라 +2 (심판 판정); https://openai.com/index/put-data-to-work); F4 75%→77% (고용노동부 자료에서 SK 생성형 AI 활용 자격 상반기 응시 2,977명 확인, 역량 제도화 신호. 단일 그룹 규모라 +2 (심판 판정); https://www.moel.go.kr/news/enews/report/enewsView.do?news_seq=19932)",
+      "reason": "2026-09-14 정기 검토(9/10~9/13 스케줄은 수집 스크립트 KeyError 로 수집 실패 → 수정 후 model·jobs 수집). 신규 후보 22건 중 8건 채택. 도전자·옹호자·심판 토론 결과: OpenAI 9/10 발표 묶음은 본문 403 이라 F1·F2 를 +2 씩만, 고용노동부 기업자격 자료로 F4 +2. 최대 이동 2%p 라 headline·충돌표 유지. 비전문가용 Data agent 와 C5(읽고 검증하는 능력) 사이 긴장은 정확도 근거가 나오면 재검토.",
+      "source": "OpenAI, 고용노동부"
+    }
+  ],
+  "outlook_history": [
+    {
+      "version": 2,
+      "updated": "2026-09-09",
+      "headline": "AI는 인간처럼 모든 일을 독립적으로 수행하는 존재보다, 컴퓨터 안에서 여러 도구를 사용해 실제 업무를 처리하는 디지털 실무자 방향으로 발전할 가능성이 높다. 그러나 완전히 믿고 맡길 수 있는 직원보다는 빠르고 유능하지만 감독과 검증이 필요한 실무자에 가까울 것이다.",
+      "forecasts": [
+        {
+          "id": "F1",
+          "probability": 90,
+          "confidence": "high"
+        },
+        {
+          "id": "F2",
+          "probability": 85,
+          "confidence": "high"
+        },
+        {
+          "id": "F3",
+          "probability": 85,
+          "confidence": "high"
+        },
+        {
+          "id": "F4",
+          "probability": 75,
+          "confidence": "medium"
+        },
+        {
+          "id": "F5",
+          "probability": 65,
+          "confidence": "medium"
+        },
+        {
+          "id": "F6",
+          "probability": 25,
+          "confidence": "medium"
+        },
+        {
+          "id": "F7",
+          "probability": 15,
+          "confidence": "medium"
+        }
+      ],
+      "reason": "2026-09-14 정기 검토(9/10~9/13 스케줄은 수집 스크립트 KeyError 로 수집 실패 → 수정 후 model·jobs 수집). 신규 후보 22건 중 8건 채택. 도전자·옹호자·심판 토론 결과: OpenAI 9/10 발표 묶음은 본문 403 이라 F1·F2 를 +2 씩만, 고용노동부 기업자격 자료로 F4 +2. 최대 이동 2%p 라 headline·충돌표 유지. 비전문가용 Data agent 와 C5(읽고 검증하는 능력) 사이 긴장은 정확도 근거가 나오면 재검토."
     }
   ]
 }
