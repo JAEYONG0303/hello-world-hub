@@ -612,6 +612,13 @@ h1,h2,h3{letter-spacing:-.01em}
 .proj3-links a:hover{color:var(--blue-ink);border-color:var(--blue)}
 .proj3-more{margin:28px 0 0;font-size:14px;color:var(--mut)}
 .proj3-more a{color:var(--blue-ink)}
+.proj-other{margin-top:28px}
+.proj-other-label{font-size:12px;color:var(--sec);font-weight:700;letter-spacing:.05em;text-transform:uppercase;margin:0 0 12px}
+.proj-other-card{background:var(--card);border:1px solid var(--grid);border-radius:12px;padding:20px 22px}
+.proj-other-card .kind{font-size:12px;color:var(--blue-ink);font-weight:700;letter-spacing:.04em;text-transform:uppercase;margin:0 0 6px}
+.proj-other-card h3{font-size:16px;margin:0 0 8px;font-weight:700}
+.proj-other-card p{margin:0 0 8px;font-size:14px;color:var(--sec);line-height:1.6}
+.proj-other-card .note{margin:8px 0 0;font-size:12.5px;color:var(--mut)}
 @media(max-width:980px){.proj3-grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:640px){.proj3-grid{grid-template-columns:1fr}.proj3-wrap{padding:40px 0}}
 .proj3-visual{height:60px;margin-bottom:16px}
@@ -1398,7 +1405,15 @@ tr.conf-debate td{padding-top:0;border-top:0}tr.conf-debate details{font-size:13
       <div class="proj3-links"><a href="https://jaeyong0303.github.io/project/cosmetics_cart_eda/dashboard/cosmetics_dashboard.html" target="_blank" rel="noopener noreferrer">대시보드 열기 ↗</a><a href="https://github.com/JAEYONG0303/project/tree/main/cosmetics_cart_eda" target="_blank" rel="noopener noreferrer">보고서와 코드 ↗</a></div>
     </article>
   </div>
-  <p class="proj3-more">그 외 학사행정 자동화 등은 <a href="#about" data-go="about">소개 페이지</a> 하단 "이력·프로젝트·경력"에서 더 볼 수 있습니다.</p>
+  <div class="proj-other">
+    <p class="proj-other-label">기타 프로젝트</p>
+    <article class="proj-other-card">
+      <p class="kind">행정 자동화 · 합성 데이터</p>
+      <h3>학과 10곳의 Excel을 명령 한 번으로 취합·검증</h3>
+      <p>비교과 프로그램 신청자 명단을 합치고 출석·서류와 대조해 수료 대상을 가립니다. 규칙은 한국어 YAML 한 곳에, 제외 근거는 로그에 남습니다. 심어 둔 오류 26건을 전부 잡았고 테스트 9개가 통과합니다.</p>
+      <p class="note">학번·이름은 전부 가짜인 합성 데이터입니다. 공개 리포 분리는 준비 중입니다.</p>
+    </article>
+  </div>
 </div>
 </section>
 
@@ -2785,6 +2800,7 @@ function renderRows(F){
   const dd=i=>i.dday==null?'':'<span class="dd">'+(i.dday<0?'마감':i.dday===0?'D-day':'D-'+i.dday)+'</span>';
   // 표시 순서: 마감 D-day → 제목 → 기관·지역 → 직종 → 고용형태·경력 → 출처
   const FIT_ICON={높음:'●',보통:'◐',낮음:'○','검토 필요':'?'};
+  const FIT_RANK={높음:0,보통:1,'검토 필요':2,낮음:3};
   const hl=(s)=>{if(!st.q)return esc(s);const q=st.q.trim();if(!q)return esc(s);
     const idx=s.toLowerCase().indexOf(q.toLowerCase());if(idx<0)return esc(s);
     return esc(s.slice(0,idx))+'<mark>'+esc(s.slice(idx,idx+q.length))+'</mark>'+esc(s.slice(idx+q.length));};
@@ -2810,7 +2826,10 @@ function renderRows(F){
   const SRC={};((F.jobs_facets||{}).source||[]).forEach(x=>SRC[x.v]=x.name||x.v);
   // feed.json 이 이미 "지금 유효한 공고"만 담고 있다(scripts/jobs_common.py active_postings 기준).
   // 여기서 dday 로 다시 걸러내면 stats.json/소개 탭 숫자와 또 어긋난다 — 그래서 채널만 거른다.
-  const jobs=F.items.filter(i=>i.channel==='jobs').sort((a,b)=>(a.dday??999)-(b.dday??999));
+  const jobs=F.items.filter(i=>i.channel==='jobs').sort((a,b)=>{
+    const fa=FIT_RANK[a.fit_level]??2,fb=FIT_RANK[b.fit_level]??2;
+    return fa!==fb?fa-fb:(a.dday??999)-(b.dday??999);
+  });
   let jpage=1;const JPER=15;
   if($('jobs-rail')){const tn=F.meta&&F.meta.today_new||0;$('jp-date').textContent='· '+(F.meta&&F.meta.updated||'');$('jp-head').textContent='오늘 신규 '+tn+'건, 7일 내 마감 '+(I.deadline_7d||0)+'건';
     $('jp-pipes').textContent='마지막 수집 '+(F.meta&&F.meta.generated_at||'').replace('T',' ').slice(0,16)+' · '+Object.keys(SRC).length+'개 출처 · 신입·경력무관만 · 실패 소스 '+pl.filter(p=>p.status!=='ok').length+'개';
