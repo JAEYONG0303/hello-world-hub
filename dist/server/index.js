@@ -1351,10 +1351,10 @@ tr.conf-debate td{padding-top:0;border-top:0}tr.conf-debate details{font-size:13
       <div class="proj3-visual" aria-hidden="true">
         <svg viewBox="0 0 300 56">
           <line x1="0" y1="48" x2="300" y2="48" stroke="var(--grid)" stroke-width="1"/>
-          <text x="70" y="34" font-size="10" text-anchor="middle" class="v-num">3.2조</text>
           <rect class="v-bar" x="50" y="38.5" width="40" height="9.5" style="animation-delay:.05s"/>
-          <text x="230" y="14" font-size="10" text-anchor="middle" class="v-num">14.8조</text>
           <rect class="v-bar" x="210" y="4" width="40" height="44" style="animation-delay:.2s"/>
+          <text x="70" y="34" font-size="10" text-anchor="middle" class="v-num">3.2조</text>
+          <text x="230" y="14" font-size="10" text-anchor="middle" class="v-num">14.8조</text>
           <text x="70" y="55" font-size="9.5" text-anchor="middle">2010</text>
           <text x="230" y="55" font-size="9.5" text-anchor="middle">2024</text>
         </svg>
@@ -1376,14 +1376,14 @@ tr.conf-debate td{padding-top:0;border-top:0}tr.conf-debate details{font-size:13
       <div class="proj3-visual" aria-hidden="true">
         <svg viewBox="0 0 300 56">
           <line x1="0" y1="48" x2="300" y2="48" stroke="var(--grid)" stroke-width="1"/>
-          <text x="45" y="6" font-size="10" text-anchor="middle" class="v-num">20.4%</text>
           <rect class="v-bar" x="25" y="10" width="40" height="38" style="animation-delay:0s"/>
+          <rect class="v-bar" x="130" y="20" width="40" height="28" style="animation-delay:.15s"/>
+          <rect class="v-bar" x="235" y="39" width="40" height="9" style="animation-delay:.3s"/>
+          <text x="45" y="6" font-size="10" text-anchor="middle" class="v-num">20.4%</text>
           <text x="45" y="55" font-size="9" text-anchor="middle">0-1</text>
           <text x="150" y="16" font-size="10" text-anchor="middle" class="v-num">16.7%</text>
-          <rect class="v-bar" x="130" y="20" width="40" height="28" style="animation-delay:.15s"/>
           <text x="150" y="55" font-size="9" text-anchor="middle">3-5</text>
           <text x="255" y="35" font-size="10" text-anchor="middle" class="v-num">4.7%</text>
-          <rect class="v-bar" x="235" y="39" width="40" height="9" style="animation-delay:.3s"/>
           <text x="255" y="55" font-size="9" text-anchor="middle">50+</text>
         </svg>
       </div>
