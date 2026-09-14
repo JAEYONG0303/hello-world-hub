@@ -1266,8 +1266,8 @@ tr.conf-debate td{padding-top:0;border-top:0}tr.conf-debate details{font-size:13
     <section class="hm-hero">
       <div class="hm-wrap"><div class="hm-hero-in">
         <span class="hm-badge">매일 자동 갱신</span>
-        <h1 class="hm-hero-name">데이터를 모아<br>일에 쓰게 만드는<br>권재용입니다.</h1>
-        <p>의료·공공·대학 분야의 채용공고와 정책 자료를 매일 수집하고, 조건에 맞는 정보만 분류·검증하는 시스템을 직접 설계하고 운영하고 있습니다.</p>
+        <h1 class="hm-hero-name">의료·공공 데이터를<br>매일 모으고<br>정리합니다.</h1>
+        <p>채용공고·정책 자료 중 조건에 맞는 것만 자동으로 분류·검증하는 시스템을 직접 설계하고 운영하고 있습니다.</p>
         <div class="hm-hero-btns"><a href="#projects" data-go="projects" class="hm-btn-p">대표 프로젝트 보기 ›</a><a href="#about" data-go="about" class="hm-btn-g">만든 과정과 역할 보기 ›</a></div>
         <p class="hm-hero-sub"><a href="#ops" data-go="ops">실제 운영 화면 보기 ›</a></p>
         <p class="hm-hero-meta" id="hm-meta"></p>
