@@ -599,6 +599,16 @@ h1,h2,h3{letter-spacing:-.01em}
 .proj3-fields{margin:0;display:grid;gap:14px}
 .proj3-fields dt{font-size:11px;color:var(--sec);font-weight:700;letter-spacing:.05em;text-transform:uppercase;margin-bottom:3px}
 .proj3-fields dd{margin:0;font-size:14.5px;color:var(--sec);line-height:1.65}
+.proj3-result{margin:0 0 16px}
+.proj3-result .lbl{font-size:11px;color:var(--sec);font-weight:700;letter-spacing:.05em;text-transform:uppercase;margin:0 0 4px}
+.proj3-result p{margin:0;font-size:15px;color:var(--ink);font-weight:500;line-height:1.6}
+.proj3-expand{margin:0 0 4px}
+.proj3-expand>summary{cursor:pointer;font-size:12.5px;color:var(--blue-ink);font-weight:600;list-style:none;user-select:none}
+.proj3-expand>summary::-webkit-details-marker{display:none}
+.proj3-expand>summary::before{content:'▸ '}
+.proj3-expand[open]>summary::before{content:'▾ '}
+.proj3-expand[open]>summary{margin-bottom:14px}
+.proj3-expand .proj3-fields{margin-top:14px}
 .proj3-links{display:flex;gap:14px;flex-wrap:wrap;margin-top:18px;padding-top:16px;border-top:1px solid var(--grid)}
 .proj3-links a{font-size:13.5px;font-weight:600;color:var(--ink);text-decoration:none;border-bottom:2px solid var(--orange)}
 .proj3-links a:hover{color:var(--blue-ink);border-color:var(--blue)}
@@ -1325,12 +1335,15 @@ tr.conf-debate td{padding-top:0;border-top:0}tr.conf-debate details{font-size:13
         </svg>
       </div>
       <h3>여러 사이트에 흩어진 공고를 매일 자동으로 모아 걸러낸다</h3>
-      <dl class="proj3-fields">
-        <div><dt>문제</dt><dd>의료·공공·대학 분야 채용공고와 정책 자료가 여러 사이트에 흩어져 있어 매일 반복해서 찾아봐야 했습니다.</dd></div>
-        <div><dt>내가 직접 한 일</dt><dd>수집 출처 선정, 데이터 구조·정규화 기준 설계, 중복 판정 기준(기관명·제목·마감일)과 적합도 규칙 정의, 분류 결과 검토.</dd></div>
-        <div><dt>사용한 도구</dt><dd>Python, BigQuery·MariaDB, YAML 규칙 파일, GitHub Pages</dd></div>
-        <div><dt>핵심 결과</dt><dd>현재 이 사이트에서 실제로 매일 운영 중입니다. 실행 로그와 처리 건수는 운영판에서 그대로 확인할 수 있습니다.</dd></div>
-      </dl>
+      <div class="proj3-result"><p class="lbl">핵심 결과</p><p>현재 이 사이트에서 실제로 매일 운영 중입니다. 실행 로그와 처리 건수는 운영판에서 그대로 확인할 수 있습니다.</p></div>
+      <details class="proj3-expand">
+        <summary>문제·과정·도구 더 보기</summary>
+        <dl class="proj3-fields">
+          <div><dt>문제</dt><dd>의료·공공·대학 분야 채용공고와 정책 자료가 여러 사이트에 흩어져 있어 매일 반복해서 찾아봐야 했습니다.</dd></div>
+          <div><dt>내가 직접 한 일</dt><dd>수집 출처 선정, 데이터 구조·정규화 기준 설계, 중복 판정 기준(기관명·제목·마감일)과 적합도 규칙 정의, 분류 결과 검토.</dd></div>
+          <div><dt>사용한 도구</dt><dd>Python, BigQuery·MariaDB, YAML 규칙 파일, GitHub Pages</dd></div>
+        </dl>
+      </details>
       <div class="proj3-links"><a href="#jobs" data-go="jobs">채용 공고 →</a><a href="#news" data-go="news">뉴스 →</a><a href="#ops" data-go="ops">운영판 →</a></div>
     </article>
     <article class="proj3-card">
@@ -1347,12 +1360,15 @@ tr.conf-debate td{padding-top:0;border-top:0}tr.conf-debate details{font-size:13
         </svg>
       </div>
       <h3>15년 만에 4.7배, 그 돈은 어디에 쓰였나</h3>
-      <dl class="proj3-fields">
-        <div><dt>문제</dt><dd>국민건강보험공단 장기요양보험 통계연보가 15개년에 걸쳐 집계 기준이 여러 번 바뀌어 있어 연도별·지역별 비교가 어려웠습니다.</dd></div>
-        <div><dt>내가 직접 한 일</dt><dd>17개 시도 패널을 직접 구성, 집계 기준이 바뀐 구간을 통일, 전산 오류 정정, 고정효과 패널로 증가 요인 분해.</dd></div>
-        <div><dt>사용한 도구</dt><dd>Python·pandas, 고정효과 패널, ECharts, GitHub Pages</dd></div>
-        <div><dt>핵심 결과</dt><dd>지출 증가의 대부분은 고령화가 아니라 노인 1인당 급여에서 왔고, 지역 격차는 수급률 차이에서 비롯됩니다(인과관계를 주장하지 않으며, 한계는 대시보드 안에 적어뒀습니다).</dd></div>
-      </dl>
+      <div class="proj3-result"><p class="lbl">핵심 결과</p><p>지출 증가의 대부분은 고령화가 아니라 노인 1인당 급여에서 왔고, 지역 격차는 수급률 차이에서 비롯됩니다(인과관계를 주장하지 않으며, 한계는 대시보드 안에 적어뒀습니다).</p></div>
+      <details class="proj3-expand">
+        <summary>문제·과정·도구 더 보기</summary>
+        <dl class="proj3-fields">
+          <div><dt>문제</dt><dd>국민건강보험공단 장기요양보험 통계연보가 15개년에 걸쳐 집계 기준이 여러 번 바뀌어 있어 연도별·지역별 비교가 어려웠습니다.</dd></div>
+          <div><dt>내가 직접 한 일</dt><dd>17개 시도 패널을 직접 구성, 집계 기준이 바뀐 구간을 통일, 전산 오류 정정, 고정효과 패널로 증가 요인 분해.</dd></div>
+          <div><dt>사용한 도구</dt><dd>Python·pandas, 고정효과 패널, ECharts, GitHub Pages</dd></div>
+        </dl>
+      </details>
       <div class="proj3-links"><a href="https://jaeyong0303.github.io/project/ltc_dashboard/" target="_blank" rel="noopener noreferrer">대시보드 열기 ↗</a><a href="https://github.com/JAEYONG0303/project/tree/main/ltc_dashboard" target="_blank" rel="noopener noreferrer">코드와 PRD ↗</a></div>
     </article>
     <article class="proj3-card">
@@ -1372,12 +1388,15 @@ tr.conf-debate td{padding-top:0;border-top:0}tr.conf-debate details{font-size:13
         </svg>
       </div>
       <h3>장바구니 이탈은 어디서 생기는가</h3>
-      <dl class="proj3-fields">
-        <div><dt>문제</dt><dd>화장품 쇼핑몰에서 장바구니 이탈이 가격 때문인지, 어느 단계에서 발생하는지 불분명했습니다.</dd></div>
-        <div><dt>내가 직접 한 일</dt><dd>2,069만 행 중 사용자 기준 2%를 해시로 결정적 추출해 전체 대비 검증, 퍼널·가격대별 전환·리텐션 코호트 분석, 매출을 네 가지 요인으로 분해해 검산.</dd></div>
-        <div><dt>사용한 도구</dt><dd>표본 검증, 세션 정의, AARRR, Tableau Public</dd></div>
-        <div><dt>핵심 결과</dt><dd>"가격 저항은 장바구니 제거보다 조회→담기 단계에서 크게 나타났다." 제거율 자체는 가격대와 무관하게 16~22%로 고르게 나타났습니다(한 몰·5개월·2% 표본 기준).</dd></div>
-      </dl>
+      <div class="proj3-result"><p class="lbl">핵심 결과</p><p>"가격 저항은 장바구니 제거보다 조회→담기 단계에서 크게 나타났다." 제거율 자체는 가격대와 무관하게 16~22%로 고르게 나타났습니다(한 몰·5개월·2% 표본 기준).</p></div>
+      <details class="proj3-expand">
+        <summary>문제·과정·도구 더 보기</summary>
+        <dl class="proj3-fields">
+          <div><dt>문제</dt><dd>화장품 쇼핑몰에서 장바구니 이탈이 가격 때문인지, 어느 단계에서 발생하는지 불분명했습니다.</dd></div>
+          <div><dt>내가 직접 한 일</dt><dd>2,069만 행 중 사용자 기준 2%를 해시로 결정적 추출해 전체 대비 검증, 퍼널·가격대별 전환·리텐션 코호트 분석, 매출을 네 가지 요인으로 분해해 검산.</dd></div>
+          <div><dt>사용한 도구</dt><dd>표본 검증, 세션 정의, AARRR, Tableau Public</dd></div>
+        </dl>
+      </details>
       <div class="proj3-links"><a href="https://jaeyong0303.github.io/project/cosmetics_cart_eda/dashboard/cosmetics_dashboard.html" target="_blank" rel="noopener noreferrer">대시보드 열기 ↗</a><a href="https://github.com/JAEYONG0303/project/tree/main/cosmetics_cart_eda" target="_blank" rel="noopener noreferrer">보고서와 코드 ↗</a></div>
     </article>
   </div>
