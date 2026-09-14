@@ -160,6 +160,10 @@ h1,h2,h3{font-family:var(--serif);font-weight:700;letter-spacing:-.02em;margin:0
 .pill{font-size:13px;color:var(--green);background:var(--green-soft);border-radius:999px;padding:4px 10px;white-space:nowrap;font-family:var(--mono);font-weight:600}
 .tag{color:var(--blue-ink);font-size:13px;white-space:nowrap;font-family:var(--mono);font-weight:600}
 .meta{color:var(--mut);font-size:13.5px}
+.toast-wrap{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);z-index:9000;display:flex;flex-direction:column;gap:8px;align-items:center;pointer-events:none}
+.toast{background:var(--card);border:1px solid var(--grid);color:var(--ink);font-size:13.5px;padding:9px 16px;border-radius:8px;box-shadow:0 8px 24px rgba(0,0,0,.35);opacity:0;transform:translateY(8px);transition:opacity .2s ease,transform .2s ease}
+.toast.show{opacity:1;transform:translateY(0)}
+.toast b{color:var(--lime)}
 .task{display:flex;align-items:center;gap:14px;padding:14px 0;border-top:1px solid var(--grid);cursor:pointer;min-height:52px;font-size:16.5px}
 .task:first-of-type{border-top:0;padding-top:0}
 .check{width:20px;height:20px;border:2px solid var(--base);border-radius:50%;flex:none;transition:.15s;background:var(--card)}
@@ -1735,6 +1739,11 @@ tr.conf-debate td{padding-top:0;border-top:0}tr.conf-debate details{font-size:13
       <div class="pf-sources" id="pf-sources"></div>
       <div class="pf-run" id="pf-run"></div>
     </article>
+    <!-- 이번 달 자동화 실행 현황: content/stats.json automation (scripts/hub_stats.py automation_runs). 하드코딩 금지 -->
+    <article class="card wide" id="auto-observ-card">
+      <div class="cardhead"><h2>이번 달 자동화 실행 현황</h2><span class="pill" id="auto-observ-total">—</span></div>
+      <div class="pf-run" id="auto-observ-run"></div>
+    </article>
     <div class="grid" id="sec-today">
       <article class="card">
         <div class="cardhead"><h2>TODAY</h2><span class="pill" id="today-count">—</span></div>
@@ -2481,6 +2490,13 @@ var JobState = (function () {
 })();
 
 // ---------- KPI 스트립 (content/stats.json) ----------
+function toast(msg){
+  let wrap=document.getElementById('toast-wrap');
+  if(!wrap){wrap=document.createElement('div');wrap.id='toast-wrap';wrap.className='toast-wrap';wrap.setAttribute('aria-live','polite');document.body.appendChild(wrap);}
+  const el=document.createElement('div');el.className='toast';el.textContent=msg;wrap.appendChild(el);
+  requestAnimationFrame(()=>el.classList.add('show'));
+  setTimeout(()=>{el.classList.remove('show');setTimeout(()=>el.remove(),200);},2000);
+}
 function renderStats(st){
   if(!st) return;
   const set=(id,v,sub,unit)=>{const el=document.getElementById(id);if(!el)return;
@@ -2522,6 +2538,16 @@ function renderStats(st){
         +'<span><b>'+(pipe.success_streak_days??'—')+'</b>일 연속 성공</span>'
         +(bySrc?'<span>출처별: '+bySrc+'</span>':'');
     }
+  }
+  const auto=st.automation||{};const routines=auto.routines||[];
+  const autoTotal=document.getElementById('auto-observ-total');
+  if(autoTotal)autoTotal.textContent=auto.month?auto.month+' · 총 '+(auto.total_days_logged??0)+'일':'—';
+  const autoRun=document.getElementById('auto-observ-run');
+  if(autoRun){
+    autoRun.innerHTML=routines.length?routines.map(r=>
+      '<span><b>'+r.days_run+'</b>일 '+r.label+(r.success_rate!=null?' · 성공률 <b>'+r.success_rate+'%</b>':'')
+      +(r.note?' <small class="muted">('+r.note+')</small>':'')+'</span>'
+    ).join('') : '<span class="muted">집계 준비 중</span>';
   }
 }
 (function(){
@@ -2782,14 +2808,14 @@ function renderRows(F){
       if(k==='q'){st.q='';$('f-q').value='';}else if(k==='soon'){st.soon=false;$('f-soon').classList.remove('on');}else{st[k]='';}
       jpage=1;drawJobs();});
 
-    $('f-reset').addEventListener('click',()=>{FK.forEach(k=>st[k]='');st.q='';st.soon=false;st.watch=false;st.hideExcluded=true;$('f-q').value='';$('f-soon').classList.remove('on');$('f-soon').setAttribute('aria-pressed','false');$('f-hide-excl').classList.add('on');$('f-hide-excl').setAttribute('aria-pressed','true');jpage=1;drawJobs();});
+    $('f-reset').addEventListener('click',()=>{FK.forEach(k=>st[k]='');st.q='';st.soon=false;st.watch=false;st.hideExcluded=true;$('f-q').value='';$('f-soon').classList.remove('on');$('f-soon').setAttribute('aria-pressed','false');$('f-hide-excl').classList.add('on');$('f-hide-excl').setAttribute('aria-pressed','true');jpage=1;drawJobs();toast('필터 초기화됨');});
     $('f-hide-excl').classList.add('on');$('f-hide-excl').setAttribute('aria-pressed','true');
     $('f-hide-excl').addEventListener('click',()=>{st.hideExcluded=!st.hideExcluded;$('f-hide-excl').classList.toggle('on',st.hideExcluded);$('f-hide-excl').setAttribute('aria-pressed',String(st.hideExcluded));jpage=1;drawJobs();});
-    $('jobgrid').addEventListener('change',e=>{const sel=e.target.closest('.jc-status');if(!sel)return;JobState.set(sel.dataset.id,{status:sel.value});jpage=1;drawJobs();});
-    $('jobgrid').addEventListener('blur',e=>{const ta=e.target.closest&&e.target.closest('.jc-note');if(!ta)return;JobState.set(ta.dataset.id,{note:ta.value});},true);
+    $('jobgrid').addEventListener('change',e=>{const sel=e.target.closest('.jc-status');if(!sel)return;JobState.set(sel.dataset.id,{status:sel.value});jpage=1;drawJobs();toast('지원 상태 저장됨');});
+    $('jobgrid').addEventListener('blur',e=>{const ta=e.target.closest&&e.target.closest('.jc-note');if(!ta)return;const prev=JobState.get(ta.dataset.id).note||'';if(prev===ta.value)return;JobState.set(ta.dataset.id,{note:ta.value});toast('메모 저장됨');},true);
     if($('jreset-personal'))$('jreset-personal').addEventListener('click',()=>{
       if(!confirm('저장된 모든 지원상태·메모를 삭제합니다. 되돌릴 수 없습니다. 계속할까요?'))return;
-      JobState.resetAll();drawJobs();});
+      JobState.resetAll();drawJobs();toast('개인 기록 초기화 완료');});
     // 홈 "오늘의 검토 흐름"에서 넘어온 프리셋을 채용 탭에 들어올 때마다 확인해서 적용한다(한 번 쓰고 지움)
     window.applyJobsPreset=function(){
       let preset=null;

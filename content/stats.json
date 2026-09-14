@@ -69,5 +69,60 @@
     "total": 0,
     "by_status": {}
   },
+  "automation": {
+    "month": "2026-09",
+    "routines": [
+      {
+        "id": "ai_signals",
+        "label": "AI 전망 신호 수집",
+        "days_run": 2,
+        "success_rate": 66.7,
+        "note": null
+      },
+      {
+        "id": "health_watch",
+        "label": "보건·의료 변화 감시",
+        "days_run": 3,
+        "success_rate": 70.8,
+        "note": null
+      },
+      {
+        "id": "sql_daily",
+        "label": "SQL 데일리 5문제",
+        "days_run": 4,
+        "success_rate": null,
+        "note": "성공/실패 로그 없음 — 파일 생성일수만 집계"
+      },
+      {
+        "id": "python_daily",
+        "label": "Python 5문제 출제",
+        "days_run": 3,
+        "success_rate": null,
+        "note": "성공/실패 로그 없음 — 파일 생성일수만 집계"
+      },
+      {
+        "id": "hub_sync",
+        "label": "홈페이지 데이터 동기화·배포",
+        "days_run": 2,
+        "success_rate": null,
+        "note": "커밋 발생 여부만 집계 — 무변경일과 실패를 구분 못 함(추후 개선 필요)"
+      },
+      {
+        "id": "career_roadmap",
+        "label": "90일 로드맵 주간 점검",
+        "days_run": 0,
+        "success_rate": null,
+        "note": "커밋 발생 여부만 집계 — 무변경일과 실패를 구분 못 함(추후 개선 필요)"
+      },
+      {
+        "id": "jobs",
+        "label": "채용 공고 수집",
+        "days_run": 2,
+        "success_rate": null,
+        "note": "표본 3일 미만 — 집계 준비 중"
+      }
+    ],
+    "total_days_logged": 16
+  },
   "note": "my agent 저장소의 CSV·YAML·MD 에서 센 값. 추정치 없음."
 }
