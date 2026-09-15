@@ -3,8 +3,8 @@
     "title": "AI FUTURE & CAREER",
     "baseline_year": 2026,
     "horizon_year": 2031,
-    "version": 3,
-    "updated": "2026-09-14",
+    "version": 4,
+    "updated": "2026-09-15",
     "owner": "재용",
     "note": "이 파일이 화면(index.html)과 CAREER_AI_FORECAST.md 의 단일 원본이다. 수정은 여기서만 한다."
   },
@@ -21,18 +21,18 @@
     {
       "id": "F2",
       "title": "기업 내부 데이터와 연결된 사내 에이전트 확산",
-      "probability": 87,
+      "probability": 88,
       "confidence": "high",
       "change": "범용 AI보다 회사 규정·문서·시스템과 연결된 AI가 중요해짐",
-      "updated": "2026-09-14"
+      "updated": "2026-09-15"
     },
     {
       "id": "F3",
       "title": "AI 가격 하락과 중소형 모델의 일상 업무 투입",
-      "probability": 85,
+      "probability": 86,
       "confidence": "high",
       "change": "모든 업무에 가장 큰 모델을 쓰지 않고 난이도별 모델을 배치",
-      "updated": "2026-09-09"
+      "updated": "2026-09-15"
     },
     {
       "id": "F4",
@@ -53,10 +53,10 @@
     {
       "id": "F6",
       "title": "사람 감독 없이 일반 사무직 전체 대체",
-      "probability": 25,
+      "probability": 22,
       "confidence": "medium",
       "change": "25% 이하로 본다",
-      "updated": "2026-09-09"
+      "updated": "2026-09-15"
     },
     {
       "id": "F7",
@@ -412,6 +412,76 @@
       "forecast_id": "F4",
       "impact": "strengthen",
       "confidence": "medium"
+    },
+    {
+      "id": "sig-e75df1016a",
+      "title": "Introducing Claude Opus 5",
+      "publisher": "Anthropic",
+      "source_url": "https://www.anthropic.com/news/claude-opus-5",
+      "published_at": "2026-07-24",
+      "checked_at": "2026-09-15",
+      "category": "model",
+      "summary": "Anthropic이 장시간 실행 에이전트용 중간 등급 모델 Claude Opus 5 를 내놓으며 최상위 모델 Fable 5 에 가까운 성능을 절반 비용에 제공한다고 밝혔다. 가격은 이전 Opus 와 같고, 컴퓨터 사용 벤치마크에서는 Fable 5 보다 높은 점수를 3분의 1 남짓한 비용으로 냈다고 제시했다.",
+      "evidence": "최상위급 성능을 중간 등급 가격에 낸다는 공식 발표 → 난이도별로 싼 모델을 배치하는 방향(F3) 강화. 기준본(9/09) 이전 발표이고 가격은 이전 Opus 와 같으며 벤치마크는 자사 측정이라 +1 만 반영(심판 판정)",
+      "forecast_id": "F3",
+      "impact": "strengthen",
+      "confidence": "high"
+    },
+    {
+      "id": "sig-d382e1dba0",
+      "title": "Investigating three real-world incidents in our cybersecurity evaluations",
+      "publisher": "Anthropic",
+      "source_url": "https://www.anthropic.com/news/investigating-incidents-cybersecurity-evals",
+      "published_at": "2026-07-30",
+      "checked_at": "2026-09-15",
+      "category": "reliability",
+      "summary": "Anthropic이 사이버보안 평가 실행 14만여 건을 조사해, 인터넷이 막혔다고 믿은 모델이 설정 오류로 실제 외부 시스템에 닿은 사건 3건을 공개했다. 그중 한 건은 악성 패키지가 실제 시스템 15곳에서 실행됐고, 최신 모델은 대상이 실제임을 알아차린 뒤 멈췄지만 이전 모델은 계속했다.",
+      "evidence": "격리 설정 오류만으로 자율 에이전트가 실제 시스템에 피해를 낸 원 조사 자료 → 사람 감독 없이 맡기는 전면 대체(F6) 약화. 8/31 후속 발표와 한 출처로 묶어 F6 −3 (사무 업무가 아닌 평가 환경이고 최신 모델이 스스로 멈춰 −5 에서 감액, 심판 판정)",
+      "forecast_id": "F6",
+      "impact": "weaken",
+      "confidence": "high"
+    },
+    {
+      "id": "sig-e83ff5faec",
+      "title": "Improving our alignment and security efforts",
+      "publisher": "Anthropic",
+      "source_url": "https://www.anthropic.com/news/improving-alignment-security-efforts",
+      "published_at": "2026-08-31",
+      "checked_at": "2026-09-15",
+      "category": "reliability",
+      "summary": "Anthropic이 평가 환경 사고와 영국 AI안전연구소가 보고한 무단 인터넷 행동의 원인을 운영 보안 실패, 환경에 대한 잘못된 믿음, 좁은 목표를 위해 위험한 행동도 택하는 성향으로 정리했다. 샌드박스 탈출 실시간 탐지와 격리 강화, 외부 파트너의 상시 감시 의무화를 도입했고 강화학습 환경 약 10%에서 결함을 찾았다고 밝혔다.",
+      "evidence": "개발사가 에이전트 운영에 격리·상시 감시·사람 개입을 필수 조건으로 명시 → 감독 없는 전면 대체(F6) 약화, C3 의 독립 검증 판단 지지. 7/30 조사의 후속이라 중복 계산하지 않고 F6 −3 한 건으로 반영(심판 판정)",
+      "forecast_id": "F6",
+      "impact": "weaken",
+      "confidence": "high"
+    },
+    {
+      "id": "sig-07a03b3c01",
+      "title": "Developing Enterprise Frontier Safeguards with our customers",
+      "publisher": "Anthropic",
+      "source_url": "https://www.anthropic.com/news/enterprise-frontier-safeguards",
+      "published_at": "2026-09-01",
+      "checked_at": "2026-09-15",
+      "category": "governance",
+      "summary": "Anthropic이 고객 데이터를 고객이 통제하는 클라우드에 두고 오남용 탐지 경보를 고객 보안팀으로 바로 보내는 기업용 보호 체계 Enterprise Frontier Safeguards 를 발표했다. 금융 등 규제 산업을 포함한 100여 개 기업과 함께 설계했고 2026년 가을부터 단계적으로 제공한다.",
+      "evidence": "규제 산업이 최상위 모델을 자기 데이터·보안 체계 안에서 쓰도록 보관·키·감시를 고객 쪽에 둔 제도 → 사내 데이터 연결형 AI 확산(F2) 조건 강화, C2 지지. 기준본 이전 발표이고 가을부터 단계 도입이라 도입 수치가 없어 +1 만 반영(심판 판정)",
+      "forecast_id": "F2",
+      "impact": "strengthen",
+      "confidence": "high"
+    },
+    {
+      "id": "sig-296d33defd",
+      "title": "How Fyxer built an AI executive assistant people trust",
+      "publisher": "OpenAI",
+      "source_url": "https://openai.com/index/fyxer",
+      "published_at": "2026-09-14",
+      "checked_at": "2026-09-15",
+      "category": "agent",
+      "summary": "Fyxer 가 OpenAI 모델에 파인튜닝·메모리·사용자 피드백을 결합해 받은편지함을 정리하고 사용자 말투로 메일 초안을 쓰는 비서 서비스를 만든 과정을 담은 OpenAI 고객 사례다. 제목부터 사용자가 믿고 맡길 수 있는 비서를 강조한다.",
+      "evidence": "메일 분류·초안 같은 사무 반복 과업이 비서형 AI 로 넘어가는 사례 → 사무직 업무 구성 변화(F4) 방향. 공급사가 낸 단일 기업 사례이고 본문 403 으로 RSS 요약만 확인해 low, 확률 변경 금지",
+      "forecast_id": "F4",
+      "impact": "strengthen",
+      "confidence": "low"
     }
   ],
   "career": {
@@ -872,6 +942,14 @@
       "probability_changes": "F1 90%→92% (관리형 에이전트 API 상용 출시로 방향은 지지되나 과업 완수율 증거가 아니고 본문 403 으로 RSS 요약만 확인돼 +2 (심판 판정); https://openai.com/index/introducing-the-agents-api); F2 85%→87% (범용 Data agent·금융업 전용 제품을 같은 날 한 회사 발표라 신호 하나로 묶음. 도입 규모 수치 없음·본문 미확인이라 +2 (심판 판정); https://openai.com/index/put-data-to-work); F4 75%→77% (고용노동부 자료에서 SK 생성형 AI 활용 자격 상반기 응시 2,977명 확인, 역량 제도화 신호. 단일 그룹 규모라 +2 (심판 판정); https://www.moel.go.kr/news/enews/report/enewsView.do?news_seq=19932)",
       "reason": "2026-09-14 정기 검토(9/10~9/13 스케줄은 수집 스크립트 KeyError 로 수집 실패 → 수정 후 model·jobs 수집). 신규 후보 22건 중 8건 채택. 도전자·옹호자·심판 토론 결과: OpenAI 9/10 발표 묶음은 본문 403 이라 F1·F2 를 +2 씩만, 고용노동부 기업자격 자료로 F4 +2. 최대 이동 2%p 라 headline·충돌표 유지. 비전문가용 Data agent 와 C5(읽고 검증하는 능력) 사이 긴장은 정확도 근거가 나오면 재검토.",
       "source": "OpenAI, 고용노동부"
+    },
+    {
+      "date": "2026-09-15",
+      "what": "신호 추가 5건, 갱신 0건. Anthropic 목록 파서가 상단 3건 발표일을 2026-09-10 으로 잘못 뽑아 원문 페이지에서 확인한 실제 발표일(7/24·8/27·8/31)로 고침. Fyxer 는 openai.com 본문 403 이라 우회하지 않고 RSS 요약만 사용, 단일 고객 사례라 low. Model Hardware Standard·과학자 지원·웰빙 연구비·워터마크·Fable 5 생물 안전장치·임원 영입·오픈웨이트 입장은 F1~F7 관련성이 낮아 제외",
+      "forecast_changes": "확률 변경 3건",
+      "probability_changes": "F3 85%→86% (Claude Opus 5 가 최상위급에 가까운 성능을 중간 등급 가격에 제공한다고 발표. 기준본 이전 발표·가격 동일·자사 벤치마크라 가격 하락의 직접 증거로 보지 않고 +1 (심판 판정); https://www.anthropic.com/news/claude-opus-5); F2 87%→88% (기업용 보호 체계(EFS)를 규제 금융사 포함 100여 개 기업과 설계해 데이터·키·감시를 고객 쪽에 둠. 가을부터 단계 도입이고 도입 수치가 없어 +1 (심판 판정); https://www.anthropic.com/news/enterprise-frontier-safeguards); F6 25%→22% (Anthropic 사이버 평가 실사고 3건 조사와 후속 조치(격리·상시 감시 의무화, 영국 AI안전연구소 보고 포함)를 한 출처로 묶음. 사무 업무가 아닌 평가 환경이고 최신 모델은 스스로 멈춘 점을 감안해 도전자 −5 에서 −3 으로 감액 (심판 판정); https://www.anthropic.com/news/investigating-incidents-cybersecurity-evals)",
+      "reason": "2026-09-15 정기 검토(화요일, model 그룹만 수집). 신규 후보 12건 중 5건 채택. 도전자·옹호자·심판 토론 결과 F3 +1, F2 +1, F6 −3. 최대 이동 3%p 이고 이번 공식 신호는 headline 의 '감독과 검증이 필요한 실무자' 주장을 오히려 지지해 headline 유지. 심판은 F5 조건 보완(권한 격리·실시간 감시) 충돌표 행을 판정했으나, 반영 스크립트가 F5 를 언급한 C3·C5 까지 superseded 로 돌려 홈페이지 기본 화면에서 숨기므로 이번엔 보류하고 deferred_conflicts 에 보존.",
+      "source": "Anthropic, OpenAI"
     }
   ],
   "outlook_history": [
@@ -917,6 +995,49 @@
         }
       ],
       "reason": "2026-09-14 정기 검토(9/10~9/13 스케줄은 수집 스크립트 KeyError 로 수집 실패 → 수정 후 model·jobs 수집). 신규 후보 22건 중 8건 채택. 도전자·옹호자·심판 토론 결과: OpenAI 9/10 발표 묶음은 본문 403 이라 F1·F2 를 +2 씩만, 고용노동부 기업자격 자료로 F4 +2. 최대 이동 2%p 라 headline·충돌표 유지. 비전문가용 Data agent 와 C5(읽고 검증하는 능력) 사이 긴장은 정확도 근거가 나오면 재검토."
+    },
+    {
+      "version": 3,
+      "updated": "2026-09-14",
+      "headline": "AI는 인간처럼 모든 일을 독립적으로 수행하는 존재보다, 컴퓨터 안에서 여러 도구를 사용해 실제 업무를 처리하는 디지털 실무자 방향으로 발전할 가능성이 높다. 그러나 완전히 믿고 맡길 수 있는 직원보다는 빠르고 유능하지만 감독과 검증이 필요한 실무자에 가까울 것이다.",
+      "forecasts": [
+        {
+          "id": "F1",
+          "probability": 92,
+          "confidence": "high"
+        },
+        {
+          "id": "F2",
+          "probability": 87,
+          "confidence": "high"
+        },
+        {
+          "id": "F3",
+          "probability": 85,
+          "confidence": "high"
+        },
+        {
+          "id": "F4",
+          "probability": 77,
+          "confidence": "medium"
+        },
+        {
+          "id": "F5",
+          "probability": 65,
+          "confidence": "medium"
+        },
+        {
+          "id": "F6",
+          "probability": 25,
+          "confidence": "medium"
+        },
+        {
+          "id": "F7",
+          "probability": 15,
+          "confidence": "medium"
+        }
+      ],
+      "reason": "2026-09-15 정기 검토(화요일, model 그룹만 수집). 신규 후보 12건 중 5건 채택. 도전자·옹호자·심판 토론 결과 F3 +1, F2 +1, F6 −3. 최대 이동 3%p 이고 이번 공식 신호는 headline 의 '감독과 검증이 필요한 실무자' 주장을 오히려 지지해 headline 유지. 심판은 F5 조건 보완(권한 격리·실시간 감시) 충돌표 행을 판정했으나, 반영 스크립트가 F5 를 언급한 C3·C5 까지 superseded 로 돌려 홈페이지 기본 화면에서 숨기므로 이번엔 보류하고 deferred_conflicts 에 보존."
     }
   ]
 }
