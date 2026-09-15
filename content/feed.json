@@ -1,7 +1,7 @@
 {
  "meta": {
   "updated": "2026-09-15",
-  "generated_at": "2026-09-15T13:33:07",
+  "generated_at": "2026-09-15T17:36:57",
   "days": [
    "2026-09-15",
    "2026-09-14",
@@ -9,14 +9,14 @@
    "2026-09-10",
    "2026-09-09"
   ],
-  "today_new": 118,
+  "today_new": 148,
   "note": "수집기 4개의 결과를 스크립트가 합친 값. 원문 복제 없음, 추정치 없음."
  },
  "channels": [
   {
    "id": "jobs",
    "name": "채용 공고",
-   "count": 150
+   "count": 173
   },
   {
    "id": "health",
@@ -46,30 +46,38 @@
   {
    "id": "changelog",
    "name": "자동화 변경사항",
-   "count": 135
+   "count": 142
   }
  ],
  "jobs_facets": {
   "region": [
    {
     "v": "서울",
-    "n": 53
+    "n": 62
    },
    {
     "v": "경기",
-    "n": 25
-   },
-   {
-    "v": "경북",
-    "n": 11
+    "n": 29
    },
    {
     "v": "세종",
-    "n": 9
+    "n": 13
+   },
+   {
+    "v": "경북",
+    "n": 12
+   },
+   {
+    "v": "부산",
+    "n": 8
    },
    {
     "v": "충북",
     "n": 8
+   },
+   {
+    "v": "대전",
+    "n": 7
    },
    {
     "v": "전남",
@@ -80,20 +88,16 @@
     "n": 6
    },
    {
-    "v": "대전",
-    "n": 6
-   },
-   {
     "v": "미분류",
     "n": 6
    },
    {
-    "v": "부산",
-    "n": 5
-   },
-   {
     "v": "인천",
     "n": 4
+   },
+   {
+    "v": "대구",
+    "n": 3
    },
    {
     "v": "울산",
@@ -102,10 +106,6 @@
    {
     "v": "충남",
     "n": 3
-   },
-   {
-    "v": "대구",
-    "n": 2
    },
    {
     "v": "경남",
@@ -119,27 +119,27 @@
   "org_type": [
    {
     "v": "공공기관",
-    "n": 39
+    "n": 50
    },
    {
     "v": "대학·산학",
-    "n": 36
+    "n": 38
    },
    {
     "v": "연구기관",
     "n": 24
    },
    {
+    "v": "미분류",
+    "n": 18
+   },
+   {
     "v": "국책연구기관",
-    "n": 16
+    "n": 17
    },
    {
     "v": "대학병원",
-    "n": 11
-   },
-   {
-    "v": "미분류",
-    "n": 11
+    "n": 12
    },
    {
     "v": "종합병원",
@@ -151,7 +151,7 @@
    },
    {
     "v": "공공병원",
-    "n": 2
+    "n": 3
    },
    {
     "v": "요양·재활",
@@ -161,57 +161,57 @@
   "job_family": [
    {
     "v": "검토 필요",
-    "n": 43
-   },
-   {
-    "v": "데이터·통계",
-    "n": 20
-   },
-   {
-    "v": "인턴",
-    "n": 20
+    "n": 45
    },
    {
     "v": "행정·사무",
-    "n": 17
+    "n": 29
+   },
+   {
+    "v": "데이터·통계",
+    "n": 21
+   },
+   {
+    "v": "인턴",
+    "n": 21
    },
    {
     "v": "사업운영·관리",
-    "n": 14
+    "n": 18
    },
    {
     "v": "기획·성과관리",
     "n": 10
    },
    {
+    "v": "연구행정·연구원",
+    "n": 8
+   },
+   {
     "v": "인사·회계·총무",
     "n": 8
    },
    {
-    "v": "연구행정·연구원",
+    "v": "전문연구직",
     "n": 7
    },
    {
     "v": "미분류",
     "n": 6
-   },
-   {
-    "v": "전문연구직",
-    "n": 5
    }
   ],
   "experience": [
    {
     "v": "신입",
-    "n": 77
+    "n": 95
    },
    {
     "v": "신입/경력",
-    "n": 39
+    "n": 41
    },
    {
     "v": "미상",
-    "n": 19
+    "n": 22
    },
    {
     "v": "경력무관",
@@ -221,35 +221,35 @@
   "employment": [
    {
     "v": "계약직·기간제",
-    "n": 71
+    "n": 73
    },
    {
     "v": "정규직",
-    "n": 47
+    "n": 61
    },
    {
     "v": "인턴",
-    "n": 26
+    "n": 28
    },
    {
     "v": "미상",
-    "n": 6
+    "n": 11
    }
   ],
   "source": [
    {
     "v": "saramin",
-    "n": 73,
+    "n": 89,
     "name": "사람인"
    },
    {
     "v": "alio",
-    "n": 42,
+    "n": 46,
     "name": "잡알리오"
    },
    {
     "v": "gojobs",
-    "n": 17,
+    "n": 20,
     "name": "gojobs"
    },
    {
@@ -538,7 +538,7 @@
     "한국환경연구원"
    ],
    "on": true,
-   "open": 2,
+   "open": 3,
    "soon": 2
   },
   {
@@ -631,7 +631,7 @@
     "국립중앙의료원"
    ],
    "on": true,
-   "open": 2,
+   "open": 3,
    "soon": 2
   },
   {
@@ -677,7 +677,7 @@
    "last_run": "2026-09-15",
    "status": "ok",
    "note": "잡알리오 · gojobs · 잡코리아 · 메디컬잡 · 경제·인문사회연구회 · 사람인, 신입/경력무관만",
-   "count": 150
+   "count": 173
   },
   {
    "id": "watch",
@@ -717,7 +717,7 @@
    "last_run": "2026-09-15",
    "status": "ok",
    "note": "git 커밋 로그에서 자동 추출, 데일리 동기화 커밋 제외",
-   "count": 135
+   "count": 142
   }
  ],
  "items": [
@@ -3669,6 +3669,757 @@
    "fit_exclusions": []
   },
   {
+   "id": "alio-56d61d1e",
+   "channel": "jobs",
+   "title": "2026년 하반기 신규직원 보훈특별고용(행정직) 채용공고",
+   "url": "https://job.alio.go.kr/recruitview.do?idx=304964",
+   "publisher": "축산물품질평가원",
+   "source": "alio",
+   "published_at": "2026-09-15",
+   "seen": "2026-09-15",
+   "category": "신입 · 인턴",
+   "tags": [
+    "연구·사업 행정",
+    "자격증"
+   ],
+   "summary": "직무: 사업관리,경영.회계.사무,농림어업",
+   "deadline": "2026-09-29",
+   "dday": 14,
+   "region": "세종",
+   "sigungu": "",
+   "org_type": "공공기관",
+   "job_family": "행정·사무",
+   "experience": "신입",
+   "employment": "인턴",
+   "also_sources": [],
+   "fit_level": "보통",
+   "fit_reasons": [
+    "의료·보건 관련 기관",
+    "신입 또는 경력무관",
+    "서울·경기·인천·대전·충청권"
+   ],
+   "fit_cautions": [
+    "단기 계약직"
+   ],
+   "fit_exclusions": []
+  },
+  {
+   "id": "alio-36e38ea0",
+   "channel": "jobs",
+   "title": "2026년 하반기 신규직원 채용형 청년인턴(행정직) 채용",
+   "url": "https://job.alio.go.kr/recruitview.do?idx=304963",
+   "publisher": "축산물품질평가원",
+   "source": "alio",
+   "published_at": "2026-09-15",
+   "seen": "2026-09-15",
+   "category": "신입 · 인턴",
+   "tags": [
+    "연구·사업 행정",
+    "자격증"
+   ],
+   "summary": "직무: 사업관리,경영.회계.사무,농림어업",
+   "deadline": "2026-09-29",
+   "dday": 14,
+   "region": "세종",
+   "sigungu": "",
+   "org_type": "공공기관",
+   "job_family": "인턴",
+   "experience": "신입",
+   "employment": "인턴",
+   "also_sources": [],
+   "fit_level": "보통",
+   "fit_reasons": [
+    "의료·보건 관련 기관",
+    "신입 또는 경력무관",
+    "서울·경기·인천·대전·충청권"
+   ],
+   "fit_cautions": [
+    "단기 계약직"
+   ],
+   "fit_exclusions": []
+  },
+  {
+   "id": "alio-9c2203cb",
+   "channel": "jobs",
+   "title": "[한국환경연구원] 임시직(일반행정) 채용 공고(인사관리실 대체인력)(0914)",
+   "url": "https://job.alio.go.kr/recruitview.do?idx=304943",
+   "publisher": "한국환경연구원",
+   "source": "alio",
+   "published_at": "2026-09-15",
+   "seen": "2026-09-15",
+   "category": "신입/경력 · 계약직·기간제",
+   "tags": [],
+   "summary": "직무: 경영.회계.사무",
+   "deadline": "2026-09-29",
+   "dday": 14,
+   "region": "세종",
+   "sigungu": "",
+   "org_type": "국책연구기관",
+   "job_family": "검토 필요",
+   "experience": "신입/경력",
+   "employment": "계약직·기간제",
+   "also_sources": [],
+   "fit_level": "보통",
+   "fit_reasons": [
+    "의료·보건 관련 기관",
+    "신입 또는 경력무관",
+    "서울·경기·인천·대전·충청권"
+   ],
+   "fit_cautions": [
+    "담당 업무 불명확",
+    "단기 계약직"
+   ],
+   "fit_exclusions": []
+  },
+  {
+   "id": "alio-e8408c5b",
+   "channel": "jobs",
+   "title": "계약직 연구원/행정(응급취약지·지역협력팀, 강원응급의료지원센터, 전북응급의료지원센터, 충북응급의료지원센터) 채용 공고",
+   "url": "https://job.alio.go.kr/recruitview.do?idx=304901",
+   "publisher": "국립중앙의료원",
+   "source": "alio",
+   "published_at": "2026-09-15",
+   "seen": "2026-09-15",
+   "category": "신입/경력 · 계약직·기간제",
+   "tags": [],
+   "summary": "직무: 보건.의료",
+   "deadline": "2026-09-28",
+   "dday": 13,
+   "region": "서울",
+   "sigungu": "",
+   "org_type": "공공병원",
+   "job_family": "검토 필요",
+   "experience": "신입/경력",
+   "employment": "계약직·기간제",
+   "also_sources": [],
+   "fit_level": "보통",
+   "fit_reasons": [
+    "의료·보건 관련 기관",
+    "신입 또는 경력무관",
+    "서울·경기·인천·대전·충청권"
+   ],
+   "fit_cautions": [
+    "담당 업무 불명확",
+    "단기 계약직"
+   ],
+   "fit_exclusions": []
+  },
+  {
+   "id": "saramin-6ac504d1",
+   "channel": "jobs",
+   "title": "(주)더존푸드 사무행정 채용 공고",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/view?rec_idx=55030290",
+   "publisher": "(주)더존푸드",
+   "source": "saramin",
+   "published_at": "2026-09-15",
+   "seen": "2026-09-15",
+   "category": "신입 · 정규직",
+   "tags": [
+    "Excel·오피스 활용"
+   ],
+   "summary": "직무: 사무직 , 식품·푸드 등록일 26/09/14",
+   "deadline": "2026-11-13",
+   "dday": 59,
+   "region": "대구",
+   "sigungu": "북구",
+   "org_type": "",
+   "job_family": "행정·사무",
+   "experience": "신입",
+   "employment": "정규직",
+   "also_sources": [],
+   "fit_level": "검토 필요",
+   "fit_reasons": [
+    "신입 또는 경력무관"
+   ],
+   "fit_cautions": [],
+   "fit_exclusions": []
+  },
+  {
+   "id": "saramin-91f81c8a",
+   "channel": "jobs",
+   "title": "[백중앙의료원] 디지털의료정보원 행정직(IT/개발/전산)채용공고",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/view?rec_idx=55040658",
+   "publisher": "인제대학교부속백중앙의료원",
+   "source": "saramin",
+   "published_at": "2026-09-15",
+   "seen": "2026-09-15",
+   "category": "신입 · 정규직",
+   "tags": [
+    "전산·SQL·시스템 활용"
+   ],
+   "summary": "직무: SI개발 , Delphi , Java , OracleDB , 헬스케어 외 등록일 26/09/15",
+   "deadline": "2026-10-15",
+   "dday": 30,
+   "region": "부산",
+   "sigungu": "부산진구",
+   "org_type": "대학병원",
+   "job_family": "데이터·통계",
+   "experience": "신입",
+   "employment": "정규직",
+   "also_sources": [],
+   "fit_level": "낮음",
+   "fit_reasons": [
+    "의료·보건 관련 기관",
+    "신입 또는 경력무관"
+   ],
+   "fit_cautions": [],
+   "fit_exclusions": [
+    "통계 전공 필수"
+   ]
+  },
+  {
+   "id": "saramin-2ae459a6",
+   "channel": "jobs",
+   "title": "[한화시스템/판교/연3240이상] 임원 및 부서 행정 지원 채용",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/view?rec_idx=54924956",
+   "publisher": "(주)한성엠에스",
+   "source": "saramin",
+   "published_at": "2026-09-15",
+   "seen": "2026-09-15",
+   "category": "신입 · 미상",
+   "tags": [
+    "문서 작성·보고"
+   ],
+   "summary": "직무: 사무보조 , 문서작성 , 총무 , 경영지원 , 자료입력 외 26/09/09",
+   "deadline": "2026-10-02",
+   "dday": 17,
+   "region": "경기",
+   "sigungu": "성남시 분당구",
+   "org_type": "공공기관",
+   "job_family": "행정·사무",
+   "experience": "신입",
+   "employment": "미상",
+   "also_sources": [],
+   "fit_level": "보통",
+   "fit_reasons": [
+    "의료·보건 관련 기관",
+    "신입 또는 경력무관",
+    "서울·경기·인천·대전·충청권"
+   ],
+   "fit_cautions": [],
+   "fit_exclusions": []
+  },
+  {
+   "id": "saramin-005f8095",
+   "channel": "jobs",
+   "title": "홍보대행사 행정비서실 경영지원업무 및 대표자 비서 업무 파트",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/view?rec_idx=54991547",
+   "publisher": "제이레퍼토리",
+   "source": "saramin",
+   "published_at": "2026-09-15",
+   "seen": "2026-09-15",
+   "category": "신입 · 정규직",
+   "tags": [
+    "Excel·오피스 활용",
+    "데이터 분석·통계 역량",
+    "자격증",
+    "외국어"
+   ],
+   "summary": "직무: 서무 , 총무 , 경영지원 , 경리 , 회계 외 등록일 26/09/09",
+   "deadline": "2026-10-09",
+   "dday": 24,
+   "region": "서울",
+   "sigungu": "마포구",
+   "org_type": "공공기관",
+   "job_family": "행정·사무",
+   "experience": "신입",
+   "employment": "정규직",
+   "also_sources": [],
+   "fit_level": "보통",
+   "fit_reasons": [
+    "의료·보건 관련 기관",
+    "신입 또는 경력무관",
+    "서울·경기·인천·대전·충청권"
+   ],
+   "fit_cautions": [],
+   "fit_exclusions": []
+  },
+  {
+   "id": "saramin-00fc0f2b",
+   "channel": "jobs",
+   "title": "[경산] 사무 행정직 모집합니다. (LG유플러스협력업체)",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/view?rec_idx=54877647",
+   "publisher": "(주)한샘정보통신",
+   "source": "saramin",
+   "published_at": "2026-09-15",
+   "seen": "2026-09-15",
+   "category": "신입 · 정규직",
+   "tags": [
+    "문서 작성·보고",
+    "자격증"
+   ],
+   "summary": "직무: 사무행정 , 사무직 , 문서작성 , 서류관리 , 자료입력 외 등록일 26/08/28",
+   "deadline": "2026-09-27",
+   "dday": 12,
+   "region": "경북",
+   "sigungu": "경산시",
+   "org_type": "",
+   "job_family": "행정·사무",
+   "experience": "신입",
+   "employment": "정규직",
+   "also_sources": [],
+   "fit_level": "검토 필요",
+   "fit_reasons": [
+    "신입 또는 경력무관"
+   ],
+   "fit_cautions": [],
+   "fit_exclusions": []
+  },
+  {
+   "id": "saramin-f60b6d76",
+   "channel": "jobs",
+   "title": "드림하이테크 기술지원파트 행정 담당자 채용",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/view?rec_idx=54918415",
+   "publisher": "(주)드림하이테크",
+   "source": "saramin",
+   "published_at": "2026-09-15",
+   "seen": "2026-09-15",
+   "category": "신입 · 정규직",
+   "tags": [
+    "Excel·오피스 활용",
+    "문서 작성·보고",
+    "자격증"
+   ],
+   "summary": "직무: 사무보조 , 문서작성 , Excel , 기술지원 , 유지보수 외 26/09/02",
+   "deadline": "2026-10-02",
+   "dday": 17,
+   "region": "경기",
+   "sigungu": "수원시 영통구",
+   "org_type": "공공기관",
+   "job_family": "행정·사무",
+   "experience": "신입",
+   "employment": "정규직",
+   "also_sources": [],
+   "fit_level": "보통",
+   "fit_reasons": [
+    "의료·보건 관련 기관",
+    "신입 또는 경력무관",
+    "서울·경기·인천·대전·충청권"
+   ],
+   "fit_cautions": [],
+   "fit_exclusions": []
+  },
+  {
+   "id": "saramin-86582172",
+   "channel": "jobs",
+   "title": "(주)잇다커뮤니케이션 국책사업 전담 사무행정 직무 채용 공고",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/view?rec_idx=55007724",
+   "publisher": "(주)잇다커뮤니케이션",
+   "source": "saramin",
+   "published_at": "2026-09-15",
+   "seen": "2026-09-15",
+   "category": "신입 · 정규직",
+   "tags": [
+    "문서 작성·보고"
+   ],
+   "summary": "직무: 사무행정 , 인쇄·제본 등록일 26/09/11",
+   "deadline": "2026-10-11",
+   "dday": 26,
+   "region": "부산",
+   "sigungu": "해운대구",
+   "org_type": "",
+   "job_family": "사업운영·관리",
+   "experience": "신입",
+   "employment": "정규직",
+   "also_sources": [],
+   "fit_level": "높음",
+   "fit_reasons": [
+    "사업운영·성과관리 업무",
+    "신입 또는 경력무관"
+   ],
+   "fit_cautions": [],
+   "fit_exclusions": []
+  },
+  {
+   "id": "saramin-550ce73d",
+   "channel": "jobs",
+   "title": "사무행정 정규직 채용 공고",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/view?rec_idx=54992144",
+   "publisher": "㈜슈어어시스트",
+   "source": "saramin",
+   "published_at": "2026-09-15",
+   "seen": "2026-09-15",
+   "category": "신입 · 정규직",
+   "tags": [
+    "Excel·오피스 활용",
+    "문서 작성·보고",
+    "자격증"
+   ],
+   "summary": "직무: 사무직 , 의약·제약 , 의료·보건 , 바이오 등록일 26/09/09",
+   "deadline": "2026-10-09",
+   "dday": 24,
+   "region": "경기",
+   "sigungu": "의왕시",
+   "org_type": "",
+   "job_family": "행정·사무",
+   "experience": "신입",
+   "employment": "정규직",
+   "also_sources": [],
+   "fit_level": "보통",
+   "fit_reasons": [
+    "신입 또는 경력무관",
+    "서울·경기·인천·대전·충청권"
+   ],
+   "fit_cautions": [],
+   "fit_exclusions": []
+  },
+  {
+   "id": "saramin-00d9ff09",
+   "channel": "jobs",
+   "title": "이룸원격평생교육원 학사행정 및 운영 정규직 채용 학점은행제",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/view?rec_idx=55021587",
+   "publisher": "(주)한스넷",
+   "source": "saramin",
+   "published_at": "2026-09-15",
+   "seen": "2026-09-15",
+   "category": "신입 · 정규직",
+   "tags": [
+    "문서 작성·보고",
+    "자격증"
+   ],
+   "summary": "직무: 학원생관리 , 온라인교육 , 이러닝 , 학점은행과정학습관리 , 통신교육 외 등록일 26/09/13",
+   "deadline": "2026-10-13",
+   "dday": 28,
+   "region": "경기",
+   "sigungu": "하남시",
+   "org_type": "공공기관",
+   "job_family": "사업운영·관리",
+   "experience": "신입",
+   "employment": "정규직",
+   "also_sources": [],
+   "fit_level": "높음",
+   "fit_reasons": [
+    "사업운영·성과관리 업무",
+    "의료·보건 관련 기관",
+    "신입 또는 경력무관",
+    "서울·경기·인천·대전·충청권"
+   ],
+   "fit_cautions": [],
+   "fit_exclusions": []
+  },
+  {
+   "id": "saramin-f3153dae",
+   "channel": "jobs",
+   "title": "[대흥정보] 사업관리(PMO) 및 사무행정 신입 사원 채용",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/view?rec_idx=54987521",
+   "publisher": "(주)대흥정보",
+   "source": "saramin",
+   "published_at": "2026-09-15",
+   "seen": "2026-09-15",
+   "category": "신입 · 정규직",
+   "tags": [
+    "Excel·오피스 활용"
+   ],
+   "summary": "직무: 사무행정 , PMO , SI·시스템통합 , 소프트웨어개발 등록일 26/09/09",
+   "deadline": "2026-11-08",
+   "dday": 54,
+   "region": "서울",
+   "sigungu": "영등포구",
+   "org_type": "공공기관",
+   "job_family": "전문연구직",
+   "experience": "신입",
+   "employment": "정규직",
+   "also_sources": [],
+   "fit_level": "낮음",
+   "fit_reasons": [
+    "의료·보건 관련 기관",
+    "신입 또는 경력무관",
+    "서울·경기·인천·대전·충청권"
+   ],
+   "fit_cautions": [],
+   "fit_exclusions": [
+    "전문 연구직",
+    "전문 연구직"
+   ]
+  },
+  {
+   "id": "saramin-f527644f",
+   "channel": "jobs",
+   "title": "[한화시스템/을지로/연3240이상] 임원 및 부서 행정 지원 채용",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/view?rec_idx=54916868",
+   "publisher": "(주)한성엠에스",
+   "source": "saramin",
+   "published_at": "2026-09-15",
+   "seen": "2026-09-15",
+   "category": "신입 · 미상",
+   "tags": [
+    "문서 작성·보고"
+   ],
+   "summary": "직무: 사무보조 , 문서작성 , 총무 , 경영지원 , 자료입력 외 26/09/09",
+   "deadline": "2026-10-02",
+   "dday": 17,
+   "region": "서울",
+   "sigungu": "중구",
+   "org_type": "공공기관",
+   "job_family": "행정·사무",
+   "experience": "신입",
+   "employment": "미상",
+   "also_sources": [],
+   "fit_level": "보통",
+   "fit_reasons": [
+    "의료·보건 관련 기관",
+    "신입 또는 경력무관",
+    "서울·경기·인천·대전·충청권"
+   ],
+   "fit_cautions": [],
+   "fit_exclusions": []
+  },
+  {
+   "id": "saramin-61816ddd",
+   "channel": "jobs",
+   "title": "SK협력사 통신선로 행정 정규직 모집함.",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/view?rec_idx=54774505",
+   "publisher": "(주)대하정보기술",
+   "source": "saramin",
+   "published_at": "2026-09-15",
+   "seen": "2026-09-15",
+   "category": "신입 · 정규직",
+   "tags": [
+    "Excel·오피스 활용",
+    "문서 작성·보고",
+    "조정·소통·협업"
+   ],
+   "summary": "직무: 사무행정 , 문서작성 , 서류관리 , 자료입력 , Excel 외 등록일 26/08/18",
+   "deadline": "2026-09-17",
+   "dday": 2,
+   "region": "부산",
+   "sigungu": "금정구",
+   "org_type": "",
+   "job_family": "행정·사무",
+   "experience": "신입",
+   "employment": "정규직",
+   "also_sources": [],
+   "fit_level": "검토 필요",
+   "fit_reasons": [
+    "신입 또는 경력무관"
+   ],
+   "fit_cautions": [],
+   "fit_exclusions": []
+  },
+  {
+   "id": "saramin-3c14c2fc",
+   "channel": "jobs",
+   "title": "도시정비사업전문관리(조합설립 등 행정사무원)신입직원모집",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/view?rec_idx=54801392",
+   "publisher": "클럽코리아㈜",
+   "source": "saramin",
+   "published_at": "2026-09-15",
+   "seen": "2026-09-15",
+   "category": "신입 · 정규직",
+   "tags": [
+    "Excel·오피스 활용",
+    "문서 작성·보고",
+    "조정·소통·협업",
+    "자격증"
+   ],
+   "summary": "직무: 사무직 , 문서작성 , Excel , 인/허가 , PowerPoint 외 등록일 26/08/20",
+   "deadline": "2026-09-19",
+   "dday": 4,
+   "region": "서울",
+   "sigungu": "동대문구",
+   "org_type": "공공기관",
+   "job_family": "사업운영·관리",
+   "experience": "신입",
+   "employment": "정규직",
+   "also_sources": [],
+   "fit_level": "높음",
+   "fit_reasons": [
+    "사업운영·성과관리 업무",
+    "의료·보건 관련 기관",
+    "신입 또는 경력무관",
+    "서울·경기·인천·대전·충청권"
+   ],
+   "fit_cautions": [],
+   "fit_exclusions": []
+  },
+  {
+   "id": "saramin-1dac7148",
+   "channel": "jobs",
+   "title": "(주)기가플롭스 경영지원·행정 담당자 채용 공고",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/view?rec_idx=54539679",
+   "publisher": "(주)기가플롭스",
+   "source": "saramin",
+   "published_at": "2026-09-15",
+   "seen": "2026-09-15",
+   "category": "신입 · 정규직",
+   "tags": [
+    "문서 작성·보고",
+    "조정·소통·협업",
+    "업무 자동화·개선"
+   ],
+   "summary": "직무: 사무직 , 비서 , 소프트웨어개발",
+   "deadline": "",
+   "dday": null,
+   "region": "대전",
+   "sigungu": "유성구",
+   "org_type": "공공기관",
+   "job_family": "전문연구직",
+   "experience": "신입",
+   "employment": "정규직",
+   "also_sources": [],
+   "fit_level": "낮음",
+   "fit_reasons": [
+    "의료·보건 관련 기관",
+    "신입 또는 경력무관",
+    "서울·경기·인천·대전·충청권"
+   ],
+   "fit_cautions": [],
+   "fit_exclusions": [
+    "전문 연구직",
+    "전문 연구직"
+   ]
+  },
+  {
+   "id": "saramin-fed9ecaf",
+   "channel": "jobs",
+   "title": "대건정보통신컨설팅 사무행정 채용공고",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/view?rec_idx=54809737",
+   "publisher": "대건정보통신컨설팅",
+   "source": "saramin",
+   "published_at": "2026-09-15",
+   "seen": "2026-09-15",
+   "category": "신입 · 정규직",
+   "tags": [
+    "문서 작성·보고",
+    "자격증"
+   ],
+   "summary": "직무: 정보통신 , 시장조사 , 시장조사 , 협회",
+   "deadline": "2026-09-20",
+   "dday": 5,
+   "region": "서울",
+   "sigungu": "송파구",
+   "org_type": "",
+   "job_family": "행정·사무",
+   "experience": "신입",
+   "employment": "정규직",
+   "also_sources": [],
+   "fit_level": "보통",
+   "fit_reasons": [
+    "신입 또는 경력무관",
+    "서울·경기·인천·대전·충청권"
+   ],
+   "fit_cautions": [],
+   "fit_exclusions": []
+  },
+  {
+   "id": "saramin-fbbfed24",
+   "channel": "jobs",
+   "title": "[신입] 정부과제 예산/행정관리 매니저 채용",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/view?rec_idx=54810409",
+   "publisher": "튠더웨이(Tunetheway)",
+   "source": "saramin",
+   "published_at": "2026-09-15",
+   "seen": "2026-09-15",
+   "category": "신입 · 정규직",
+   "tags": [],
+   "summary": "직무: 사무행정 , 사무직 , 사무보조 , 총무 , 경리 외 등록일 26/08/21",
+   "deadline": "2026-09-20",
+   "dday": 5,
+   "region": "서울",
+   "sigungu": "구로구",
+   "org_type": "",
+   "job_family": "사업운영·관리",
+   "experience": "신입",
+   "employment": "정규직",
+   "also_sources": [],
+   "fit_level": "높음",
+   "fit_reasons": [
+    "사업운영·성과관리 업무",
+    "신입 또는 경력무관",
+    "서울·경기·인천·대전·충청권"
+   ],
+   "fit_cautions": [],
+   "fit_exclusions": []
+  },
+  {
+   "id": "gojobs-362e7788",
+   "channel": "jobs",
+   "title": "오남중학교 사무행정실무사 대체직원 채용계획 공고",
+   "url": "http://work.sen.go.kr/work/search/recInfo/BD_selectRecDetail.do?q_rcrtSn=110162",
+   "publisher": "경기도교육청 경기도구리남양주교육지원청 오남중학교",
+   "source": "gojobs",
+   "published_at": "2026-09-15",
+   "seen": "2026-09-15",
+   "category": "미상 · 미상",
+   "tags": [],
+   "summary": "직무: 사무행정실무사 대체직원 1명",
+   "deadline": "2026-09-15",
+   "dday": 0,
+   "region": "서울",
+   "sigungu": "구로구",
+   "org_type": "대학·산학",
+   "job_family": "행정·사무",
+   "experience": "미상",
+   "employment": "미상",
+   "also_sources": [],
+   "fit_level": "보통",
+   "fit_reasons": [
+    "대학 또는 연구기관 행정",
+    "서울·경기·인천·대전·충청권"
+   ],
+   "fit_cautions": [],
+   "fit_exclusions": []
+  },
+  {
+   "id": "gojobs-74b6540b",
+   "channel": "jobs",
+   "title": "2026학년도 예일초등학교 사무행정실무사 모집 재공고",
+   "url": "http://work.sen.go.kr/work/search/recInfo/BD_selectRecDetail.do?q_rcrtSn=110001",
+   "publisher": "서울특별시교육청 서울특별시서부교육지원청 예일초등학교",
+   "source": "gojobs",
+   "published_at": "2026-09-15",
+   "seen": "2026-09-15",
+   "category": "미상 · 미상",
+   "tags": [],
+   "summary": "직무: 사무행정실무사 1명",
+   "deadline": "2026-09-14",
+   "dday": -1,
+   "region": "서울",
+   "sigungu": "은평구",
+   "org_type": "대학·산학",
+   "job_family": "행정·사무",
+   "experience": "미상",
+   "employment": "미상",
+   "also_sources": [],
+   "fit_level": "보통",
+   "fit_reasons": [
+    "대학 또는 연구기관 행정",
+    "서울·경기·인천·대전·충청권"
+   ],
+   "fit_cautions": [],
+   "fit_exclusions": []
+  },
+  {
+   "id": "gojobs-b041d7b2",
+   "channel": "jobs",
+   "title": "행정안전부 성과관리담당관 공무직근로자(행정실무원, 장애인구분) 채용 공고",
+   "url": "https://www.gojobs.go.kr/apmView.do?menuNo=401&selMenuNo=400&searchJobsecode=020&empmnsn=302880",
+   "publisher": "행정안전부",
+   "source": "gojobs",
+   "published_at": "2026-09-15",
+   "seen": "2026-09-15",
+   "category": "미상 · 미상",
+   "tags": [],
+   "summary": "직무: 행정실무원 1명",
+   "deadline": "2026-09-14",
+   "dday": -1,
+   "region": "세종",
+   "sigungu": "특별자치시",
+   "org_type": "공공기관",
+   "job_family": "연구행정·연구원",
+   "experience": "미상",
+   "employment": "미상",
+   "also_sources": [],
+   "fit_level": "높음",
+   "fit_reasons": [
+    "연구행정 경험 활용 가능",
+    "의료·보건 관련 기관",
+    "서울·경기·인천·대전·충청권"
+   ],
+   "fit_cautions": [],
+   "fit_exclusions": []
+  },
+  {
    "id": "sql-2026-09-15-1",
    "channel": "sql",
    "title": "[Basic Joins] Replace Employee ID With The Unique Identifier",
@@ -3794,6 +4545,96 @@
    ],
    "kind": "generated",
    "summary": "rows 는 {\"dept\": 부서명, \"revenue\": 정수} 딕셔너리의 리스트입니다. 부서별 revenue 합계를 {부서명: 합계} 딕셔너리로 반환하는 sum_by_dept 를 작성하세요."
+  },
+  {
+   "id": "changelog-my agent-fb47dfb4cb",
+   "channel": "changelog",
+   "title": "feat(jobs): widen industry_open_jobs to 행정/사무 (more sensitive matching)",
+   "url": "",
+   "publisher": "my agent",
+   "source": "my agent",
+   "published_at": "2026-09-15",
+   "seen": "2026-09-15",
+   "category": "feat",
+   "tags": [
+    "feat"
+   ],
+   "summary": "feat(jobs): widen industry_open_jobs to 행정/사무 (more sensitive matching)"
+  },
+  {
+   "id": "changelog-my agent-cd8cc3556a",
+   "channel": "changelog",
+   "title": "feat(portfolio): order-inventory-settlement reconciliation demo",
+   "url": "",
+   "publisher": "my agent",
+   "source": "my agent",
+   "published_at": "2026-09-15",
+   "seen": "2026-09-15",
+   "category": "feat",
+   "tags": [
+    "feat"
+   ],
+   "summary": "feat(portfolio): order-inventory-settlement reconciliation demo"
+  },
+  {
+   "id": "changelog-my agent-b0a2196f67",
+   "channel": "changelog",
+   "title": "fix(beauty): keep stored YouTube metadata current under the 30-day rule",
+   "url": "",
+   "publisher": "my agent",
+   "source": "my agent",
+   "published_at": "2026-09-15",
+   "seen": "2026-09-15",
+   "category": "fix",
+   "tags": [
+    "fix"
+   ],
+   "summary": "fix(beauty): keep stored YouTube metadata current under the 30-day rule"
+  },
+  {
+   "id": "changelog-my agent-4b85dfcfa8",
+   "channel": "changelog",
+   "title": "fix(beauty): replace trend candidates with in-sample composition analysis",
+   "url": "",
+   "publisher": "my agent",
+   "source": "my agent",
+   "published_at": "2026-09-15",
+   "seen": "2026-09-15",
+   "category": "fix",
+   "tags": [
+    "fix"
+   ],
+   "summary": "fix(beauty): replace trend candidates with in-sample composition analysis"
+  },
+  {
+   "id": "changelog-my agent-55b15d5567",
+   "channel": "changelog",
+   "title": "fix(beauty): purge labeled rows whose source video was removed under 30-day rule",
+   "url": "",
+   "publisher": "my agent",
+   "source": "my agent",
+   "published_at": "2026-09-15",
+   "seen": "2026-09-15",
+   "category": "fix",
+   "tags": [
+    "fix"
+   ],
+   "summary": "fix(beauty): purge labeled rows whose source video was removed under 30-day rule"
+  },
+  {
+   "id": "changelog-my agent-daceeaed95",
+   "channel": "changelog",
+   "title": "feat(beauty): connect real YouTube collection, calibrate classifier, add daily schedule",
+   "url": "",
+   "publisher": "my agent",
+   "source": "my agent",
+   "published_at": "2026-09-15",
+   "seen": "2026-09-15",
+   "category": "feat",
+   "tags": [
+    "feat"
+   ],
+   "summary": "feat(beauty): connect real YouTube collection, calibrate classifier, add daily schedule"
   },
   {
    "id": "changelog-my agent-131fc45adf",
@@ -3944,6 +4785,21 @@
     "feat"
    ],
    "summary": "feat(jobs): open data/research-admin roles to all industries"
+  },
+  {
+   "id": "changelog-hello-world-hub-cc311fa0a6",
+   "channel": "changelog",
+   "title": "chore(feed): sync changelog with pagination fix commits",
+   "url": "https://github.com/JAEYONG0303/hello-world-hub/commit/cc311fa0a6a8045b0e7319d9ff5f3a049257c5d1",
+   "publisher": "hello-world-hub",
+   "source": "hello-world-hub",
+   "published_at": "2026-09-15",
+   "seen": "2026-09-15",
+   "category": "chore",
+   "tags": [
+    "chore"
+   ],
+   "summary": "chore(feed): sync changelog with pagination fix commits"
   },
   {
    "id": "changelog-hello-world-hub-7c8bd166be",
@@ -8636,7 +9492,7 @@
    }
   ],
   "new_by_channel": {
-   "jobs": 89,
+   "jobs": 112,
    "health": 0,
    "ai": 5,
    "sql": 0,
@@ -8644,7 +9500,7 @@
    "research": 0,
    "changelog": 0
   },
-  "deadline_7d": 79,
+  "deadline_7d": 84,
   "high": 3,
   "headline": "치료재료·의료기기 보상 체계가 동시에 움직이고, 공공기관 채용은 절차가 엄격해진다",
   "points": [
