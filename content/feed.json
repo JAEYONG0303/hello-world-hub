@@ -1,7 +1,7 @@
 {
  "meta": {
   "updated": "2026-09-15",
-  "generated_at": "2026-09-15T17:36:57",
+  "generated_at": "2026-09-15T17:47:24",
   "days": [
    "2026-09-15",
    "2026-09-14",
@@ -9,14 +9,14 @@
    "2026-09-10",
    "2026-09-09"
   ],
-  "today_new": 148,
+  "today_new": 156,
   "note": "수집기 4개의 결과를 스크립트가 합친 값. 원문 복제 없음, 추정치 없음."
  },
  "channels": [
   {
    "id": "jobs",
    "name": "채용 공고",
-   "count": 173
+   "count": 178
   },
   {
    "id": "health",
@@ -46,18 +46,18 @@
   {
    "id": "changelog",
    "name": "자동화 변경사항",
-   "count": 142
+   "count": 145
   }
  ],
  "jobs_facets": {
   "region": [
    {
     "v": "서울",
-    "n": 62
+    "n": 66
    },
    {
     "v": "경기",
-    "n": 29
+    "n": 30
    },
    {
     "v": "세종",
@@ -119,7 +119,7 @@
   "org_type": [
    {
     "v": "공공기관",
-    "n": 50
+    "n": 52
    },
    {
     "v": "대학·산학",
@@ -127,11 +127,11 @@
    },
    {
     "v": "연구기관",
-    "n": 24
+    "n": 25
    },
    {
     "v": "미분류",
-    "n": 18
+    "n": 20
    },
    {
     "v": "국책연구기관",
@@ -169,11 +169,11 @@
    },
    {
     "v": "데이터·통계",
-    "n": 21
+    "n": 22
    },
    {
     "v": "인턴",
-    "n": 21
+    "n": 22
    },
    {
     "v": "사업운영·관리",
@@ -182,6 +182,10 @@
    {
     "v": "기획·성과관리",
     "n": 10
+   },
+   {
+    "v": "미분류",
+    "n": 9
    },
    {
     "v": "연구행정·연구원",
@@ -194,20 +198,16 @@
    {
     "v": "전문연구직",
     "n": 7
-   },
-   {
-    "v": "미분류",
-    "n": 6
    }
   ],
   "experience": [
    {
     "v": "신입",
-    "n": 95
+    "n": 96
    },
    {
     "v": "신입/경력",
-    "n": 41
+    "n": 43
    },
    {
     "v": "미상",
@@ -215,21 +215,21 @@
    },
    {
     "v": "경력무관",
-    "n": 15
+    "n": 17
    }
   ],
   "employment": [
    {
     "v": "계약직·기간제",
-    "n": 73
+    "n": 74
    },
    {
     "v": "정규직",
-    "n": 61
+    "n": 64
    },
    {
     "v": "인턴",
-    "n": 28
+    "n": 29
    },
    {
     "v": "미상",
@@ -239,7 +239,7 @@
   "source": [
    {
     "v": "saramin",
-    "n": 89,
+    "n": 94,
     "name": "사람인"
    },
    {
@@ -677,7 +677,7 @@
    "last_run": "2026-09-15",
    "status": "ok",
    "note": "잡알리오 · gojobs · 잡코리아 · 메디컬잡 · 경제·인문사회연구회 · 사람인, 신입/경력무관만",
-   "count": 173
+   "count": 178
   },
   {
    "id": "watch",
@@ -717,7 +717,7 @@
    "last_run": "2026-09-15",
    "status": "ok",
    "note": "git 커밋 로그에서 자동 추출, 데일리 동기화 커밋 제외",
-   "count": 142
+   "count": 145
   }
  ],
  "items": [
@@ -4420,6 +4420,171 @@
    "fit_exclusions": []
   },
   {
+   "id": "saramin-56a21bf4",
+   "channel": "jobs",
+   "title": "[O2O 홈서비스 플랫폼 miso] 사업 운영 인턴 (정규직 전환형)",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/view?rec_idx=55014456",
+   "publisher": "유한회사 미소",
+   "source": "saramin",
+   "published_at": "2026-09-15",
+   "seen": "2026-09-15",
+   "category": "신입 · 인턴",
+   "tags": [
+    "연구·사업 행정"
+   ],
+   "summary": "직무: 경영기획 , PL(프로젝트리더) , PM(프로젝트매니저) , PO(프로덕트오너) , 사업관리 외 등록일 26/09/11",
+   "deadline": "2026-10-11",
+   "dday": 26,
+   "region": "서울",
+   "sigungu": "종로구",
+   "org_type": "",
+   "job_family": "인턴",
+   "experience": "신입",
+   "employment": "인턴",
+   "also_sources": [],
+   "fit_level": "보통",
+   "fit_reasons": [
+    "신입 또는 경력무관",
+    "서울·경기·인천·대전·충청권"
+   ],
+   "fit_cautions": [
+    "단기 계약직"
+   ],
+   "fit_exclusions": []
+  },
+  {
+   "id": "saramin-60da562c",
+   "channel": "jobs",
+   "title": "(주)미소정보기술 기술연구소 개발자 채용합니다.",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/view?rec_idx=54910344",
+   "publisher": "(주)미소정보기술",
+   "source": "saramin",
+   "published_at": "2026-09-15",
+   "seen": "2026-09-15",
+   "category": "신입/경력 · 정규직",
+   "tags": [
+    "데이터 분석·통계 역량",
+    "조정·소통·협업",
+    "전산·SQL·시스템 활용",
+    "업무 자동화·개선",
+    "통계·현황·실적 관리"
+   ],
+   "summary": "직무: 빅데이터 , AI(인공지능) , 백엔드/서버개발 , 솔루션업체 등록일 26/09/01",
+   "deadline": "2026-10-01",
+   "dday": 16,
+   "region": "서울",
+   "sigungu": "강남구",
+   "org_type": "연구기관",
+   "job_family": "데이터·통계",
+   "experience": "신입/경력",
+   "employment": "정규직",
+   "also_sources": [],
+   "fit_level": "낮음",
+   "fit_reasons": [
+    "신입 또는 경력무관",
+    "서울·경기·인천·대전·충청권"
+   ],
+   "fit_cautions": [],
+   "fit_exclusions": [
+    "통계 전공 필수"
+   ]
+  },
+  {
+   "id": "saramin-50958dde",
+   "channel": "jobs",
+   "title": "원더플란트치과 노원점 데스크 코디네이터 모집",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/view?rec_idx=54846169",
+   "publisher": "(주)원더플컨설팅",
+   "source": "saramin",
+   "published_at": "2026-09-15",
+   "seen": "2026-09-15",
+   "category": "경력무관 · 정규직",
+   "tags": [],
+   "summary": "직무: 병원코디네이터 , 치과 등록일 26/08/25",
+   "deadline": "2026-09-24",
+   "dday": 9,
+   "region": "서울",
+   "sigungu": "노원구",
+   "org_type": "공공기관",
+   "job_family": "",
+   "experience": "경력무관",
+   "employment": "정규직",
+   "also_sources": [],
+   "fit_level": "보통",
+   "fit_reasons": [
+    "의료·보건 관련 기관",
+    "신입 또는 경력무관",
+    "서울·경기·인천·대전·충청권"
+   ],
+   "fit_cautions": [],
+   "fit_exclusions": []
+  },
+  {
+   "id": "saramin-a421005f",
+   "channel": "jobs",
+   "title": "연세루미너스치과 치과 코디네이터 구인합니다",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/view?rec_idx=54929075",
+   "publisher": "연세루미너스치과",
+   "source": "saramin",
+   "published_at": "2026-09-15",
+   "seen": "2026-09-15",
+   "category": "신입/경력 · 정규직",
+   "tags": [
+    "조정·소통·협업",
+    "문서 작성·보고",
+    "전산·SQL·시스템 활용"
+   ],
+   "summary": "직무: 치과 , 병원코디네이터 , 치과의원 , 치과",
+   "deadline": "",
+   "dday": null,
+   "region": "서울",
+   "sigungu": "강남구",
+   "org_type": "",
+   "job_family": "",
+   "experience": "신입/경력",
+   "employment": "정규직",
+   "also_sources": [],
+   "fit_level": "보통",
+   "fit_reasons": [
+    "신입 또는 경력무관",
+    "서울·경기·인천·대전·충청권"
+   ],
+   "fit_cautions": [],
+   "fit_exclusions": []
+  },
+  {
+   "id": "saramin-5f444c51",
+   "channel": "jobs",
+   "title": "3000협의 오다한의원 별내점 코디 채용 (남양주/별내/다산/구리)",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/view?rec_idx=54574354",
+   "publisher": "오다한의원남양주별내점",
+   "source": "saramin",
+   "published_at": "2026-09-15",
+   "seen": "2026-09-15",
+   "category": "경력무관 · 계약직·기간제",
+   "tags": [],
+   "summary": "직무: 한의원 , 병원코디네이터 , 피부과 , 한의원",
+   "deadline": "",
+   "dday": null,
+   "region": "경기",
+   "sigungu": "남양주시",
+   "org_type": "공공기관",
+   "job_family": "",
+   "experience": "경력무관",
+   "employment": "계약직·기간제",
+   "also_sources": [],
+   "fit_level": "보통",
+   "fit_reasons": [
+    "의료·보건 관련 기관",
+    "신입 또는 경력무관",
+    "서울·경기·인천·대전·충청권"
+   ],
+   "fit_cautions": [
+    "단기 계약직"
+   ],
+   "fit_exclusions": []
+  },
+  {
    "id": "sql-2026-09-15-1",
    "channel": "sql",
    "title": "[Basic Joins] Replace Employee ID With The Unique Identifier",
@@ -4545,6 +4710,36 @@
    ],
    "kind": "generated",
    "summary": "rows 는 {\"dept\": 부서명, \"revenue\": 정수} 딕셔너리의 리스트입니다. 부서별 revenue 합계를 {부서명: 합계} 딕셔너리로 반환하는 sum_by_dept 를 작성하세요."
+  },
+  {
+   "id": "changelog-my agent-6ea07010f0",
+   "channel": "changelog",
+   "title": "feat(jobs): widen industry_open_jobs to startup-style role names",
+   "url": "",
+   "publisher": "my agent",
+   "source": "my agent",
+   "published_at": "2026-09-15",
+   "seen": "2026-09-15",
+   "category": "feat",
+   "tags": [
+    "feat"
+   ],
+   "summary": "feat(jobs): widen industry_open_jobs to startup-style role names"
+  },
+  {
+   "id": "changelog-my agent-63219e3ee4",
+   "channel": "changelog",
+   "title": "feat(jobs): collect via widened 행정 keyword (industry_open_jobs)",
+   "url": "",
+   "publisher": "my agent",
+   "source": "my agent",
+   "published_at": "2026-09-15",
+   "seen": "2026-09-15",
+   "category": "feat",
+   "tags": [
+    "feat"
+   ],
+   "summary": "feat(jobs): collect via widened 행정 keyword (industry_open_jobs)"
   },
   {
    "id": "changelog-my agent-fb47dfb4cb",
@@ -4785,6 +4980,21 @@
     "feat"
    ],
    "summary": "feat(jobs): open data/research-admin roles to all industries"
+  },
+  {
+   "id": "changelog-hello-world-hub-a8ee54f7c8",
+   "channel": "changelog",
+   "title": "chore(feed): sync widened 행정 keyword collection results",
+   "url": "https://github.com/JAEYONG0303/hello-world-hub/commit/a8ee54f7c8b4f704baff30b07c20d16949c6373d",
+   "publisher": "hello-world-hub",
+   "source": "hello-world-hub",
+   "published_at": "2026-09-15",
+   "seen": "2026-09-15",
+   "category": "chore",
+   "tags": [
+    "chore"
+   ],
+   "summary": "chore(feed): sync widened 행정 keyword collection results"
   },
   {
    "id": "changelog-hello-world-hub-cc311fa0a6",
@@ -9492,7 +9702,7 @@
    }
   ],
   "new_by_channel": {
-   "jobs": 112,
+   "jobs": 117,
    "health": 0,
    "ai": 5,
    "sql": 0,
