@@ -615,6 +615,7 @@ h1,h2,h3{letter-spacing:-.01em}
 .proj-other{margin-top:28px}
 .proj-other-label{font-size:12px;color:var(--sec);font-weight:700;letter-spacing:.05em;text-transform:uppercase;margin:0 0 12px}
 .proj-other-card{background:var(--card);border:1px solid var(--grid);border-radius:12px;padding:20px 22px}
+.proj-other-card+.proj-other-card{margin-top:12px}
 .proj-other-card .kind{font-size:12px;color:var(--blue-ink);font-weight:700;letter-spacing:.04em;text-transform:uppercase;margin:0 0 6px}
 .proj-other-card h3{font-size:16px;margin:0 0 8px;font-weight:700}
 .proj-other-card p{margin:0 0 8px;font-size:14px;color:var(--sec);line-height:1.6}
@@ -1412,6 +1413,12 @@ tr.conf-debate td{padding-top:0;border-top:0}tr.conf-debate details{font-size:13
       <h3>학과 10곳의 Excel을 명령 한 번으로 취합·검증</h3>
       <p>비교과 프로그램 신청자 명단을 합치고 출석·서류와 대조해 수료 대상을 가립니다. 규칙은 한국어 YAML 한 곳에, 제외 근거는 로그에 남습니다. 심어 둔 오류 26건을 전부 잡았고 테스트 9개가 통과합니다.</p>
       <p class="note">학번·이름은 전부 가짜인 합성 데이터입니다. 공개 리포 분리는 준비 중입니다.</p>
+    </article>
+    <article class="proj-other-card">
+      <p class="kind">쇼핑몰 운영 자동화 · 합성 데이터</p>
+      <h3>주문·재고·정산 엑셀 대조와 해외 발주 납기 추적</h3>
+      <p>판매처 주문, 재고, PG·오픈마켓 정산, 해외 발주 엑셀을 넣으면 서로 맞지 않는 지점과 확약일이 지난 발주를 찾습니다. 재고가 모자라 못 나가는 주문이 어느 발주를 기다리는지 계산하고, 거래처 리컨펌 요청 초안(한국어·중국어)과 주간 리포트를 만듭니다. 규칙은 YAML 한 곳에 두었고, 심어 둔 오류·경고 46건을 대상까지 정확히 잡으며 테스트 97개가 통과합니다.</p>
+      <p class="note">주문·거래처·금액은 전부 합성 데이터이고, 메시지는 초안만 만들 뿐 보내지 않습니다. 공개 리포 분리는 준비 중입니다.</p>
     </article>
   </div>
 </div>
