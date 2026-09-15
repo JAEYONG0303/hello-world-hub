@@ -1,7 +1,7 @@
 {
  "meta": {
   "updated": "2026-09-15",
-  "generated_at": "2026-09-15T11:21:03",
+  "generated_at": "2026-09-15T11:28:46",
   "days": [
    "2026-09-15",
    "2026-09-14",
@@ -9,14 +9,14 @@
    "2026-09-10",
    "2026-09-09"
   ],
-  "today_new": 69,
+  "today_new": 90,
   "note": "수집기 4개의 결과를 스크립트가 합친 값. 원문 복제 없음, 추정치 없음."
  },
  "channels": [
   {
    "id": "jobs",
    "name": "채용 공고",
-   "count": 113
+   "count": 132
   },
   {
    "id": "health",
@@ -46,26 +46,26 @@
   {
    "id": "changelog",
    "name": "자동화 변경사항",
-   "count": 123
+   "count": 125
   }
  ],
  "jobs_facets": {
   "region": [
    {
     "v": "서울",
-    "n": 41
+    "n": 44
    },
    {
     "v": "경기",
-    "n": 21
-   },
-   {
-    "v": "세종",
-    "n": 8
+    "n": 24
    },
    {
     "v": "경북",
-    "n": 7
+    "n": 11
+   },
+   {
+    "v": "세종",
+    "n": 9
    },
    {
     "v": "대전",
@@ -76,11 +76,15 @@
     "n": 6
    },
    {
-    "v": "강원",
-    "n": 5
+    "v": "전남",
+    "n": 6
    },
    {
-    "v": "전남",
+    "v": "충북",
+    "n": 6
+   },
+   {
+    "v": "강원",
     "n": 5
    },
    {
@@ -88,15 +92,15 @@
     "n": 4
    },
    {
+    "v": "울산",
+    "n": 3
+   },
+   {
     "v": "인천",
     "n": 3
    },
    {
-    "v": "충북",
-    "n": 3
-   },
-   {
-    "v": "울산",
+    "v": "충남",
     "n": 2
    },
    {
@@ -106,9 +110,17 @@
    {
     "v": "대구",
     "n": 1
+   },
+   {
+    "v": "전북",
+    "n": 1
    }
   ],
   "org_type": [
+   {
+    "v": "대학·산학",
+    "n": 32
+   },
    {
     "v": "공공기관",
     "n": 28
@@ -118,20 +130,16 @@
     "n": 22
    },
    {
-    "v": "대학·산학",
-    "n": 18
+    "v": "국책연구기관",
+    "n": 16
    },
    {
-    "v": "국책연구기관",
-    "n": 15
+    "v": "대학병원",
+    "n": 11
    },
    {
     "v": "미분류",
     "n": 11
-   },
-   {
-    "v": "대학병원",
-    "n": 7
    },
    {
     "v": "협회·재단",
@@ -153,7 +161,7 @@
   "job_family": [
    {
     "v": "검토 필요",
-    "n": 37
+    "n": 41
    },
    {
     "v": "데이터·통계",
@@ -161,67 +169,67 @@
    },
    {
     "v": "인턴",
-    "n": 12
+    "n": 16
    },
    {
     "v": "행정·사무",
-    "n": 11
+    "n": 13
    },
    {
     "v": "사업운영·관리",
-    "n": 9
+    "n": 11
    },
    {
     "v": "기획·성과관리",
-    "n": 8
+    "n": 9
+   },
+   {
+    "v": "연구행정·연구원",
+    "n": 7
    },
    {
     "v": "인사·회계·총무",
     "n": 6
    },
    {
-    "v": "연구행정·연구원",
-    "n": 4
+    "v": "미분류",
+    "n": 5
    },
    {
     "v": "전문연구직",
     "n": 4
-   },
-   {
-    "v": "미분류",
-    "n": 2
    }
   ],
   "experience": [
    {
     "v": "신입",
-    "n": 64
+    "n": 72
    },
    {
     "v": "신입/경력",
-    "n": 26
+    "n": 30
    },
    {
     "v": "미상",
-    "n": 15
+    "n": 16
    },
    {
     "v": "경력무관",
-    "n": 8
+    "n": 14
    }
   ],
   "employment": [
    {
     "v": "계약직·기간제",
-    "n": 49
+    "n": 62
    },
    {
     "v": "정규직",
-    "n": 41
+    "n": 44
    },
    {
     "v": "인턴",
-    "n": 18
+    "n": 21
    },
    {
     "v": "미상",
@@ -231,17 +239,17 @@
   "source": [
    {
     "v": "saramin",
-    "n": 62,
+    "n": 72,
     "name": "사람인"
    },
    {
     "v": "alio",
-    "n": 20,
+    "n": 28,
     "name": "잡알리오"
    },
    {
     "v": "gojobs",
-    "n": 13,
+    "n": 14,
     "name": "gojobs"
    },
    {
@@ -309,8 +317,8 @@
     "KDI국제정책대학원"
    ],
    "on": true,
-   "open": 1,
-   "soon": 1
+   "open": 2,
+   "soon": 2
   },
   {
    "group": "nrc",
@@ -669,7 +677,7 @@
    "last_run": "2026-09-15",
    "status": "ok",
    "note": "잡알리오 · gojobs · 잡코리아 · 메디컬잡 · 경제·인문사회연구회 · 사람인, 신입/경력무관만",
-   "count": 113
+   "count": 132
   },
   {
    "id": "watch",
@@ -709,7 +717,7 @@
    "last_run": "2026-09-15",
    "status": "ok",
    "note": "git 커밋 로그에서 자동 추출, 데일리 동기화 커밋 제외",
-   "count": 123
+   "count": 125
   }
  ],
  "items": [
@@ -1714,7 +1722,9 @@
    "published_at": "2026-09-15",
    "seen": "2026-09-15",
    "category": "신입 · 정규직",
-   "tags": [],
+   "tags": [
+    "연구·사업 행정"
+   ],
    "summary": "직무: 사업관리 , 사무직 , 공공기관",
    "deadline": "2026-09-28",
    "dday": 13,
@@ -2323,7 +2333,9 @@
    "published_at": "2026-09-15",
    "seen": "2026-09-15",
    "category": "신입 · 인턴",
-   "tags": [],
+   "tags": [
+    "문서 작성·보고"
+   ],
    "summary": "직무: 사무행정 , 사무직 , 사무보조 , 문서작성 , 서류관리 외 26/09/14",
    "deadline": "2026-09-16",
    "dday": 1,
@@ -2434,6 +2446,631 @@
    "fit_reasons": [
     "대학 또는 연구기관 행정",
     "신입 또는 경력무관"
+   ],
+   "fit_cautions": [
+    "단기 계약직"
+   ],
+   "fit_exclusions": []
+  },
+  {
+   "id": "alio-45895eeb",
+   "channel": "jobs",
+   "title": "[한국전력국제원자력대학원대학교] 체험형 청년인턴 채용",
+   "url": "https://job.alio.go.kr/recruitview.do?idx=304938",
+   "publisher": "한국전력국제원자력대학원대학교",
+   "source": "alio",
+   "published_at": "2026-09-15",
+   "seen": "2026-09-15",
+   "category": "신입 · 인턴",
+   "tags": [
+    "Excel·오피스 활용"
+   ],
+   "summary": "직무: 경영.회계.사무",
+   "deadline": "2026-09-21",
+   "dday": 6,
+   "region": "울산",
+   "sigungu": "",
+   "org_type": "대학·산학",
+   "job_family": "인턴",
+   "experience": "신입",
+   "employment": "인턴",
+   "also_sources": [],
+   "fit_level": "보통",
+   "fit_reasons": [
+    "대학 또는 연구기관 행정",
+    "신입 또는 경력무관"
+   ],
+   "fit_cautions": [
+    "단기 계약직"
+   ],
+   "fit_exclusions": []
+  },
+  {
+   "id": "alio-a94d4ec9",
+   "channel": "jobs",
+   "title": "분당서울대학교병원 신입(업무지원직) 직원 채용 공고",
+   "url": "https://job.alio.go.kr/recruitview.do?idx=304908",
+   "publisher": "분당서울대학교병원",
+   "source": "alio",
+   "published_at": "2026-09-15",
+   "seen": "2026-09-15",
+   "category": "신입 · 정규직",
+   "tags": [],
+   "summary": "직무: 보건.의료",
+   "deadline": "2026-09-23",
+   "dday": 8,
+   "region": "경기",
+   "sigungu": "",
+   "org_type": "대학병원",
+   "job_family": "",
+   "experience": "신입",
+   "employment": "정규직",
+   "also_sources": [],
+   "fit_level": "보통",
+   "fit_reasons": [
+    "의료·보건 관련 기관",
+    "신입 또는 경력무관",
+    "서울·경기·인천·대전·충청권"
+   ],
+   "fit_cautions": [],
+   "fit_exclusions": []
+  },
+  {
+   "id": "alio-b0d03f10",
+   "channel": "jobs",
+   "title": "분당서울대학교병원 신입(업무지원직_미화) 직원 채용 공고",
+   "url": "https://job.alio.go.kr/recruitview.do?idx=304907",
+   "publisher": "분당서울대학교병원",
+   "source": "alio",
+   "published_at": "2026-09-15",
+   "seen": "2026-09-15",
+   "category": "신입 · 정규직",
+   "tags": [],
+   "summary": "직무: 보건.의료",
+   "deadline": "2026-09-23",
+   "dday": 8,
+   "region": "경기",
+   "sigungu": "",
+   "org_type": "대학병원",
+   "job_family": "",
+   "experience": "신입",
+   "employment": "정규직",
+   "also_sources": [],
+   "fit_level": "보통",
+   "fit_reasons": [
+    "의료·보건 관련 기관",
+    "신입 또는 경력무관",
+    "서울·경기·인천·대전·충청권"
+   ],
+   "fit_cautions": [],
+   "fit_exclusions": []
+  },
+  {
+   "id": "alio-d6acb8a2",
+   "channel": "jobs",
+   "title": "분당서울대학교병원 신입(사무직) 직원 장애인·상이군경 제한경쟁 채용 공고",
+   "url": "https://job.alio.go.kr/recruitview.do?idx=304906",
+   "publisher": "분당서울대학교병원",
+   "source": "alio",
+   "published_at": "2026-09-15",
+   "seen": "2026-09-15",
+   "category": "신입 · 정규직",
+   "tags": [],
+   "summary": "직무: 보건.의료",
+   "deadline": "2026-09-23",
+   "dday": 8,
+   "region": "경기",
+   "sigungu": "",
+   "org_type": "대학병원",
+   "job_family": "행정·사무",
+   "experience": "신입",
+   "employment": "정규직",
+   "also_sources": [],
+   "fit_level": "보통",
+   "fit_reasons": [
+    "의료·보건 관련 기관",
+    "신입 또는 경력무관",
+    "서울·경기·인천·대전·충청권"
+   ],
+   "fit_cautions": [],
+   "fit_exclusions": []
+  },
+  {
+   "id": "alio-4843d7a2",
+   "channel": "jobs",
+   "title": "한국폴리텍대학 광주캠퍼스 청년인턴(장애) 채용 공고",
+   "url": "https://job.alio.go.kr/recruitview.do?idx=304799",
+   "publisher": "학교법인한국폴리텍",
+   "source": "alio",
+   "published_at": "2026-09-15",
+   "seen": "2026-09-15",
+   "category": "신입/경력 · 인턴",
+   "tags": [],
+   "summary": "직무: 경영.회계.사무",
+   "deadline": "2026-09-18",
+   "dday": 3,
+   "region": "전남",
+   "sigungu": "",
+   "org_type": "대학·산학",
+   "job_family": "인턴",
+   "experience": "신입/경력",
+   "employment": "인턴",
+   "also_sources": [],
+   "fit_level": "보통",
+   "fit_reasons": [
+    "대학 또는 연구기관 행정",
+    "신입 또는 경력무관"
+   ],
+   "fit_cautions": [
+    "단기 계약직"
+   ],
+   "fit_exclusions": []
+  },
+  {
+   "id": "alio-f039b0f5",
+   "channel": "jobs",
+   "title": "한국폴리텍대학 청주캠퍼스 하반기 청년인턴(일반) 채용 공고",
+   "url": "https://job.alio.go.kr/recruitview.do?idx=304741",
+   "publisher": "학교법인한국폴리텍",
+   "source": "alio",
+   "published_at": "2026-09-15",
+   "seen": "2026-09-15",
+   "category": "신입/경력 · 인턴",
+   "tags": [],
+   "summary": "직무: 경영.회계.사무",
+   "deadline": "2026-09-18",
+   "dday": 3,
+   "region": "충북",
+   "sigungu": "",
+   "org_type": "대학·산학",
+   "job_family": "인턴",
+   "experience": "신입/경력",
+   "employment": "인턴",
+   "also_sources": [],
+   "fit_level": "보통",
+   "fit_reasons": [
+    "대학 또는 연구기관 행정",
+    "신입 또는 경력무관",
+    "서울·경기·인천·대전·충청권"
+   ],
+   "fit_cautions": [
+    "단기 계약직"
+   ],
+   "fit_exclusions": []
+  },
+  {
+   "id": "alio-6c0cc623",
+   "channel": "jobs",
+   "title": "서울대학교병원 블라인드 직원채용 (대체근로자) 공고 (장애인 특별우대)",
+   "url": "https://job.alio.go.kr/recruitview.do?idx=304766",
+   "publisher": "서울대학교병원",
+   "source": "alio",
+   "published_at": "2026-09-15",
+   "seen": "2026-09-15",
+   "category": "신입 · 계약직·기간제",
+   "tags": [],
+   "summary": "직무: 보건.의료",
+   "deadline": "2026-09-22",
+   "dday": 7,
+   "region": "서울",
+   "sigungu": "",
+   "org_type": "대학병원",
+   "job_family": "",
+   "experience": "신입",
+   "employment": "계약직·기간제",
+   "also_sources": [],
+   "fit_level": "보통",
+   "fit_reasons": [
+    "의료·보건 관련 기관",
+    "신입 또는 경력무관",
+    "서울·경기·인천·대전·충청권"
+   ],
+   "fit_cautions": [
+    "단기 계약직"
+   ],
+   "fit_exclusions": []
+  },
+  {
+   "id": "alio-dc9d7075",
+   "channel": "jobs",
+   "title": "[KDI국제정책대학원] 2026년 제9차 인턴 직원 채용(하반기 KOICA YP)",
+   "url": "https://job.alio.go.kr/recruitview.do?idx=304611",
+   "publisher": "KDI국제정책대학원",
+   "source": "alio",
+   "published_at": "2026-09-15",
+   "seen": "2026-09-15",
+   "category": "신입/경력 · 계약직·기간제",
+   "tags": [
+    "연구·사업 행정"
+   ],
+   "summary": "직무: 사업관리,교육.자연.사회과학,연구",
+   "deadline": "2026-09-22",
+   "dday": 7,
+   "region": "세종",
+   "sigungu": "",
+   "org_type": "국책연구기관",
+   "job_family": "인턴",
+   "experience": "신입/경력",
+   "employment": "계약직·기간제",
+   "also_sources": [],
+   "fit_level": "보통",
+   "fit_reasons": [
+    "의료·보건 관련 기관",
+    "신입 또는 경력무관",
+    "서울·경기·인천·대전·충청권"
+   ],
+   "fit_cautions": [
+    "단기 계약직"
+   ],
+   "fit_exclusions": []
+  },
+  {
+   "id": "saramin-27205a07",
+   "channel": "jobs",
+   "title": "순천향대학교산학협력단 신규 정규직원 채용 공고",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/view?rec_idx=54919245",
+   "publisher": "순천향대학교산학협력단",
+   "source": "saramin",
+   "published_at": "2026-09-15",
+   "seen": "2026-09-15",
+   "category": "신입 · 계약직·기간제",
+   "tags": [
+    "회계·예산·정산"
+   ],
+   "summary": "직무: 경리 , 재무회계 , 출납 , 회계결산 , 회계 외 26/09/02",
+   "deadline": "2026-09-15",
+   "dday": 0,
+   "region": "충남",
+   "sigungu": "아산시",
+   "org_type": "대학·산학",
+   "job_family": "검토 필요",
+   "experience": "신입",
+   "employment": "계약직·기간제",
+   "also_sources": [],
+   "fit_level": "보통",
+   "fit_reasons": [
+    "대학 또는 연구기관 행정",
+    "신입 또는 경력무관",
+    "서울·경기·인천·대전·충청권"
+   ],
+   "fit_cautions": [
+    "담당 업무 불명확",
+    "단기 계약직"
+   ],
+   "fit_exclusions": []
+  },
+  {
+   "id": "saramin-02179a1c",
+   "channel": "jobs",
+   "title": "[전북 앵커사업] 국립군산대학교 앵커사업단 직원 채용공고",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/view?rec_idx=54989084",
+   "publisher": "국립군산대학교산학협력단",
+   "source": "saramin",
+   "published_at": "2026-09-15",
+   "seen": "2026-09-15",
+   "category": "신입 · 계약직·기간제",
+   "tags": [],
+   "summary": "직무: 3D설계 , 경영기획 , 교육기관 등록일 26/09/09",
+   "deadline": "2026-09-18",
+   "dday": 3,
+   "region": "전북",
+   "sigungu": "군산시",
+   "org_type": "대학·산학",
+   "job_family": "검토 필요",
+   "experience": "신입",
+   "employment": "계약직·기간제",
+   "also_sources": [],
+   "fit_level": "낮음",
+   "fit_reasons": [
+    "대학 또는 연구기관 행정",
+    "신입 또는 경력무관"
+   ],
+   "fit_cautions": [
+    "담당 업무 불명확",
+    "단기 계약직"
+   ],
+   "fit_exclusions": [
+    "전문 연구직"
+   ]
+  },
+  {
+   "id": "saramin-c2f60171",
+   "channel": "jobs",
+   "title": "(제2026-19호)서원대학교 산학협력단 계약직원 채용",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/view?rec_idx=55038727",
+   "publisher": "서원대학교산학협력단",
+   "source": "saramin",
+   "published_at": "2026-09-15",
+   "seen": "2026-09-15",
+   "category": "신입 · 계약직·기간제",
+   "tags": [
+    "연구·사업 행정"
+   ],
+   "summary": "직무: 사무행정 , 사업기획 , 사업관리 , 컨설팅 등록일 26/09/15",
+   "deadline": "2026-09-27",
+   "dday": 12,
+   "region": "충북",
+   "sigungu": "청주시 서원구",
+   "org_type": "대학·산학",
+   "job_family": "검토 필요",
+   "experience": "신입",
+   "employment": "계약직·기간제",
+   "also_sources": [],
+   "fit_level": "보통",
+   "fit_reasons": [
+    "대학 또는 연구기관 행정",
+    "신입 또는 경력무관",
+    "서울·경기·인천·대전·충청권"
+   ],
+   "fit_cautions": [
+    "담당 업무 불명확",
+    "단기 계약직"
+   ],
+   "fit_exclusions": []
+  },
+  {
+   "id": "saramin-fec17ab1",
+   "channel": "jobs",
+   "title": "서원대학교 계약직원 채용 공고",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/view?rec_idx=55032017",
+   "publisher": "서원대학교",
+   "source": "saramin",
+   "published_at": "2026-09-15",
+   "seen": "2026-09-15",
+   "category": "신입/경력 · 계약직·기간제",
+   "tags": [
+    "연구·사업 행정"
+   ],
+   "summary": "직무: 대학교 , 교직원 , 교육행정 , 사무행정 , 사업관리 외 26/09/15",
+   "deadline": "2026-09-20",
+   "dday": 5,
+   "region": "충북",
+   "sigungu": "청주시 서원구",
+   "org_type": "대학·산학",
+   "job_family": "사업운영·관리",
+   "experience": "신입/경력",
+   "employment": "계약직·기간제",
+   "also_sources": [],
+   "fit_level": "보통",
+   "fit_reasons": [
+    "사업운영·성과관리 업무",
+    "대학 또는 연구기관 행정",
+    "신입 또는 경력무관",
+    "서울·경기·인천·대전·충청권"
+   ],
+   "fit_cautions": [
+    "단기 계약직"
+   ],
+   "fit_exclusions": []
+  },
+  {
+   "id": "saramin-8d99b47c",
+   "channel": "jobs",
+   "title": "건양대학교 산학협력단 사업계약직 채용 공고(앵커(ANCHOR)",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/view?rec_idx=54714475",
+   "publisher": "건양대학교산학협력단",
+   "source": "saramin",
+   "published_at": "2026-09-15",
+   "seen": "2026-09-15",
+   "category": "경력무관 · 계약직·기간제",
+   "tags": [
+    "문서 작성·보고",
+    "자격증"
+   ],
+   "summary": "직무: 사무직 , 대학교 등록일 26/08/11",
+   "deadline": "",
+   "dday": null,
+   "region": "충남",
+   "sigungu": "논산시",
+   "org_type": "대학·산학",
+   "job_family": "검토 필요",
+   "experience": "경력무관",
+   "employment": "계약직·기간제",
+   "also_sources": [],
+   "fit_level": "보통",
+   "fit_reasons": [
+    "대학 또는 연구기관 행정",
+    "신입 또는 경력무관",
+    "서울·경기·인천·대전·충청권"
+   ],
+   "fit_cautions": [
+    "담당 업무 불명확",
+    "단기 계약직"
+   ],
+   "fit_exclusions": []
+  },
+  {
+   "id": "saramin-0835a643",
+   "channel": "jobs",
+   "title": "성운대학교 앵커사업단 신규 직원 채용(앵커사업 전담직원)",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/view?rec_idx=55019630",
+   "publisher": "성운대학교",
+   "source": "saramin",
+   "published_at": "2026-09-15",
+   "seen": "2026-09-15",
+   "category": "경력무관 · 계약직·기간제",
+   "tags": [
+    "전산·SQL·시스템 활용"
+   ],
+   "summary": "직무: 대학교 , 교직원 , 교육행정 , 사무행정 , 전산회계 외 등록일 26/09/12",
+   "deadline": "2026-09-18",
+   "dday": 3,
+   "region": "경북",
+   "sigungu": "영천시",
+   "org_type": "대학·산학",
+   "job_family": "연구행정·연구원",
+   "experience": "경력무관",
+   "employment": "계약직·기간제",
+   "also_sources": [],
+   "fit_level": "보통",
+   "fit_reasons": [
+    "연구행정 경험 활용 가능",
+    "대학 또는 연구기관 행정",
+    "신입 또는 경력무관"
+   ],
+   "fit_cautions": [
+    "단기 계약직"
+   ],
+   "fit_exclusions": []
+  },
+  {
+   "id": "saramin-1bd271d3",
+   "channel": "jobs",
+   "title": "성운대학교 혁신지원사업단 신규 직원 채용",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/view?rec_idx=55019627",
+   "publisher": "성운대학교",
+   "source": "saramin",
+   "published_at": "2026-09-15",
+   "seen": "2026-09-15",
+   "category": "경력무관 · 계약직·기간제",
+   "tags": [
+    "전산·SQL·시스템 활용"
+   ],
+   "summary": "직무: 대학교 , 교직원 , 교육행정 , 사무행정 , 전산회계 외 등록일 26/09/12",
+   "deadline": "2026-09-18",
+   "dday": 3,
+   "region": "경북",
+   "sigungu": "영천시",
+   "org_type": "대학·산학",
+   "job_family": "연구행정·연구원",
+   "experience": "경력무관",
+   "employment": "계약직·기간제",
+   "also_sources": [],
+   "fit_level": "보통",
+   "fit_reasons": [
+    "연구행정 경험 활용 가능",
+    "대학 또는 연구기관 행정",
+    "신입 또는 경력무관"
+   ],
+   "fit_cautions": [
+    "단기 계약직"
+   ],
+   "fit_exclusions": []
+  },
+  {
+   "id": "saramin-27925fe3",
+   "channel": "jobs",
+   "title": "성운대학교 신규 직원 채용(일반행정)",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/view?rec_idx=55019622",
+   "publisher": "성운대학교",
+   "source": "saramin",
+   "published_at": "2026-09-15",
+   "seen": "2026-09-15",
+   "category": "경력무관 · 계약직·기간제",
+   "tags": [
+    "전산·SQL·시스템 활용"
+   ],
+   "summary": "직무: 대학교 , 교직원 , 교육행정 , 사무행정 , 전산회계 외 등록일 26/09/12",
+   "deadline": "2026-09-18",
+   "dday": 3,
+   "region": "경북",
+   "sigungu": "영천시",
+   "org_type": "대학·산학",
+   "job_family": "행정·사무",
+   "experience": "경력무관",
+   "employment": "계약직·기간제",
+   "also_sources": [],
+   "fit_level": "보통",
+   "fit_reasons": [
+    "대학 또는 연구기관 행정",
+    "신입 또는 경력무관"
+   ],
+   "fit_cautions": [
+    "단기 계약직"
+   ],
+   "fit_exclusions": []
+  },
+  {
+   "id": "saramin-e9483585",
+   "channel": "jobs",
+   "title": "서울대학교 국가미래전략원 연구근접지원인력 채용",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/view?rec_idx=54971229",
+   "publisher": "서울대학교 국가미래전략원",
+   "source": "saramin",
+   "published_at": "2026-09-15",
+   "seen": "2026-09-15",
+   "category": "경력무관 · 계약직·기간제",
+   "tags": [],
+   "summary": "직무: 교육행정 , 사무행정 , 대학교 등록일 26/09/08",
+   "deadline": "2026-09-21",
+   "dday": 6,
+   "region": "서울",
+   "sigungu": "관악구",
+   "org_type": "대학·산학",
+   "job_family": "기획·성과관리",
+   "experience": "경력무관",
+   "employment": "계약직·기간제",
+   "also_sources": [],
+   "fit_level": "보통",
+   "fit_reasons": [
+    "사업운영·성과관리 업무",
+    "대학 또는 연구기관 행정",
+    "신입 또는 경력무관",
+    "서울·경기·인천·대전·충청권"
+   ],
+   "fit_cautions": [
+    "단기 계약직"
+   ],
+   "fit_exclusions": []
+  },
+  {
+   "id": "saramin-7561c638",
+   "channel": "jobs",
+   "title": "포항공과대학교 특성화지방대학(글로컬사업단) 전담인력 채용",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/view?rec_idx=54992273",
+   "publisher": "포항공과대학교",
+   "source": "saramin",
+   "published_at": "2026-09-15",
+   "seen": "2026-09-15",
+   "category": "경력무관 · 계약직·기간제",
+   "tags": [],
+   "summary": "직무: 연구원 , 대학교 등록일 26/09/09",
+   "deadline": "2026-10-09",
+   "dday": 24,
+   "region": "경북",
+   "sigungu": "포항시 남구",
+   "org_type": "대학·산학",
+   "job_family": "연구행정·연구원",
+   "experience": "경력무관",
+   "employment": "계약직·기간제",
+   "also_sources": [],
+   "fit_level": "보통",
+   "fit_reasons": [
+    "연구행정 경험 활용 가능",
+    "대학 또는 연구기관 행정",
+    "신입 또는 경력무관"
+   ],
+   "fit_cautions": [
+    "단기 계약직"
+   ],
+   "fit_exclusions": []
+  },
+  {
+   "id": "gojobs-fd60536f",
+   "channel": "jobs",
+   "title": "서울과학기술대학교 국립대학육성사업추진단 자체계약직원(행정원) 공개경쟁채용 공고",
+   "url": "http://www.seoultech.ac.kr/service/info/recruit?do=commonview&searchtext=&searchtype=-1&nowpage=1&bnum=3601&bidx=895410&qidx=3601&cate=10&allboard=false&nowpage=1",
+   "publisher": "서울과학기술대학교",
+   "source": "gojobs",
+   "published_at": "2026-09-15",
+   "seen": "2026-09-15",
+   "category": "미상 · 계약직·기간제",
+   "tags": [],
+   "summary": "직무: 행정원 1명",
+   "deadline": "2026-09-21",
+   "dday": 6,
+   "region": "서울",
+   "sigungu": "노원구",
+   "org_type": "대학·산학",
+   "job_family": "사업운영·관리",
+   "experience": "미상",
+   "employment": "계약직·기간제",
+   "also_sources": [],
+   "fit_level": "보통",
+   "fit_reasons": [
+    "사업운영·성과관리 업무",
+    "대학 또는 연구기관 행정",
+    "서울·경기·인천·대전·충청권"
    ],
    "fit_cautions": [
     "단기 계약직"
@@ -2568,6 +3205,21 @@
    "summary": "rows 는 {\"dept\": 부서명, \"revenue\": 정수} 딕셔너리의 리스트입니다. 부서별 revenue 합계를 {부서명: 합계} 딕셔너리로 반환하는 sum_by_dept 를 작성하세요."
   },
   {
+   "id": "changelog-my agent-a4f0391822",
+   "channel": "changelog",
+   "title": "feat(jobs): collect university administration postings",
+   "url": "",
+   "publisher": "my agent",
+   "source": "my agent",
+   "published_at": "2026-09-15",
+   "seen": "2026-09-15",
+   "category": "feat",
+   "tags": [
+    "feat"
+   ],
+   "summary": "feat(jobs): collect university administration postings"
+  },
+  {
    "id": "changelog-my agent-ac33ece2ba",
    "channel": "changelog",
    "title": "feat(jobs): collect data/research-admin postings across industries, tag competencies",
@@ -2611,6 +3263,21 @@
     "feat"
    ],
    "summary": "feat(jobs): open data/research-admin roles to all industries"
+  },
+  {
+   "id": "changelog-hello-world-hub-921982aa72",
+   "channel": "changelog",
+   "title": "chore(feed): sync jobs feed with university administration postings",
+   "url": "https://github.com/JAEYONG0303/hello-world-hub/commit/921982aa72429daa68a99c0c63c7f9dfb1931ee5",
+   "publisher": "hello-world-hub",
+   "source": "hello-world-hub",
+   "published_at": "2026-09-15",
+   "seen": "2026-09-15",
+   "category": "chore",
+   "tags": [
+    "chore"
+   ],
+   "summary": "chore(feed): sync jobs feed with university administration postings"
   },
   {
    "id": "changelog-hello-world-hub-e72ba46e06",
@@ -7228,7 +7895,7 @@
    }
   ],
   "new_by_channel": {
-   "jobs": 52,
+   "jobs": 71,
    "health": 0,
    "ai": 5,
    "sql": 0,
@@ -7236,7 +7903,7 @@
    "research": 0,
    "changelog": 0
   },
-  "deadline_7d": 62,
+  "deadline_7d": 75,
   "high": 3,
   "headline": "치료재료·의료기기 보상 체계가 동시에 움직이고, 공공기관 채용은 절차가 엄격해진다",
   "points": [
