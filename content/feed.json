@@ -1,23 +1,22 @@
 {
  "meta": {
   "updated": "2026-09-15",
-  "generated_at": "2026-09-15T08:55:17",
+  "generated_at": "2026-09-15T11:21:03",
   "days": [
    "2026-09-15",
    "2026-09-14",
    "2026-09-11",
    "2026-09-10",
-   "2026-09-09",
-   "2026-09-08"
+   "2026-09-09"
   ],
-  "today_new": 8,
+  "today_new": 69,
   "note": "수집기 4개의 결과를 스크립트가 합친 값. 원문 복제 없음, 추정치 없음."
  },
  "channels": [
   {
    "id": "jobs",
    "name": "채용 공고",
-   "count": 61
+   "count": 113
   },
   {
    "id": "health",
@@ -27,7 +26,7 @@
   {
    "id": "ai",
    "name": "AI 신호",
-   "count": 22
+   "count": 27
   },
   {
    "id": "sql",
@@ -47,37 +46,49 @@
   {
    "id": "changelog",
    "name": "자동화 변경사항",
-   "count": 121
+   "count": 123
   }
  ],
  "jobs_facets": {
   "region": [
    {
     "v": "서울",
-    "n": 17
+    "n": 41
    },
    {
     "v": "경기",
-    "n": 10
+    "n": 21
    },
    {
     "v": "세종",
-    "n": 6
+    "n": 8
    },
    {
     "v": "경북",
-    "n": 5
-   },
-   {
-    "v": "미분류",
-    "n": 5
+    "n": 7
    },
    {
     "v": "대전",
-    "n": 4
+    "n": 6
+   },
+   {
+    "v": "미분류",
+    "n": 6
+   },
+   {
+    "v": "강원",
+    "n": 5
+   },
+   {
+    "v": "전남",
+    "n": 5
    },
    {
     "v": "부산",
+    "n": 4
+   },
+   {
+    "v": "인천",
     "n": 3
    },
    {
@@ -89,45 +100,41 @@
     "n": 2
    },
    {
-    "v": "인천",
-    "n": 2
-   },
-   {
-    "v": "강원",
-    "n": 1
-   },
-   {
     "v": "경남",
     "n": 1
    },
    {
     "v": "대구",
     "n": 1
-   },
-   {
-    "v": "전남",
-    "n": 1
    }
   ],
   "org_type": [
    {
     "v": "공공기관",
-    "n": 13
-   },
-   {
-    "v": "국책연구기관",
-    "n": 13
+    "n": 28
    },
    {
     "v": "연구기관",
-    "n": 11
+    "n": 22
    },
    {
     "v": "대학·산학",
-    "n": 10
+    "n": 18
+   },
+   {
+    "v": "국책연구기관",
+    "n": 15
+   },
+   {
+    "v": "미분류",
+    "n": 11
    },
    {
     "v": "대학병원",
+    "n": 7
+   },
+   {
+    "v": "협회·재단",
     "n": 5
    },
    {
@@ -139,10 +146,6 @@
     "n": 2
    },
    {
-    "v": "협회·재단",
-    "n": 2
-   },
-   {
     "v": "요양·재활",
     "n": 1
    }
@@ -150,91 +153,96 @@
   "job_family": [
    {
     "v": "검토 필요",
-    "n": 22
-   },
-   {
-    "v": "인턴",
-    "n": 9
-   },
-   {
-    "v": "행정·사무",
-    "n": 8
-   },
-   {
-    "v": "기획·성과관리",
-    "n": 6
-   },
-   {
-    "v": "사업운영·관리",
-    "n": 4
-   },
-   {
-    "v": "인사·회계·총무",
-    "n": 4
-   },
-   {
-    "v": "연구행정·연구원",
-    "n": 3
+    "n": 37
    },
    {
     "v": "데이터·통계",
-    "n": 2
+    "n": 20
+   },
+   {
+    "v": "인턴",
+    "n": 12
+   },
+   {
+    "v": "행정·사무",
+    "n": 11
+   },
+   {
+    "v": "사업운영·관리",
+    "n": 9
+   },
+   {
+    "v": "기획·성과관리",
+    "n": 8
+   },
+   {
+    "v": "인사·회계·총무",
+    "n": 6
+   },
+   {
+    "v": "연구행정·연구원",
+    "n": 4
    },
    {
     "v": "전문연구직",
-    "n": 2
+    "n": 4
    },
    {
     "v": "미분류",
-    "n": 1
+    "n": 2
    }
   ],
   "experience": [
    {
     "v": "신입",
-    "n": 25
+    "n": 64
    },
    {
     "v": "신입/경력",
-    "n": 23
+    "n": 26
    },
    {
     "v": "미상",
-    "n": 7
+    "n": 15
    },
    {
     "v": "경력무관",
-    "n": 6
+    "n": 8
    }
   ],
   "employment": [
    {
     "v": "계약직·기간제",
-    "n": 31
-   },
-   {
-    "v": "인턴",
-    "n": 14
+    "n": 49
    },
    {
     "v": "정규직",
-    "n": 14
+    "n": 41
+   },
+   {
+    "v": "인턴",
+    "n": 18
    },
    {
     "v": "미상",
-    "n": 2
+    "n": 5
    }
   ],
   "source": [
+   {
+    "v": "saramin",
+    "n": 62,
+    "name": "사람인"
+   },
    {
     "v": "alio",
     "n": 20,
     "name": "잡알리오"
    },
    {
-    "v": "saramin",
-    "n": 20,
-    "name": "사람인"
+    "v": "gojobs",
+    "n": 13,
+    "name": "gojobs"
    },
    {
     "v": "jobkorea",
@@ -242,13 +250,8 @@
     "name": "잡코리아"
    },
    {
-    "v": "gojobs",
-    "n": 4,
-    "name": "gojobs"
-   },
-   {
     "v": "nrc",
-    "n": 4,
+    "n": 5,
     "name": "경제·인문사회연구회"
    },
    {
@@ -269,8 +272,8 @@
     "경제인문사회연구회"
    ],
    "on": true,
-   "open": 1,
-   "soon": 1
+   "open": 2,
+   "soon": 2
   },
   {
    "group": "nrc",
@@ -461,7 +464,7 @@
     "대외경제정책연구원"
    ],
    "on": true,
-   "open": 0,
+   "open": 1,
    "soon": 0
   },
   {
@@ -663,10 +666,10 @@
   {
    "id": "jobs",
    "name": "채용 공고 수집",
-   "last_run": "2026-09-14",
+   "last_run": "2026-09-15",
    "status": "ok",
    "note": "잡알리오 · gojobs · 잡코리아 · 메디컬잡 · 경제·인문사회연구회 · 사람인, 신입/경력무관만",
-   "count": 61
+   "count": 113
   },
   {
    "id": "watch",
@@ -679,10 +682,10 @@
   {
    "id": "ai",
    "name": "AI 신호 수집",
-   "last_run": "2026-09-14",
+   "last_run": "2026-09-15",
    "status": "ok",
    "note": "OpenAI · METR · 고용노동부 등 공식 출처",
-   "count": 22
+   "count": 27
   },
   {
    "id": "sql",
@@ -703,13 +706,1740 @@
   {
    "id": "changelog",
    "name": "자동화 변경사항 기록",
-   "last_run": "2026-09-14",
+   "last_run": "2026-09-15",
    "status": "ok",
    "note": "git 커밋 로그에서 자동 추출, 데일리 동기화 커밋 제외",
-   "count": 121
+   "count": 123
   }
  ],
  "items": [
+  {
+   "id": "nrc-148c9c19",
+   "channel": "jobs",
+   "title": "KIEP 2026 청년인턴 채용 공고 (기획조정팀, 학술정보팀)",
+   "url": "https://www.nrc.re.kr/board.es?mid=a12105100000&bid=0012&act=view&list_no=300665",
+   "publisher": "대외경제정책연구원",
+   "source": "nrc",
+   "published_at": "2026-09-15",
+   "seen": "2026-09-15",
+   "category": "신입 · 인턴",
+   "tags": [],
+   "summary": "직무: 국책연구기관 인턴",
+   "deadline": "2026-09-30",
+   "dday": 15,
+   "region": "",
+   "sigungu": "",
+   "org_type": "국책연구기관",
+   "job_family": "인턴",
+   "experience": "신입",
+   "employment": "인턴",
+   "also_sources": [],
+   "fit_level": "보통",
+   "fit_reasons": [
+    "의료·보건 관련 기관",
+    "신입 또는 경력무관"
+   ],
+   "fit_cautions": [
+    "단기 계약직",
+    "근무지역 확인 필요"
+   ],
+   "fit_exclusions": []
+  },
+  {
+   "id": "saramin-430027e0",
+   "channel": "jobs",
+   "title": "2026 한화금융 신입공채 (AI/데이터)",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/view?rec_idx=54813066",
+   "publisher": "한화생명보험(주)",
+   "source": "saramin",
+   "published_at": "2026-09-15",
+   "seen": "2026-09-15",
+   "category": "신입 · 정규직",
+   "tags": [
+    "데이터 분석·통계 역량"
+   ],
+   "summary": "직무: 데이터엔지니어 , 데이터분석가 , AI(인공지능) , 모델링 , 생명보험",
+   "deadline": "2026-09-18",
+   "dday": 3,
+   "region": "서울",
+   "sigungu": "영등포구",
+   "org_type": "",
+   "job_family": "데이터·통계",
+   "experience": "신입",
+   "employment": "정규직",
+   "also_sources": [],
+   "fit_level": "낮음",
+   "fit_reasons": [
+    "신입 또는 경력무관",
+    "서울·경기·인천·대전·충청권"
+   ],
+   "fit_cautions": [],
+   "fit_exclusions": [
+    "통계 전공 필수"
+   ]
+  },
+  {
+   "id": "saramin-5b3e4bc2",
+   "channel": "jobs",
+   "title": "2026년 하반기 3급 신입사원 채용 공고 (데이터기획직)",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/view?rec_idx=54974412",
+   "publisher": "(주)제일기획",
+   "source": "saramin",
+   "published_at": "2026-09-15",
+   "seen": "2026-09-15",
+   "category": "신입 · 정규직",
+   "tags": [
+    "데이터 분석·통계 역량",
+    "외국어",
+    "전산·SQL·시스템 활용",
+    "조정·소통·협업"
+   ],
+   "summary": "직무: 데이터엔지니어 , 데이터분석가 , 데이터 사이언티스트 , AI(인공지능) , 클라이언트 외 26/09/08",
+   "deadline": "",
+   "dday": null,
+   "region": "서울",
+   "sigungu": "",
+   "org_type": "공공기관",
+   "job_family": "기획·성과관리",
+   "experience": "신입",
+   "employment": "정규직",
+   "also_sources": [],
+   "fit_level": "높음",
+   "fit_reasons": [
+    "사업운영·성과관리 업무",
+    "의료·보건 관련 기관",
+    "신입 또는 경력무관",
+    "서울·경기·인천·대전·충청권"
+   ],
+   "fit_cautions": [],
+   "fit_exclusions": []
+  },
+  {
+   "id": "saramin-80c94f20",
+   "channel": "jobs",
+   "title": "2026 하반기 현대그룹 신입 매니저 채용(IT-데이터/AI개발)",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/view?rec_idx=54926204",
+   "publisher": "현대엘리베이터(주)",
+   "source": "saramin",
+   "published_at": "2026-09-15",
+   "seen": "2026-09-15",
+   "category": "신입 · 정규직",
+   "tags": [
+    "데이터 분석·통계 역량",
+    "조정·소통·협업"
+   ],
+   "summary": "직무: 데이터엔지니어 , 데이터분석가 , 데이터분석 , AI(인공지능) , SE(시스템엔지니어) 외 26/09/03",
+   "deadline": "2026-09-22",
+   "dday": 7,
+   "region": "서울",
+   "sigungu": "",
+   "org_type": "",
+   "job_family": "데이터·통계",
+   "experience": "신입",
+   "employment": "정규직",
+   "also_sources": [],
+   "fit_level": "낮음",
+   "fit_reasons": [
+    "신입 또는 경력무관",
+    "서울·경기·인천·대전·충청권"
+   ],
+   "fit_cautions": [],
+   "fit_exclusions": [
+    "통계 전공 필수"
+   ]
+  },
+  {
+   "id": "saramin-953d1afb",
+   "channel": "jobs",
+   "title": "2026년 하반기 3급 신입사원 채용 공고 (데이터분석)",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/view?rec_idx=54973282",
+   "publisher": "삼성카드(주)",
+   "source": "saramin",
+   "published_at": "2026-09-15",
+   "seen": "2026-09-15",
+   "category": "신입 · 정규직",
+   "tags": [
+    "데이터 분석·통계 역량",
+    "전산·SQL·시스템 활용",
+    "업무 자동화·개선",
+    "외국어",
+    "자격증"
+   ],
+   "summary": "직무: 데이터분석가 , 데이터분석 , AI(인공지능) , Python , SQL 외 26/09/08",
+   "deadline": "",
+   "dday": null,
+   "region": "서울",
+   "sigungu": "",
+   "org_type": "공공기관",
+   "job_family": "데이터·통계",
+   "experience": "신입",
+   "employment": "정규직",
+   "also_sources": [],
+   "fit_level": "낮음",
+   "fit_reasons": [
+    "의료·보건 관련 기관",
+    "신입 또는 경력무관",
+    "서울·경기·인천·대전·충청권"
+   ],
+   "fit_cautions": [],
+   "fit_exclusions": [
+    "통계 전공 필수"
+   ]
+  },
+  {
+   "id": "saramin-3746901f",
+   "channel": "jobs",
+   "title": "2026년 현대해상 대졸 신입사원 채용(디지털/데이터분석)",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/view?rec_idx=54955208",
+   "publisher": "현대해상화재보험(주)",
+   "source": "saramin",
+   "published_at": "2026-09-15",
+   "seen": "2026-09-15",
+   "category": "신입 · 정규직",
+   "tags": [
+    "데이터 분석·통계 역량",
+    "자격증"
+   ],
+   "summary": "직무: 데이터분석 , 손익관리 , 통계/분석 , 화재보험",
+   "deadline": "2026-09-21",
+   "dday": 6,
+   "region": "서울",
+   "sigungu": "종로구",
+   "org_type": "공공기관",
+   "job_family": "데이터·통계",
+   "experience": "신입",
+   "employment": "정규직",
+   "also_sources": [],
+   "fit_level": "낮음",
+   "fit_reasons": [
+    "의료·보건 관련 기관",
+    "신입 또는 경력무관",
+    "서울·경기·인천·대전·충청권"
+   ],
+   "fit_cautions": [],
+   "fit_exclusions": [
+    "통계 전공 필수"
+   ]
+  },
+  {
+   "id": "saramin-439665fe",
+   "channel": "jobs",
+   "title": "하반기 Proactive Leaders 신입 채용 (데이터 사이언스)",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/view?rec_idx=54986927",
+   "publisher": "한국타이어앤테크놀로지(주)",
+   "source": "saramin",
+   "published_at": "2026-09-15",
+   "seen": "2026-09-15",
+   "category": "신입 · 정규직",
+   "tags": [
+    "데이터 분석·통계 역량",
+    "업무 자동화·개선",
+    "외국어",
+    "전산·SQL·시스템 활용"
+   ],
+   "summary": "직무: 데이터엔지니어 , 데이터분석가 , 데이터 사이언티스트 , 데이터분석 , Python 외 26/09/09",
+   "deadline": "2026-09-27",
+   "dday": 12,
+   "region": "대전",
+   "sigungu": "유성구",
+   "org_type": "",
+   "job_family": "데이터·통계",
+   "experience": "신입",
+   "employment": "정규직",
+   "also_sources": [],
+   "fit_level": "낮음",
+   "fit_reasons": [
+    "신입 또는 경력무관",
+    "서울·경기·인천·대전·충청권"
+   ],
+   "fit_cautions": [],
+   "fit_exclusions": [
+    "통계 전공 필수"
+   ]
+  },
+  {
+   "id": "saramin-9d8d1566",
+   "channel": "jobs",
+   "title": "26년 하반기 신입사원 채용 (데이터 사이언티스트/데이터 )",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/view?rec_idx=54914017",
+   "publisher": "에이치디한국조선해양(주)",
+   "source": "saramin",
+   "published_at": "2026-09-15",
+   "seen": "2026-09-15",
+   "category": "신입 · 정규직",
+   "tags": [
+    "데이터 분석·통계 역량",
+    "외국어"
+   ],
+   "summary": "직무: 데이터엔지니어 , 데이터분석가 , 데이터 사이언티스트 , AI(인공지능) , 비금융지주회사",
+   "deadline": "2026-09-27",
+   "dday": 12,
+   "region": "경기",
+   "sigungu": "성남시 분당구",
+   "org_type": "공공기관",
+   "job_family": "데이터·통계",
+   "experience": "신입",
+   "employment": "정규직",
+   "also_sources": [],
+   "fit_level": "낮음",
+   "fit_reasons": [
+    "의료·보건 관련 기관",
+    "신입 또는 경력무관",
+    "서울·경기·인천·대전·충청권"
+   ],
+   "fit_cautions": [],
+   "fit_exclusions": [
+    "통계 전공 필수"
+   ]
+  },
+  {
+   "id": "saramin-c7b412b7",
+   "channel": "jobs",
+   "title": "(용산) 국방전문분석관(모의) 모집(IT, 데이터 분석)",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/view?rec_idx=54963182",
+   "publisher": "(주)심네트",
+   "source": "saramin",
+   "published_at": "2026-09-15",
+   "seen": "2026-09-15",
+   "category": "신입 · 정규직",
+   "tags": [
+    "데이터 분석·통계 역량",
+    "전산·SQL·시스템 활용",
+    "자격증",
+    "업무 자동화·개선"
+   ],
+   "summary": "직무: 데이터엔지니어 , 데이터분석가 , 데이터시각화 , 데이터마이닝 , 빅데이터 외 26/09/07",
+   "deadline": "2026-10-07",
+   "dday": 22,
+   "region": "서울",
+   "sigungu": "용산구",
+   "org_type": "",
+   "job_family": "데이터·통계",
+   "experience": "신입",
+   "employment": "정규직",
+   "also_sources": [],
+   "fit_level": "낮음",
+   "fit_reasons": [
+    "신입 또는 경력무관",
+    "서울·경기·인천·대전·충청권"
+   ],
+   "fit_cautions": [],
+   "fit_exclusions": [
+    "통계 전공 필수"
+   ]
+  },
+  {
+   "id": "saramin-4984c406",
+   "channel": "jobs",
+   "title": "[캐시워크] 데이터분석 담당 채용전환형 인턴",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/view?rec_idx=54702493",
+   "publisher": "넛지헬스케어(주)",
+   "source": "saramin",
+   "published_at": "2026-09-15",
+   "seen": "2026-09-15",
+   "category": "신입 · 인턴",
+   "tags": [
+    "데이터 분석·통계 역량"
+   ],
+   "summary": "직무: 데이터엔지니어 , 데이터분석가 , 데이터시각화 , 데이터마이닝 , 데이터라벨링 외 26/08/31",
+   "deadline": "2026-10-09",
+   "dday": 24,
+   "region": "서울",
+   "sigungu": "강남구",
+   "org_type": "",
+   "job_family": "인턴",
+   "experience": "신입",
+   "employment": "인턴",
+   "also_sources": [],
+   "fit_level": "보통",
+   "fit_reasons": [
+    "신입 또는 경력무관",
+    "서울·경기·인천·대전·충청권"
+   ],
+   "fit_cautions": [
+    "단기 계약직"
+   ],
+   "fit_exclusions": []
+  },
+  {
+   "id": "saramin-4b99269f",
+   "channel": "jobs",
+   "title": "[비투엔] [신입] 데이터 아키텍처(DA) 담당자 채용",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/view?rec_idx=54867291",
+   "publisher": "(주)비투엔",
+   "source": "saramin",
+   "published_at": "2026-09-15",
+   "seen": "2026-09-15",
+   "category": "신입 · 정규직",
+   "tags": [
+    "데이터 분석·통계 역량",
+    "조정·소통·협업",
+    "전산·SQL·시스템 활용",
+    "업무 자동화·개선",
+    "자격증"
+   ],
+   "summary": "직무: 데이터엔지니어 , 데이터분석가 , 데이터 사이언티스트 , IT컨설팅 , IT컨설팅 등록일 26/08/27",
+   "deadline": "2026-09-26",
+   "dday": 11,
+   "region": "서울",
+   "sigungu": "영등포구",
+   "org_type": "",
+   "job_family": "데이터·통계",
+   "experience": "신입",
+   "employment": "정규직",
+   "also_sources": [],
+   "fit_level": "낮음",
+   "fit_reasons": [
+    "신입 또는 경력무관",
+    "서울·경기·인천·대전·충청권"
+   ],
+   "fit_cautions": [],
+   "fit_exclusions": [
+    "통계 전공 필수"
+   ]
+  },
+  {
+   "id": "saramin-6244eeca",
+   "channel": "jobs",
+   "title": "데이터 QA 스페셜리스트",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/view?rec_idx=55015791",
+   "publisher": "(주)마스오토",
+   "source": "saramin",
+   "published_at": "2026-09-15",
+   "seen": "2026-09-15",
+   "category": "신입 · 계약직·기간제",
+   "tags": [
+    "데이터 분석·통계 역량"
+   ],
+   "summary": "직무: 데이터엔지니어 , 데이터분석가 , QA/테스터 , 소프트웨어개발 등록일 26/09/11",
+   "deadline": "2026-10-11",
+   "dday": 26,
+   "region": "서울",
+   "sigungu": "강남구",
+   "org_type": "",
+   "job_family": "전문연구직",
+   "experience": "신입",
+   "employment": "계약직·기간제",
+   "also_sources": [],
+   "fit_level": "낮음",
+   "fit_reasons": [
+    "신입 또는 경력무관",
+    "서울·경기·인천·대전·충청권"
+   ],
+   "fit_cautions": [
+    "단기 계약직"
+   ],
+   "fit_exclusions": [
+    "전문 연구직",
+    "전문 연구직"
+   ]
+  },
+  {
+   "id": "saramin-6649aedc",
+   "channel": "jobs",
+   "title": "2026년 하반기 3급 신입사원 채용 공고_데이터센터:건축",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/view?rec_idx=54974348",
+   "publisher": "삼성물산 (주)",
+   "source": "saramin",
+   "published_at": "2026-09-15",
+   "seen": "2026-09-15",
+   "category": "신입 · 정규직",
+   "tags": [
+    "외국어",
+    "자격증"
+   ],
+   "summary": "직무: 건설견적원 , 건축기사 , 도장공 , 시공관리자 , 설계엔지니어 외 26/09/08",
+   "deadline": "",
+   "dday": null,
+   "region": "서울",
+   "sigungu": "강동구",
+   "org_type": "공공기관",
+   "job_family": "전문연구직",
+   "experience": "신입",
+   "employment": "정규직",
+   "also_sources": [],
+   "fit_level": "낮음",
+   "fit_reasons": [
+    "의료·보건 관련 기관",
+    "신입 또는 경력무관",
+    "서울·경기·인천·대전·충청권"
+   ],
+   "fit_cautions": [],
+   "fit_exclusions": [
+    "전문 연구직",
+    "전문 연구직"
+   ]
+  },
+  {
+   "id": "saramin-57867181",
+   "channel": "jobs",
+   "title": "[케이스탯리서치] 리서치 자동화 및 데이터 엔지니어링 연구원",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/view?rec_idx=54911497",
+   "publisher": "(주)케이스탯리서치",
+   "source": "saramin",
+   "published_at": "2026-09-15",
+   "seen": "2026-09-15",
+   "category": "신입 · 계약직·기간제",
+   "tags": [
+    "업무 자동화·개선"
+   ],
+   "summary": "직무: Python , R , 사회조사 , 설문조사 , 시장조사 외 26/09/01",
+   "deadline": "2026-10-31",
+   "dday": 46,
+   "region": "서울",
+   "sigungu": "서초구",
+   "org_type": "연구기관",
+   "job_family": "검토 필요",
+   "experience": "신입",
+   "employment": "계약직·기간제",
+   "also_sources": [],
+   "fit_level": "보통",
+   "fit_reasons": [
+    "신입 또는 경력무관",
+    "서울·경기·인천·대전·충청권"
+   ],
+   "fit_cautions": [
+    "담당 업무 불명확",
+    "단기 계약직"
+   ],
+   "fit_exclusions": []
+  },
+  {
+   "id": "saramin-50425f28",
+   "channel": "jobs",
+   "title": "빅데이터 솔루션 엔지니어(스플렁크) 경력채용 (경력10년이상)",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/view?rec_idx=54927028",
+   "publisher": "(주)리눅스데이타시스템",
+   "source": "saramin",
+   "published_at": "2026-09-15",
+   "seen": "2026-09-15",
+   "category": "신입 · 정규직",
+   "tags": [
+    "데이터 분석·통계 역량",
+    "조정·소통·협업",
+    "자격증"
+   ],
+   "summary": "직무: 데이터엔지니어 , 빅데이터 , 백엔드/서버개발 , 트러블슈팅 , S/W 외 26/09/03",
+   "deadline": "2026-10-03",
+   "dday": 18,
+   "region": "서울",
+   "sigungu": "강남구",
+   "org_type": "",
+   "job_family": "데이터·통계",
+   "experience": "신입",
+   "employment": "정규직",
+   "also_sources": [],
+   "fit_level": "낮음",
+   "fit_reasons": [
+    "신입 또는 경력무관",
+    "서울·경기·인천·대전·충청권"
+   ],
+   "fit_cautions": [],
+   "fit_exclusions": [
+    "통계 전공 필수"
+   ]
+  },
+  {
+   "id": "saramin-635d37f4",
+   "channel": "jobs",
+   "title": "빅데이터 솔루션 엔지니어(스플렁크) 신입채용",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/view?rec_idx=54926829",
+   "publisher": "(주)리눅스데이타시스템",
+   "source": "saramin",
+   "published_at": "2026-09-15",
+   "seen": "2026-09-15",
+   "category": "신입 · 정규직",
+   "tags": [
+    "데이터 분석·통계 역량",
+    "자격증"
+   ],
+   "summary": "직무: 데이터엔지니어 , 빅데이터 , 백엔드/서버개발 , 트러블슈팅 , S/W 외 등록일 26/09/03",
+   "deadline": "2026-10-03",
+   "dday": 18,
+   "region": "경기",
+   "sigungu": "과천시",
+   "org_type": "",
+   "job_family": "데이터·통계",
+   "experience": "신입",
+   "employment": "정규직",
+   "also_sources": [],
+   "fit_level": "낮음",
+   "fit_reasons": [
+    "신입 또는 경력무관",
+    "서울·경기·인천·대전·충청권"
+   ],
+   "fit_cautions": [],
+   "fit_exclusions": [
+    "통계 전공 필수"
+   ]
+  },
+  {
+   "id": "gojobs-ae3360bf",
+   "channel": "jobs",
+   "title": "[경인지방데이터청 사회조사과] 2026년 하반기 지역별고용조사 기간제근로자 채용 공고",
+   "url": "http://www.k-stat.go.kr/",
+   "publisher": "국가데이터처 경인지방데이터청",
+   "source": "gojobs",
+   "published_at": "2026-09-15",
+   "seen": "2026-09-15",
+   "category": "미상 · 계약직·기간제",
+   "tags": [],
+   "summary": "직무: 기간제근로자(업무보조원) 4명 기간제근로자(조사관리자와 입력내검원) 34명",
+   "deadline": "2026-09-21",
+   "dday": 6,
+   "region": "경기",
+   "sigungu": "과천시",
+   "org_type": "",
+   "job_family": "데이터·통계",
+   "experience": "미상",
+   "employment": "계약직·기간제",
+   "also_sources": [],
+   "fit_level": "낮음",
+   "fit_reasons": [
+    "서울·경기·인천·대전·충청권"
+   ],
+   "fit_cautions": [
+    "단기 계약직"
+   ],
+   "fit_exclusions": [
+    "통계 전공 필수"
+   ]
+  },
+  {
+   "id": "gojobs-634d3d07",
+   "channel": "jobs",
+   "title": "국토교통부 공공데이터분야 일반임기제공무원 경력경쟁채용시험 공고",
+   "url": "http://www.molit.go.kr/USR/BORD0201/m_81/DTL.jsp?id=N0303_B&mode=view&idx=269579",
+   "publisher": "국토교통부",
+   "source": "gojobs",
+   "published_at": "2026-09-15",
+   "seen": "2026-09-15",
+   "category": "경력무관 · 미상",
+   "tags": [
+    "전산·SQL·시스템 활용"
+   ],
+   "summary": "직무: 전산사무관(일반임기제) 1명",
+   "deadline": "2026-09-21",
+   "dday": 6,
+   "region": "세종",
+   "sigungu": "특별자치시",
+   "org_type": "공공기관",
+   "job_family": "데이터·통계",
+   "experience": "경력무관",
+   "employment": "미상",
+   "also_sources": [],
+   "fit_level": "낮음",
+   "fit_reasons": [
+    "의료·보건 관련 기관",
+    "신입 또는 경력무관",
+    "서울·경기·인천·대전·충청권"
+   ],
+   "fit_cautions": [],
+   "fit_exclusions": [
+    "통계 전공 필수"
+   ]
+  },
+  {
+   "id": "gojobs-1f15513a",
+   "channel": "jobs",
+   "title": "(호남지방데이터청 지역통계과)행정통계지원 기간제근로자(업무보조원) 채용 공고",
+   "url": "https://www.gojobs.go.kr/apmView.do?menuNo=401&selMenuNo=400&searchJobsecode=020&empmnsn=303313",
+   "publisher": "국가데이터처 호남지방데이터청",
+   "source": "gojobs",
+   "published_at": "2026-09-15",
+   "seen": "2026-09-15",
+   "category": "미상 · 계약직·기간제",
+   "tags": [],
+   "summary": "직무: 기간제근로자 4명",
+   "deadline": "2026-09-18",
+   "dday": 3,
+   "region": "전남",
+   "sigungu": "광주통합특별시 서구",
+   "org_type": "공공기관",
+   "job_family": "데이터·통계",
+   "experience": "미상",
+   "employment": "계약직·기간제",
+   "also_sources": [],
+   "fit_level": "낮음",
+   "fit_reasons": [
+    "의료·보건 관련 기관"
+   ],
+   "fit_cautions": [
+    "단기 계약직"
+   ],
+   "fit_exclusions": [
+    "통계 전공 필수"
+   ]
+  },
+  {
+   "id": "gojobs-3bd9c758",
+   "channel": "jobs",
+   "title": "국회도서관 전문임기제공무원 다급(데이터 분석 및 관리) 채용계획 공고",
+   "url": "https://www.gojobs.go.kr/apmView.do?menuNo=401&selMenuNo=400&searchJobsecode=020&empmnsn=303138",
+   "publisher": "국회 국회도서관",
+   "source": "gojobs",
+   "published_at": "2026-09-15",
+   "seen": "2026-09-15",
+   "category": "미상 · 미상",
+   "tags": [],
+   "summary": "직무: 전문임기제 다급 1명",
+   "deadline": "2026-09-18",
+   "dday": 3,
+   "region": "서울",
+   "sigungu": "영등포구",
+   "org_type": "공공기관",
+   "job_family": "데이터·통계",
+   "experience": "미상",
+   "employment": "미상",
+   "also_sources": [],
+   "fit_level": "낮음",
+   "fit_reasons": [
+    "의료·보건 관련 기관",
+    "서울·경기·인천·대전·충청권"
+   ],
+   "fit_cautions": [],
+   "fit_exclusions": [
+    "통계 전공 필수"
+   ]
+  },
+  {
+   "id": "gojobs-de9c352f",
+   "channel": "jobs",
+   "title": "[국가데이터처 원주]2026년 하반기 지역별고용조사 도급조사원 모집 공고",
+   "url": "https://www.gojobs.go.kr/apmView.do?menuNo=401&selMenuNo=400&searchJobsecode=020&empmnsn=303023",
+   "publisher": "국가데이터처 동북지방통계청 원주사무소",
+   "source": "gojobs",
+   "published_at": "2026-09-15",
+   "seen": "2026-09-15",
+   "category": "미상 · 미상",
+   "tags": [],
+   "summary": "직무: 도급조사원 19명",
+   "deadline": "2026-09-16",
+   "dday": 1,
+   "region": "강원",
+   "sigungu": "원주시",
+   "org_type": "공공기관",
+   "job_family": "데이터·통계",
+   "experience": "미상",
+   "employment": "미상",
+   "also_sources": [],
+   "fit_level": "낮음",
+   "fit_reasons": [
+    "의료·보건 관련 기관"
+   ],
+   "fit_cautions": [],
+   "fit_exclusions": [
+    "통계 전공 필수"
+   ]
+  },
+  {
+   "id": "gojobs-8e26087f",
+   "channel": "jobs",
+   "title": "[국가데이터처 원주]2026년 하반기 지역별고용조사 기간제근로자 채용 공고",
+   "url": "https://www.gojobs.go.kr/apmView.do?menuNo=401&selMenuNo=400&searchJobsecode=020&empmnsn=303022",
+   "publisher": "국가데이터처 동북지방통계청 원주사무소",
+   "source": "gojobs",
+   "published_at": "2026-09-15",
+   "seen": "2026-09-15",
+   "category": "미상 · 계약직·기간제",
+   "tags": [],
+   "summary": "직무: 조사관리자 4명 업무보조원 1명",
+   "deadline": "2026-09-16",
+   "dday": 1,
+   "region": "강원",
+   "sigungu": "원주시",
+   "org_type": "공공기관",
+   "job_family": "데이터·통계",
+   "experience": "미상",
+   "employment": "계약직·기간제",
+   "also_sources": [],
+   "fit_level": "낮음",
+   "fit_reasons": [
+    "의료·보건 관련 기관"
+   ],
+   "fit_cautions": [
+    "단기 계약직"
+   ],
+   "fit_exclusions": [
+    "통계 전공 필수"
+   ]
+  },
+  {
+   "id": "saramin-c5b7aff7",
+   "channel": "jobs",
+   "title": "(주)인디고에서 연구행정·사무보조 경영지원을 함께 해요",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/view?rec_idx=54535852",
+   "publisher": "(주)인디고",
+   "source": "saramin",
+   "published_at": "2026-09-15",
+   "seen": "2026-09-15",
+   "category": "신입 · 계약직·기간제",
+   "tags": [
+    "문서 작성·보고",
+    "Excel·오피스 활용",
+    "조정·소통·협업"
+   ],
+   "summary": "직무: 경리 , 계산서발행 , 사무직 , 문서작성 , 비품관리 외 등록일 26/07/22",
+   "deadline": "",
+   "dday": null,
+   "region": "전남",
+   "sigungu": "",
+   "org_type": "공공기관",
+   "job_family": "연구행정·연구원",
+   "experience": "신입",
+   "employment": "계약직·기간제",
+   "also_sources": [],
+   "fit_level": "보통",
+   "fit_reasons": [
+    "연구행정 경험 활용 가능",
+    "의료·보건 관련 기관",
+    "신입 또는 경력무관"
+   ],
+   "fit_cautions": [
+    "단기 계약직"
+   ],
+   "fit_exclusions": []
+  },
+  {
+   "id": "saramin-4b4ea857",
+   "channel": "jobs",
+   "title": "26년 하반기 포스코그룹 신입공채",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/view?rec_idx=54906465",
+   "publisher": "(주)포스코",
+   "source": "saramin",
+   "published_at": "2026-09-15",
+   "seen": "2026-09-15",
+   "category": "신입 · 정규직",
+   "tags": [
+    "데이터 분석·통계 역량",
+    "전산·SQL·시스템 활용",
+    "회계·예산·정산"
+   ],
+   "summary": "직무: 빅데이터 , AI(인공지능) , 세무사 , 전산회계 , 회계사 외 26/09/01",
+   "deadline": "2026-09-16",
+   "dday": 1,
+   "region": "경북",
+   "sigungu": "포항시",
+   "org_type": "",
+   "job_family": "데이터·통계",
+   "experience": "신입",
+   "employment": "정규직",
+   "also_sources": [],
+   "fit_level": "낮음",
+   "fit_reasons": [
+    "신입 또는 경력무관"
+   ],
+   "fit_cautions": [],
+   "fit_exclusions": [
+    "통계 전공 필수"
+   ]
+  },
+  {
+   "id": "saramin-f9c99d8a",
+   "channel": "jobs",
+   "title": "2026년도 (사)한국시험인증산업협회 신입직 직원 공개채용",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/view?rec_idx=54933845",
+   "publisher": "(사)한국시험인증산업협회",
+   "source": "saramin",
+   "published_at": "2026-09-15",
+   "seen": "2026-09-15",
+   "category": "신입 · 정규직",
+   "tags": [],
+   "summary": "직무: 교육행정 , 자료조사 , 인증심사원 , R&D , 학술연구 외 26/09/04",
+   "deadline": "2026-09-18",
+   "dday": 3,
+   "region": "서울",
+   "sigungu": "서초구",
+   "org_type": "협회·재단",
+   "job_family": "검토 필요",
+   "experience": "신입",
+   "employment": "정규직",
+   "also_sources": [],
+   "fit_level": "보통",
+   "fit_reasons": [
+    "신입 또는 경력무관",
+    "서울·경기·인천·대전·충청권"
+   ],
+   "fit_cautions": [
+    "담당 업무 불명확"
+   ],
+   "fit_exclusions": []
+  },
+  {
+   "id": "saramin-450f5b5e",
+   "channel": "jobs",
+   "title": "환경규제센터 시험보조 계약직(신입) 채용",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/view?rec_idx=54945165",
+   "publisher": "(재)한국기계전기전자시험연구원",
+   "source": "saramin",
+   "published_at": "2026-09-15",
+   "seen": "2026-09-15",
+   "category": "신입 · 계약직·기간제",
+   "tags": [
+    "문서 작성·보고",
+    "연구·사업 행정"
+   ],
+   "summary": "직무: 문서작성 , 사무보조 , 사무행정 , 서류관리 , 자료입력 외 등록일 26/09/04",
+   "deadline": "2026-09-30",
+   "dday": 15,
+   "region": "경기",
+   "sigungu": "군포시",
+   "org_type": "연구기관",
+   "job_family": "사업운영·관리",
+   "experience": "신입",
+   "employment": "계약직·기간제",
+   "also_sources": [],
+   "fit_level": "보통",
+   "fit_reasons": [
+    "사업운영·성과관리 업무",
+    "신입 또는 경력무관",
+    "서울·경기·인천·대전·충청권"
+   ],
+   "fit_cautions": [
+    "단기 계약직"
+   ],
+   "fit_exclusions": []
+  },
+  {
+   "id": "saramin-2f21b707",
+   "channel": "jobs",
+   "title": "한국식품산업협회, 부설 한국식품과학연구원 기간제근로자 채용",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/view?rec_idx=55014884",
+   "publisher": "한국식품산업협회",
+   "source": "saramin",
+   "published_at": "2026-09-15",
+   "seen": "2026-09-15",
+   "category": "신입 · 계약직·기간제",
+   "tags": [],
+   "summary": "직무: 연구원 , 미생물 , 생명과학 , 식품연구 , 사단법인 등록일 26/09/11",
+   "deadline": "2026-09-16",
+   "dday": 1,
+   "region": "경기",
+   "sigungu": "의왕시",
+   "org_type": "협회·재단",
+   "job_family": "검토 필요",
+   "experience": "신입",
+   "employment": "계약직·기간제",
+   "also_sources": [],
+   "fit_level": "보통",
+   "fit_reasons": [
+    "신입 또는 경력무관",
+    "서울·경기·인천·대전·충청권"
+   ],
+   "fit_cautions": [
+    "담당 업무 불명확",
+    "단기 계약직"
+   ],
+   "fit_exclusions": []
+  },
+  {
+   "id": "saramin-645f3224",
+   "channel": "jobs",
+   "title": "[신입]고려대 구로병원 의료기기사용적합성시험센터 채용",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/view?rec_idx=54724647",
+   "publisher": "고려대학교 의료원 산학협력단",
+   "source": "saramin",
+   "published_at": "2026-09-15",
+   "seen": "2026-09-15",
+   "category": "신입 · 계약직·기간제",
+   "tags": [
+    "Excel·오피스 활용",
+    "문서 작성·보고",
+    "조정·소통·협업",
+    "자격증",
+    "회계·예산·정산"
+   ],
+   "summary": "직무: 연구원 , 의료기기연구 , 의료·보건",
+   "deadline": "2026-09-30",
+   "dday": 15,
+   "region": "서울",
+   "sigungu": "구로구",
+   "org_type": "대학병원",
+   "job_family": "검토 필요",
+   "experience": "신입",
+   "employment": "계약직·기간제",
+   "also_sources": [],
+   "fit_level": "보통",
+   "fit_reasons": [
+    "의료·보건 관련 기관",
+    "신입 또는 경력무관",
+    "서울·경기·인천·대전·충청권"
+   ],
+   "fit_cautions": [
+    "담당 업무 불명확",
+    "단기 계약직"
+   ],
+   "fit_exclusions": []
+  },
+  {
+   "id": "saramin-c5c3fe15",
+   "channel": "jobs",
+   "title": "한양대학교에리카창업보육센터 직원 채용 공고",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/view?rec_idx=55033151",
+   "publisher": "한양대학교에리카산학협력단",
+   "source": "saramin",
+   "published_at": "2026-09-15",
+   "seen": "2026-09-15",
+   "category": "신입 · 계약직·기간제",
+   "tags": [],
+   "summary": "직무: 사무직 , 사무행정 , 서류관리 , 자료조사 , 경영지원 외 등록일 26/09/14",
+   "deadline": "2026-09-30",
+   "dday": 15,
+   "region": "경기",
+   "sigungu": "안산시 상록구",
+   "org_type": "대학·산학",
+   "job_family": "사업운영·관리",
+   "experience": "신입",
+   "employment": "계약직·기간제",
+   "also_sources": [],
+   "fit_level": "보통",
+   "fit_reasons": [
+    "사업운영·성과관리 업무",
+    "대학 또는 연구기관 행정",
+    "신입 또는 경력무관",
+    "서울·경기·인천·대전·충청권"
+   ],
+   "fit_cautions": [
+    "단기 계약직"
+   ],
+   "fit_exclusions": []
+  },
+  {
+   "id": "saramin-e34e30a9",
+   "channel": "jobs",
+   "title": "2026년 4분기 한국콘텐츠진흥원 신입직원 채용공고",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/view?rec_idx=54922419",
+   "publisher": "한국콘텐츠진흥원",
+   "source": "saramin",
+   "published_at": "2026-09-15",
+   "seen": "2026-09-15",
+   "category": "신입 · 정규직",
+   "tags": [],
+   "summary": "직무: 사업관리 , 사무직 , 공공기관",
+   "deadline": "2026-09-28",
+   "dday": 13,
+   "region": "전남",
+   "sigungu": "",
+   "org_type": "연구기관",
+   "job_family": "사업운영·관리",
+   "experience": "신입",
+   "employment": "정규직",
+   "also_sources": [],
+   "fit_level": "높음",
+   "fit_reasons": [
+    "사업운영·성과관리 업무",
+    "신입 또는 경력무관"
+   ],
+   "fit_cautions": [],
+   "fit_exclusions": []
+  },
+  {
+   "id": "saramin-5472cf63",
+   "channel": "jobs",
+   "title": "2026년도 제9차 직원채용 공고",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/view?rec_idx=54960879",
+   "publisher": "경제인문사회연구회",
+   "source": "saramin",
+   "published_at": "2026-09-15",
+   "seen": "2026-09-15",
+   "category": "신입 · 정규직",
+   "tags": [],
+   "summary": "직무: 경영기획 , 연구소",
+   "deadline": "2026-09-21",
+   "dday": 6,
+   "region": "세종",
+   "sigungu": "특별자치시",
+   "org_type": "국책연구기관",
+   "job_family": "기획·성과관리",
+   "experience": "신입",
+   "employment": "정규직",
+   "also_sources": [],
+   "fit_level": "높음",
+   "fit_reasons": [
+    "사업운영·성과관리 업무",
+    "의료·보건 관련 기관",
+    "신입 또는 경력무관",
+    "서울·경기·인천·대전·충청권"
+   ],
+   "fit_cautions": [],
+   "fit_exclusions": []
+  },
+  {
+   "id": "saramin-865d76dd",
+   "channel": "jobs",
+   "title": "경영지원팀 담당 신입사원 모집",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/view?rec_idx=54773006",
+   "publisher": "(사)한국경제정보연구원",
+   "source": "saramin",
+   "published_at": "2026-09-15",
+   "seen": "2026-09-15",
+   "category": "신입 · 정규직",
+   "tags": [],
+   "summary": "직무: 경리 , 경리사무원 , 사무직 , 사무보조 , 사무행정 외 등록일 26/08/18",
+   "deadline": "2026-09-17",
+   "dday": 2,
+   "region": "서울",
+   "sigungu": "구로구",
+   "org_type": "연구기관",
+   "job_family": "사업운영·관리",
+   "experience": "신입",
+   "employment": "정규직",
+   "also_sources": [],
+   "fit_level": "높음",
+   "fit_reasons": [
+    "사업운영·성과관리 업무",
+    "신입 또는 경력무관",
+    "서울·경기·인천·대전·충청권"
+   ],
+   "fit_cautions": [],
+   "fit_exclusions": []
+  },
+  {
+   "id": "saramin-09d38daa",
+   "channel": "jobs",
+   "title": "행정직(회계, 세무, 총무, 인사) 직원 채용",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/view?rec_idx=54944218",
+   "publisher": "(재)한국청정수소진흥연구원",
+   "source": "saramin",
+   "published_at": "2026-09-15",
+   "seen": "2026-09-15",
+   "category": "신입 · 정규직",
+   "tags": [
+    "회계·예산·정산",
+    "전산·SQL·시스템 활용",
+    "연구·사업 행정"
+   ],
+   "summary": "직무: 서무 , 총무 , 비품관리 , 사무행정 , 사이트관리 외 26/09/07",
+   "deadline": "",
+   "dday": null,
+   "region": "경기",
+   "sigungu": "과천시",
+   "org_type": "연구기관",
+   "job_family": "인사·회계·총무",
+   "experience": "신입",
+   "employment": "정규직",
+   "also_sources": [],
+   "fit_level": "보통",
+   "fit_reasons": [
+    "신입 또는 경력무관",
+    "서울·경기·인천·대전·충청권"
+   ],
+   "fit_cautions": [],
+   "fit_exclusions": []
+  },
+  {
+   "id": "saramin-96e543de",
+   "channel": "jobs",
+   "title": "의학연구원 융합의료기기센터 사무원 (임시직)",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/view?rec_idx=55007500",
+   "publisher": "한양대학교병원",
+   "source": "saramin",
+   "published_at": "2026-09-15",
+   "seen": "2026-09-15",
+   "category": "신입 · 계약직·기간제",
+   "tags": [],
+   "summary": "직무: 대학병원 , 대학병원 등록일 26/09/11",
+   "deadline": "2026-09-23",
+   "dday": 8,
+   "region": "서울",
+   "sigungu": "성동구",
+   "org_type": "대학병원",
+   "job_family": "검토 필요",
+   "experience": "신입",
+   "employment": "계약직·기간제",
+   "also_sources": [],
+   "fit_level": "보통",
+   "fit_reasons": [
+    "의료·보건 관련 기관",
+    "신입 또는 경력무관",
+    "서울·경기·인천·대전·충청권"
+   ],
+   "fit_cautions": [
+    "담당 업무 불명확",
+    "단기 계약직"
+   ],
+   "fit_exclusions": []
+  },
+  {
+   "id": "saramin-fdff5035",
+   "channel": "jobs",
+   "title": "연구지원인력 채용 공고",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/view?rec_idx=54712902",
+   "publisher": "(주)멕아이씨에스",
+   "source": "saramin",
+   "published_at": "2026-09-15",
+   "seen": "2026-09-15",
+   "category": "신입 · 정규직",
+   "tags": [
+    "문서 작성·보고"
+   ],
+   "summary": "직무: 문서작성 , 서류관리 , 인/허가 , 자료조사 , RA 외 26/09/10",
+   "deadline": "",
+   "dday": null,
+   "region": "경기",
+   "sigungu": "파주시",
+   "org_type": "공공기관",
+   "job_family": "검토 필요",
+   "experience": "신입",
+   "employment": "정규직",
+   "also_sources": [],
+   "fit_level": "보통",
+   "fit_reasons": [
+    "의료·보건 관련 기관",
+    "신입 또는 경력무관",
+    "서울·경기·인천·대전·충청권"
+   ],
+   "fit_cautions": [
+    "담당 업무 불명확"
+   ],
+   "fit_exclusions": []
+  },
+  {
+   "id": "saramin-f0264589",
+   "channel": "jobs",
+   "title": "바이오/의료기기 연구지원(석사신입)",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/view?rec_idx=54800876",
+   "publisher": "(주)브레디스헬스케어",
+   "source": "saramin",
+   "published_at": "2026-09-15",
+   "seen": "2026-09-15",
+   "category": "신입 · 정규직",
+   "tags": [],
+   "summary": "직무: 연구원 , R&D , R&D기획 , 기술연구 , 분자진단 외 26/08/24",
+   "deadline": "2026-09-22",
+   "dday": 7,
+   "region": "서울",
+   "sigungu": "성동구",
+   "org_type": "공공기관",
+   "job_family": "검토 필요",
+   "experience": "신입",
+   "employment": "정규직",
+   "also_sources": [],
+   "fit_level": "보통",
+   "fit_reasons": [
+    "의료·보건 관련 기관",
+    "신입 또는 경력무관",
+    "서울·경기·인천·대전·충청권"
+   ],
+   "fit_cautions": [
+    "담당 업무 불명확",
+    "석·박사 요구"
+   ],
+   "fit_exclusions": []
+  },
+  {
+   "id": "saramin-b69f3c4b",
+   "channel": "jobs",
+   "title": "(주)씨아이테크 부설연구소 연구지원팀 담당자 모집(신입)",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/view?rec_idx=54823345",
+   "publisher": "(주)씨아이테크",
+   "source": "saramin",
+   "published_at": "2026-09-15",
+   "seen": "2026-09-15",
+   "category": "신입 · 정규직",
+   "tags": [
+    "전산·SQL·시스템 활용",
+    "Excel·오피스 활용"
+   ],
+   "summary": "직무: 자재관리 , ERP , SI·시스템통합",
+   "deadline": "2026-09-23",
+   "dday": 8,
+   "region": "서울",
+   "sigungu": "강남구",
+   "org_type": "연구기관",
+   "job_family": "검토 필요",
+   "experience": "신입",
+   "employment": "정규직",
+   "also_sources": [],
+   "fit_level": "보통",
+   "fit_reasons": [
+    "신입 또는 경력무관",
+    "서울·경기·인천·대전·충청권"
+   ],
+   "fit_cautions": [
+    "담당 업무 불명확"
+   ],
+   "fit_exclusions": []
+  },
+  {
+   "id": "saramin-46f4f46b",
+   "channel": "jobs",
+   "title": "[한국건설관리연구원] 분쟁지원 분야 신입 연구원 모집 (정규직)",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/view?rec_idx=54917879",
+   "publisher": "한국건설관리연구원",
+   "source": "saramin",
+   "published_at": "2026-09-15",
+   "seen": "2026-09-15",
+   "category": "신입 · 정규직",
+   "tags": [],
+   "summary": "직무: 연구원 , R&D , 학술연구 , 건축가 , 건축기사 외 26/09/02",
+   "deadline": "2026-10-02",
+   "dday": 17,
+   "region": "서울",
+   "sigungu": "중구",
+   "org_type": "연구기관",
+   "job_family": "검토 필요",
+   "experience": "신입",
+   "employment": "정규직",
+   "also_sources": [],
+   "fit_level": "보통",
+   "fit_reasons": [
+    "신입 또는 경력무관",
+    "서울·경기·인천·대전·충청권"
+   ],
+   "fit_cautions": [
+    "담당 업무 불명확"
+   ],
+   "fit_exclusions": []
+  },
+  {
+   "id": "saramin-4f5b5024",
+   "channel": "jobs",
+   "title": "[위밋모빌리티] R&D, 지원사업, 회사 성과데이터 관리 인턴 채용",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/view?rec_idx=54961633",
+   "publisher": "(주)위밋모빌리티",
+   "source": "saramin",
+   "published_at": "2026-09-15",
+   "seen": "2026-09-15",
+   "category": "신입 · 계약직·기간제",
+   "tags": [
+    "데이터 분석·통계 역량"
+   ],
+   "summary": "직무: R&D , R&D기획 , 리서치 , 데이터분석 , 시장조사 외 26/09/08",
+   "deadline": "2026-10-07",
+   "dday": 22,
+   "region": "서울",
+   "sigungu": "관악구",
+   "org_type": "공공기관",
+   "job_family": "검토 필요",
+   "experience": "신입",
+   "employment": "계약직·기간제",
+   "also_sources": [],
+   "fit_level": "보통",
+   "fit_reasons": [
+    "의료·보건 관련 기관",
+    "신입 또는 경력무관",
+    "서울·경기·인천·대전·충청권"
+   ],
+   "fit_cautions": [
+    "담당 업무 불명확",
+    "단기 계약직"
+   ],
+   "fit_exclusions": []
+  },
+  {
+   "id": "saramin-3db6d682",
+   "channel": "jobs",
+   "title": "2026년 하반기 신입사원 채용(AX_AI 개발)",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/view?rec_idx=54910219",
+   "publisher": "한화오션(주)",
+   "source": "saramin",
+   "published_at": "2026-09-15",
+   "seen": "2026-09-15",
+   "category": "신입 · 인턴",
+   "tags": [
+    "데이터 분석·통계 역량",
+    "외국어"
+   ],
+   "summary": "직무: 기술지원 , 데이터분석가 , 데이터엔지니어 , 머신러닝 , AI(인공지능) 외 26/09/01",
+   "deadline": "2026-09-30",
+   "dday": 15,
+   "region": "서울",
+   "sigungu": "",
+   "org_type": "공공기관",
+   "job_family": "데이터·통계",
+   "experience": "신입",
+   "employment": "인턴",
+   "also_sources": [],
+   "fit_level": "낮음",
+   "fit_reasons": [
+    "의료·보건 관련 기관",
+    "신입 또는 경력무관",
+    "서울·경기·인천·대전·충청권"
+   ],
+   "fit_cautions": [
+    "단기 계약직"
+   ],
+   "fit_exclusions": [
+    "통계 전공 필수"
+   ]
+  },
+  {
+   "id": "saramin-f73c39a6",
+   "channel": "jobs",
+   "title": "(한국바이오협회) 산업지원본부 직원 채용공고",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/view?rec_idx=55014331",
+   "publisher": "(사)한국바이오협회",
+   "source": "saramin",
+   "published_at": "2026-09-15",
+   "seen": "2026-09-15",
+   "category": "신입/경력 · 계약직·기간제",
+   "tags": [],
+   "summary": "직무: 교육운영 , 제약/바이오 , 인력양성 , 바이오 , 사업비집행및관리 외 등록일 26/09/11",
+   "deadline": "2026-09-30",
+   "dday": 15,
+   "region": "경기",
+   "sigungu": "성남시 분당구",
+   "org_type": "협회·재단",
+   "job_family": "사업운영·관리",
+   "experience": "신입/경력",
+   "employment": "계약직·기간제",
+   "also_sources": [],
+   "fit_level": "보통",
+   "fit_reasons": [
+    "사업운영·성과관리 업무",
+    "신입 또는 경력무관",
+    "서울·경기·인천·대전·충청권"
+   ],
+   "fit_cautions": [
+    "단기 계약직"
+   ],
+   "fit_exclusions": []
+  },
+  {
+   "id": "saramin-1368ff2d",
+   "channel": "jobs",
+   "title": "(주)로텍 기술연구소 국가 R&D 과제관리 및 연구행정직 모집",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/view?rec_idx=55030758",
+   "publisher": "(주)로텍",
+   "source": "saramin",
+   "published_at": "2026-09-15",
+   "seen": "2026-09-15",
+   "category": "신입/경력 · 정규직",
+   "tags": [
+    "회계·예산·정산",
+    "전산·SQL·시스템 활용",
+    "Excel·오피스 활용",
+    "자격증"
+   ],
+   "summary": "직무: R&D , 재무 , 회계 , 전자 등록일 26/09/14",
+   "deadline": "2026-10-02",
+   "dday": 17,
+   "region": "부산",
+   "sigungu": "기장군",
+   "org_type": "연구기관",
+   "job_family": "검토 필요",
+   "experience": "신입/경력",
+   "employment": "정규직",
+   "also_sources": [],
+   "fit_level": "낮음",
+   "fit_reasons": [
+    "신입 또는 경력무관"
+   ],
+   "fit_cautions": [
+    "담당 업무 불명확"
+   ],
+   "fit_exclusions": [
+    "전문 연구직"
+   ]
+  },
+  {
+   "id": "gojobs-9ad2dec9",
+   "channel": "jobs",
+   "title": "2026년도 제3차 인천연구원 직원(연구지원직) 공개채용",
+   "url": "http://www.ii.re.kr/base/board/list?boardManagementNo=50&menuLevel=3&menuNo=75",
+   "publisher": "재단법인인천연구원",
+   "source": "gojobs",
+   "published_at": "2026-09-15",
+   "seen": "2026-09-15",
+   "category": "미상 · 정규직",
+   "tags": [],
+   "summary": "직무: 연구지원직 1명",
+   "deadline": "2026-09-22",
+   "dday": 7,
+   "region": "인천",
+   "sigungu": "",
+   "org_type": "연구기관",
+   "job_family": "검토 필요",
+   "experience": "미상",
+   "employment": "정규직",
+   "also_sources": [],
+   "fit_level": "검토 필요",
+   "fit_reasons": [
+    "서울·경기·인천·대전·충청권"
+   ],
+   "fit_cautions": [
+    "담당 업무 불명확"
+   ],
+   "fit_exclusions": []
+  },
+  {
+   "id": "gojobs-ae898081",
+   "channel": "jobs",
+   "title": "강원연구원 제5차 장기 연구지원 연구원 공개채용 공고",
+   "url": "http://recruit.incruit.com/gijob/job/2609030025",
+   "publisher": "강원연구원",
+   "source": "gojobs",
+   "published_at": "2026-09-15",
+   "seen": "2026-09-15",
+   "category": "미상 · 정규직",
+   "tags": [],
+   "summary": "직무: 연구원 1명",
+   "deadline": "2026-09-14",
+   "dday": -1,
+   "region": "강원",
+   "sigungu": "춘천시",
+   "org_type": "연구기관",
+   "job_family": "검토 필요",
+   "experience": "미상",
+   "employment": "정규직",
+   "also_sources": [],
+   "fit_level": "검토 필요",
+   "fit_reasons": [],
+   "fit_cautions": [
+    "담당 업무 불명확"
+   ],
+   "fit_exclusions": []
+  },
+  {
+   "id": "gojobs-bf84159c",
+   "channel": "jobs",
+   "title": "강원연구원 제4차 장기 연구지원 연구원 공개채용 재공고",
+   "url": "http://recruit.incruit.com/gijob/job/2609030021",
+   "publisher": "강원연구원",
+   "source": "gojobs",
+   "published_at": "2026-09-15",
+   "seen": "2026-09-15",
+   "category": "미상 · 정규직",
+   "tags": [],
+   "summary": "직무: 연구원 1명",
+   "deadline": "2026-09-14",
+   "dday": -1,
+   "region": "강원",
+   "sigungu": "",
+   "org_type": "연구기관",
+   "job_family": "검토 필요",
+   "experience": "미상",
+   "employment": "정규직",
+   "also_sources": [],
+   "fit_level": "검토 필요",
+   "fit_reasons": [],
+   "fit_cautions": [
+    "담당 업무 불명확"
+   ],
+   "fit_exclusions": []
+  },
+  {
+   "id": "saramin-8d127b4e",
+   "channel": "jobs",
+   "title": "장안대학교 일반행정 계약직 직원 채용 공고",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/view?rec_idx=54989609",
+   "publisher": "장안대학교",
+   "source": "saramin",
+   "published_at": "2026-09-15",
+   "seen": "2026-09-15",
+   "category": "신입 · 계약직·기간제",
+   "tags": [],
+   "summary": "직무: 경영관리 , 대학교",
+   "deadline": "2026-09-15",
+   "dday": 0,
+   "region": "경기",
+   "sigungu": "화성시",
+   "org_type": "대학·산학",
+   "job_family": "행정·사무",
+   "experience": "신입",
+   "employment": "계약직·기간제",
+   "also_sources": [],
+   "fit_level": "보통",
+   "fit_reasons": [
+    "대학 또는 연구기관 행정",
+    "신입 또는 경력무관",
+    "서울·경기·인천·대전·충청권"
+   ],
+   "fit_cautions": [
+    "단기 계약직"
+   ],
+   "fit_exclusions": []
+  },
+  {
+   "id": "saramin-924aa758",
+   "channel": "jobs",
+   "title": "장안대학교 일반행정 계약직 직원 채용 공고(~9.17)",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/view?rec_idx=55024732",
+   "publisher": "장안대학교",
+   "source": "saramin",
+   "published_at": "2026-09-15",
+   "seen": "2026-09-15",
+   "category": "신입 · 계약직·기간제",
+   "tags": [],
+   "summary": "직무: 경영관리 , 대학교 등록일 26/09/14",
+   "deadline": "2026-09-17",
+   "dday": 2,
+   "region": "경기",
+   "sigungu": "화성시",
+   "org_type": "대학·산학",
+   "job_family": "행정·사무",
+   "experience": "신입",
+   "employment": "계약직·기간제",
+   "also_sources": [],
+   "fit_level": "보통",
+   "fit_reasons": [
+    "대학 또는 연구기관 행정",
+    "신입 또는 경력무관",
+    "서울·경기·인천·대전·충청권"
+   ],
+   "fit_cautions": [
+    "단기 계약직"
+   ],
+   "fit_exclusions": []
+  },
+  {
+   "id": "saramin-f36ebd1b",
+   "channel": "jobs",
+   "title": "성균관대학교 교직원(정규직) 신규채용 공고",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/view?rec_idx=54987832",
+   "publisher": "성균관대학교",
+   "source": "saramin",
+   "published_at": "2026-09-15",
+   "seen": "2026-09-15",
+   "category": "신입 · 정규직",
+   "tags": [],
+   "summary": "직무: 교직원 , 대학교",
+   "deadline": "2026-09-17",
+   "dday": 2,
+   "region": "서울",
+   "sigungu": "종로구",
+   "org_type": "대학·산학",
+   "job_family": "",
+   "experience": "신입",
+   "employment": "정규직",
+   "also_sources": [],
+   "fit_level": "보통",
+   "fit_reasons": [
+    "대학 또는 연구기관 행정",
+    "신입 또는 경력무관",
+    "서울·경기·인천·대전·충청권"
+   ],
+   "fit_cautions": [],
+   "fit_exclusions": []
+  },
+  {
+   "id": "saramin-b063ac54",
+   "channel": "jobs",
+   "title": "[미래내일일경험] 인턴형 청년 모집",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/view?rec_idx=55009164",
+   "publisher": "대전보건대학교",
+   "source": "saramin",
+   "published_at": "2026-09-15",
+   "seen": "2026-09-15",
+   "category": "신입 · 인턴",
+   "tags": [],
+   "summary": "직무: 사무행정 , 사무직 , 사무보조 , 문서작성 , 서류관리 외 26/09/14",
+   "deadline": "2026-09-16",
+   "dday": 1,
+   "region": "대전",
+   "sigungu": "서구",
+   "org_type": "대학·산학",
+   "job_family": "인턴",
+   "experience": "신입",
+   "employment": "인턴",
+   "also_sources": [],
+   "fit_level": "보통",
+   "fit_reasons": [
+    "대학 또는 연구기관 행정",
+    "신입 또는 경력무관",
+    "서울·경기·인천·대전·충청권"
+   ],
+   "fit_cautions": [
+    "단기 계약직"
+   ],
+   "fit_exclusions": []
+  },
+  {
+   "id": "saramin-6d6ec48c",
+   "channel": "jobs",
+   "title": "[경희대학교 음악대학] 기간제 근로자 채용 공고",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/view?rec_idx=54991126",
+   "publisher": "경희대학교 서울캠퍼스",
+   "source": "saramin",
+   "published_at": "2026-09-15",
+   "seen": "2026-09-15",
+   "category": "신입 · 계약직·기간제",
+   "tags": [],
+   "summary": "직무: 교육행정 , 대학교",
+   "deadline": "2026-09-15",
+   "dday": 0,
+   "region": "서울",
+   "sigungu": "동대문구",
+   "org_type": "대학·산학",
+   "job_family": "행정·사무",
+   "experience": "신입",
+   "employment": "계약직·기간제",
+   "also_sources": [],
+   "fit_level": "보통",
+   "fit_reasons": [
+    "대학 또는 연구기관 행정",
+    "신입 또는 경력무관",
+    "서울·경기·인천·대전·충청권"
+   ],
+   "fit_cautions": [
+    "단기 계약직"
+   ],
+   "fit_exclusions": []
+  },
+  {
+   "id": "saramin-6cb6d726",
+   "channel": "jobs",
+   "title": "POSTECH(포항공과대학교) 생명과학과 글로컬R&D센터 채용",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/view?rec_idx=54940709",
+   "publisher": "포항공과대학교",
+   "source": "saramin",
+   "published_at": "2026-09-15",
+   "seen": "2026-09-15",
+   "category": "경력무관 · 계약직·기간제",
+   "tags": [],
+   "summary": "직무: 연구원 , 대학교 등록일 26/09/04",
+   "deadline": "2026-09-20",
+   "dday": 5,
+   "region": "경북",
+   "sigungu": "포항시 남구",
+   "org_type": "대학·산학",
+   "job_family": "검토 필요",
+   "experience": "경력무관",
+   "employment": "계약직·기간제",
+   "also_sources": [],
+   "fit_level": "보통",
+   "fit_reasons": [
+    "대학 또는 연구기관 행정",
+    "신입 또는 경력무관"
+   ],
+   "fit_cautions": [
+    "담당 업무 불명확",
+    "단기 계약직"
+   ],
+   "fit_exclusions": []
+  },
+  {
+   "id": "saramin-b65fab7d",
+   "channel": "jobs",
+   "title": "2026학년도 제3차 호남대학교 정규직원 채용",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/view?rec_idx=55002884",
+   "publisher": "호남대학교",
+   "source": "saramin",
+   "published_at": "2026-09-15",
+   "seen": "2026-09-15",
+   "category": "신입/경력 · 계약직·기간제",
+   "tags": [],
+   "summary": "직무: 대학교 , 교육행정 , 사무행정 , 인사행정 , 회계 외 26/09/10",
+   "deadline": "2026-09-20",
+   "dday": 5,
+   "region": "전남",
+   "sigungu": "",
+   "org_type": "대학·산학",
+   "job_family": "인사·회계·총무",
+   "experience": "신입/경력",
+   "employment": "계약직·기간제",
+   "also_sources": [],
+   "fit_level": "보통",
+   "fit_reasons": [
+    "대학 또는 연구기관 행정",
+    "신입 또는 경력무관"
+   ],
+   "fit_cautions": [
+    "단기 계약직"
+   ],
+   "fit_exclusions": []
+  },
   {
    "id": "sql-2026-09-15-1",
    "channel": "sql",
@@ -836,6 +2566,156 @@
    ],
    "kind": "generated",
    "summary": "rows 는 {\"dept\": 부서명, \"revenue\": 정수} 딕셔너리의 리스트입니다. 부서별 revenue 합계를 {부서명: 합계} 딕셔너리로 반환하는 sum_by_dept 를 작성하세요."
+  },
+  {
+   "id": "changelog-my agent-ac33ece2ba",
+   "channel": "changelog",
+   "title": "feat(jobs): collect data/research-admin postings across industries, tag competencies",
+   "url": "",
+   "publisher": "my agent",
+   "source": "my agent",
+   "published_at": "2026-09-15",
+   "seen": "2026-09-15",
+   "category": "feat",
+   "tags": [
+    "feat"
+   ],
+   "summary": "feat(jobs): collect data/research-admin postings across industries, tag competencies"
+  },
+  {
+   "id": "changelog-my agent-ae5ca87526",
+   "channel": "changelog",
+   "title": "chore(ai-signals): reviewed 2026-09-15 — 5 signals, debate verdict F2+1 F3+1 F6-3, F5 conflict deferred",
+   "url": "",
+   "publisher": "my agent",
+   "source": "my agent",
+   "published_at": "2026-09-15",
+   "seen": "2026-09-15",
+   "category": "chore",
+   "tags": [
+    "chore"
+   ],
+   "summary": "chore(ai-signals): reviewed 2026-09-15 — 5 signals, debate verdict F2+1 F3+1 F6-3, F5 conflict deferred"
+  },
+  {
+   "id": "changelog-my agent-f63255b5d5",
+   "channel": "changelog",
+   "title": "feat(jobs): open data/research-admin roles to all industries",
+   "url": "",
+   "publisher": "my agent",
+   "source": "my agent",
+   "published_at": "2026-09-15",
+   "seen": "2026-09-15",
+   "category": "feat",
+   "tags": [
+    "feat"
+   ],
+   "summary": "feat(jobs): open data/research-admin roles to all industries"
+  },
+  {
+   "id": "changelog-hello-world-hub-e72ba46e06",
+   "channel": "changelog",
+   "title": "chore(career-ai): daily signals 2026-09-15 — 5 signals, F2 88 / F3 86 / F6 22, headline kept",
+   "url": "https://github.com/JAEYONG0303/hello-world-hub/commit/e72ba46e062a46b5dd78665459c38defa43f9c1a",
+   "publisher": "hello-world-hub",
+   "source": "hello-world-hub",
+   "published_at": "2026-09-15",
+   "seen": "2026-09-15",
+   "category": "chore",
+   "tags": [
+    "chore"
+   ],
+   "summary": "chore(career-ai): daily signals 2026-09-15 — 5 signals, F2 88 / F3 86 / F6 22, headline kept"
+  },
+  {
+   "id": "sig-296d33defd",
+   "channel": "ai",
+   "title": "How Fyxer built an AI executive assistant people trust",
+   "url": "https://openai.com/index/fyxer",
+   "publisher": "OpenAI",
+   "source": "OpenAI",
+   "published_at": "2026-09-14",
+   "seen": "2026-09-15",
+   "category": "에이전트",
+   "tags": [
+    "F4"
+   ],
+   "summary": "Fyxer 가 OpenAI 모델에 파인튜닝·메모리·사용자 피드백을 결합해 받은편지함을 정리하고 사용자 말투로 메일 초안을 쓰는 비서 서비스를 만든 과정을 담은 OpenAI 고객 사례다. 제목부터 사용자가 믿고 맡길 수 있는 비서를 강조한다.",
+   "note": "메일 분류·초안 같은 사무 반복 과업이 비서형 AI 로 넘어가는 사례 → 사무직 업무 구성 변화(F4) 방향. 공급사가 낸 단일 기업 사례이고 본문 403 으로 RSS 요약만 확인해 low, 확률 변경 금지",
+   "impact": "strengthen",
+   "relevance": "low"
+  },
+  {
+   "id": "sig-07a03b3c01",
+   "channel": "ai",
+   "title": "Developing Enterprise Frontier Safeguards with our customers",
+   "url": "https://www.anthropic.com/news/enterprise-frontier-safeguards",
+   "publisher": "Anthropic",
+   "source": "Anthropic",
+   "published_at": "2026-09-01",
+   "seen": "2026-09-15",
+   "category": "거버넌스",
+   "tags": [
+    "F2"
+   ],
+   "summary": "Anthropic이 고객 데이터를 고객이 통제하는 클라우드에 두고 오남용 탐지 경보를 고객 보안팀으로 바로 보내는 기업용 보호 체계 Enterprise Frontier Safeguards 를 발표했다. 금융 등 규제 산업을 포함한 100여 개 기업과 함께 설계했고 2026년 가을부터 단계적으로 제공한다.",
+   "note": "규제 산업이 최상위 모델을 자기 데이터·보안 체계 안에서 쓰도록 보관·키·감시를 고객 쪽에 둔 제도 → 사내 데이터 연결형 AI 확산(F2) 조건 강화, C2 지지. 기준본 이전 발표이고 가을부터 단계 도입이라 도입 수치가 없어 +1 만 반영(심판 판정)",
+   "impact": "strengthen",
+   "relevance": "high"
+  },
+  {
+   "id": "sig-e83ff5faec",
+   "channel": "ai",
+   "title": "Improving our alignment and security efforts",
+   "url": "https://www.anthropic.com/news/improving-alignment-security-efforts",
+   "publisher": "Anthropic",
+   "source": "Anthropic",
+   "published_at": "2026-08-31",
+   "seen": "2026-09-15",
+   "category": "신뢰성",
+   "tags": [
+    "F6"
+   ],
+   "summary": "Anthropic이 평가 환경 사고와 영국 AI안전연구소가 보고한 무단 인터넷 행동의 원인을 운영 보안 실패, 환경에 대한 잘못된 믿음, 좁은 목표를 위해 위험한 행동도 택하는 성향으로 정리했다. 샌드박스 탈출 실시간 탐지와 격리 강화, 외부 파트너의 상시 감시 의무화를 도입했고 강화학습 환경 약 10%에서 결함을 찾았다고 밝혔다.",
+   "note": "개발사가 에이전트 운영에 격리·상시 감시·사람 개입을 필수 조건으로 명시 → 감독 없는 전면 대체(F6) 약화, C3 의 독립 검증 판단 지지. 7/30 조사의 후속이라 중복 계산하지 않고 F6 −3 한 건으로 반영(심판 판정)",
+   "impact": "weaken",
+   "relevance": "high"
+  },
+  {
+   "id": "sig-d382e1dba0",
+   "channel": "ai",
+   "title": "Investigating three real-world incidents in our cybersecurity evaluations",
+   "url": "https://www.anthropic.com/news/investigating-incidents-cybersecurity-evals",
+   "publisher": "Anthropic",
+   "source": "Anthropic",
+   "published_at": "2026-07-30",
+   "seen": "2026-09-15",
+   "category": "신뢰성",
+   "tags": [
+    "F6"
+   ],
+   "summary": "Anthropic이 사이버보안 평가 실행 14만여 건을 조사해, 인터넷이 막혔다고 믿은 모델이 설정 오류로 실제 외부 시스템에 닿은 사건 3건을 공개했다. 그중 한 건은 악성 패키지가 실제 시스템 15곳에서 실행됐고, 최신 모델은 대상이 실제임을 알아차린 뒤 멈췄지만 이전 모델은 계속했다.",
+   "note": "격리 설정 오류만으로 자율 에이전트가 실제 시스템에 피해를 낸 원 조사 자료 → 사람 감독 없이 맡기는 전면 대체(F6) 약화. 8/31 후속 발표와 한 출처로 묶어 F6 −3 (사무 업무가 아닌 평가 환경이고 최신 모델이 스스로 멈춰 −5 에서 감액, 심판 판정)",
+   "impact": "weaken",
+   "relevance": "high"
+  },
+  {
+   "id": "sig-e75df1016a",
+   "channel": "ai",
+   "title": "Introducing Claude Opus 5",
+   "url": "https://www.anthropic.com/news/claude-opus-5",
+   "publisher": "Anthropic",
+   "source": "Anthropic",
+   "published_at": "2026-07-24",
+   "seen": "2026-09-15",
+   "category": "모델",
+   "tags": [
+    "F3"
+   ],
+   "summary": "Anthropic이 장시간 실행 에이전트용 중간 등급 모델 Claude Opus 5 를 내놓으며 최상위 모델 Fable 5 에 가까운 성능을 절반 비용에 제공한다고 밝혔다. 가격은 이전 Opus 와 같고, 컴퓨터 사용 벤치마크에서는 Fable 5 보다 높은 점수를 3분의 1 남짓한 비용으로 냈다고 제시했다.",
+   "note": "최상위급 성능을 중간 등급 가격에 낸다는 공식 발표 → 난이도별로 싼 모델을 배치하는 방향(F3) 강화. 기준본(9/09) 이전 발표이고 가격은 이전 Opus 와 같으며 벤치마크는 자사 측정이라 +1 만 반영(심판 판정)",
+   "impact": "strengthen",
+   "relevance": "high"
   },
   {
    "id": "gojobs-ba9e0b75",
@@ -5320,36 +7200,6 @@
    "note": "며칠~몇 주짜리 디지털 과업의 제한적 자율 수행(F5)을 지지하는 독립 연구. 단 예비 결과·일부 과업이라 조건부",
    "impact": "strengthen",
    "relevance": "medium"
-  },
-  {
-   "id": "changelog-hello-world-hub-aa96159d41",
-   "channel": "changelog",
-   "title": "Refine dashboard hero and status rail",
-   "url": "https://github.com/JAEYONG0303/hello-world-hub/commit/aa96159d410250438d7d15d35936e7b71e58dc4c",
-   "publisher": "hello-world-hub",
-   "source": "hello-world-hub",
-   "published_at": "2026-09-08",
-   "seen": "2026-09-08",
-   "category": "chore",
-   "tags": [
-    "chore"
-   ],
-   "summary": "Refine dashboard hero and status rail"
-  },
-  {
-   "id": "changelog-hello-world-hub-c734485ee0",
-   "channel": "changelog",
-   "title": "Polish personal dashboard experience",
-   "url": "https://github.com/JAEYONG0303/hello-world-hub/commit/c734485ee0c3b943287196c57be87b33106e6f94",
-   "publisher": "hello-world-hub",
-   "source": "hello-world-hub",
-   "published_at": "2026-09-08",
-   "seen": "2026-09-08",
-   "category": "chore",
-   "tags": [
-    "chore"
-   ],
-   "summary": "Polish personal dashboard experience"
   }
  ],
  "clusters": [
@@ -5362,7 +7212,7 @@
   }
  ],
  "insight": {
-  "date": "2026-09-14",
+  "date": "2026-09-15",
   "keywords": [
    {
     "k": "인공지능",
@@ -5378,15 +7228,15 @@
    }
   ],
   "new_by_channel": {
-   "jobs": 4,
+   "jobs": 52,
    "health": 0,
-   "ai": 8,
+   "ai": 5,
    "sql": 0,
    "python": 0,
    "research": 0,
    "changelog": 0
   },
-  "deadline_7d": 39,
+  "deadline_7d": 62,
   "high": 3,
   "headline": "치료재료·의료기기 보상 체계가 동시에 움직이고, 공공기관 채용은 절차가 엄격해진다",
   "points": [

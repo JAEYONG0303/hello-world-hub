@@ -1,54 +1,55 @@
 {
   "updated": "2026-09-15",
   "jobs": {
-    "total": 61,
-    "upcoming7": 39,
+    "total": 113,
+    "upcoming7": 62,
     "next_deadline": "2026-09-15",
     "sources_count": 6,
     "by_source": {
+      "사람인": 62,
       "잡알리오": 20,
-      "사람인": 20,
+      "gojobs": 13,
       "잡코리아": 12,
-      "경제·인문사회연구회": 4,
-      "gojobs": 4,
+      "경제·인문사회연구회": 5,
       "메디컬잡": 1
     },
-    "last_fetched_at": "2026-09-14",
-    "new_this_week": 61
+    "last_fetched_at": "2026-09-15",
+    "new_this_week": 113
   },
   "fit": {
-    "high": 6,
-    "medium": 48,
-    "low": 4,
-    "review": 3
+    "high": 10,
+    "medium": 72,
+    "low": 25,
+    "review": 6
   },
   "pipeline": {
-    "collected": 167,
-    "dedup_removed": 38,
-    "career_excluded": 36,
+    "collected": 295,
+    "dedup_removed": 71,
+    "career_excluded": 46,
     "job_excluded": null,
-    "auto_classified": 52,
-    "review_needed": 29,
-    "final_exposed": 61,
+    "auto_classified": 110,
+    "review_needed": 54,
+    "final_exposed": 113,
     "reconciled": false,
-    "reconcile_diff": 3,
+    "reconcile_diff": 5,
     "sources": {
       "ok": 6,
       "fail": 0,
       "skip": 2
     },
-    "run_days": 3,
+    "run_days": 4,
     "run_dates": [
       "2026-09-09",
       "2026-09-10",
-      "2026-09-14"
+      "2026-09-14",
+      "2026-09-15"
     ],
     "success_rate": null,
-    "avg_duration_ms": 5336,
-    "last_success_at": "2026-09-14T15:57:06",
+    "avg_duration_ms": 22098,
+    "last_success_at": "2026-09-15T11:20:17",
     "success_streak_days": null,
     "by_source_success_rate": {},
-    "sample_days": 1,
+    "sample_days": 2,
     "sample_ready": false
   },
   "sql": {
@@ -77,8 +78,8 @@
       {
         "id": "ai_signals",
         "label": "AI 전망 신호 수집",
-        "days_run": 2,
-        "success_rate": 66.7,
+        "days_run": 3,
+        "success_rate": 72.2,
         "note": null
       },
       {
@@ -105,7 +106,7 @@
       {
         "id": "hub_sync",
         "label": "홈페이지 데이터 동기화·배포",
-        "days_run": 2,
+        "days_run": 3,
         "success_rate": null,
         "note": "커밋 발생 여부만 집계 — 무변경일과 실패를 구분 못 함(추후 개선 필요)"
       },
@@ -119,12 +120,12 @@
       {
         "id": "jobs",
         "label": "채용 공고 수집",
-        "days_run": 3,
+        "days_run": 4,
         "success_rate": null,
         "note": "표본 3일 미만 — 집계 준비 중"
       }
     ],
-    "total_days_logged": 20
+    "total_days_logged": 23
   },
   "note": "my agent 저장소의 CSV·YAML·MD 에서 센 값. 추정치 없음."
 }
