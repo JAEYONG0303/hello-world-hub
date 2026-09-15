@@ -1,7 +1,7 @@
 {
  "meta": {
   "updated": "2026-09-15",
-  "generated_at": "2026-09-15T12:37:39",
+  "generated_at": "2026-09-15T13:33:07",
   "days": [
    "2026-09-15",
    "2026-09-14",
@@ -9,7 +9,7 @@
    "2026-09-10",
    "2026-09-09"
   ],
-  "today_new": 115,
+  "today_new": 118,
   "note": "수집기 4개의 결과를 스크립트가 합친 값. 원문 복제 없음, 추정치 없음."
  },
  "channels": [
@@ -46,7 +46,7 @@
   {
    "id": "changelog",
    "name": "자동화 변경사항",
-   "count": 132
+   "count": 135
   }
  ],
  "jobs_facets": {
@@ -717,7 +717,7 @@
    "last_run": "2026-09-15",
    "status": "ok",
    "note": "git 커밋 로그에서 자동 추출, 데일리 동기화 커밋 제외",
-   "count": 132
+   "count": 135
   }
  ],
  "items": [
@@ -3796,6 +3796,36 @@
    "summary": "rows 는 {\"dept\": 부서명, \"revenue\": 정수} 딕셔너리의 리스트입니다. 부서별 revenue 합계를 {부서명: 합계} 딕셔너리로 반환하는 sum_by_dept 를 작성하세요."
   },
   {
+   "id": "changelog-my agent-131fc45adf",
+   "channel": "changelog",
+   "title": "fix(jobs): medicaljob and nrc pagination correctness",
+   "url": "",
+   "publisher": "my agent",
+   "source": "my agent",
+   "published_at": "2026-09-15",
+   "seen": "2026-09-15",
+   "category": "fix",
+   "tags": [
+    "fix"
+   ],
+   "summary": "fix(jobs): medicaljob and nrc pagination correctness"
+  },
+  {
+   "id": "changelog-my agent-f06e655ac7",
+   "channel": "changelog",
+   "title": "fix(jobs): alio and saramin pagination parity with gojobs fix",
+   "url": "",
+   "publisher": "my agent",
+   "source": "my agent",
+   "published_at": "2026-09-15",
+   "seen": "2026-09-15",
+   "category": "fix",
+   "tags": [
+    "fix"
+   ],
+   "summary": "fix(jobs): alio and saramin pagination parity with gojobs fix"
+  },
+  {
    "id": "changelog-my agent-e76573b712",
    "channel": "changelog",
    "title": "fix(ai-signals): take date and title from each link's own card",
@@ -3914,6 +3944,21 @@
     "feat"
    ],
    "summary": "feat(jobs): open data/research-admin roles to all industries"
+  },
+  {
+   "id": "changelog-hello-world-hub-7c8bd166be",
+   "channel": "changelog",
+   "title": "chore(feed): sync alio/saramin pagination fix results",
+   "url": "https://github.com/JAEYONG0303/hello-world-hub/commit/7c8bd166bedfa28df60517d7edef1b91920d47c1",
+   "publisher": "hello-world-hub",
+   "source": "hello-world-hub",
+   "published_at": "2026-09-15",
+   "seen": "2026-09-15",
+   "category": "chore",
+   "tags": [
+    "chore"
+   ],
+   "summary": "chore(feed): sync alio/saramin pagination fix results"
   },
   {
    "id": "changelog-hello-world-hub-c11901112b",

@@ -23,15 +23,15 @@
     "review": 6
   },
   "pipeline": {
-    "collected": 417,
-    "dedup_removed": 109,
-    "career_excluded": 69,
+    "collected": 470,
+    "dedup_removed": 149,
+    "career_excluded": 77,
     "job_excluded": null,
     "auto_classified": 155,
     "review_needed": 67,
     "final_exposed": 150,
     "reconciled": false,
-    "reconcile_diff": 8,
+    "reconcile_diff": 13,
     "sources": {
       "ok": 6,
       "fail": 0,
@@ -45,8 +45,8 @@
       "2026-09-15"
     ],
     "success_rate": null,
-    "avg_duration_ms": 27311,
-    "last_success_at": "2026-09-15T12:37:25",
+    "avg_duration_ms": 28527,
+    "last_success_at": "2026-09-15T13:31:32",
     "success_streak_days": null,
     "by_source_success_rate": {},
     "sample_days": 2,
