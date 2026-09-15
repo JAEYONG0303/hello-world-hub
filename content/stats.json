@@ -1,37 +1,37 @@
 {
   "updated": "2026-09-15",
   "jobs": {
-    "total": 132,
+    "total": 135,
     "upcoming7": 75,
     "next_deadline": "2026-09-15",
     "sources_count": 6,
     "by_source": {
       "사람인": 72,
       "잡알리오": 28,
-      "gojobs": 14,
+      "gojobs": 17,
       "잡코리아": 12,
       "경제·인문사회연구회": 5,
       "메디컬잡": 1
     },
     "last_fetched_at": "2026-09-15",
-    "new_this_week": 132
+    "new_this_week": 135
   },
   "fit": {
     "high": 10,
-    "medium": 90,
+    "medium": 93,
     "low": 26,
     "review": 6
   },
   "pipeline": {
-    "collected": 341,
+    "collected": 371,
     "dedup_removed": 85,
-    "career_excluded": 59,
+    "career_excluded": 62,
     "job_excluded": null,
-    "auto_classified": 125,
-    "review_needed": 58,
-    "final_exposed": 132,
+    "auto_classified": 142,
+    "review_needed": 65,
+    "final_exposed": 135,
     "reconciled": false,
-    "reconcile_diff": 5,
+    "reconcile_diff": 8,
     "sources": {
       "ok": 6,
       "fail": 0,
@@ -45,8 +45,8 @@
       "2026-09-15"
     ],
     "success_rate": null,
-    "avg_duration_ms": 24480,
-    "last_success_at": "2026-09-15T11:28:30",
+    "avg_duration_ms": 25122,
+    "last_success_at": "2026-09-15T11:34:39",
     "success_streak_days": null,
     "by_source_success_rate": {},
     "sample_days": 2,

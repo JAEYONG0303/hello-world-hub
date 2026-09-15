@@ -1,7 +1,7 @@
 {
  "meta": {
   "updated": "2026-09-15",
-  "generated_at": "2026-09-15T11:28:46",
+  "generated_at": "2026-09-15T11:34:52",
   "days": [
    "2026-09-15",
    "2026-09-14",
@@ -9,14 +9,14 @@
    "2026-09-10",
    "2026-09-09"
   ],
-  "today_new": 90,
+  "today_new": 95,
   "note": "수집기 4개의 결과를 스크립트가 합친 값. 원문 복제 없음, 추정치 없음."
  },
  "channels": [
   {
    "id": "jobs",
    "name": "채용 공고",
-   "count": 132
+   "count": 135
   },
   {
    "id": "health",
@@ -46,14 +46,14 @@
   {
    "id": "changelog",
    "name": "자동화 변경사항",
-   "count": 125
+   "count": 127
   }
  ],
  "jobs_facets": {
   "region": [
    {
     "v": "서울",
-    "n": 44
+    "n": 45
    },
    {
     "v": "경기",
@@ -68,6 +68,10 @@
     "n": 9
    },
    {
+    "v": "충북",
+    "n": 7
+   },
+   {
     "v": "대전",
     "n": 6
    },
@@ -77,10 +81,6 @@
    },
    {
     "v": "전남",
-    "n": 6
-   },
-   {
-    "v": "충북",
     "n": 6
    },
    {
@@ -101,7 +101,7 @@
    },
    {
     "v": "충남",
-    "n": 2
+    "n": 3
    },
    {
     "v": "경남",
@@ -119,7 +119,7 @@
   "org_type": [
    {
     "v": "대학·산학",
-    "n": 32
+    "n": 35
    },
    {
     "v": "공공기관",
@@ -169,11 +169,11 @@
    },
    {
     "v": "인턴",
-    "n": 16
+    "n": 17
    },
    {
     "v": "행정·사무",
-    "n": 13
+    "n": 14
    },
    {
     "v": "사업운영·관리",
@@ -189,7 +189,7 @@
    },
    {
     "v": "인사·회계·총무",
-    "n": 6
+    "n": 7
    },
    {
     "v": "미분류",
@@ -211,7 +211,7 @@
    },
    {
     "v": "미상",
-    "n": 16
+    "n": 19
    },
    {
     "v": "경력무관",
@@ -221,7 +221,7 @@
   "employment": [
    {
     "v": "계약직·기간제",
-    "n": 62
+    "n": 63
    },
    {
     "v": "정규직",
@@ -229,11 +229,11 @@
    },
    {
     "v": "인턴",
-    "n": 21
+    "n": 22
    },
    {
     "v": "미상",
-    "n": 5
+    "n": 6
    }
   ],
   "source": [
@@ -249,7 +249,7 @@
    },
    {
     "v": "gojobs",
-    "n": 14,
+    "n": 17,
     "name": "gojobs"
    },
    {
@@ -677,7 +677,7 @@
    "last_run": "2026-09-15",
    "status": "ok",
    "note": "잡알리오 · gojobs · 잡코리아 · 메디컬잡 · 경제·인문사회연구회 · 사람인, 신입/경력무관만",
-   "count": 132
+   "count": 135
   },
   {
    "id": "watch",
@@ -717,7 +717,7 @@
    "last_run": "2026-09-15",
    "status": "ok",
    "note": "git 커밋 로그에서 자동 추출, 데일리 동기화 커밋 제외",
-   "count": 125
+   "count": 127
   }
  ],
  "items": [
@@ -3078,6 +3078,97 @@
    "fit_exclusions": []
   },
   {
+   "id": "gojobs-9db69a4c",
+   "channel": "jobs",
+   "title": "국립한국교통대학교 청년인턴 신규채용 공고",
+   "url": "https://www.gojobs.go.kr/apmView.do?menuNo=401&selMenuNo=400&searchJobsecode=020&empmnsn=302833",
+   "publisher": "국립한국교통대학교",
+   "source": "gojobs",
+   "published_at": "2026-09-15",
+   "seen": "2026-09-15",
+   "category": "미상 · 인턴",
+   "tags": [],
+   "summary": "직무: 청년인턴 1명",
+   "deadline": "2026-09-14",
+   "dday": -1,
+   "region": "충북",
+   "sigungu": "",
+   "org_type": "대학·산학",
+   "job_family": "인턴",
+   "experience": "미상",
+   "employment": "인턴",
+   "also_sources": [],
+   "fit_level": "보통",
+   "fit_reasons": [
+    "대학 또는 연구기관 행정",
+    "서울·경기·인천·대전·충청권"
+   ],
+   "fit_cautions": [
+    "단기 계약직"
+   ],
+   "fit_exclusions": []
+  },
+  {
+   "id": "gojobs-8a5d8433",
+   "channel": "jobs",
+   "title": "서울과학기술대학교 대학회계 연봉제직원(행정원 라급) 공개경쟁채용 공고",
+   "url": "http://seoultech.ac.kr/service/info/recruit?do=commonview&searchtext=&searchtype=-1&nowpage=1&bnum=3601&bidx=894951&qidx=3601&cate=10&allboard=false&nowpage=1",
+   "publisher": "서울과학기술대학교",
+   "source": "gojobs",
+   "published_at": "2026-09-15",
+   "seen": "2026-09-15",
+   "category": "미상 · 미상",
+   "tags": [],
+   "summary": "직무: 연봉제직원(행정원 라급) 1명",
+   "deadline": "2026-09-14",
+   "dday": -1,
+   "region": "서울",
+   "sigungu": "노원구",
+   "org_type": "대학·산학",
+   "job_family": "인사·회계·총무",
+   "experience": "미상",
+   "employment": "미상",
+   "also_sources": [],
+   "fit_level": "보통",
+   "fit_reasons": [
+    "대학 또는 연구기관 행정",
+    "서울·경기·인천·대전·충청권"
+   ],
+   "fit_cautions": [],
+   "fit_exclusions": []
+  },
+  {
+   "id": "gojobs-5fcde159",
+   "channel": "jobs",
+   "title": "국립공주대학교 학생생활관 기간제근로자(사무원) 채용 공고",
+   "url": "https://www.gojobs.go.kr/apmView.do?menuNo=401&selMenuNo=400&searchJobsecode=020&empmnsn=302614",
+   "publisher": "국립공주대학교 학생생활관",
+   "source": "gojobs",
+   "published_at": "2026-09-15",
+   "seen": "2026-09-15",
+   "category": "미상 · 계약직·기간제",
+   "tags": [],
+   "summary": "직무: 기간제근로자 1명",
+   "deadline": "2026-09-14",
+   "dday": -1,
+   "region": "충남",
+   "sigungu": "",
+   "org_type": "대학·산학",
+   "job_family": "행정·사무",
+   "experience": "미상",
+   "employment": "계약직·기간제",
+   "also_sources": [],
+   "fit_level": "보통",
+   "fit_reasons": [
+    "대학 또는 연구기관 행정",
+    "서울·경기·인천·대전·충청권"
+   ],
+   "fit_cautions": [
+    "단기 계약직"
+   ],
+   "fit_exclusions": []
+  },
+  {
    "id": "sql-2026-09-15-1",
    "channel": "sql",
    "title": "[Basic Joins] Replace Employee ID With The Unique Identifier",
@@ -3205,6 +3296,21 @@
    "summary": "rows 는 {\"dept\": 부서명, \"revenue\": 정수} 딕셔너리의 리스트입니다. 부서별 revenue 합계를 {부서명: 합계} 딕셔너리로 반환하는 sum_by_dept 를 작성하세요."
   },
   {
+   "id": "changelog-my agent-703964c298",
+   "channel": "changelog",
+   "title": "feat(jobs): widen university admin search to single-word keyword",
+   "url": "",
+   "publisher": "my agent",
+   "source": "my agent",
+   "published_at": "2026-09-15",
+   "seen": "2026-09-15",
+   "category": "feat",
+   "tags": [
+    "feat"
+   ],
+   "summary": "feat(jobs): widen university admin search to single-word keyword"
+  },
+  {
    "id": "changelog-my agent-a4f0391822",
    "channel": "changelog",
    "title": "feat(jobs): collect university administration postings",
@@ -3263,6 +3369,21 @@
     "feat"
    ],
    "summary": "feat(jobs): open data/research-admin roles to all industries"
+  },
+  {
+   "id": "changelog-hello-world-hub-1953bcfa75",
+   "channel": "changelog",
+   "title": "chore(feed): sync additional university postings (single-word search fix)",
+   "url": "https://github.com/JAEYONG0303/hello-world-hub/commit/1953bcfa75ed463ad01b7d2bdc285f5cb8fa5cae",
+   "publisher": "hello-world-hub",
+   "source": "hello-world-hub",
+   "published_at": "2026-09-15",
+   "seen": "2026-09-15",
+   "category": "chore",
+   "tags": [
+    "chore"
+   ],
+   "summary": "chore(feed): sync additional university postings (single-word search fix)"
   },
   {
    "id": "changelog-hello-world-hub-921982aa72",
@@ -7895,7 +8016,7 @@
    }
   ],
   "new_by_channel": {
-   "jobs": 71,
+   "jobs": 74,
    "health": 0,
    "ai": 5,
    "sql": 0,
