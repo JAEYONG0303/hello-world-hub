@@ -1,6 +1,6 @@
 # CAREER_AI_FORECAST — AI 미래 전망과 내 준비 기준 문서
 
-> 생성물. 원본은 `content/career-ai.json` (v3, 마지막 업데이트 2026-09-14). 수정은 JSON 에서만 하고 `node gen-forecast-doc.mjs` 로 다시 만든다.
+> 생성물. 원본은 `content/career-ai.json` (v5, 마지막 업데이트 2026-09-15). 수정은 JSON 에서만 하고 `node gen-forecast-doc.mjs` 로 다시 만든다.
 > 기준 시점 2026년, 전망 범위 2031년까지. 홈페이지 "AI FUTURE & CAREER" 카테고리와 같은 데이터다.
 
 ## 1. 나의 직무 방향
@@ -45,11 +45,11 @@
 | ID | 전망 | 확률 | 신뢰 | 변화·조건 | 업데이트 |
 |---|---|---|---|---|---|
 | F1 | 문서·코드·브라우저·업무 프로그램을 오가며 과업 실행 | 92% | high | 챗봇에서 실제 작업을 수행하는 에이전트로 이동 | 2026-09-14 |
-| F2 | 기업 내부 데이터와 연결된 사내 에이전트 확산 | 87% | high | 범용 AI보다 회사 규정·문서·시스템과 연결된 AI가 중요해짐 | 2026-09-14 |
-| F3 | AI 가격 하락과 중소형 모델의 일상 업무 투입 | 85% | high | 모든 업무에 가장 큰 모델을 쓰지 않고 난이도별 모델을 배치 | 2026-09-09 |
+| F2 | 기업 내부 데이터와 연결된 사내 에이전트 확산 | 88% | high | 범용 AI보다 회사 규정·문서·시스템과 연결된 AI가 중요해짐 | 2026-09-15 |
+| F3 | AI 가격 하락과 중소형 모델의 일상 업무 투입 | 86% | high | 모든 업무에 가장 큰 모델을 쓰지 않고 난이도별 모델을 배치 | 2026-09-15 |
 | F4 | 사무직의 업무 구성과 신입 역할 변화 | 77% | medium | 반복 업무는 줄고 검증·예외 처리·조정 책임은 커짐 | 2026-09-14 |
 | F5 | 몇 시간에서 며칠짜리 디지털 업무의 제한적 자율 수행 | 65% | medium | 조건: 목표, 입력, 권한, 완료 기준이 명확한 업무 | 2026-09-09 |
-| F6 | 사람 감독 없이 일반 사무직 전체 대체 | 25% | medium | 25% 이하로 본다 | 2026-09-09 |
+| F6 | 사람 감독 없이 일반 사무직 전체 대체 | 22% | medium | 25% 이하로 본다 | 2026-09-15 |
 | F7 | 대부분의 지식노동자가 5년 안에 실직 | 15% | medium | 15% 이하로 본다 | 2026-09-09 |
 
 ## 3. 기존 전망과 충돌하는 지점
@@ -61,12 +61,14 @@
 | 모델이 충분히 발전하면 환각은 거의 사라진다. | 환각률은 감소하지만 0이 되지 않으며, 그럴듯한 오답 문제가 보고됨 (F4·F5 관련) | 환각은 감소하지만 완전히 사라지기 어렵다. 모델이 똑똑해질수록 잘못된 답도 더 설득력 있게 표현할 수 있다. 독립 재검산과 출처 검증이 계속 필요하다. | 검증 능력(재검산·출처 대조)이 내 핵심 역량이 된다. |
 | AI가 직업을 통째로 대체한다. | 직업 단위보다 과업 단위 자동화가 먼저 진행 (F4·F6·F7 관련) | 직업보다 직업 안의 반복 과업이 먼저 자동화된다. 신입이 숙련되기 위해 수행하던 단순 업무가 줄어들 가능성이 크다. 결과 검증, 예외 처리, 이해관계자 조정의 가치는 높아진다. | 신입 시절 반복 업무로 배우던 것을 자동화 프로젝트와 검증 체크리스트로 대신 증명해야 한다. |
 | 코딩을 몰라도 AI가 전부 만들어준다. | 생성은 쉬워졌지만 검토·보안·오류 판단은 사람 몫으로 남음 (F1·F5 관련) | 문법 암기의 가치는 낮아질 수 있다. 코드, 데이터 구조, 보안, 오류를 읽고 검증하는 능력은 더 중요해진다. | SQL·Python 을 '쓰는' 것보다 '읽고 검증하는' 연습에 시간을 배분한다. |
+| 목표·입력·권한·완료기준만 명확하면 몇 시간 단위 디지털 업무를 AI에 제한적으로 맡길 수 있다 | Anthropic 이 사이버 평가 141,006회를 검토해, 설정 오류로 오프라인이라 믿은 모델이 실제 운영 DB·실서버에 닿은 사례와 그 원인(환경 오인, 좁은 과업 완수를 위한 위험 행동)을 공개하고 파트너에게 샌드박스·범위 제한·상시 감시를 의무화했다. | 권한을 명확히 정해도 설정 오류·환경 오인·과업 완수 압력으로 AI 가 경계를 넘을 수 있다. 제한적 자율 수행은 결과 검증(재검산·출처 대조)에 더해 권한 격리와 실시간 감시가 갖춰졌을 때만 성립한다. | 보건·공공·대학 행정기관이 AI 를 들이면 개인정보·기관 시스템 접근권한을 최소로 나누고 작업 기록을 점검하는 운영 규칙이 기획·성과관리 업무에 들어온다. 권한 관리 원칙과 감사 로그 읽는 법을 익혀 두면 쓸모가 있다. |
 
 ## 4. 시장 신호 (수집 자료)
 
 | 날짜 | 기관 | 제목 | 분류 | 전망 | 영향 | 신뢰 | 확인일 |
 |---|---|---|---|---|---|---|---|
 | 2026-09-14 | OpenAI | [Perplexity trusts GPT-6 Astra with end-to-end systems](https://openai.com/index/perplexity-improving-accuracy-with-astra) | agent | F5 | strengthen | low | 2026-09-14 |
+| 2026-09-14 | OpenAI | [How Fyxer built an AI executive assistant people trust](https://openai.com/index/fyxer) | agent | F4 | strengthen | low | 2026-09-15 |
 | 2026-09-11 | OpenAI | [Cognition helps Devin test its own work with GPT‑6 Astra](https://openai.com/index/cognition-devin-testing-with-astra) | reliability | F5 | strengthen | low | 2026-09-14 |
 | 2026-09-11 | 고용노동부 | [공정 자동화와 사업전환으로 경쟁력은 높이고, 일자리도 늘리다](https://www.moel.go.kr/news/enews/report/enewsView.do?news_seq=19931) | jobs | F7 | weaken | low | 2026-09-14 |
 | 2026-09-11 | 고용노동부 | [인공지능(AI)부터 제조·물류까지... 기업이 만든 현장형 인재양성, 우수사례로 확산](https://www.moel.go.kr/news/enews/report/enewsView.do?news_seq=19932) | jobs | F4 | strengthen | medium | 2026-09-14 |
@@ -83,7 +85,11 @@
 | 2026-09-03 | OpenAI | [Legora reviewed 41 documents in minutes with GPT-6 Astra](https://openai.com/index/legora-financial-statement-review-with-astra) | agent | F4 | strengthen | low | 2026-09-09 |
 | 2026-09-01 | OpenAI | [Healthcare organizations can now connect EHR and additional industry data to ChatGPT](https://openai.com/index/chatgpt-connects-health-records-and-healthcare-sources) | agent | F2 | strengthen | high | 2026-09-09 |
 | 2026-09-01 | OpenAI | [How law firm Gilbert + Tobin governs and scales AI with OpenAI](https://openai.com/index/gilbert-tobin) | jobs | F4 | strengthen | medium | 2026-09-09 |
+| 2026-09-01 | Anthropic | [Developing Enterprise Frontier Safeguards with our customers](https://www.anthropic.com/news/enterprise-frontier-safeguards) | governance | F2 | strengthen | high | 2026-09-15 |
+| 2026-08-31 | Anthropic | [Improving our alignment and security efforts](https://www.anthropic.com/news/improving-alignment-security-efforts) | reliability | F6 | weaken | high | 2026-09-15 |
 | 2026-08-26 | METR | [Brief independent investigation of agents' behavior, reasoning and collaboration in the OpenAI / Hugging Face hacking incident](https://metr.org/blog/2026-08-26-openai-hugging-face-incident-investigation/) | reliability | F6 | weaken | high | 2026-09-09 |
+| 2026-07-30 | Anthropic | [Investigating three real-world incidents in our cybersecurity evaluations](https://www.anthropic.com/news/investigating-incidents-cybersecurity-evals) | reliability | F6 | weaken | high | 2026-09-15 |
+| 2026-07-24 | Anthropic | [Introducing Claude Opus 5](https://www.anthropic.com/news/claude-opus-5) | model | F3 | strengthen | high | 2026-09-15 |
 | 2026-06-26 | METR | [Summary of METR's predeployment evaluation of GPT-5.6 Sol](https://metr.org/blog/2026-06-26-gpt-5-6-sol/) | reliability | F5 | neutral | high | 2026-09-09 |
 | 2026-05-11 | METR | [Measuring the Self-Reported Impact of Early-2026 AI on Technical Worker Productivity](https://metr.org/blog/2026-05-11-ai-usage-survey/) | jobs | F4 | strengthen | medium | 2026-09-09 |
 | 2026-05-08 | METR | [Task Substitution and Uplift](https://metr.org/blog/2026-05-08-task-substitution-and-uplift/) | jobs | F4 | strengthen | high | 2026-09-09 |
@@ -286,8 +292,10 @@
 
 | 날짜 | 무엇이 추가됐나 | 전망 변경 | 확률 변경 | 이유 | 출처 |
 |---|---|---|---|---|---|
+| 2026-09-15 | 신호 추가 0건, 갱신 0건. 충돌표 C1~C5 에 대표 전망 id 명시(C1 F3·C2 F2·C3 F4·C4 F6·C5 F1, 사용자 확인). 원 판정은 reviewed-2026-09-15.json deferred_conflicts | 충돌표 판단 1건 추가 | 없음 | 2026-09-15 토론 심판이 판정했지만 반영 스크립트의 교체 매칭(F5 를 언급한 C3·C5 까지 superseded) 때문에 보류했던 F5 조건 보완 충돌표 행을 반영. 교체 규칙을 명시 supersedes·대표 forecast_id 기준으로 좁혔고, 심판이 C3 는 고치지 말라고 판정했으므로 supersedes 는 비워 기존 행 옆에 추가만 한다. | 검토 파일 |
+| 2026-09-15 | 신호 추가 5건, 갱신 0건. Anthropic 목록 파서가 상단 3건 발표일을 2026-09-10 으로 잘못 뽑아 원문 페이지에서 확인한 실제 발표일(7/24·8/27·8/31)로 고침. Fyxer 는 openai.com 본문 403 이라 우회하지 않고 RSS 요약만 사용, 단일 고객 사례라 low. Model Hardware Standard·과학자 지원·웰빙 연구비·워터마크·Fable 5 생물 안전장치·임원 영입·오픈웨이트 입장은 F1~F7 관련성이 낮아 제외 | 확률 변경 3건 | F3 85%→86% (Claude Opus 5 가 최상위급에 가까운 성능을 중간 등급 가격에 제공한다고 발표. 기준본 이전 발표·가격 동일·자사 벤치마크라 가격 하락의 직접 증거로 보지 않고 +1 (심판 판정); https://www.anthropic.com/news/claude-opus-5); F2 87%→88% (기업용 보호 체계(EFS)를 규제 금융사 포함 100여 개 기업과 설계해 데이터·키·감시를 고객 쪽에 둠. 가을부터 단계 도입이고 도입 수치가 없어 +1 (심판 판정); https://www.anthropic.com/news/enterprise-frontier-safeguards); F6 25%→22% (Anthropic 사이버 평가 실사고 3건 조사와 후속 조치(격리·상시 감시 의무화, 영국 AI안전연구소 보고 포함)를 한 출처로 묶음. 사무 업무가 아닌 평가 환경이고 최신 모델은 스스로 멈춘 점을 감안해 도전자 −5 에서 −3 으로 감액 (심판 판정); https://www.anthropic.com/news/investigating-incidents-cybersecurity-evals) | 2026-09-15 정기 검토(화요일, model 그룹만 수집). 신규 후보 12건 중 5건 채택. 도전자·옹호자·심판 토론 결과 F3 +1, F2 +1, F6 −3. 최대 이동 3%p 이고 이번 공식 신호는 headline 의 '감독과 검증이 필요한 실무자' 주장을 오히려 지지해 headline 유지. 심판은 F5 조건 보완(권한 격리·실시간 감시) 충돌표 행을 판정했으나, 반영 스크립트가 F5 를 언급한 C3·C5 까지 superseded 로 돌려 홈페이지 기본 화면에서 숨기므로 이번엔 보류하고 deferred_conflicts 에 보존. | Anthropic, OpenAI |
 | 2026-09-14 | 신호 추가 8건, 갱신 0건. openai.com 본문은 403 이라 우회하지 않고 공식 RSS 요약만으로 판단. 고객 사례(Perplexity·Cognition)와 조일공업 현장방문은 단일 사례라 low, 확률 변경 근거로 쓰지 않음. 고용노동부 게시일은 상세 페이지 등록일(2026-09-11) 기준 | 확률 변경 3건 | F1 90%→92% (관리형 에이전트 API 상용 출시로 방향은 지지되나 과업 완수율 증거가 아니고 본문 403 으로 RSS 요약만 확인돼 +2 (심판 판정); https://openai.com/index/introducing-the-agents-api); F2 85%→87% (범용 Data agent·금융업 전용 제품을 같은 날 한 회사 발표라 신호 하나로 묶음. 도입 규모 수치 없음·본문 미확인이라 +2 (심판 판정); https://openai.com/index/put-data-to-work); F4 75%→77% (고용노동부 자료에서 SK 생성형 AI 활용 자격 상반기 응시 2,977명 확인, 역량 제도화 신호. 단일 그룹 규모라 +2 (심판 판정); https://www.moel.go.kr/news/enews/report/enewsView.do?news_seq=19932) | 2026-09-14 정기 검토(9/10~9/13 스케줄은 수집 스크립트 KeyError 로 수집 실패 → 수정 후 model·jobs 수집). 신규 후보 22건 중 8건 채택. 도전자·옹호자·심판 토론 결과: OpenAI 9/10 발표 묶음은 본문 403 이라 F1·F2 를 +2 씩만, 고용노동부 기업자격 자료로 F4 +2. 최대 이동 2%p 라 headline·충돌표 유지. 비전문가용 Data agent 와 C5(읽고 검증하는 능력) 사이 긴장은 정확도 근거가 나오면 재검토. | OpenAI, 고용노동부 |
 | 2026-09-09 | 신호 추가 14건, 갱신 0건. OpenAI 사례(1Password·Playco·ATV·Legora·Gilbert+Tobin)는 기업 자체 자료·단일 사례라 medium/low 로 두고 확률 변경 근거로 쓰지 않음 | 없음 | 없음 | 2026-09-09 첫 정기 검토. 후보 50건 중 공식 출처·발표일·전망 관련성을 갖춘 12건 채택. 기준본 확률은 유지(첫 라운드, 상충 자료 병기). | METR, OpenAI, 고용노동부 |
 | 2026-09-09 | AI FUTURE & CAREER 카테고리 최초 작성. 전망 7개, 충돌표 5개, 역량 6개, 90일 로드맵 6단계, 검증 체크리스트 6영역 | 없음(기준본) | 없음 | 2026-09-09 기준 전망 프롬프트를 기준본으로 채택 | 사용자 작성 기준 문서 |
 
-_마지막 업데이트: 2026-09-14 · 생성: 2026-09-14_
+_마지막 업데이트: 2026-09-15 · 생성: 2026-09-15_
