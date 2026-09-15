@@ -1,7 +1,7 @@
 {
  "meta": {
   "updated": "2026-09-15",
-  "generated_at": "2026-09-15T11:34:52",
+  "generated_at": "2026-09-15T12:37:39",
   "days": [
    "2026-09-15",
    "2026-09-14",
@@ -9,14 +9,14 @@
    "2026-09-10",
    "2026-09-09"
   ],
-  "today_new": 95,
+  "today_new": 115,
   "note": "수집기 4개의 결과를 스크립트가 합친 값. 원문 복제 없음, 추정치 없음."
  },
  "channels": [
   {
    "id": "jobs",
    "name": "채용 공고",
-   "count": 135
+   "count": 150
   },
   {
    "id": "health",
@@ -46,18 +46,18 @@
   {
    "id": "changelog",
    "name": "자동화 변경사항",
-   "count": 127
+   "count": 132
   }
  ],
  "jobs_facets": {
   "region": [
    {
     "v": "서울",
-    "n": 45
+    "n": 53
    },
    {
     "v": "경기",
-    "n": 24
+    "n": 25
    },
    {
     "v": "경북",
@@ -69,7 +69,15 @@
    },
    {
     "v": "충북",
+    "n": 8
+   },
+   {
+    "v": "전남",
     "n": 7
+   },
+   {
+    "v": "강원",
+    "n": 6
    },
    {
     "v": "대전",
@@ -80,15 +88,11 @@
     "n": 6
    },
    {
-    "v": "전남",
-    "n": 6
-   },
-   {
-    "v": "강원",
+    "v": "부산",
     "n": 5
    },
    {
-    "v": "부산",
+    "v": "인천",
     "n": 4
    },
    {
@@ -96,19 +100,15 @@
     "n": 3
    },
    {
-    "v": "인천",
-    "n": 3
-   },
-   {
     "v": "충남",
     "n": 3
    },
    {
-    "v": "경남",
-    "n": 1
+    "v": "대구",
+    "n": 2
    },
    {
-    "v": "대구",
+    "v": "경남",
     "n": 1
    },
    {
@@ -118,16 +118,16 @@
   ],
   "org_type": [
    {
-    "v": "대학·산학",
-    "n": 35
+    "v": "공공기관",
+    "n": 39
    },
    {
-    "v": "공공기관",
-    "n": 28
+    "v": "대학·산학",
+    "n": 36
    },
    {
     "v": "연구기관",
-    "n": 22
+    "n": 24
    },
    {
     "v": "국책연구기관",
@@ -142,12 +142,12 @@
     "n": 11
    },
    {
-    "v": "협회·재단",
+    "v": "종합병원",
     "n": 5
    },
    {
-    "v": "종합병원",
-    "n": 4
+    "v": "협회·재단",
+    "n": 5
    },
    {
     "v": "공공병원",
@@ -161,7 +161,7 @@
   "job_family": [
    {
     "v": "검토 필요",
-    "n": 41
+    "n": 43
    },
    {
     "v": "데이터·통계",
@@ -169,45 +169,45 @@
    },
    {
     "v": "인턴",
-    "n": 17
+    "n": 20
    },
    {
     "v": "행정·사무",
-    "n": 14
+    "n": 17
    },
    {
     "v": "사업운영·관리",
-    "n": 11
+    "n": 14
    },
    {
     "v": "기획·성과관리",
-    "n": 9
+    "n": 10
+   },
+   {
+    "v": "인사·회계·총무",
+    "n": 8
    },
    {
     "v": "연구행정·연구원",
     "n": 7
    },
    {
-    "v": "인사·회계·총무",
-    "n": 7
-   },
-   {
     "v": "미분류",
-    "n": 5
+    "n": 6
    },
    {
     "v": "전문연구직",
-    "n": 4
+    "n": 5
    }
   ],
   "experience": [
    {
     "v": "신입",
-    "n": 72
+    "n": 77
    },
    {
     "v": "신입/경력",
-    "n": 30
+    "n": 39
    },
    {
     "v": "미상",
@@ -215,21 +215,21 @@
    },
    {
     "v": "경력무관",
-    "n": 14
+    "n": 15
    }
   ],
   "employment": [
    {
     "v": "계약직·기간제",
-    "n": 63
+    "n": 71
    },
    {
     "v": "정규직",
-    "n": 44
+    "n": 47
    },
    {
     "v": "인턴",
-    "n": 22
+    "n": 26
    },
    {
     "v": "미상",
@@ -239,12 +239,12 @@
   "source": [
    {
     "v": "saramin",
-    "n": 72,
+    "n": 73,
     "name": "사람인"
    },
    {
     "v": "alio",
-    "n": 28,
+    "n": 42,
     "name": "잡알리오"
    },
    {
@@ -677,7 +677,7 @@
    "last_run": "2026-09-15",
    "status": "ok",
    "note": "잡알리오 · gojobs · 잡코리아 · 메디컬잡 · 경제·인문사회연구회 · 사람인, 신입/경력무관만",
-   "count": 135
+   "count": 150
   },
   {
    "id": "watch",
@@ -717,7 +717,7 @@
    "last_run": "2026-09-15",
    "status": "ok",
    "note": "git 커밋 로그에서 자동 추출, 데일리 동기화 커밋 제외",
-   "count": 127
+   "count": 132
   }
  ],
  "items": [
@@ -3169,6 +3169,506 @@
    "fit_exclusions": []
   },
   {
+   "id": "saramin-a7546ed3",
+   "channel": "jobs",
+   "title": "서울기독대학교 취창업지원센터 직원 채용",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/view?rec_idx=54961990",
+   "publisher": "서울기독대학교",
+   "source": "saramin",
+   "published_at": "2026-09-15",
+   "seen": "2026-09-15",
+   "category": "경력무관 · 계약직·기간제",
+   "tags": [
+    "자격증",
+    "Excel·오피스 활용",
+    "전산·SQL·시스템 활용",
+    "문서 작성·보고"
+   ],
+   "summary": "직무: 교직원 , 교육행정 , 대학교 등록일 26/09/07",
+   "deadline": "2026-09-15",
+   "dday": 0,
+   "region": "서울",
+   "sigungu": "은평구",
+   "org_type": "대학·산학",
+   "job_family": "행정·사무",
+   "experience": "경력무관",
+   "employment": "계약직·기간제",
+   "also_sources": [],
+   "fit_level": "보통",
+   "fit_reasons": [
+    "대학 또는 연구기관 행정",
+    "신입 또는 경력무관",
+    "서울·경기·인천·대전·충청권"
+   ],
+   "fit_cautions": [
+    "단기 계약직"
+   ],
+   "fit_exclusions": []
+  },
+  {
+   "id": "alio-c58bf304",
+   "channel": "jobs",
+   "title": "한국저작권위원회 2026년 제3차 직원 채용",
+   "url": "https://job.alio.go.kr/recruitview.do?idx=304922",
+   "publisher": "한국저작권위원회",
+   "source": "alio",
+   "published_at": "2026-09-15",
+   "seen": "2026-09-15",
+   "category": "신입 · 계약직·기간제",
+   "tags": [
+    "연구·사업 행정"
+   ],
+   "summary": "직무: 사업관리,경영.회계.사무,문화.예술.디자인.방송",
+   "deadline": "2026-09-30",
+   "dday": 15,
+   "region": "서울",
+   "sigungu": "",
+   "org_type": "공공기관",
+   "job_family": "사업운영·관리",
+   "experience": "신입",
+   "employment": "계약직·기간제",
+   "also_sources": [],
+   "fit_level": "보통",
+   "fit_reasons": [
+    "사업운영·성과관리 업무",
+    "의료·보건 관련 기관",
+    "신입 또는 경력무관",
+    "서울·경기·인천·대전·충청권"
+   ],
+   "fit_cautions": [
+    "단기 계약직"
+   ],
+   "fit_exclusions": []
+  },
+  {
+   "id": "alio-a1f147b2",
+   "channel": "jobs",
+   "title": "의료기관평가인증원 2026년 제3회 직원채용 공고",
+   "url": "https://job.alio.go.kr/recruitview.do?idx=304942",
+   "publisher": "의료기관평가인증원",
+   "source": "alio",
+   "published_at": "2026-09-15",
+   "seen": "2026-09-15",
+   "category": "신입/경력 · 계약직·기간제",
+   "tags": [
+    "연구·사업 행정",
+    "보건의료 도메인 지식"
+   ],
+   "summary": "직무: 사업관리,보건.의료",
+   "deadline": "2026-10-01",
+   "dday": 16,
+   "region": "서울",
+   "sigungu": "",
+   "org_type": "공공기관",
+   "job_family": "기획·성과관리",
+   "experience": "신입/경력",
+   "employment": "계약직·기간제",
+   "also_sources": [],
+   "fit_level": "보통",
+   "fit_reasons": [
+    "사업운영·성과관리 업무",
+    "의료·보건 관련 기관",
+    "신입 또는 경력무관",
+    "서울·경기·인천·대전·충청권"
+   ],
+   "fit_cautions": [
+    "단기 계약직"
+   ],
+   "fit_exclusions": []
+  },
+  {
+   "id": "alio-53b5526b",
+   "channel": "jobs",
+   "title": "국립농업박물관 2026년 제5차 직원 및 하반기 청년인턴 채용(재공고)",
+   "url": "https://job.alio.go.kr/recruitview.do?idx=304948",
+   "publisher": "국립농업박물관",
+   "source": "alio",
+   "published_at": "2026-09-15",
+   "seen": "2026-09-15",
+   "category": "신입/경력 · 인턴",
+   "tags": [],
+   "summary": "직무: 경영.회계.사무,문화.예술.디자인.방송",
+   "deadline": "2026-09-29",
+   "dday": 14,
+   "region": "경기",
+   "sigungu": "",
+   "org_type": "공공기관",
+   "job_family": "인턴",
+   "experience": "신입/경력",
+   "employment": "인턴",
+   "also_sources": [],
+   "fit_level": "보통",
+   "fit_reasons": [
+    "의료·보건 관련 기관",
+    "신입 또는 경력무관",
+    "서울·경기·인천·대전·충청권"
+   ],
+   "fit_cautions": [
+    "단기 계약직"
+   ],
+   "fit_exclusions": []
+  },
+  {
+   "id": "alio-5b58a7ec",
+   "channel": "jobs",
+   "title": "2026년 제2차 한국연구재단 직원 채용(연구직, 공무직(사무지원직))",
+   "url": "https://job.alio.go.kr/recruitview.do?idx=304945",
+   "publisher": "한국연구재단",
+   "source": "alio",
+   "published_at": "2026-09-15",
+   "seen": "2026-09-15",
+   "category": "신입 · 인턴",
+   "tags": [
+    "연구·사업 행정"
+   ],
+   "summary": "직무: 사업관리,경영.회계.사무",
+   "deadline": "2026-09-29",
+   "dday": 14,
+   "region": "서울",
+   "sigungu": "",
+   "org_type": "연구기관",
+   "job_family": "검토 필요",
+   "experience": "신입",
+   "employment": "인턴",
+   "also_sources": [],
+   "fit_level": "보통",
+   "fit_reasons": [
+    "신입 또는 경력무관",
+    "서울·경기·인천·대전·충청권"
+   ],
+   "fit_cautions": [
+    "담당 업무 불명확",
+    "단기 계약직"
+   ],
+   "fit_exclusions": []
+  },
+  {
+   "id": "alio-bc693823",
+   "channel": "jobs",
+   "title": "[광주보훈병원] 계약직 보건직(치과위생사) 직원 채용 공고",
+   "url": "https://job.alio.go.kr/recruitview.do?idx=304955",
+   "publisher": "한국보훈복지의료공단",
+   "source": "alio",
+   "published_at": "2026-09-15",
+   "seen": "2026-09-15",
+   "category": "신입/경력 · 계약직·기간제",
+   "tags": [],
+   "summary": "직무: 보건.의료",
+   "deadline": "2026-09-28",
+   "dday": 13,
+   "region": "전남",
+   "sigungu": "",
+   "org_type": "공공기관",
+   "job_family": "",
+   "experience": "신입/경력",
+   "employment": "계약직·기간제",
+   "also_sources": [],
+   "fit_level": "보통",
+   "fit_reasons": [
+    "의료·보건 관련 기관",
+    "신입 또는 경력무관"
+   ],
+   "fit_cautions": [
+    "단기 계약직"
+   ],
+   "fit_exclusions": []
+  },
+  {
+   "id": "alio-c9116502",
+   "channel": "jobs",
+   "title": "한국우편사업진흥원 2026년 신입직원(일반직, 전문직(사무), 전문직(특수)) 채용",
+   "url": "https://job.alio.go.kr/recruitview.do?idx=304896",
+   "publisher": "(재)한국우편사업진흥원",
+   "source": "alio",
+   "published_at": "2026-09-15",
+   "seen": "2026-09-15",
+   "category": "신입 · 계약직·기간제",
+   "tags": [
+    "연구·사업 행정",
+    "규정·법령 이해"
+   ],
+   "summary": "직무: 사업관리,경영.회계.사무,문화.예술.디자인.방송,영업판매,정보통신,인쇄.목재.가구.공예,환경.에너지.안전",
+   "deadline": "2026-09-25",
+   "dday": 10,
+   "region": "서울",
+   "sigungu": "",
+   "org_type": "연구기관",
+   "job_family": "사업운영·관리",
+   "experience": "신입",
+   "employment": "계약직·기간제",
+   "also_sources": [],
+   "fit_level": "보통",
+   "fit_reasons": [
+    "사업운영·성과관리 업무",
+    "신입 또는 경력무관",
+    "서울·경기·인천·대전·충청권"
+   ],
+   "fit_cautions": [
+    "단기 계약직"
+   ],
+   "fit_exclusions": []
+  },
+  {
+   "id": "alio-bbb26da8",
+   "channel": "jobs",
+   "title": "게임물관리위원회 2026년 제3차 직원(체험형청년인턴) 채용공고",
+   "url": "https://job.alio.go.kr/recruitview.do?idx=304854",
+   "publisher": "게임물관리위원회",
+   "source": "alio",
+   "published_at": "2026-09-15",
+   "seen": "2026-09-15",
+   "category": "신입/경력 · 인턴",
+   "tags": [
+    "연구·사업 행정"
+   ],
+   "summary": "직무: 사업관리,경영.회계.사무,문화.예술.디자인.방송",
+   "deadline": "2026-09-29",
+   "dday": 14,
+   "region": "서울",
+   "sigungu": "",
+   "org_type": "공공기관",
+   "job_family": "인턴",
+   "experience": "신입/경력",
+   "employment": "인턴",
+   "also_sources": [],
+   "fit_level": "보통",
+   "fit_reasons": [
+    "의료·보건 관련 기관",
+    "신입 또는 경력무관",
+    "서울·경기·인천·대전·충청권"
+   ],
+   "fit_cautions": [
+    "단기 계약직"
+   ],
+   "fit_exclusions": []
+  },
+  {
+   "id": "alio-016d6453",
+   "channel": "jobs",
+   "title": "게임물관리위원회 2026년 제3차 직원(일반정규직) 채용공고",
+   "url": "https://job.alio.go.kr/recruitview.do?idx=304852",
+   "publisher": "게임물관리위원회",
+   "source": "alio",
+   "published_at": "2026-09-15",
+   "seen": "2026-09-15",
+   "category": "신입/경력 · 정규직",
+   "tags": [
+    "연구·사업 행정"
+   ],
+   "summary": "직무: 사업관리,경영.회계.사무,문화.예술.디자인.방송",
+   "deadline": "2026-09-29",
+   "dday": 14,
+   "region": "부산",
+   "sigungu": "",
+   "org_type": "공공기관",
+   "job_family": "사업운영·관리",
+   "experience": "신입/경력",
+   "employment": "정규직",
+   "also_sources": [],
+   "fit_level": "높음",
+   "fit_reasons": [
+    "사업운영·성과관리 업무",
+    "의료·보건 관련 기관",
+    "신입 또는 경력무관"
+   ],
+   "fit_cautions": [],
+   "fit_exclusions": []
+  },
+  {
+   "id": "alio-80840293",
+   "channel": "jobs",
+   "title": "[국립공원연구원] 국립공원연구원 기간제(연구복원) 직원 채용",
+   "url": "https://job.alio.go.kr/recruitview.do?idx=304796",
+   "publisher": "국립공원공단",
+   "source": "alio",
+   "published_at": "2026-09-15",
+   "seen": "2026-09-15",
+   "category": "신입/경력 · 계약직·기간제",
+   "tags": [],
+   "summary": "직무: 환경.에너지.안전",
+   "deadline": "2026-09-23",
+   "dday": 8,
+   "region": "강원",
+   "sigungu": "",
+   "org_type": "공공기관",
+   "job_family": "검토 필요",
+   "experience": "신입/경력",
+   "employment": "계약직·기간제",
+   "also_sources": [],
+   "fit_level": "보통",
+   "fit_reasons": [
+    "의료·보건 관련 기관",
+    "신입 또는 경력무관"
+   ],
+   "fit_cautions": [
+    "담당 업무 불명확",
+    "단기 계약직"
+   ],
+   "fit_exclusions": []
+  },
+  {
+   "id": "alio-fb8c8c26",
+   "channel": "jobs",
+   "title": "[속리산] 속리산국립공원사무소 기간제(탐방해설) 직원 채용 공고",
+   "url": "https://job.alio.go.kr/recruitview.do?idx=304798",
+   "publisher": "국립공원공단",
+   "source": "alio",
+   "published_at": "2026-09-15",
+   "seen": "2026-09-15",
+   "category": "신입/경력 · 계약직·기간제",
+   "tags": [
+    "자격증"
+   ],
+   "summary": "직무: 이용.숙박.여행.오락.스포츠",
+   "deadline": "2026-09-23",
+   "dday": 8,
+   "region": "충북",
+   "sigungu": "",
+   "org_type": "공공기관",
+   "job_family": "행정·사무",
+   "experience": "신입/경력",
+   "employment": "계약직·기간제",
+   "also_sources": [],
+   "fit_level": "보통",
+   "fit_reasons": [
+    "의료·보건 관련 기관",
+    "신입 또는 경력무관",
+    "서울·경기·인천·대전·충청권"
+   ],
+   "fit_cautions": [
+    "단기 계약직"
+   ],
+   "fit_exclusions": []
+  },
+  {
+   "id": "alio-4ea95b40",
+   "channel": "jobs",
+   "title": "2026년도 제5차 신규직원(행정직) 채용 공고",
+   "url": "https://job.alio.go.kr/recruitview.do?idx=304802",
+   "publisher": "경북대학교치과병원",
+   "source": "alio",
+   "published_at": "2026-09-15",
+   "seen": "2026-09-15",
+   "category": "신입 · 정규직",
+   "tags": [],
+   "summary": "직무: 보건.의료",
+   "deadline": "2026-09-23",
+   "dday": 8,
+   "region": "대구",
+   "sigungu": "",
+   "org_type": "종합병원",
+   "job_family": "행정·사무",
+   "experience": "신입",
+   "employment": "정규직",
+   "also_sources": [],
+   "fit_level": "보통",
+   "fit_reasons": [
+    "의료·보건 관련 기관",
+    "신입 또는 경력무관"
+   ],
+   "fit_cautions": [],
+   "fit_exclusions": []
+  },
+  {
+   "id": "alio-3a12c15f",
+   "channel": "jobs",
+   "title": "2026년도 제4차 전문직원 채용공고",
+   "url": "https://job.alio.go.kr/recruitview.do?idx=304768",
+   "publisher": "한국전력공사",
+   "source": "alio",
+   "published_at": "2026-09-15",
+   "seen": "2026-09-15",
+   "category": "신입/경력 · 정규직",
+   "tags": [
+    "자격증"
+   ],
+   "summary": "직무: 경영.회계.사무,법률.경찰.소방.교도.국방,연구",
+   "deadline": "2026-09-22",
+   "dday": 7,
+   "region": "서울",
+   "sigungu": "",
+   "org_type": "공공기관",
+   "job_family": "인사·회계·총무",
+   "experience": "신입/경력",
+   "employment": "정규직",
+   "also_sources": [],
+   "fit_level": "보통",
+   "fit_reasons": [
+    "의료·보건 관련 기관",
+    "신입 또는 경력무관",
+    "서울·경기·인천·대전·충청권"
+   ],
+   "fit_cautions": [],
+   "fit_exclusions": []
+  },
+  {
+   "id": "alio-58ce30f9",
+   "channel": "jobs",
+   "title": "2026년 하반기 공무직원 채용",
+   "url": "https://job.alio.go.kr/recruitview.do?idx=304764",
+   "publisher": "한국전기안전공사",
+   "source": "alio",
+   "published_at": "2026-09-15",
+   "seen": "2026-09-15",
+   "category": "신입 · 계약직·기간제",
+   "tags": [],
+   "summary": "직무: 경영.회계.사무,법률.경찰.소방.교도.국방,경비.청소,음식서비스,건설,기계,전기.전자,환경.에너지.안전",
+   "deadline": "2026-09-22",
+   "dday": 7,
+   "region": "서울",
+   "sigungu": "",
+   "org_type": "공공기관",
+   "job_family": "전문연구직",
+   "experience": "신입",
+   "employment": "계약직·기간제",
+   "also_sources": [],
+   "fit_level": "낮음",
+   "fit_reasons": [
+    "의료·보건 관련 기관",
+    "신입 또는 경력무관",
+    "서울·경기·인천·대전·충청권"
+   ],
+   "fit_cautions": [
+    "단기 계약직"
+   ],
+   "fit_exclusions": [
+    "전문 연구직",
+    "전문 연구직"
+   ]
+  },
+  {
+   "id": "alio-148e36fc",
+   "channel": "jobs",
+   "title": "[인천보훈병원] 2026-14차 직원 제한경쟁채용(장애인 청년인턴) 공고",
+   "url": "https://job.alio.go.kr/recruitview.do?idx=304754",
+   "publisher": "한국보훈복지의료공단",
+   "source": "alio",
+   "published_at": "2026-09-15",
+   "seen": "2026-09-15",
+   "category": "신입/경력 · 인턴",
+   "tags": [],
+   "summary": "직무: 보건.의료",
+   "deadline": "2026-09-22",
+   "dday": 7,
+   "region": "인천",
+   "sigungu": "",
+   "org_type": "공공기관",
+   "job_family": "인턴",
+   "experience": "신입/경력",
+   "employment": "인턴",
+   "also_sources": [],
+   "fit_level": "보통",
+   "fit_reasons": [
+    "의료·보건 관련 기관",
+    "신입 또는 경력무관",
+    "서울·경기·인천·대전·충청권"
+   ],
+   "fit_cautions": [
+    "단기 계약직"
+   ],
+   "fit_exclusions": []
+  },
+  {
    "id": "sql-2026-09-15-1",
    "channel": "sql",
    "title": "[Basic Joins] Replace Employee ID With The Unique Identifier",
@@ -3296,6 +3796,51 @@
    "summary": "rows 는 {\"dept\": 부서명, \"revenue\": 정수} 딕셔너리의 리스트입니다. 부서별 revenue 합계를 {부서명: 합계} 딕셔너리로 반환하는 sum_by_dept 를 작성하세요."
   },
   {
+   "id": "changelog-my agent-e76573b712",
+   "channel": "changelog",
+   "title": "fix(ai-signals): take date and title from each link's own card",
+   "url": "",
+   "publisher": "my agent",
+   "source": "my agent",
+   "published_at": "2026-09-15",
+   "seen": "2026-09-15",
+   "category": "fix",
+   "tags": [
+    "fix"
+   ],
+   "summary": "fix(ai-signals): take date and title from each link's own card"
+  },
+  {
+   "id": "changelog-my agent-a19dd964d2",
+   "channel": "changelog",
+   "title": "fix(ai-signals): supersede conflict rows only by explicit id or single primary forecast",
+   "url": "",
+   "publisher": "my agent",
+   "source": "my agent",
+   "published_at": "2026-09-15",
+   "seen": "2026-09-15",
+   "category": "fix",
+   "tags": [
+    "fix"
+   ],
+   "summary": "fix(ai-signals): supersede conflict rows only by explicit id or single primary forecast"
+  },
+  {
+   "id": "changelog-my agent-1a4bc0f503",
+   "channel": "changelog",
+   "title": "fix(jobs): gojobs search now paginates within a 60-day window",
+   "url": "",
+   "publisher": "my agent",
+   "source": "my agent",
+   "published_at": "2026-09-15",
+   "seen": "2026-09-15",
+   "category": "fix",
+   "tags": [
+    "fix"
+   ],
+   "summary": "fix(jobs): gojobs search now paginates within a 60-day window"
+  },
+  {
    "id": "changelog-my agent-703964c298",
    "channel": "changelog",
    "title": "feat(jobs): widen university admin search to single-word keyword",
@@ -3369,6 +3914,36 @@
     "feat"
    ],
    "summary": "feat(jobs): open data/research-admin roles to all industries"
+  },
+  {
+   "id": "changelog-hello-world-hub-c11901112b",
+   "channel": "changelog",
+   "title": "chore(career-ai): add F5 conflict row C6, tag C1–C5 with primary forecast",
+   "url": "https://github.com/JAEYONG0303/hello-world-hub/commit/c11901112b2325cdeb3f30e110a0021ba5d0f92a",
+   "publisher": "hello-world-hub",
+   "source": "hello-world-hub",
+   "published_at": "2026-09-15",
+   "seen": "2026-09-15",
+   "category": "chore",
+   "tags": [
+    "chore"
+   ],
+   "summary": "chore(career-ai): add F5 conflict row C6, tag C1–C5 with primary forecast"
+  },
+  {
+   "id": "changelog-hello-world-hub-7715c9b270",
+   "channel": "changelog",
+   "title": "chore(feed): sync gojobs pagination fix results",
+   "url": "https://github.com/JAEYONG0303/hello-world-hub/commit/7715c9b270a77ff76c0ff0530c9361cc60646723",
+   "publisher": "hello-world-hub",
+   "source": "hello-world-hub",
+   "published_at": "2026-09-15",
+   "seen": "2026-09-15",
+   "category": "chore",
+   "tags": [
+    "chore"
+   ],
+   "summary": "chore(feed): sync gojobs pagination fix results"
   },
   {
    "id": "changelog-hello-world-hub-1953bcfa75",
@@ -8016,7 +8591,7 @@
    }
   ],
   "new_by_channel": {
-   "jobs": 74,
+   "jobs": 89,
    "health": 0,
    "ai": 5,
    "sql": 0,
@@ -8024,7 +8599,7 @@
    "research": 0,
    "changelog": 0
   },
-  "deadline_7d": 75,
+  "deadline_7d": 79,
   "high": 3,
   "headline": "치료재료·의료기기 보상 체계가 동시에 움직이고, 공공기관 채용은 절차가 엄격해진다",
   "points": [
